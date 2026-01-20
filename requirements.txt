@@ -1,0 +1,15 @@
+langchain-community
+langchain-ollama
+langgraph
+langgraph-checkpoint-redis
+langchain-openai
+openpyxl
+fastapi
+uvicorn
+asyncpg
+sqlalchemy[asyncio]
+psycopg[binary,pool]
+langgraph-cli[inmem]
+numpy
+pandas
+langsmith
