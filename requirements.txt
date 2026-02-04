@@ -13,4 +13,6 @@ langgraph-cli[inmem]
 numpy
 pandas
 langsmith
-
+python-dotenv
+redis
+aioredis
