@@ -22,8 +22,7 @@ async def main() -> None:
 
     pool = await get_postgre_client()
     await pool.close()
-    await redis_client.close()
-    await redis_client.connection_pool.disconnect()
+    await redis_client.aclose()
 
 
 if __name__ == "__main__":
