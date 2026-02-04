@@ -1,0 +1,26 @@
+{
+  "dependencies": [
+    ".",
+    "langchain-community",
+    "langchain-ollama",
+    "langgraph",
+    "langgraph-checkpoint-redis",
+    "langchain-openai",
+    "openpyxl",
+    "fastapi",
+    "uvicorn",
+    "asyncpg",
+    "redis",
+    "aioredis",
+    "sqlalchemy[asyncio]",
+    "psycopg[binary,pool]",
+    "langgraph-cli[inmem]",
+    "python-dotenv"
+  ],
+  "graphs": {
+    "main_workflow": "./workflow.py:app",
+    "demo_workflow": "./workflow_demo.py:app"
+  },
+  "env": ".env",
+  "python_version": "3.11"
+}
