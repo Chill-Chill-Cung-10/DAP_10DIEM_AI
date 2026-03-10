@@ -1,0 +1,3346 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "LLM Training Data Schema — Lĩnh vực Cây Trồng",
+  "description": "Khung JSON chuyên biệt để crawl và cấu trúc dữ liệu huấn luyện LLM cho lĩnh vực nông nghiệp, cây trồng, canh tác",
+  "version": "1.0.0",
+  "crawl_config": {
+    "source": {
+      "url": "https://example.com/cay-trong/lua-nuoc",
+      "domain": "example.com",
+      "source_type": "web | pdf | youtube | forum | extension_service | research_paper | government_doc",
+      "language": "vi",
+      "crawled_at": "2026-03-06T10:00:00Z",
+      "crawl_method": "playwright | scrapy | selenium | rss | api",
+      "is_dynamic": false
+    },
+    "trusted_sources": [
+      "vaas.vn",
+      "mard.gov.vn",
+      "cimmyt.org",
+      "fao.org",
+      "irri.org",
+      "khuyennongvn.gov.vn"
+    ]
+  },
+  "contents": [
+    {
+      "summary": "Tài liệu trình bày các giai đoạn sinh trưởng của giống lúa 120 ngày, chia làm ba thời kỳ chính: tăng trưởng, sinh sản và lúa chín. Trong đó, thời gian từ lúc làm đòng đến khi thu hoạch thường cố định ở mức 65 ngày đối với hầu hết các giống lúa.",
+      "full_text": "CÁC GIAI ĐOẠN SINH TRƯỞNG CỦA CÂY LÚA. Đối với giống 120 ngày, quá trình phát triển được chia thành: Giai đoạn tăng trưởng (55 ngày) từ lúc gieo đến khi có chồi tối đa. Giai đoạn sinh sản (35 ngày) từ lúc làm đòng đến khi trổ bông. Giai đoạn lúa chín (30 ngày) từ khi trổ bông đến lúc thu hoạch. Số ngày ở giai đoạn tăng trưởng khác nhau tùy theo giống lúa. Giai đoạn sinh sản và lúa chín không thay đổi ở hầu hết các giống.",
+      "sections": [
+        {
+          "heading": "Giai đoạn tăng trưởng",
+          "level": 1,
+          "text": "Kéo dài 55 ngày (đối với giống trong sơ đồ), bao gồm các mốc: Gieo, Cấy và đạt Chồi tối đa. Thời gian này có thể thay đổi tùy thuộc vào từng giống lúa cụ thể."
+        },
+        {
+          "heading": "Giai đoạn sinh sản",
+          "level": 1,
+          "text": "Kéo dài 35 ngày, tính từ thời điểm làm đòng đến khi lúa trổ bông. Đây là giai đoạn ít biến động về thời gian giữa các giống lúa khác nhau."
+        },
+        {
+          "heading": "Giai đoạn lúa chín",
+          "level": 1,
+          "text": "Kéo dài 30 ngày, tính từ lúc trổ bông đến khi thu hoạch. Tương tự giai đoạn sinh sản, thời gian này thường không thay đổi ở hầu hết các giống."
+        }
+      ],
+      "key_phrases": [
+        "Giống 120 ngày",
+        "Giai đoạn tăng trưởng",
+        "Giai đoạn sinh sản",
+        "Giai đoạn lúa chín",
+        "Làm đòng",
+        "Trổ bông"
+      ]
+    },
+    {
+      "summary": "Chu kỳ sinh trưởng của cây lúa gồm ba giai đoạn: tăng trưởng, sinh sản và lúa chín, với tổng thời gian canh tác phụ thuộc chủ yếu vào sự biến động của giai đoạn tăng trưởng. Trong khi đó, thời gian từ khi làm đòng đến khi thu hoạch thường cố định khoảng 65 ngày ở hầu hết các giống lúa.",
+      "full_text": "Cây lúa trải qua các giai đoạn phát triển chính bao gồm: Giai đoạn tăng trưởng, Giai đoạn sinh sản và Giai đoạn lúa chín. Sự khác biệt về tổng thời gian sinh trưởng giữa các giống (ví dụ giống 120 ngày và 150 ngày) chủ yếu căn cứ vào số ngày trong giai đoạn tăng trưởng. Giai đoạn tăng trưởng bao gồm thời kỳ mạ và nhảy chồi, trong đó số chồi và diện tích lá gia tăng liên tục. Thời gian mạ thay đổi theo phương pháp: Đa-bô (9-11 ngày), mạ ướt (16-20 ngày) hoặc sạ thẳng. Giai đoạn sinh sản (35 ngày) và giai đoạn lúa chín (30 ngày) có thời gian thường cố định hoặc ít thay đổi giữa các giống. Các yếu tố ngoại cảnh như nhiệt độ thấp hoặc ngày dài có thể làm kéo dài thời gian của giai đoạn tăng trưởng.",
+      "sections": [
+        {
+          "heading": "Phân chia các giai đoạn sinh trưởng",
+          "level": 1,
+          "text": "Chu kỳ sống của cây lúa (ví dụ giống 120 ngày) được chia cụ thể: Giai đoạn tăng trưởng chiếm 55 ngày (từ gieo đến chồi tối đa); Giai đoạn sinh sản chiếm 35 ngày (từ làm đòng đến trổ bông); Giai đoạn lúa chín chiếm 30 ngày (từ trổ bông đến thu hoạch)."
+        },
+        {
+          "heading": "Sự khác biệt giữa các giống lúa",
+          "level": 1,
+          "text": "Số ngày trong giai đoạn tăng trưởng thay đổi tùy theo giống, trong khi giai đoạn sinh sản và lúa chín thường cố định. Đây là cơ sở chính để phân biệt các giống lúa ngắn ngày và dài ngày."
+        },
+        {
+          "heading": "Chi tiết giai đoạn tăng trưởng và thời kỳ mạ",
+          "level": 1,
+          "text": "Giai đoạn này chứng kiến sự gia tăng liên tục về số chồi và diện tích lá. Thời gian mạ phụ thuộc vào kỹ thuật canh tác: phương pháp Đa-bô mất 9-11 ngày, mạ ướt mất 16-20 ngày. Nhiệt độ thấp hoặc điều kiện ngày dài có thể kéo dài thời gian của giai đoạn này."
+        }
+      ],
+      "key_phrases": [
+        "Giai đoạn tăng trưởng",
+        "Giai đoạn sinh sản",
+        "Giai đoạn lúa chín",
+        "Nương mạ Đa-bô",
+        "Thời kỳ nhảy chồi",
+        "Chồi tối đa",
+        "Làm đòng",
+        "Trổ bông"
+      ]
+    },
+    {
+      "summary": "Chu kỳ sinh trưởng của cây lúa bao gồm ba giai đoạn chính: tăng trưởng, sinh sản và lúa chín. Sự khác biệt về tổng thời gian canh tác giữa các giống lúa ngắn ngày và dài ngày chủ yếu do sự biến động thời gian trong giai đoạn tăng trưởng quyết định.",
+      "full_text": "Cây lúa trải qua quá trình phát triển qua các mốc quan trọng từ gieo, cấy, đến khi đạt chồi tối đa, làm đòng, trổ bông và thu hoạch. Đối với giống lúa 120 ngày, giai đoạn tăng trưởng chiếm 55 ngày, sinh sản 35 ngày và lúa chín 30 ngày. Tuy nhiên, số ngày trong giai đoạn tăng trưởng sẽ thay đổi tùy theo giống, trong khi giai đoạn sinh sản và lúa chín thường cố định hoặc thay đổi rất ít. Giai đoạn tăng trưởng bao gồm thời kỳ mạ và nhảy chồi, nơi số chồi và diện tích lá gia tăng liên tục. Thời gian mạ phụ thuộc vào phương pháp canh tác: Đa-bô (9-11 ngày), mạ ướt (16-20 ngày) hoặc sạ thẳng. Ngoài ra, các yếu tố môi trường như nhiệt độ thấp hoặc ngày dài có thể kéo dài thời gian của giai đoạn tăng trưởng này.",
+      "sections": [
+        {
+          "heading": "Các giai đoạn sinh trưởng chính",
+          "level": 1,
+          "text": "Được chia làm 3 giai đoạn: 1. Giai đoạn tăng trưởng (từ gieo đến chồi tối đa); 2. Giai đoạn sinh sản (từ làm đòng đến trổ bông); 3. Giai đoạn lúa chín (từ trổ bông đến thu hoạch)."
+        },
+        {
+          "heading": "Sự khác biệt giữa các giống lúa",
+          "level": 1,
+          "text": "Sự khác biệt về tổng thời gian sinh trưởng (ví dụ giữa giống 120 ngày và 150 ngày) được căn cứ vào số ngày trong giai đoạn tăng trưởng. Giai đoạn sinh sản (35 ngày) và lúa chín (30 ngày) được xem là các giai đoạn có thời gian ổn định ở hầu hết các giống."
+        },
+        {
+          "heading": "Đặc điểm giai đoạn tăng trưởng",
+          "level": 1,
+          "text": "Đây là thời kỳ cây lúa phát triển mạnh về số chồi và diện tích lá. Thời gian mạ có sự khác biệt rõ rệt theo kỹ thuật: phương pháp Đa-bô mất 9-11 ngày, trong khi mạ ướt cần 16-20 ngày. Điều kiện ngoại cảnh bất lợi như nhiệt độ thấp có thể làm chậm quá trình này."
+        }
+      ],
+      "key_phrases": [
+        "Giai đoạn tăng trưởng",
+        "Giai đoạn sinh sản",
+        "Giai đoạn lúa chín",
+        "Chồi tối đa",
+        "Làm đòng",
+        "Trổ bông",
+        "Nương mạ Đa-bô",
+        "Mạ ướt"
+      ]
+    },
+    {
+      "summary": "Chu kỳ sinh trưởng của cây lúa gồm ba giai đoạn chính: tăng trưởng, sinh sản và lúa chín. Sự khác biệt về tổng thời gian canh tác giữa các giống lúa chủ yếu do giai đoạn tăng trưởng quyết định, trong khi giai đoạn từ làm đòng đến thu hoạch thường cố định khoảng 65 ngày.",
+      "full_text": "Quá trình sinh trưởng của cây lúa trải qua ba giai đoạn chính: Giai đoạn tăng trưởng, Giai đoạn sinh sản và Giai đoạn lúa chín. Đối với giống lúa 120 ngày, giai đoạn tăng trưởng chiếm 55 ngày, sinh sản 35 ngày và lúa chín 30 ngày. Sự khác biệt giữa các giống lúa (ví dụ giống 120 ngày và 150 ngày) chủ yếu nằm ở số ngày của giai đoạn tăng trưởng. Trong giai đoạn này, cây phát triển mạnh về số chồi và diện tích lá. Thời gian mạ có thể thay đổi tùy theo phương pháp: Đa-bô (9-11 ngày), mạ ướt (16-20 ngày) hoặc sạ thẳng. Giai đoạn sinh sản bắt đầu từ khi lúa tượng đòng và kết thúc khi trổ bông, kéo dài khoảng 35 ngày. Các yếu tố ngoại cảnh như nhiệt độ thấp hoặc ngày dài có thể làm kéo dài giai đoạn tăng trưởng.",
+      "sections": [
+        {
+          "heading": "Phân chia giai đoạn theo thời gian",
+          "level": 1,
+          "text": "Chu kỳ sống của giống lúa 120 ngày bao gồm: Giai đoạn tăng trưởng (55 ngày) từ gieo đến chồi tối đa; Giai đoạn sinh sản (35 ngày) từ làm đòng đến trổ bông; Giai đoạn lúa chín (30 ngày) từ trổ bông đến thu hoạch."
+        },
+        {
+          "heading": "Sự biến đổi giữa các giống lúa",
+          "level": 1,
+          "text": "Số ngày trong giai đoạn tăng trưởng thay đổi tùy theo giống, trong khi giai đoạn sinh sản và lúa chín thường cố định hoặc thay đổi rất ít. Sự khác biệt giữa giống lúa 120 ngày và 150 ngày được căn cứ hoàn toàn vào thời gian của giai đoạn tăng trưởng."
+        },
+        {
+          "heading": "Đặc điểm giai đoạn tăng trưởng và thời kỳ mạ",
+          "level": 1,
+          "text": "Giai đoạn này ghi nhận sự gia tăng liên tục về số chồi và diện tích lá. Thời gian mạ phụ thuộc phương pháp canh tác: nương mạ Đa-bô (9-11 ngày), mạ ướt (16-20 ngày). Nhiệt độ thấp hoặc điều kiện ngày dài là tác nhân kéo dài thời gian giai đoạn này."
+        },
+        {
+          "heading": "Đặc điểm giai đoạn sinh sản",
+          "level": 1,
+          "text": "Giai đoạn này bắt đầu khi cây lúa tượng đòng và chấm dứt khi lúa trổ bông hoàn toàn. Thời gian của giai đoạn này thường kéo dài khoảng 35 ngày."
+        }
+      ],
+      "key_phrases": [
+        "Giai đoạn tăng trưởng",
+        "Giai đoạn sinh sản",
+        "Giai đoạn lúa chín",
+        "Chồi tối đa",
+        "Tượng đòng",
+        "Trổ bông",
+        "Nương mạ Đa-bô",
+        "Mạ ướt",
+        "Giống lúa 120 ngày",
+        "Giống lúa 150 ngày"
+      ]
+    },
+    {
+      "summary": "GIAI ĐOẠN LÚA CHÍN. Giai đoạn lúa chín bắt đầu từ lúc trổ bông và kéo dài trong 30 ngày. Trời mưa nhiều hoặc nhiệt độ lạnh có thể kéo dài giai đoạn lúa chín, trong khi đó ngày nắng và ấm làm rút ngắn thời gian này.",
+      "full_text": "Giai đoạn lúa chín bắt đầu từ khi lúa trổ bông và thường kéo dài khoảng 30 ngày. Thời gian của giai đoạn này có thể thay đổi tùy theo điều kiện thời tiết, trong đó mưa nhiều hoặc nhiệt độ thấp làm kéo dài thời gian, còn nắng ấm sẽ rút ngắn giai đoạn lúa chín.",
+      "sections": [
+        {
+          "heading": "Giai đoạn lúa chín",
+          "level": 1,
+          "text": "Giai đoạn lúa chín bắt đầu từ lúc trổ bông và kéo dài trong khoảng 30 ngày. Điều kiện thời tiết ảnh hưởng trực tiếp đến thời gian của giai đoạn này. Nếu trời mưa nhiều hoặc nhiệt độ lạnh, thời gian lúa chín có thể kéo dài. Ngược lại, khi thời tiết nắng và ấm, quá trình chín của lúa sẽ diễn ra nhanh hơn."
+        }
+      ],
+      "key_phrases": [
+        "giai đoạn lúa chín",
+        "trổ bông",
+        "thời gian 30 ngày",
+        "ảnh hưởng thời tiết",
+        "nhiệt độ và lượng mưa"
+      ]
+    },
+    {
+      "summary": "Chu kỳ sinh trưởng của cây lúa gồm ba giai đoạn chính: tăng trưởng, sinh sản và lúa chín. Sự khác biệt về thời gian canh tác giữa các giống chủ yếu do giai đoạn tăng trưởng quyết định, trong khi hai giai đoạn sau thường cố định khoảng 65 ngày.",
+      "full_text": "Quá trình phát triển của cây lúa (ví dụ giống 120 ngày) chia thành: Giai đoạn tăng trưởng (55 ngày), Giai đoạn sinh sản (35 ngày) và Giai đoạn lúa chín (30 ngày). Số ngày trong giai đoạn tăng trưởng thay đổi tùy theo giống lúa và điều kiện ngoại cảnh như nhiệt độ thấp hoặc ngày dài. Ngược lại, giai đoạn sinh sản và lúa chín thường cố định hoặc ít thay đổi ở hầu hết các giống. Giai đoạn tăng trưởng bao gồm thời kỳ mạ và nhảy chồi với sự gia tăng liên tục về số chồi và diện tích lá. Giai đoạn sinh sản bắt đầu từ khi tượng đòng và kết thúc khi trổ bông. Đặc điểm hạt lúa cũng đa dạng về kích cỡ, hình dạng và màu sắc tùy theo giống.",
+      "sections": [
+        {
+          "heading": "Phân chia các giai đoạn sinh trưởng",
+          "level": 1,
+          "text": "Được chia làm 3 thời kỳ chính: 1. Giai đoạn tăng trưởng: từ gieo đến chồi tối đa (55 ngày với giống 120 ngày). 2. Giai đoạn sinh sản: từ làm đòng đến trổ bông (35 ngày). 3. Giai đoạn lúa chín: từ trổ bông đến thu hoạch (30 ngày)."
+        },
+        {
+          "heading": "Sự khác biệt giữa các giống lúa",
+          "level": 1,
+          "text": "Sự khác biệt trong chu kỳ sống (ví dụ giữa giống 120 ngày và 150 ngày) được căn cứ vào số ngày trong giai đoạn tăng trưởng. Thời gian từ làm đòng đến khi chín thường không thay đổi."
+        },
+        {
+          "heading": "Chi tiết giai đoạn tăng trưởng và thời kỳ mạ",
+          "level": 1,
+          "text": "Thời gian mạ thay đổi theo phương pháp: Đa-bô (9-11 ngày), mạ ướt (16-20 ngày) hoặc sạ thẳng. Đây là thời kỳ cây tăng trưởng mạnh về chiều cao, số chồi và diện tích lá."
+        },
+        {
+          "heading": "Đặc điểm giai đoạn sinh sản và hạt",
+          "level": 1,
+          "text": "Giai đoạn sinh sản kéo dài khoảng 35 ngày, tính từ lúc tượng đòng đến khi trổ bông hoàn toàn. Hạt lúa sau đó phát triển với sự thay đổi về kích cỡ, dạng hạt và chiều dài đuôi tùy giống."
+        }
+      ],
+      "key_phrases": [
+        "Giai đoạn tăng trưởng",
+        "Giai đoạn sinh sản",
+        "Giai đoạn lúa chín",
+        "Tượng đòng",
+        "Trổ bông",
+        "Nương mạ Đa-bô",
+        "Số chồi tối đa",
+        "Giống lúa 120 ngày"
+      ]
+    },
+    {
+      "summary": "Hạt lúa gồm các bộ phận chính như vỏ trấu, phôi nhũ và mầm. Phôi nhũ chứa nhiều chất dinh dưỡng cung cấp năng lượng cho hạt nảy mầm, còn mầm phát triển thành thân và rễ của cây lúa.",
+      "full_text": "CÁC PHẦN CỦA HẠT LÚA. Hạt lúa khi cắt dọc cho thấy các bộ phận gồm đuôi, vỏ trấu, phôi nhũ và mầm. Vỏ trấu là phần cứng bao bọc hạt. Phần lớn phôi nhũ được cấu tạo bởi chất bột, đường, đạm và chất béo, là nguồn dự trữ thức ăn của mầm lúa. Khoảng 80% phôi nhũ là tinh bột, là thức ăn cần thiết cho hạt giống nảy mầm. Mầm sẽ phát triển thành thân mầm và rễ mầm.",
+      "sections": [
+        {
+          "heading": "Các phần của hạt lúa",
+          "level": 1,
+          "text": "Hạt lúa khi cắt dọc gồm các bộ phận: đuôi, vỏ trấu, phôi nhũ và mầm. Vỏ trấu là lớp cứng bảo vệ bên ngoài của hạt lúa."
+        },
+        {
+          "heading": "Phôi nhũ",
+          "level": 2,
+          "text": "Phần lớn phôi nhũ được cấu tạo bởi chất bột, đường, đạm và chất béo. Đây là nguồn dự trữ thức ăn cho mầm lúa khi nảy mầm."
+        },
+        {
+          "heading": "Tinh bột trong phôi nhũ",
+          "level": 2,
+          "text": "Khoảng 80% phôi nhũ là tinh bột, đóng vai trò là nguồn dinh dưỡng chính giúp hạt giống nảy mầm."
+        },
+        {
+          "heading": "Mầm",
+          "level": 2,
+          "text": "Mầm phát triển thành thân mầm và rễ mầm khi hạt bắt đầu nảy mầm."
+        }
+      ],
+      "key_phrases": [
+        "các phần của hạt lúa",
+        "vỏ trấu",
+        "phôi nhũ",
+        "mầm lúa",
+        "tinh bột trong phôi nhũ",
+        "cấu tạo hạt lúa"
+      ]
+    },
+    {
+      "summary": "Các giai đoạn nảy mầm của hạt lúa được mô tả qua thời gian từ 0 đến 125 giờ, bắt đầu từ khi ngâm trong nước cho đến khi cây mầm phát triển đầy đủ với rễ và lá.",
+      "full_text": "CÁC GIAI ĐOẠN NẢY MẦM. 0 giờ: Hạt được ngâm trong nước. 50 giờ: Hạt bắt đầu nảy mầm nhỏ. 75 giờ: Mầm phát triển rõ hơn. 100 giờ: Cây mầm mọc lá và rễ. 125 giờ: Cây mầm phát triển đầy đủ với lá và hệ rễ hoàn chỉnh. Sự sinh trưởng của mầm tùy thuộc vào nhiệt độ, lượng không khí và nước thích nghi.",
+      "sections": [
+        {
+          "heading": "Các giai đoạn nảy mầm",
+          "level": 1,
+          "text": "Quá trình nảy mầm của hạt lúa diễn ra qua nhiều giai đoạn theo thời gian. Ở 0 giờ, hạt được ngâm trong nước. Đến 50 giờ, hạt bắt đầu xuất hiện mầm nhỏ. Tại 75 giờ, mầm tiếp tục phát triển rõ rệt hơn. Ở mốc 100 giờ, cây mầm đã hình thành lá và rễ. Đến 125 giờ, cây mầm phát triển hoàn chỉnh với hệ lá và rễ đầy đủ."
+        }
+      ],
+      "key_phrases": [
+        "các giai đoạn nảy mầm",
+        "ngâm trong nước",
+        "thời gian 0–125 giờ",
+        "sự sinh trưởng của mầm",
+        "nhiệt độ, không khí và nước"
+      ]
+    },
+    {
+      "summary": "Các bước và điều kiện cần thiết để hạt lúa nảy mầm trong môi trường nước.",
+      "full_text": "CÁC ĐIỀU KIỆN CẦN THIẾT CHO SỰ NẨY MẦM - NƯỚC. Hạt khô cần hấp thu nước để nảy mầm. Có nhiều hoạt động diễn ra bên trong hạt giống nảy mầm. Chất bột, đạm và chất béo được chuyển sang dạng thức ăn đơn giản cho mầm. Ngâm hạt giống ít nhất 24 giờ để nước ngấm đều.",
+      "sections": [
+        {
+          "heading": "Quy trình xử lý hạt",
+          "level": 1,
+          "text": "Ngâm hạt giống ít nhất 24 giờ để đảm bảo nước ngấm vào hạt dễ dàng và đều khắp."
+        },
+        {
+          "heading": "Chuyển hóa dinh dưỡng",
+          "level": 1,
+          "text": "Chất bột, đạm, béo được phân giải thành thức ăn cho mầm phát triển nhanh ngoài trời."
+        }
+      ],
+      "key_phrases": [
+        "Hạt khô",
+        "Ngâm nước",
+        "24 giờ",
+        "Chuyển hóa chất bột",
+        "Nảy mầm"
+      ]
+    },
+    {
+      "summary": "Không khí là một điều kiện quan trọng cho sự nảy mầm của hạt lúa. Nếu hạt giống bị ngập sâu dưới nước, thiếu không khí thì mầm sẽ phát triển chậm, cây yếu và thân cao.",
+      "full_text": "CÁC ĐIỀU KIỆN CẦN THIẾT CHO SỰ NẢY MẦM - KHÔNG KHÍ. Cây lúa nảy mầm cần không khí trời để sống. Trong nước có rất ít không khí. Nếu hạt giống bị ngập sâu dưới nước, sự sinh trưởng của mầm sẽ bị chậm và kết quả là thân mầm sẽ cao và yếu.",
+      "sections": [
+        {
+          "heading": "Không khí và sự nảy mầm của lúa",
+          "level": 1,
+          "text": "Cây lúa nảy mầm cần có không khí để phát triển. Không khí cung cấp oxy cần thiết cho quá trình hô hấp của hạt giống."
+        },
+        {
+          "heading": "Ảnh hưởng của nước đến mầm lúa",
+          "level": 2,
+          "text": "Trong nước có rất ít không khí. Nếu hạt giống bị ngập sâu dưới nước, mầm sẽ thiếu oxy để phát triển."
+        },
+        {
+          "heading": "Hậu quả khi thiếu không khí",
+          "level": 2,
+          "text": "Khi hạt giống thiếu không khí, sự sinh trưởng của mầm sẽ bị chậm lại và thân mầm thường phát triển cao nhưng yếu."
+        }
+      ],
+      "key_phrases": [
+        "nảy mầm lúa",
+        "không khí cho hạt giống",
+        "oxy cho mầm lúa",
+        "hạt giống bị ngập nước",
+        "mầm lúa yếu"
+      ]
+    },
+    {
+      "summary": "Nhiệt độ là điều kiện cần thiết cho sự nảy mầm của hạt lúa. Nhiệt độ tối ưu là 30°C, dưới 10°C hạt không nảy mầm, trên 50°C hạt lúa cũng không thể nảy mầm.",
+      "full_text": "CÁC ĐIỀU KIỆN CẦN THIẾT CHO SỰ NẢY MẦM - NHIỆT ĐỘ. 100°C: Nước sẽ sôi ở nhiệt độ này. Trên 50°C: Hạt lúa không thể nảy mầm trên nhiệt độ này. 30°C: Nhiệt độ tốt nhất cho hạt lúa nảy mầm. Dưới 10°C: Hạt lúa sẽ không nảy mầm dưới nhiệt độ này. Nhiệt độ ấm cần thiết cho sự gia tăng các hoạt động bên trong hạt giống và thúc đẩy sự sinh trưởng nhanh. Nhiệt độ thấp làm giảm các hoạt động bên trong hạt giống.",
+      "sections": [
+        {
+          "heading": "Các điều kiện cần thiết cho sự nảy mầm - Nhiệt độ",
+          "level": 1,
+          "text": "Nhiệt độ đóng vai trò quan trọng trong quá trình nảy mầm của hạt lúa. Ở 100°C, nước sẽ sôi. Trên 50°C, hạt lúa không thể nảy mầm. Nhiệt độ tối ưu cho hạt lúa nảy mầm là 30°C. Dưới 10°C, hạt lúa sẽ không nảy mầm. Nhiệt độ ấm giúp gia tăng các hoạt động bên trong hạt giống và thúc đẩy sinh trưởng, trong khi nhiệt độ thấp làm giảm các hoạt động này."
+        }
+      ],
+      "key_phrases": [
+        "điều kiện nảy mầm",
+        "nhiệt độ tối ưu 30°C",
+        "nhiệt độ giới hạn",
+        "hoạt động bên trong hạt giống",
+        "sinh trưởng nhanh"
+      ]
+    },
+    {
+      "summary": "Việc ủ hạt giống giúp cung cấp độ ẩm cần thiết để mầm sinh trưởng đều. Tuy nhiên, cần kiểm soát nhiệt độ chặt chẽ vì nhiệt độ quá cao có thể làm giảm tỷ lệ nảy mầm hoặc làm chết mầm.",
+      "full_text": "TẠI SAO PHẢI Ủ HẠT GIỐNG. Ngâm 24 giờ. Ủ 24 giờ. Tấm đậy. Sau khi ngâm 24 giờ, vớt hạt giống ra khỏi nước và rửa lại, đặt trên nền xi măng và phủ bằng tấm đậy ẩm. Việc ủ giữ hạt giống ẩm, làm tăng sự sinh trưởng của mầm, và kết quả hạt sẽ nảy mầm đều. Nếu nhiệt độ ủ quá cao, nảy mầm giảm và mầm hạt có thể bị chết.",
+      "sections": [
+        {
+          "heading": "Tại sao phải ủ hạt giống",
+          "level": 1,
+          "text": "Quy trình ủ hạt giống bao gồm hai giai đoạn chính: ngâm hạt trong 24 giờ, sau đó vớt ra rửa sạch và ủ trong 24 giờ tiếp theo bằng cách đặt trên nền xi măng và phủ tấm đậy ẩm. Mục đích của việc ủ là giữ ẩm để kích thích sự sinh trưởng của mầm và giúp hạt nảy mầm đồng đều. Cần lưu ý không để nhiệt độ ủ quá cao để tránh làm hỏng mầm hạt."
+        }
+      ],
+      "key_phrases": [
+        "tại sao phải ủ hạt giống",
+        "ngâm 24 giờ",
+        "ủ 24 giờ",
+        "nảy mầm đều",
+        "nhiệt độ ủ quá cao"
+      ]
+    },
+    {
+      "summary": "Chọn hạt giống tốt giúp cây mạ phát triển mạnh, khỏe và có nhiều rễ. Mạ khỏe sẽ sinh trưởng nhanh hơn sau khi cấy xuống ruộng và giúp ruộng lúa phát triển đồng đều.",
+      "full_text": "TẠI SAO CHỌN GIỐNG TỐT. Lượng thức ăn đầy đủ trong hạt giống tốt sẽ làm cho cây mạ phát triển mạnh hơn. Hạt giống tốt sẽ cho mạ tốt - khỏe - cứng và nhiều rễ. Mạ khỏe sẽ phát triển nhanh hơn mạ xấu khi được cấy vào ruộng. Hạt giống tốt sẽ giúp lúa phát triển đều.",
+      "sections": [
+        {
+          "heading": "Tại sao chọn giống tốt",
+          "level": 1,
+          "text": "Lượng thức ăn đầy đủ trong hạt giống tốt sẽ làm cho cây mạ phát triển mạnh hơn. Hạt giống tốt sẽ cho mạ tốt, khỏe, cứng và nhiều rễ. Mạ khỏe sẽ phát triển nhanh hơn mạ xấu khi được cấy vào ruộng. Hạt giống tốt sẽ giúp lúa phát triển đều."
+        }
+      ],
+      "key_phrases": [
+        "chọn giống tốt",
+        "mạ khỏe và nhiều rễ",
+        "phát triển mạnh",
+        "mạ phát triển nhanh",
+        "lúa phát triển đều"
+      ]
+    },
+    {
+      "summary": "Nguồn thức ăn cho sự tăng trưởng của cây lúa thay đổi theo giai đoạn phát triển: từ thức ăn trong phôi nhũ (giai đoạn mạ non) đến thức ăn từ đất và lá (giai đoạn ruộng), với thời kỳ chuyển tiếp ở giữa.",
+      "full_text": "NGUỒN THỨC ĂN CHO SỰ TĂNG TRƯỞNG. Nương mạ - Thức ăn từ hạt. Thời kỳ chuyển tiếp. Ruộng - Thức ăn từ đất và lá. Mạ non tăng trưởng nhờ vào thức ăn trong phôi nhũ. Sau khi cây có 4 lá, cây lớn nhờ nguồn thức ăn lấy qua rễ và tạo được từ lá. Mạ càng lớn nguồn thức ăn càng lệ thuộc vào môi trường chung quanh.",
+      "sections": [
+        {
+          "heading": "Nguồn thức ăn cho sự tăng trưởng",
+          "level": 1,
+          "text": "Sự tăng trưởng của cây lúa phụ thuộc vào các nguồn thức ăn khác nhau theo từng giai đoạn. Ở giai đoạn nương mạ, cây sử dụng thức ăn từ hạt. Trong thời kỳ chuyển tiếp, cây bắt đầu chuyển sang nguồn thức ăn bên ngoài. Ở giai đoạn ruộng, cây sử dụng thức ăn từ đất và lá. Mạ non tăng trưởng nhờ vào thức ăn trong phôi nhũ. Sau khi cây có 4 lá, cây lớn nhờ nguồn thức ăn lấy qua rễ và tạo được từ lá. Mạ càng lớn nguồn thức ăn càng lệ thuộc vào môi trường chung quanh."
+        }
+      ],
+      "key_phrases": [
+        "nguồn thức ăn tăng trưởng",
+        "thức ăn từ phôi nhũ",
+        "thức ăn từ đất và lá",
+        "thời kỳ chuyển tiếp",
+        "nương mạ",
+        "4 lá",
+        "môi trường chung quanh"
+      ]
+    },
+    {
+      "summary": "Lượng nước ảnh hưởng trực tiếp đến sự tăng trưởng của mạ. Nước cạn giúp mạ lùn, khỏe và rễ phát triển tốt; ngược lại, nước ngập sâu làm mạ cao yếu, rễ phát triển kém do thiếu không khí, dẫn đến dễ bị thiệt hại khi cấy.",
+      "full_text": "CÁC YẾU TỐ ẢNH HƯỞNG ĐẾN SỰ TĂNG TRƯỞNG CỦA MẠ - LƯỢNG NƯỚC. Mực nước sâu. Nương mạ ướt. Cấy vào ruộng. Nước cạn: Tốt. Lùn và khỏe, rễ phát triển tốt, ít bị hại. Nước sâu: Xấu. Cao và yếu, rễ phát triển xấu, dễ bị chết. * Nước ngập sâu làm rễ phát triển xấu và mạ cao cây; vì trong nước thiếu không khí. Khi cấy mạ dễ bị thiệt hại.",
+      "sections": [
+        {
+          "heading": "Các yếu tố ảnh hưởng đến sự tăng trưởng của mạ - Lượng nước",
+          "level": 1,
+          "text": "Tài liệu so sánh sự phát triển của mạ trong hai điều kiện mực nước khác nhau: nước cạn và nước sâu. Ở điều kiện nước cạn, mạ phát triển tốt, cây lùn và khỏe, hệ thống rễ phát triển mạnh, giúp giảm thiểu thiệt hại khi cấy. Ngược lại, ở điều kiện nước sâu, mạ phát triển xấu, cây mọc cao nhưng yếu ớt, bộ rễ kém phát triển và dễ bị chết. Nguyên nhân là do nước ngập sâu gây thiếu không khí, làm ảnh hưởng đến bộ rễ và khiến mạ dễ bị tổn thương trong quá trình canh tác."
+        }
+      ],
+      "key_phrases": [
+        "tăng trưởng của mạ",
+        "lượng nước",
+        "nước cạn",
+        "nước ngập sâu",
+        "thiếu không khí"
+      ]
+    },
+    {
+      "summary": "Lượng nước ảnh hưởng trực tiếp đến sự tăng trưởng của mạ. Nương mạ ướt giúp mạ phát triển đồng đều nhưng rễ kém, trong khi nương mạ khô khiến mạ phát triển không đều nhưng rễ tốt hơn; thiếu nước sẽ làm mạ tăng trưởng chậm.",
+      "full_text": "CÁC YẾU TỐ ẢNH HƯỞNG ĐẾN SỰ TĂNG TRƯỞNG CỦA MẠ - LƯỢNG NƯỚC. Nương mạ ướt: Tăng trưởng đồng đều, rễ xấu. Nương mạ khô: Tăng trưởng không đồng đều, rễ tốt. Lượng nước nhiều trong nương mạ ướt giúp cây mạ tăng trưởng đều. Sự phân bố nước không đều trong nương mạ khô làm cây mạ tăng trưởng không đều, tuy nhiên rễ mạ thường phát triển rất tốt. Mạ thiếu nước sẽ tăng trưởng chậm.",
+      "sections": [
+        {
+          "heading": "Các yếu tố ảnh hưởng đến sự tăng trưởng của mạ - Lượng nước",
+          "level": 1,
+          "text": "Trong nương mạ ướt, cây mạ tăng trưởng đồng đều nhưng rễ phát triển kém. Lượng nước nhiều giúp cây mạ phát triển đều. Trong nương mạ khô, sự phân bố nước không đều làm cây mạ tăng trưởng không đồng đều, tuy nhiên rễ mạ thường phát triển tốt hơn. Khi mạ thiếu nước, sự tăng trưởng của cây sẽ chậm lại."
+        }
+      ],
+      "key_phrases": [
+        "tăng trưởng của mạ",
+        "lượng nước",
+        "nương mạ ướt",
+        "nương mạ khô",
+        "tăng trưởng đồng đều",
+        "rễ phát triển",
+        "mạ thiếu nước"
+      ]
+    },
+    {
+      "summary": "Nhiệt độ là yếu tố ảnh hưởng đến sự tăng trưởng của mạ. Cây mạ tăng trưởng nhanh hơn ở nhiệt độ ấm (25-35°C) so với nhiệt độ lạnh (16°C). Nhiệt độ lạnh làm lá bị vàng và cây có thể chết.",
+      "full_text": "CÁC YẾU TỐ ẢNH HƯỞNG ĐẾN SỰ TĂNG TRƯỞNG CỦA MẠ - NHIỆT ĐỘ. Lanh: 16°C. Ấm: 25°C - 35°C. 100°C (thang nhiệt kế tham chiếu). Cây tăng trưởng ở nhiệt độ ấm nhanh hơn ở nhiệt độ lạnh. Ở nhiệt độ ấm cây mạ cao hơn. Nhiệt độ lạnh làm lá bị vàng và cây có thể chết.",
+      "sections": [
+        {
+          "heading": "Các yếu tố ảnh hưởng đến sự tăng trưởng của mạ - Nhiệt độ",
+          "level": 1,
+          "text": "Nhiệt độ là yếu tố quan trọng ảnh hưởng trực tiếp đến sự tăng trưởng của cây mạ. Ở điều kiện lạnh (16°C), cây mạ tăng trưởng chậm, lá có thể bị vàng và cây có thể chết. Ở điều kiện ấm (25°C - 35°C), cây mạ tăng trưởng nhanh hơn và cao hơn. Cây tăng trưởng ở nhiệt độ ấm nhanh hơn ở nhiệt độ lạnh. Ở nhiệt độ ấm cây mạ cao hơn. Nhiệt độ lạnh làm lá bị vàng và cây có thể chết."
+        }
+      ],
+      "key_phrases": [
+        "yếu tố ảnh hưởng tăng trưởng",
+        "nhiệt độ lạnh 16°C",
+        "nhiệt độ ấm 25-35°C",
+        "cây mạ cao hơn",
+        "lá bị vàng",
+        "cây có thể chết"
+      ]
+    },
+    {
+      "summary": "Ánh sáng đầy đủ là yếu tố quan trọng giúp mạ khỏe mạnh và phát triển cân đối. Thiếu ánh sáng do mây mù hoặc bóng râm khiến mạ yếu, phiến lá vươn dài và khó tạo đủ dinh dưỡng.",
+      "full_text": "CÁC YẾU TỐ ẢNH HƯỞNG ĐẾN SỰ TĂNG TRƯỞNG CỦA MẠ - CƯỜNG ĐỘ ÁNH SÁNG. Xấu. Tốt. * Mạ cần ánh sáng đầy đủ. Những ngày nhiều mây thường thiếu ánh sáng. * Thiếu ánh sáng mạ sẽ yếu, vì không tạo đủ thức ăn. * Thiếu ánh sáng làm phiến lá và bẹ lá vươn dài ra, cây trở nên yếu hơn. * Nên chuẩn bị nương mạ ở nơi tránh bóng cây và nhà cao.",
+      "sections": [
+        {
+          "heading": "Các yếu tố ảnh hưởng đến sự tăng trưởng của mạ - Cường độ ánh sáng",
+          "level": 1,
+          "text": "Cường độ ánh sáng đóng vai trò quyết định đến sức khỏe của cây mạ. Khi có đủ ánh sáng, mạ phát triển tốt và cứng cáp. Ngược lại, trong điều kiện thiếu sáng (như ngày nhiều mây), mạ không thể quang hợp để tạo đủ 'thức ăn', dẫn đến tình trạng phiến lá và bẹ lá vươn dài bất thường, làm cây trở nên yếu ớt. Do đó, nương mạ nên được đặt ở những vị trí thông thoáng, tránh bị che khuất bởi bóng cây hoặc các công trình cao tầng."
+        }
+      ],
+      "key_phrases": [
+        "cường độ ánh sáng",
+        "tăng trưởng của mạ",
+        "thiếu ánh sáng",
+        "phiến lá vươn dài",
+        "vị trí nương mạ"
+      ]
+    },
+    {
+      "summary": "Cường độ ánh sáng ảnh hưởng lớn đến sự tăng trưởng của mạ. Thiếu ánh sáng làm mạ yếu và cao cây, trọng lượng cây khô thấp, dễ bị tổn thương khi cấy và dễ bị bệnh hại.",
+      "full_text": "CÁC YẾU TỐ ẢNH HƯỞNG ĐẾN SỰ TĂNG TRƯỞNG CỦA MẠ - CƯỜNG ĐỘ ÁNH SÁNG. Thiếu ánh sáng làm cho: mạ yếu và cao cây; trọng lượng cây khô của mạ thấp; mạ dễ bị tổn thương lúc cấy; và dễ bị bệnh hại.",
+      "sections": [
+        {
+          "heading": "Các yếu tố ảnh hưởng đến sự tăng trưởng của mạ - Cường độ ánh sáng",
+          "level": 1,
+          "text": "Thiếu ánh sáng làm cho mạ yếu và cao cây. Trọng lượng cây khô của mạ thấp. Mạ dễ bị tổn thương lúc cấy và dễ bị bệnh hại."
+        }
+      ],
+      "key_phrases": [
+        "cường độ ánh sáng",
+        "thiếu ánh sáng",
+        "mạ yếu và cao cây",
+        "trọng lượng cây khô thấp",
+        "dễ bị tổn thương lúc cấy",
+        "dễ bị bệnh hại"
+      ]
+    },
+    {
+      "summary": "Dưỡng chất là yếu tố ảnh hưởng đến sự tăng trưởng của mạ. Cây thiếu dưỡng chất sẽ còi cọc, lùn; cây đủ dưỡng chất sẽ khỏe mạnh và cao lớn. Phân bón cung cấp thêm dưỡng chất ngoài nguồn từ đất.",
+      "full_text": "CÁC YẾU TỐ ẢNH HƯỞNG ĐẾN SỰ TĂNG TRƯỞNG CỦA MẠ - DƯỠNG CHẤT CÓ ÍCH. Cây lùn - Thiếu dưỡng chất. Cây khỏe mạnh - Đủ dưỡng chất. Phân bón cung cấp thức ăn cho cây ngoài nguồn lấy từ đất. Cần dùng thêm phân bón nếu mạ dài ngày, trên nương mạ khô, ở vùng lạnh và ở vùng đất đai cằn cỗi.",
+      "sections": [
+        {
+          "heading": "Các yếu tố ảnh hưởng đến sự tăng trưởng của mạ - Dưỡng chất có ích",
+          "level": 1,
+          "text": "Dưỡng chất đóng vai trò quan trọng trong sự tăng trưởng của cây mạ. Cây thiếu dưỡng chất sẽ bị lùn, còi cọc và kém phát triển. Cây đủ dưỡng chất sẽ khỏe mạnh, cao lớn và phát triển tốt. Phân bón cung cấp thức ăn cho cây ngoài nguồn lấy từ đất. Cần dùng thêm phân bón nếu mạ dài ngày, trên nương mạ khô, ở vùng lạnh và ở vùng đất đai cằn cỗi."
+        }
+      ],
+      "key_phrases": [
+        "dưỡng chất có ích",
+        "thiếu dưỡng chất",
+        "đủ dưỡng chất",
+        "cây lùn",
+        "cây khỏe mạnh",
+        "phân bón",
+        "nương mạ khô",
+        "vùng đất cằn cỗi"
+      ]
+    },
+    {
+      "summary": "Dinh dưỡng ảnh hưởng đến sự tăng trưởng của mạ. Bón phân quá nhiều trong nương mạ có thể làm cây dễ bị bệnh, mạ cao và yếu; ở nhiều vùng khí hậu ấm, thời gian mạ ngắn nên thường ít cần bón phân.",
+      "full_text": "CÁC YẾU TỐ ẢNH HƯỞNG ĐẾN SỰ TĂNG TRƯỞNG CỦA MẠ - DINH DƯỠNG PHÙ HỢP. Phân bón nhiều quá ở nương mạ đưa đến: cây dễ bị bệnh, chẳng hạn bệnh cháy lá; mạ rất cao và yếu. Thời gian mạ ở các vùng khí hậu ấm trên thế giới từ 10-20 ngày, phân bón thường ít được dùng.",
+      "sections": [
+        {
+          "heading": "Các yếu tố ảnh hưởng đến sự tăng trưởng của mạ - Dinh dưỡng phù hợp",
+          "level": 1,
+          "text": "Bón phân quá nhiều ở nương mạ có thể làm cây dễ bị bệnh, chẳng hạn như bệnh cháy lá, và làm cho mạ rất cao và yếu. Ở các vùng khí hậu ấm trên thế giới, thời gian mạ thường từ 10 đến 20 ngày nên phân bón thường ít được sử dụng."
+        }
+      ],
+      "key_phrases": [
+        "dinh dưỡng phù hợp",
+        "bón phân quá nhiều",
+        "bệnh cháy lá",
+        "mạ cao và yếu",
+        "thời gian mạ 10-20 ngày",
+        "ít sử dụng phân bón"
+      ]
+    },
+    {
+      "summary": "Mạ tốt có cây cao và lớn đều. Mạ lớn không đều do nhiều nguyên nhân như gieo hạt không đều, sự nảy mầm của hạt, cách chuẩn bị nền mạ, nước và dưỡng chất trong đất.",
+      "full_text": "MẠ TỐT CÓ CÂY CAO VÀ LỚN ĐỀU. Cây mạ đều. Cây mạ không đều. Mạ lớn không đều là do: Gieo hạt không đều. Sự nảy mầm của hạt. Cách chuẩn bị nền mạ. Nước. Dưỡng chất trong đất.",
+      "sections": [
+        {
+          "heading": "Mạ tốt có cây cao và lớn đều",
+          "level": 1,
+          "text": "Mạ tốt cần có cây cao và lớn đều nhau. Sự không đồng đều trong tăng trưởng của mạ có thể nhận biết qua sự chênh lệch chiều cao giữa các cây. Mạ lớn không đều là do các nguyên nhân: gieo hạt không đều, sự nảy mầm của hạt không đồng loạt, cách chuẩn bị nền mạ không tốt, yếu tố nước và dưỡng chất trong đất không đồng đều."
+        }
+      ],
+      "key_phrases": [
+        "mạ tốt",
+        "cây cao và lớn đều",
+        "cây mạ đều",
+        "cây mạ không đều",
+        "gieo hạt không đều",
+        "nảy mầm của hạt",
+        "chuẩn bị nền mạ",
+        "dưỡng chất trong đất"
+      ]
+    },
+    {
+      "summary": "Mạ tốt thường có bẹ lá ngắn. Bẹ lá dài cho thấy mạ vươn nhanh nhưng yếu, trong khi bẹ lá ngắn giúp cây mạ khỏe hơn.",
+      "full_text": "MẠ TỐT CÓ BẸ LÁ NGẮN. Bẹ lá đầu tiên. Bẹ lá là phần dưới của lá, bao lấy thân và các lá non. Bẹ lá dài do tốc độ vươn nhanh, làm cây mạ yếu.",
+      "sections": [
+        {
+          "heading": "Mạ tốt có bẹ lá ngắn",
+          "level": 1,
+          "text": "Bẹ lá là phần dưới của lá, bao lấy thân và các lá non. Mạ tốt thường có bẹ lá ngắn. Khi bẹ lá dài do tốc độ vươn nhanh sẽ làm cây mạ yếu."
+        }
+      ],
+      "key_phrases": [
+        "mạ tốt",
+        "bẹ lá ngắn",
+        "bẹ lá đầu tiên",
+        "bao lấy thân và lá non",
+        "bẹ lá dài làm mạ yếu"
+      ]
+    },
+    {
+      "summary": "Để có bẹ lá ngắn cần độ ngập nước thích hợp ở nương mạ. Nước ngập quá nhiều (10cm) làm bẹ lá dài và mạ yếu, trong khi mực nước phù hợp tạo bẹ lá ngắn (2-5cm) và mạ tốt.",
+      "full_text": "ĐỂ CÓ BẸ LÁ NGẮN CẦN ĐỘ NGẬP NƯỚC THÍCH HỢP. Nước ngập 10 cm: Xấu. Bẹ lá 2-5 cm: Tốt. Mực nước ở nương mạ. Quá nhiều nước làm bẹ lá dài và mạ yếu. Cây mạ yếu sẽ lớn chậm sau khi cấy, phục hồi chậm. Lá dài và rũ của mạ xấu sẽ quấn vào bùn sau khi cấy.",
+      "sections": [
+        {
+          "heading": "Để có bẹ lá ngắn cần độ ngập nước thích hợp",
+          "level": 1,
+          "text": "Mực nước ở nương mạ ảnh hưởng trực tiếp đến chất lượng bẹ lá và sức khỏe của cây mạ. Khi nước ngập quá nhiều (10cm), bẹ lá sẽ dài và mạ yếu - đây là trường hợp xấu. Khi mực nước thích hợp, bẹ lá chỉ dài 2-5cm và cây mạ tốt, khỏe mạnh. Quá nhiều nước làm bẹ lá dài và mạ yếu. Cây mạ yếu sẽ lớn chậm sau khi cấy và phục hồi chậm. Lá dài và rũ của mạ xấu sẽ quấn vào bùn sau khi cấy."
+        }
+      ],
+      "key_phrases": [
+        "bẹ lá ngắn",
+        "độ ngập nước thích hợp",
+        "nước ngập 10cm",
+        "bẹ lá 2-5cm",
+        "mạ yếu",
+        "mạ tốt",
+        "mực nước nương mạ",
+        "lá dài và rũ",
+        "quấn vào bùn sau khi cấy"
+      ]
+    },
+    {
+      "summary": "MẠ TỐT KHÔNG CÓ DỊCH BỆNH HẠI NHƯ: Sâu đục thân, bệnh cháy lá, sâu cắn lá, rầy và cỏ dại.",
+      "full_text": "Mạ tốt cần không bị sâu bệnh và cỏ dại gây hại. Các tác nhân phổ biến gồm sâu đục thân, bệnh cháy lá, sâu cắn lá, rầy và cỏ dại.",
+      "sections": [
+        {
+          "heading": "Mạ tốt không có dịch bệnh hại",
+          "level": 1,
+          "text": "Mạ tốt cần không bị các loại sâu bệnh và cỏ dại gây hại như sâu đục thân, bệnh cháy lá, sâu cắn lá, rầy và cỏ dại."
+        }
+      ],
+      "key_phrases": [
+        "mạ tốt",
+        "dịch bệnh hại",
+        "sâu đục thân",
+        "bệnh cháy lá",
+        "sâu cắn lá",
+        "rầy",
+        "cỏ dại"
+      ]
+    },
+    {
+      "summary": "Mạ tốt có rễ nhiều và lớn. Cây mạ tốt chứa nhiều dưỡng chất và phục hồi tốt hơn sau khi cấy, so với mạ xấu có rễ ít và nhỏ.",
+      "full_text": "MẠ TỐT CÓ RỄ NHIỀU VÀ LỚN. Xấu: cây mạ có rễ ít và nhỏ. Tốt: cây mạ có rễ nhiều và lớn. Cây mạ lớn chứa nhiều dưỡng chất, cây phục hồi tốt hơn sau khi cấy.",
+      "sections": [
+        {
+          "heading": "Mạ tốt có rễ nhiều và lớn",
+          "level": 1,
+          "text": "Chất lượng bộ rễ là một trong những tiêu chí quan trọng để đánh giá mạ tốt hay xấu. Mạ xấu có rễ ít và nhỏ, trong khi mạ tốt có rễ nhiều và lớn hơn rõ rệt. Cây mạ lớn chứa nhiều dưỡng chất, giúp cây phục hồi tốt hơn sau khi cấy."
+        }
+      ],
+      "key_phrases": [
+        "mạ tốt",
+        "rễ nhiều và lớn",
+        "mạ xấu",
+        "rễ ít và nhỏ",
+        "dưỡng chất",
+        "phục hồi sau khi cấy"
+      ]
+    },
+    {
+      "summary": "TẠI SAO PHẢI CẤY. Cấy ngay hàng sẽ dễ làm cỏ. Lúa sạ dễ bị phá hại bởi chuột, ốc và chim.",
+      "full_text": "Cấy lúa giúp hạn chế cỏ dại và giảm thiệt hại do chuột, ốc và chim gây ra. Vì vậy việc cấy theo hàng mang lại lợi ích cho sự phát triển của ruộng lúa.",
+      "sections": [
+        {
+          "heading": "Tại sao phải cấy",
+          "level": 1,
+          "text": "Cấy ngay hàng sẽ giúp việc làm cỏ dễ dàng hơn. Trong khi đó, lúa sạ dễ bị phá hại bởi chuột, ốc và chim."
+        }
+      ],
+      "key_phrases": [
+        "tại sao phải cấy",
+        "cấy ngay hàng",
+        "dễ làm cỏ",
+        "lúa sạ",
+        "chuột ốc chim gây hại"
+      ]
+    },
+    {
+      "summary": "Cấy bao nhiêu tép phụ thuộc vào số cây mạ. Có thể cấy một hoặc hai tép. Không có sự khác biệt về năng suất hạt giữa cách cấy 1 và 2 tép nếu không có cây mạ chết.",
+      "full_text": "CẤY BAO NHIÊU TÉP. Số cây mạ. Hai tép. Một tép. Nếu một tép bị chết, tép mạ còn lại vẫn nảy chồi đủ. Cần cấy lại nếu mạ chết. Không có sự khác biệt về năng suất hạt giữa cách cấy 1 và 2 tép, nếu không có cây mạ chết.",
+      "sections": [
+        {
+          "heading": "Cấy bao nhiêu tép",
+          "level": 1,
+          "text": "Số lượng tép cấy phụ thuộc vào số cây mạ có sẵn. Có hai cách cấy: cấy một tép hoặc cấy hai tép. Khi cấy một tép, nếu tép đó bị chết thì cần cấy lại. Khi cấy hai tép, nếu một tép bị chết, tép mạ còn lại vẫn nảy chồi đủ. Không có sự khác biệt về năng suất hạt giữa cách cấy 1 và 2 tép, nếu không có cây mạ chết."
+        }
+      ],
+      "key_phrases": [
+        "cấy tép",
+        "số cây mạ",
+        "một tép",
+        "hai tép",
+        "nảy chồi đủ",
+        "cấy lại",
+        "mạ chết",
+        "năng suất hạt"
+      ]
+    },
+    {
+      "summary": "Cấy lúa ở độ sâu thích hợp giúp cây phát triển tốt và ra chồi bình thường. Cấy quá sâu làm chậm sự tăng trưởng và ra chồi, trong khi cấy ở độ sâu khoảng 2–3 cm giúp chồi mới phát triển không bị chậm.",
+      "full_text": "CẤY Ở ĐỘ SÂU THÍCH HỢP. Quá sâu: Chậm tăng chồi lại sau 10 ngày. Độ sâu 2-3 cm: Chồi mới, sự tăng chồi không bị chậm. Thường cây nhảy chồi lúc 5-10 ngày sau khi cấy, cấy sâu làm cây nhảy chồi chậm. Ngay sau khi cấy, cây ngừng phát triển. Từ 2-4 ngày sau khi cấy, cây ra lá và rễ mới.",
+      "sections": [
+        {
+          "heading": "Cấy ở độ sâu thích hợp",
+          "level": 1,
+          "text": "Cấy quá sâu làm chậm sự tăng chồi của cây sau khoảng 10 ngày. Cấy ở độ sâu khoảng 2-3 cm giúp chồi mới phát triển và sự tăng chồi không bị chậm. Thông thường cây bắt đầu nhảy chồi sau 5-10 ngày sau khi cấy. Ngay sau khi cấy cây tạm ngừng phát triển, và từ 2-4 ngày sau cây bắt đầu ra lá và rễ mới."
+        }
+      ],
+      "key_phrases": [
+        "cấy ở độ sâu thích hợp",
+        "độ sâu 2-3 cm",
+        "nhảy chồi sau khi cấy",
+        "cấy quá sâu",
+        "chậm tăng chồi",
+        "ra lá và rễ mới"
+      ]
+    },
+    {
+      "summary": "CẮT LÁ MẠ. Để nguyên. Cắt lá. Mạ lý tưởng. Mực nước. Mặt đất. Lá mạ dài và rũ dính bùn dễ bị nhiễm bệnh. Cắt lá để ngừa. Cắt lá có thể làm cây dễ bị nhiễm bệnh vi khuẩn. Để khỏi cắt lá, nên cấy mạ đúng tuổi.",
+      "full_text": "Cắt lá mạ là kỹ thuật được thực hiện khi mạ có lá dài và rũ dính bùn dễ bị nhiễm bệnh. Cắt lá giúp ngừa nhiễm bệnh, tuy nhiên cắt lá có thể làm cây dễ bị nhiễm vi khuẩn, nên cần cấy mạ đúng tuổi để khỏi phải cắt lá.",
+      "sections": [
+        {
+          "heading": "Cắt lá mạ",
+          "level": 1,
+          "text": "Kỹ thuật cắt lá mạ được áp dụng trong một số trường hợp nhất định. Có ba trạng thái mạ: để nguyên, cắt lá và mạ lý tưởng. Lá mạ dài và rũ dính bùn dễ bị nhiễm bệnh, vì vậy cắt lá để ngừa bệnh. Tuy nhiên, cắt lá cũng có thể làm cây dễ bị nhiễm bệnh vi khuẩn. Để tránh phải cắt lá, nên cấy mạ đúng tuổi để có mạ lý tưởng với lá không quá dài và rũ."
+        }
+      ],
+      "key_phrases": [
+        "cắt lá mạ",
+        "lá dài và rũ",
+        "dính bùn",
+        "nhiễm bệnh",
+        "nhiễm vi khuẩn",
+        "mạ lý tưởng",
+        "cấy mạ đúng tuổi",
+        "mực nước",
+        "mặt đất"
+      ]
+    },
+    {
+      "summary": "Lá lúa có các bộ phận như phiến lá, cổ lá, bẹ lá, tai lá và thìa lá. Lá lúa có thể phân biệt với cỏ khác nhờ tai lá và thìa lá, đồng thời có các gân lá song song.",
+      "full_text": "LÁ LÚA. Các bộ phận của lá lúa gồm: phiến lá, cổ lá, bẹ lá, tai lá và thìa lá. Lá lúa có thể được phân biệt với các cây cỏ khác bởi sự hiện diện của thìa lá và tai lá. Lá của cỏ có cổ lá nhưng có thể chỉ có tai lá hoặc thìa lá, hoặc không có cả hai. Giống như lá cỏ, lá lúa có những gân song song.",
+      "sections": [
+        {
+          "heading": "Lá lúa",
+          "level": 1,
+          "text": "Lá lúa gồm các bộ phận như phiến lá, cổ lá, bẹ lá, tai lá và thìa lá. Lá lúa có thể phân biệt với các cây cỏ khác nhờ sự hiện diện của tai lá và thìa lá. Giống như các loại cỏ khác, lá lúa có các gân lá song song."
+        }
+      ],
+      "key_phrases": [
+        "lá lúa",
+        "phiến lá",
+        "cổ lá",
+        "bẹ lá",
+        "tai lá",
+        "thìa lá",
+        "gân lá song song"
+      ]
+    },
+    {
+      "summary": "Thân chính của cây lúa có các lá được đánh số theo thứ tự từ lá mầm đến lá cờ. Lá mầm mọc ra trước tiên, tiếp theo là lá thứ nhất, thứ hai... Lá thứ hai là lá đầu tiên có phiến lá. Lá cuối cùng gọi là lá cờ. Giống lúa minh họa có 14 lá.",
+      "full_text": "NHỮNG LÁ CỦA THÂN CHÍNH. Lá mầm. Lá thứ nhất. Lá thứ hai. Lá thứ ba. Lá thứ tư. Lá thứ 12. Lá thứ 13. Lá cờ (thứ 14). Giống lúa có 14 lá. Lá mầm mọc ra trước tiên, kế đến là lá thứ nhất, lá thứ hai... Lá thứ hai là lá đầu tiên có phiến lá, các lá khác tiếp tục phát triển. Lá cuối cùng gọi là lá cờ.",
+      "sections": [
+        {
+          "heading": "Những lá của thân chính",
+          "level": 1,
+          "text": "Thân chính của cây lúa phát triển các lá theo thứ tự từ dưới lên trên. Lá mầm mọc ra trước tiên, kế đến là lá thứ nhất, lá thứ hai và tiếp tục phát triển. Lá thứ hai là lá đầu tiên có phiến lá, các lá khác tiếp tục phát triển theo thứ tự. Lá cuối cùng gọi là lá cờ. Giống lúa được minh họa có tổng cộng 14 lá, với lá cờ là lá thứ 14."
+        }
+      ],
+      "key_phrases": [
+        "lá thân chính",
+        "lá mầm",
+        "lá thứ nhất",
+        "lá thứ hai",
+        "phiến lá",
+        "lá cờ",
+        "lá thứ 14",
+        "giống lúa 14 lá"
+      ]
+    },
+    {
+      "summary": "Lá lúa trên thân chính mọc lần lượt từng lá một. Trung bình khoảng 7 ngày sẽ hình thành một lá mới và các lá tiếp tục mọc nối tiếp nhau theo thời gian.",
+      "full_text": "SỰ TẠO LÁ. Hình cắt dọc của phần trên thân lúa. Sự phát triển của một lá: từ 0 ngày đến 7 ngày. Lá lúa trên thân chính mọc từng lá một. Bình quân cứ 7 ngày có một lá mới được hình thành. Các lá liên tiếp mọc dõi diện nhau.",
+      "sections": [
+        {
+          "heading": "Sự tạo lá",
+          "level": 1,
+          "text": "Lá lúa trên thân chính mọc lần lượt từng lá một. Trung bình khoảng 7 ngày sẽ có một lá mới được hình thành. Các lá tiếp tục mọc nối tiếp nhau trên thân lúa."
+        }
+      ],
+      "key_phrases": [
+        "sự tạo lá",
+        "lá lúa",
+        "phát triển của lá",
+        "7 ngày một lá mới",
+        "lá mọc nối tiếp"
+      ]
+    },
+    {
+      "summary": "Lóng là các đốt thân của cây lúa. Thông thường cây lúa có 4-6 lóng (dài hơn 1cm) lúc thu hoạch. Lóng lúa dài làm cây lúa dễ đổ ngã. Trồng mật độ dày, trời nhiều mây, bón phân đạm nhiều và nhiệt độ cao sẽ làm lóng dài hơn.",
+      "full_text": "LÓNG. Lóng dài nhất. Lóng ngắn nhất. Lóng thứ nhất. Lóng thứ hai. Lóng thứ ba. Lóng thứ tư. Lóng thứ năm. Thông thường cây lúa có 4-6 lóng (dài hơn 1cm) lúc thu hoạch. Lóng lúa dài làm cây lúa dễ đổ ngã. Trồng mật độ dày, trời nhiều mây, bón phân đạm nhiều và nhiệt độ cao sẽ làm lóng dài hơn.",
+      "sections": [
+        {
+          "heading": "Lóng",
+          "level": 1,
+          "text": "Lóng là các đốt thân của cây lúa, được đánh số từ lóng thứ nhất (dài nhất, gần bông) đến lóng thứ năm (ngắn nhất, gần gốc). Thông thường cây lúa có 4-6 lóng dài hơn 1cm lúc thu hoạch. Lóng lúa dài làm cây lúa dễ đổ ngã. Các yếu tố làm lóng dài hơn bao gồm: trồng mật độ dày, trời nhiều mây, bón phân đạm nhiều và nhiệt độ cao."
+        }
+      ],
+      "key_phrases": [
+        "lóng cây lúa",
+        "lóng dài nhất",
+        "lóng ngắn nhất",
+        "4-6 lóng",
+        "lóng dài hơn 1cm",
+        "cây lúa đổ ngã",
+        "mật độ dày",
+        "phân đạm",
+        "nhiệt độ cao"
+      ]
+    },
+    {
+      "summary": "Rễ lúa gồm rễ mầm và rễ phụ. Rễ mầm xuất hiện đầu tiên nhưng thường chết sau khoảng một tháng, sau đó rễ phụ mọc từ các mắt phía dưới và trở thành hệ rễ chính của cây.",
+      "full_text": "NGUỒN GỐC CỦA RỄ. Rễ mầm và rễ phụ. Rễ mầm thường chết trong vòng một tháng sau khi mọc. Rễ phụ mọc từ những mắt nằm phía dưới. Rễ già hoặc các phần già của rễ màu nâu, trong khi rễ mới hoặc các phần non của rễ màu trắng.",
+      "sections": [
+        {
+          "heading": "Nguồn gốc của rễ",
+          "level": 1,
+          "text": "Rễ lúa gồm rễ mầm và rễ phụ. Rễ mầm xuất hiện đầu tiên nhưng thường chết trong vòng một tháng sau khi mọc. Rễ phụ mọc từ các mắt nằm phía dưới của thân. Rễ già hoặc các phần già của rễ có màu nâu, còn rễ mới hoặc phần non của rễ có màu trắng."
+        }
+      ],
+      "key_phrases": [
+        "nguồn gốc của rễ",
+        "rễ mầm",
+        "rễ phụ",
+        "rễ mọc từ mắt",
+        "rễ già màu nâu",
+        "rễ non màu trắng"
+      ]
+    },
+    {
+      "summary": "Rễ phụ của cây lúa mọc từ những mắt nằm phía dưới. Có hai loại rễ phụ: rễ bàng và rễ bình thường. Rễ bàng phát triển nhiều ở đất thoáng khí và lúa càng lớn thì rễ bàng mọc càng nhiều.",
+      "full_text": "RỄ PHỤ. Mắt. Mặt đất. Rễ bàng. Rễ bình thường. Rễ phụ mọc từ những mắt nằm phía dưới. Có hai loại rễ phụ: rễ bàng và rễ bình thường. Rễ bàng phát triển nhiều ở đất thoáng khí. Lúa càng lớn, rễ bàng mọc càng nhiều.",
+      "sections": [
+        {
+          "heading": "Rễ phụ",
+          "level": 1,
+          "text": "Rễ phụ của cây lúa mọc từ những mắt nằm phía dưới mặt đất. Có hai loại rễ phụ: rễ bàng (phát triển gần mặt đất theo chiều ngang) và rễ bình thường (phát triển sâu xuống đất theo chiều thẳng đứng). Rễ bàng phát triển nhiều ở đất thoáng khí. Lúa càng lớn, rễ bàng mọc càng nhiều."
+        }
+      ],
+      "key_phrases": [
+        "rễ phụ",
+        "rễ bàng",
+        "rễ bình thường",
+        "mắt phía dưới",
+        "mặt đất",
+        "đất thoáng khí",
+        "lúa càng lớn rễ bàng càng nhiều"
+      ]
+    },
+    {
+      "summary": "Lông hút là các ống nhỏ mọc từ lớp ngoài của rễ, có nhiệm vụ hấp thụ nước và dưỡng chất từ đất. Chúng đóng vai trò quan trọng trong quá trình nuôi cây nhưng thường có đời sống ngắn.",
+      "full_text": "LÔNG HÚT. Lông hút là những ống mọc từ tầng ngoài của rễ. Nước và dưỡng chất được hấp thụ qua lông hút và vận chuyển lên lá qua các ống dẫn. Lông hút giữ vai trò quan trọng trong việc hút nước và dưỡng chất từ đất. Lông hút thường có đời sống ngắn.",
+      "sections": [
+        {
+          "heading": "Lông hút",
+          "level": 1,
+          "text": "Lông hút là những ống nhỏ mọc từ tầng ngoài của rễ. Chúng giúp hấp thụ nước và dưỡng chất từ đất rồi vận chuyển lên các bộ phận khác của cây. Lông hút giữ vai trò quan trọng trong việc nuôi cây nhưng thường có đời sống ngắn."
+        }
+      ],
+      "key_phrases": [
+        "lông hút",
+        "hấp thụ nước",
+        "hấp thụ dưỡng chất",
+        "tầng ngoài của rễ",
+        "vận chuyển nước lên lá",
+        "đời sống ngắn"
+      ]
+    },
+    {
+      "summary": "NHIỆM VỤ CỦA RỄ - HÚT NƯỚC VÀ DƯỠNG CHẤT - GIỮ THÂN CÂY LÚA. Nước + Dưỡng chất. Nước trong đất chứa các loại dưỡng chất như đạm, lân và bố tạt.",
+      "full_text": "Nhiệm vụ của rễ cây lúa là hút nước và dưỡng chất từ đất, đồng thời giữ thân cây lúa. Nước trong đất chứa các loại dưỡng chất như đạm, lân và bố tạt.",
+      "sections": [
+        {
+          "heading": "Nhiệm vụ của rễ - Hút nước và dưỡng chất - Giữ thân cây lúa",
+          "level": 1,
+          "text": "Rễ cây lúa có hai nhiệm vụ chính: hút nước và dưỡng chất từ đất để nuôi cây, đồng thời giữ thân cây lúa được vững chắc. Nước và dưỡng chất được hút từ đất qua rễ, sau đó vận chuyển lên thân và các bộ phận khác của cây. Nước trong đất chứa các loại dưỡng chất quan trọng như đạm, lân và bố tạt (kali)."
+        }
+      ],
+      "key_phrases": [
+        "nhiệm vụ của rễ",
+        "hút nước",
+        "hút dưỡng chất",
+        "giữ thân cây lúa",
+        "nước trong đất",
+        "đạm",
+        "lân",
+        "bố tạt"
+      ]
+    },
+    {
+      "summary": "Rễ lúa phát triển mạnh theo thời gian sau khi cấy. Khi cây lớn, nhiều rễ mọc ngang từ các mắt phía trên và tạo thành lớp rễ dày trong đất.",
+      "full_text": "SỰ PHÁT TRIỂN CỦA RỄ. 30 ngày sau khi cấy, 50 ngày sau khi cấy và lúc trổ, hệ rễ của cây lúa ngày càng phát triển rộng và sâu hơn. Khi cây lúa đã lớn, từ những mắt phía trên phát triển nhiều rễ theo chiều ngang và tạo nên lớp rễ dày trong đất.",
+      "sections": [
+        {
+          "heading": "Sự phát triển của rễ",
+          "level": 1,
+          "text": "Hệ rễ của cây lúa phát triển mạnh theo thời gian từ 30 ngày sau khi cấy đến 50 ngày và khi cây trổ bông. Khi cây lúa lớn, nhiều rễ mọc từ các mắt phía trên và phát triển theo chiều ngang, tạo nên một lớp rễ dày trong đất."
+        }
+      ],
+      "key_phrases": [
+        "sự phát triển của rễ",
+        "30 ngày sau khi cấy",
+        "50 ngày sau khi cấy",
+        "lúc trổ",
+        "rễ phát triển ngang",
+        "lớp rễ dày"
+      ]
+    },
+    {
+      "summary": "Sự phát triển của rễ lúa 30 ngày sau khi cấy cho thấy hầu hết rễ lúa nằm ở tầng đất cày (18cm), gần như không có rễ ở tầng đất dưới.",
+      "full_text": "SỰ PHÁT TRIỂN CỦA RỄ 30 NGÀY SAU KHI CẤY. Tầng đất cày. Tầng đất dưới. 18 cm. Hầu hết rễ lúa nằm ở tầng đất cày (18cm), gần như không có rễ ở tầng đất dưới.",
+      "sections": [
+        {
+          "heading": "Sự phát triển của rễ 30 ngày sau khi cấy",
+          "level": 1,
+          "text": "Sau 30 ngày cấy, hệ thống rễ lúa phát triển chủ yếu theo chiều ngang và tập trung ở tầng đất cày với độ sâu khoảng 18cm. Hầu hết rễ lúa nằm ở tầng đất cày (18cm), gần như không có rễ phát triển xuống tầng đất dưới. Điều này cho thấy rễ lúa phát triển rộng theo chiều ngang hơn là ăn sâu xuống đất."
+        }
+      ],
+      "key_phrases": [
+        "phát triển rễ",
+        "30 ngày sau khi cấy",
+        "tầng đất cày",
+        "tầng đất dưới",
+        "18cm",
+        "rễ lúa theo chiều ngang"
+      ]
+    },
+    {
+      "summary": "Sau khoảng 50 ngày sau khi cấy, hệ rễ lúa phát triển rộng tạo thành lớp rễ dày gần tầng đất canh tác. Một số rễ tiếp tục mọc sâu xuống lớp đất dưới.",
+      "full_text": "SỰ PHÁT TRIỂN CỦA RỄ 50 NGÀY SAU KHI CẤY. Hệ rễ phát triển tạo thành rễ bàng trong tầng đất cày khoảng 18 cm. Một số rễ mọc sâu xuống khỏi lớp đất cày và phát triển vào tầng đất dưới.",
+      "sections": [
+        {
+          "heading": "Sự phát triển của rễ 50 ngày sau khi cấy",
+          "level": 1,
+          "text": "Khoảng 50 ngày sau khi cấy, hệ rễ lúa phát triển rộng trong tầng đất cày, tạo thành lớp rễ bàng. Độ sâu của tầng đất cày khoảng 18 cm. Một số rễ tiếp tục mọc sâu xuống dưới lớp đất cày và phát triển trong tầng đất dưới."
+        }
+      ],
+      "key_phrases": [
+        "phát triển của rễ",
+        "50 ngày sau khi cấy",
+        "rễ bàng",
+        "tầng đất cày 18 cm",
+        "rễ mọc sâu xuống",
+        "tầng đất dưới"
+      ]
+    },
+    {
+      "summary": "SỰ PHÁT TRIỂN CỦA RỄ Ở GIAI ĐOẠN TRỔ. Rễ bàng. Tầng đất cày. Tầng đất dưới. 18 cm. Một số rễ lớn và mạnh mọc xuống tầng đất sâu. Rễ bàng phát triển nhiều.",
+      "full_text": "Ở giai đoạn trổ, sự phát triển của rễ lúa có sự thay đổi so với giai đoạn trước: một số rễ lớn và mạnh mọc xuống tầng đất sâu, đồng thời rễ bàng phát triển nhiều hơn.",
+      "sections": [
+        {
+          "heading": "Sự phát triển của rễ ở giai đoạn trổ",
+          "level": 1,
+          "text": "Ở giai đoạn trổ, hệ thống rễ lúa phát triển phức tạp hơn so với giai đoạn 30 ngày sau cấy. Rễ vẫn tập trung chủ yếu ở tầng đất cày (18cm), nhưng một số rễ lớn và mạnh đã mọc xuống tầng đất sâu hơn. Đồng thời, rễ bàng phát triển nhiều hơn ở tầng đất trên, giúp cây hút thêm nước và dưỡng chất từ lớp đất mặt."
+        }
+      ],
+      "key_phrases": [
+        "giai đoạn trổ",
+        "phát triển rễ",
+        "rễ bàng",
+        "tầng đất cày",
+        "tầng đất dưới",
+        "18cm",
+        "rễ lớn và mạnh",
+        "tầng đất sâu"
+      ]
+    },
+    {
+      "summary": "Sự phân bố của rễ lúa phụ thuộc vào nhiều yếu tố như độ sâu đất, lượng nước, không khí trong đất và nơi bón phân. Rễ mọc sâu và lan rộng trong đất để hấp thụ nước và chất dinh dưỡng nuôi cây.",
+      "full_text": "SỰ PHÂN BỐ CỦA RỄ. Sự phân bố của rễ phụ thuộc vào: độ sâu của lớp đất mặt, độ sâu của lớp đất cày, độ rút nước của đất, lượng không khí trong đất, cách tưới nước và nơi bón phân. Rễ mọc xuống sâu và tỏa ra trong đất để hút các chất bổ dưỡng nuôi cây.",
+      "sections": [
+        {
+          "heading": "Sự phân bố của rễ",
+          "level": 1,
+          "text": "Sự phân bố của rễ phụ thuộc vào nhiều yếu tố như độ sâu của lớp đất mặt, độ sâu của lớp đất cày, khả năng rút nước của đất, lượng không khí trong đất, cách tưới nước và vị trí bón phân. Rễ phát triển sâu và lan rộng trong đất để hấp thụ nước và các chất dinh dưỡng cần thiết cho cây."
+        }
+      ],
+      "key_phrases": [
+        "sự phân bố của rễ",
+        "độ sâu lớp đất",
+        "lượng không khí trong đất",
+        "cách tưới nước",
+        "nơi bón phân",
+        "rễ lan rộng trong đất"
+      ]
+    },
+    {
+      "summary": "SỰ PHÂN BỐ CỦA RỄ TÙY THUỘC VÀO ĐỘ SÂU CỦA LỚP ĐẤT MẶT. Nước. Đất mặt. Đất cứng. Tầng đất mặt càng dày rễ mọc càng sâu.",
+      "full_text": "Sự phân bố của rễ lúa tùy thuộc vào độ sâu của lớp đất mặt. Tầng đất mặt càng dày thì rễ mọc càng sâu, giúp cây lúa phát triển tốt hơn.",
+      "sections": [
+        {
+          "heading": "Sự phân bố của rễ tùy thuộc vào độ sâu của lớp đất mặt",
+          "level": 1,
+          "text": "Sự phân bố và phát triển của hệ thống rễ lúa phụ thuộc trực tiếp vào độ sâu của lớp đất mặt. Khi tầng đất mặt mỏng, rễ bị giới hạn bởi lớp đất cứng bên dưới và không thể phát triển sâu, dẫn đến cây lúa kém phát triển hơn. Khi tầng đất mặt dày hơn, rễ có thể mọc sâu hơn, giúp cây lúa hút được nhiều nước và dưỡng chất hơn, cây phát triển cao lớn và khỏe mạnh hơn. Tầng đất mặt càng dày rễ mọc càng sâu."
+        }
+      ],
+      "key_phrases": [
+        "phân bố rễ",
+        "độ sâu đất mặt",
+        "tầng đất mặt",
+        "đất cứng",
+        "rễ mọc sâu",
+        "tầng đất mặt dày",
+        "phát triển rễ"
+      ]
+    },
+    {
+      "summary": "Sự phân bố của rễ lúa phụ thuộc vào độ dày của tầng đất cày. Tầng đất cày càng dày thì rễ phát triển càng tốt, còn nền đất cày sâu hoặc đất cứng sẽ hạn chế sự phát triển của rễ.",
+      "full_text": "SỰ PHÂN BỐ CỦA RỄ TÙY THUỘC VÀO TẦNG ĐẤT CÀY. Lớp đất cày càng dày rễ mọc càng sâu. Nền cày sâu, cày cạn hạn chế sự phát triển của rễ. Đất cứng bên dưới cũng làm hạn chế sự phát triển của rễ.",
+      "sections": [
+        {
+          "heading": "Sự phân bố của rễ tùy thuộc vào tầng đất cày",
+          "level": 1,
+          "text": "Sự phát triển và phân bố của rễ phụ thuộc vào độ dày của tầng đất cày. Khi lớp đất cày dày, rễ có thể mọc sâu và phát triển tốt hơn. Nếu nền đất cứng hoặc lớp đất cày nông sẽ hạn chế sự phát triển và lan rộng của rễ."
+        }
+      ],
+      "key_phrases": [
+        "phân bố của rễ",
+        "tầng đất cày",
+        "lớp đất cày dày",
+        "rễ mọc sâu",
+        "đất cứng",
+        "hạn chế phát triển của rễ"
+      ]
+    },
+    {
+      "summary": "Sự phân bố của rễ lúa tùy thuộc vào độ thấm rút nước của đất. Nước thấm rút nhanh giúp rễ mọc sâu hơn, đất thoáng khí hơn và có nhiều phân bón ở tầng đất phía dưới, giúp cây hút nước tốt hơn khi ruộng không được tưới đầy đủ.",
+      "full_text": "SỰ PHÂN BỐ CỦA RỄ TÙY THUỘC VÀO ĐỘ THẤM RÚT NƯỚC CỦA ĐẤT. Nước. Nước rút xuống đất chậm. Nước rút xuống đất nhanh. Nếu nước thấm rút nhanh và dễ dàng, rễ càng dễ mọc sâu. Nước dễ thấm rút làm đất thoáng khí và có nhiều phân bón ở tầng đất phía dưới. Rễ mọc sâu sẽ hút nước được tốt hơn, điều này quan trọng nếu ruộng không được tưới nước đầy đủ.",
+      "sections": [
+        {
+          "heading": "Sự phân bố của rễ tùy thuộc vào độ thấm rút nước của đất",
+          "level": 1,
+          "text": "Độ thấm rút nước của đất ảnh hưởng trực tiếp đến sự phân bố và phát triển của rễ lúa. Ở đất có nước rút xuống chậm, rễ kém phát triển và không mọc sâu được. Ở đất có nước rút xuống nhanh, rễ dễ mọc sâu hơn. Nước dễ thấm rút làm đất thoáng khí và có nhiều phân bón ở tầng đất phía dưới. Rễ mọc sâu sẽ hút nước được tốt hơn, điều này đặc biệt quan trọng nếu ruộng không được tưới nước đầy đủ."
+        }
+      ],
+      "key_phrases": [
+        "phân bố rễ",
+        "độ thấm rút nước",
+        "nước rút chậm",
+        "nước rút nhanh",
+        "rễ mọc sâu",
+        "đất thoáng khí",
+        "phân bón tầng dưới",
+        "hút nước tốt hơn",
+        "ruộng không được tưới đầy đủ"
+      ]
+    },
+    {
+      "summary": "Sự phát triển và phân bố của rễ lúa phụ thuộc vào lượng không khí trong đất. Đất thoáng khí giúp rễ phát triển tốt và lan rộng, trong khi đất yếm khí làm rễ phát triển kém.",
+      "full_text": "SỰ PHÂN BỐ CỦA RỄ TÙY THUỘC VÀO LƯỢNG KHÔNG KHÍ CÓ TRONG ĐẤT. Đất yếm khí: rễ phát triển kém và chỉ có rễ cạn mọc được. Đất thoáng khí: rễ phát triển tốt và lan rộng. Đặc điểm thoáng khí tùy thuộc theo loại đất và độ sâu của tầng đất mặt.",
+      "sections": [
+        {
+          "heading": "Sự phân bố của rễ tùy thuộc vào lượng không khí có trong đất",
+          "level": 1,
+          "text": "Khi đất yếm khí, rễ lúa phát triển kém và chỉ có rễ cạn mọc được. Khi đất thoáng khí, rễ phát triển tốt và lan rộng hơn. Khả năng thoáng khí của đất phụ thuộc vào loại đất và độ sâu của tầng đất mặt."
+        }
+      ],
+      "key_phrases": [
+        "phân bố của rễ",
+        "không khí trong đất",
+        "đất yếm khí",
+        "đất thoáng khí",
+        "rễ phát triển kém",
+        "rễ phát triển tốt"
+      ]
+    },
+    {
+      "summary": "Sự phân bố của rễ lúa tùy thuộc vào cách bón phân. Vùi phân bón vào sâu trong đất cày làm rễ mọc nhiều và sâu hơn so với bón phân trên bề mặt.",
+      "full_text": "SỰ PHÂN BỐ CỦA RỄ TÙY THUỘC VÀO CÁCH BÓN PHÂN. Phân bón. Tầng đất cày. Tầng đất cứng. Vùi phân bón vào sâu trong đất cày làm rễ mọc nhiều và sâu hơn.",
+      "sections": [
+        {
+          "heading": "Sự phân bố của rễ tùy thuộc vào cách bón phân",
+          "level": 1,
+          "text": "Cách bón phân ảnh hưởng trực tiếp đến sự phân bố và phát triển của rễ lúa. Khi phân bón được bón trên bề mặt hoặc ở vị trí nông trong tầng đất cày, rễ có xu hướng tập trung ở tầng đất trên và kém phát triển về chiều sâu. Khi phân bón được vùi sâu vào trong tầng đất cày, rễ sẽ mọc nhiều hơn và ăn sâu hơn để tiếp cận nguồn dinh dưỡng, giúp cây lúa phát triển tốt hơn."
+        }
+      ],
+      "key_phrases": [
+        "phân bố rễ",
+        "cách bón phân",
+        "vùi phân bón sâu",
+        "tầng đất cày",
+        "tầng đất cứng",
+        "rễ mọc nhiều và sâu hơn",
+        "phân bón"
+      ]
+    },
+    {
+      "summary": "CHỒI SƠ CẤP. Chồi đầu tiên (sơ cấp) mọc ở thân chính, nơi nách lá thứ hai. Do chồi mọc dính vào thân mẹ, nó có thể sống tự lực khi đã có rễ mọc.",
+      "full_text": "Chồi sơ cấp là chồi đầu tiên mọc trên thân chính của cây lúa tại nách lá thứ hai. Khi đã có rễ mọc, chồi này có thể sống tự lập mặc dù vẫn gắn với thân mẹ.",
+      "sections": [
+        {
+          "heading": "Chồi sơ cấp",
+          "level": 1,
+          "text": "Chồi sơ cấp là chồi đầu tiên mọc trên thân chính của cây lúa tại nách lá thứ hai. Chồi này gắn với thân mẹ nhưng có thể sống tự lập khi đã hình thành rễ."
+        }
+      ],
+      "key_phrases": [
+        "chồi sơ cấp",
+        "chồi đầu tiên",
+        "nách lá thứ hai",
+        "thân chính",
+        "chồi có rễ",
+        "sống tự lập"
+      ]
+    },
+    {
+      "summary": "Cách nháy chồi của cây lúa theo thứ bậc: chồi bậc 1 mọc từ thân chính, chồi bậc 2 mọc từ chồi bậc 1, chồi bậc 3 mọc từ chồi bậc 2. Các chồi nằm ở phía dưới và gần thân chính mọc sớm hơn.",
+      "full_text": "CÁCH NHÁY CHỒI. T S P S S P S P M P S P S S P S T. Chồi thứ 1. Chồi thứ 2. Chồi thứ 3. Chồi thứ 4. Chồi 5. Chồi 6. Thân chính. Chồi bậc 1 mọc từ thân chính. Chồi bậc 2 mọc từ chồi bậc 1, và chồi bậc 3 mọc từ chồi bậc 2. Các chồi nằm ở phía dưới và gần thân chính mọc sớm hơn.",
+      "sections": [
+        {
+          "heading": "Cách nháy chồi",
+          "level": 1,
+          "text": "Cây lúa nháy chồi theo hệ thống thứ bậc có trật tự. Chồi bậc 1 mọc trực tiếp từ thân chính. Chồi bậc 2 mọc từ chồi bậc 1, và chồi bậc 3 mọc từ chồi bậc 2. Các chồi được đánh số từ chồi thứ 1 đến chồi thứ 6 tùy theo vị trí và thứ tự xuất hiện. Các chồi nằm ở phía dưới và gần thân chính mọc sớm hơn các chồi ở phía trên và xa thân chính."
+        }
+      ],
+      "key_phrases": [
+        "nháy chồi",
+        "thân chính",
+        "chồi bậc 1",
+        "chồi bậc 2",
+        "chồi bậc 3",
+        "chồi thứ 1 đến thứ 6",
+        "chồi mọc sớm hơn",
+        "phía dưới gần thân chính"
+      ]
+    },
+    {
+      "summary": "Sau khi cấy khoảng 10 ngày, lúa bắt đầu nhảy chồi và số chồi tăng dần theo thời gian. Số chồi đạt tối đa khoảng 50–60 ngày sau khi cấy, sau đó giảm dần do một số chồi yếu bị chết.",
+      "full_text": "SỰ TĂNG CHỒI. Lúa bắt đầu nhảy chồi sau khi cấy 10 ngày và đạt số chồi tối đa vào khoảng 50-60 ngày sau khi cấy. Sau khi đạt đến tối đa, số chồi sẽ giảm vì một số chồi yếu sẽ chết đi.",
+      "sections": [
+        {
+          "heading": "Sự tăng chồi",
+          "level": 1,
+          "text": "Sau khi cấy khoảng 10 ngày, cây lúa bắt đầu nhảy chồi và số lượng chồi tăng dần. Số chồi đạt mức tối đa vào khoảng 50 đến 60 ngày sau khi cấy. Sau giai đoạn này, số chồi giảm dần vì một số chồi yếu sẽ chết."
+        }
+      ],
+      "key_phrases": [
+        "sự tăng chồi",
+        "nhảy chồi sau 10 ngày",
+        "50-60 ngày sau khi cấy",
+        "số chồi tối đa",
+        "chồi yếu chết"
+      ]
+    },
+    {
+      "summary": "Chồi hữu hiệu và chồi vô hiệu là hai loại chồi trong quá trình phát triển của cây lúa. Số chồi tăng từ 2 lên đến 20 rồi giảm xuống còn 15. Chồi mọc trễ thường vô hiệu, sẽ chết hoặc cho bông nhỏ. Số chồi giảm do bị rợp, cạnh tranh hoặc thiếu phân đạm.",
+      "full_text": "CHỒI HỮU HIỆU VÀ CHỒI VÔ HIỆU. Số chồi: 2, 10, 20, 15. Chồi mọc trễ thường không có hiệu quả trong việc cho hạt. Nó sẽ chết đi hoặc cho bông nhỏ, và chín trễ hơn so với các bông khác. Lúc gặt chỉ cho hạt lửng. Giống lúa cải tiến có nhiều chồi lúc trổ và ít chồi bị chết. Số chồi giảm có thể do bị rợp, do cạnh tranh giữa các chồi, hoặc thiếu dưỡng chất nhất là phân đạm.",
+      "sections": [
+        {
+          "heading": "Chồi hữu hiệu và chồi vô hiệu",
+          "level": 1,
+          "text": "Trong quá trình phát triển, số chồi của cây lúa tăng dần từ 2 lên đến đỉnh điểm 20 chồi rồi giảm xuống còn 15 chồi ở giai đoạn thu hoạch. Chồi mọc trễ thường không có hiệu quả trong việc cho hạt, sẽ chết đi hoặc cho bông nhỏ và chín trễ hơn so với các bông khác, lúc gặt chỉ cho hạt lửng - đây là chồi vô hiệu. Giống lúa cải tiến có nhiều chồi lúc trổ và ít chồi bị chết. Số chồi giảm có thể do bị rợp, do cạnh tranh giữa các chồi, hoặc thiếu dưỡng chất nhất là phân đạm."
+        }
+      ],
+      "key_phrases": [
+        "chồi hữu hiệu",
+        "chồi vô hiệu",
+        "số chồi",
+        "chồi mọc trễ",
+        "bông nhỏ",
+        "hạt lửng",
+        "giống lúa cải tiến",
+        "chồi bị chết",
+        "cạnh tranh giữa các chồi",
+        "thiếu phân đạm"
+      ]
+    },
+    {
+      "summary": "Tỉ lệ chồi hữu hiệu là phần trăm số bông so với số chồi tối đa. Ở giống lúa cổ truyền tỉ lệ này khoảng 50%, trong khi ở giống lúa năng suất cao có thể đạt khoảng 75%.",
+      "full_text": "TỈ LỆ CHỒI HỮU HIỆU. Phần trăm chồi hữu hiệu = (số bông / số chồi tối đa) × 100. Ở giống lúa cổ truyền: 12 / 24 × 100 = 50%. Ở giống lúa năng suất cao: 15 / 20 × 100 = 75%. Trong hình trên, tỉ lệ chồi hữu hiệu là 50% ở các giống lúa cổ truyền và 75% ở các giống lúa cải tiến.",
+      "sections": [
+        {
+          "heading": "Tỉ lệ chồi hữu hiệu",
+          "level": 1,
+          "text": "Tỉ lệ chồi hữu hiệu được tính bằng phần trăm giữa số bông và số chồi tối đa. Ở giống lúa cổ truyền, tỉ lệ này khoảng 50% (12 bông trên 24 chồi). Ở giống lúa năng suất cao, tỉ lệ chồi hữu hiệu có thể đạt khoảng 75% (15 bông trên 20 chồi)."
+        }
+      ],
+      "key_phrases": [
+        "tỉ lệ chồi hữu hiệu",
+        "số bông",
+        "số chồi tối đa",
+        "giống lúa cổ truyền",
+        "giống lúa năng suất cao",
+        "50 phần trăm",
+        "75 phần trăm"
+      ]
+    },
+    {
+      "summary": "Giống là một trong các yếu tố ảnh hưởng đến sự nháy chồi của cây lúa. Các giống lúa khác nhau có khả năng nháy chồi khác nhau, ví dụ giống lúa có 19 chồi và giống lúa có 54 chồi. Khả năng nháy chồi tối đa thể hiện khi cấy thưa trên đất tốt.",
+      "full_text": "CÁC YẾU TỐ ẢNH HƯỞNG ĐẾN SỰ NHÁY CHỒI - GIỐNG. Giống lúa có 19 chồi. Giống lúa có 54 chồi. Các giống lúa khác nhau ở khả năng nháy chồi. Khả năng nháy chồi có thể thấy được khi cấy thưa trên đất tốt. Thường ở ngoài đồng, cây lúa ít đạt được số chồi tối đa theo khả năng của giống.",
+      "sections": [
+        {
+          "heading": "Các yếu tố ảnh hưởng đến sự nháy chồi - Giống",
+          "level": 1,
+          "text": "Giống lúa là một trong những yếu tố quan trọng ảnh hưởng đến khả năng nháy chồi. Các giống lúa khác nhau có khả năng nháy chồi khác nhau rõ rệt, ví dụ có giống chỉ nháy được 19 chồi trong khi giống khác có thể đạt tới 54 chồi. Khả năng nháy chồi tối đa của giống có thể thấy được khi cấy thưa trên đất tốt. Tuy nhiên, thường ở ngoài đồng, cây lúa ít đạt được số chồi tối đa theo khả năng của giống."
+        }
+      ],
+      "key_phrases": [
+        "yếu tố nháy chồi",
+        "giống lúa",
+        "khả năng nháy chồi",
+        "giống 19 chồi",
+        "giống 54 chồi",
+        "cấy thưa",
+        "đất tốt",
+        "số chồi tối đa"
+      ]
+    },
+    {
+      "summary": "Mật độ trồng ảnh hưởng đến sự nhảy chồi của lúa. Cấy thưa giúp mỗi bụi có nhiều chồi hơn nhưng tổng số chồi trên mỗi mét vuông có thể giảm, trong khi cấy dày làm số chồi trên mỗi bụi ít hơn.",
+      "full_text": "CÁC YẾU TỐ ẢNH HƯỞNG ĐẾN SỰ NHẢY CHỒI - MẬT ĐỘ. Khoảng cách 50 x 50 cm: 33 chồi trên mỗi bụi, 4 bụi trên mỗi mét vuông, 122 chồi trên mỗi mét vuông. Khoảng cách 10 x 10 cm: 3 chồi trên mỗi bụi, 100 bụi trên mỗi mét vuông, 300 chồi trên mỗi mét vuông. Số chồi trên mỗi bụi sẽ tăng khi cấy thưa. Số chồi trên mỗi mét vuông có thể giảm nếu cấy quá thưa.",
+      "sections": [
+        {
+          "heading": "Các yếu tố ảnh hưởng đến sự nhảy chồi - Mật độ",
+          "level": 1,
+          "text": "Mật độ cấy ảnh hưởng đến số chồi của cây lúa. Khi khoảng cách cấy rộng (50 x 50 cm), mỗi bụi có nhiều chồi hơn nhưng số bụi trên mỗi mét vuông ít. Khi cấy dày (10 x 10 cm), mỗi bụi có ít chồi hơn nhưng tổng số chồi trên mỗi mét vuông lại cao hơn. Số chồi trên mỗi bụi tăng khi cấy thưa, nhưng số chồi trên mỗi mét vuông có thể giảm nếu cấy quá thưa."
+        }
+      ],
+      "key_phrases": [
+        "nhảy chồi",
+        "mật độ cấy",
+        "khoảng cách 50 x 50 cm",
+        "khoảng cách 10 x 10 cm",
+        "số chồi trên mỗi bụi",
+        "số chồi trên mỗi mét vuông"
+      ]
+    },
+    {
+      "summary": "Mức độ phân đạm ảnh hưởng đến sự nhảy chồi của lúa. Khi bón nhiều phân đạm, cây lúa sẽ tạo ra nhiều chồi hơn so với khi không bón phân.",
+      "full_text": "CÁC YẾU TỐ ẢNH HƯỞNG ĐẾN SỰ NHẢY CHỒI - MỨC ĐỘ PHÂN ĐẠM. Không bón phân đạm: 10 chồi. Có bón phân đạm: 30 chồi. Bón nhiều phân đạm sẽ cho nhiều chồi hơn.",
+      "sections": [
+        {
+          "heading": "Các yếu tố ảnh hưởng đến sự nhảy chồi - Mức độ phân đạm",
+          "level": 1,
+          "text": "Mức độ phân đạm ảnh hưởng trực tiếp đến số lượng chồi của cây lúa. Khi không bón phân đạm, cây chỉ tạo khoảng 10 chồi. Khi có bón phân đạm, số chồi có thể tăng lên khoảng 30 chồi. Bón nhiều phân đạm sẽ giúp cây tạo ra nhiều chồi hơn."
+        }
+      ],
+      "key_phrases": [
+        "nhảy chồi",
+        "mức độ phân đạm",
+        "không bón phân đạm",
+        "có bón phân đạm",
+        "10 chồi",
+        "30 chồi",
+        "bón nhiều phân đạm"
+      ]
+    },
+    {
+      "summary": "Thời vụ là yếu tố ảnh hưởng đến sự nháy chồi của cây lúa. Chồi phát triển trong mùa mưa nhiều hơn mùa khô (21 chồi so với 16 chồi). Trong mùa khô cần bón nhiều phân đạm để tăng số chồi.",
+      "full_text": "CÁC YẾU TỐ ẢNH HƯỞNG ĐẾN SỰ NHÁY CHỒI - THỜI VỤ. Mùa mưa - 21 chồi. Mùa nắng - 16 chồi. Chồi phát triển trong mùa mưa nhiều hơn trong mùa khô. Trong mùa khô cần bón nhiều phân đạm để tăng số chồi.",
+      "sections": [
+        {
+          "heading": "Các yếu tố ảnh hưởng đến sự nháy chồi - Thời vụ",
+          "level": 1,
+          "text": "Thời vụ canh tác ảnh hưởng rõ rệt đến khả năng nháy chồi của cây lúa. Trong mùa mưa, cây lúa có thể nháy được 21 chồi, trong khi mùa nắng (mùa khô) chỉ đạt 16 chồi. Chồi phát triển trong mùa mưa nhiều hơn trong mùa khô. Để khắc phục hạn chế này, trong mùa khô cần bón nhiều phân đạm hơn để tăng số chồi."
+        }
+      ],
+      "key_phrases": [
+        "yếu tố nháy chồi",
+        "thời vụ",
+        "mùa mưa 21 chồi",
+        "mùa nắng 16 chồi",
+        "mùa khô",
+        "phân đạm",
+        "tăng số chồi"
+      ]
+    },
+    {
+      "summary": "Sự tạo thành bông lúa bắt đầu ở chóp trên cùng của thân. Bông có thể thấy bằng mắt thường khi dài 1mm (25 ngày trước khi trổ). Đến 20 ngày trước khi trổ, bông phát triển lên 10-20mm. Khi bông bên trong bẹ lá khoảng 1mm, cây lúa ra thêm 3 lá trước khi trổ.",
+      "full_text": "SỰ TẠO THÀNH BÔNG LÚA. 1 mm - 25 ngày trước khi trổ. 10-20 mm - 20 ngày trước khi trổ. Bông lúa hình thành ở chóp trên cùng của thân. Bông có thể thấy bằng mắt thường khi nó dài 1 mm. Bông mới hình thành (1 mm) có nhiều lông nhỏ màu trắng ở chóp đầu. Khi bông bên trong bẹ lá khoảng 1 mm, cây lúa ra thêm 3 lá trước khi trổ.",
+      "sections": [
+        {
+          "heading": "Sự tạo thành bông lúa",
+          "level": 1,
+          "text": "Bông lúa hình thành ở chóp trên cùng của thân cây. Bông có thể thấy bằng mắt thường khi nó dài 1mm, tương ứng với 25 ngày trước khi trổ. Bông mới hình thành (1mm) có nhiều lông nhỏ màu trắng ở chóp đầu. Đến 20 ngày trước khi trổ, bông phát triển lên kích thước 10-20mm. Khi bông bên trong bẹ lá khoảng 1mm, cây lúa sẽ ra thêm 3 lá trước khi trổ."
+        }
+      ],
+      "key_phrases": [
+        "tạo thành bông lúa",
+        "chóp trên cùng thân",
+        "1mm bằng mắt thường",
+        "25 ngày trước khi trổ",
+        "10-20mm",
+        "20 ngày trước khi trổ",
+        "lông nhỏ màu trắng",
+        "3 lá trước khi trổ"
+      ]
+    },
+    {
+      "summary": "Thời kỳ làm đòng là giai đoạn hình thành đòng lúa trong thân cây. Trước khi trổ khoảng 20–25 ngày, đòng lúa dài khoảng 1 mm và toàn bộ giai đoạn từ bắt đầu làm đòng đến trổ kéo dài khoảng 35 ngày.",
+      "full_text": "THỜI KỲ LÀM ĐÒNG. Khối sơ khởi (đòng lúa còn non). Trong thời kỳ làm đòng, ở phần dưới bẹ lá phồng to lên. Trước khi trổ 20-25 ngày, đòng lúa dài khoảng 1 mm. Từ khi bắt đầu làm đòng đến trổ là 35 ngày.",
+      "sections": [
+        {
+          "heading": "Thời kỳ làm đòng",
+          "level": 1,
+          "text": "Trong thời kỳ làm đòng, phần dưới của bẹ lá phồng to lên do đòng lúa đang hình thành bên trong. Trước khi trổ khoảng 20 đến 25 ngày, đòng lúa dài khoảng 1 mm. Thời gian từ khi bắt đầu làm đòng đến khi trổ kéo dài khoảng 35 ngày."
+        }
+      ],
+      "key_phrases": [
+        "thời kỳ làm đòng",
+        "đòng lúa",
+        "bẹ lá phồng",
+        "20-25 ngày trước khi trổ",
+        "đòng dài 1 mm",
+        "35 ngày làm đòng"
+      ]
+    },
+    {
+      "summary": "Hoa lúa gồm các bộ phận như nhị đực, nhị cái, vỏ trấu và cuống hoa. Sau khi bông lúa trổ khoảng 1 ngày, bao phấn sẽ nở và hạt phấn rơi vào nhuỵ để thụ phấn và hình thành hạt lúa.",
+      "full_text": "HOA LÚA. Các bộ phận của hoa lúa gồm: đuôi, bao phấn, tua nhị (nhị đực), vỏ trấu lớn, vỏ trấu nhỏ, nhuỵ, bầu noãn (nhị cái), mày trấu và cuống hoa. Sau khi bông lúa trổ 1 ngày, bao phấn sẽ nở. Nhiệt độ lạnh làm bao phấn nở chậm. Hạt phấn từ túi phấn sẽ rơi vào nhuỵ và kết hợp với trứng trong bầu noãn để phát triển thành hạt lúa.",
+      "sections": [
+        {
+          "heading": "Hoa lúa",
+          "level": 1,
+          "text": "Hoa lúa có các bộ phận chính như bao phấn và tua nhị thuộc nhị đực, cùng với nhuỵ và bầu noãn thuộc nhị cái. Ngoài ra còn có vỏ trấu lớn, vỏ trấu nhỏ, mày trấu và cuống hoa. Sau khi bông lúa trổ khoảng 1 ngày, bao phấn sẽ nở và hạt phấn rơi vào nhuỵ để thụ phấn. Hạt phấn kết hợp với trứng trong bầu noãn và phát triển thành hạt lúa."
+        }
+      ],
+      "key_phrases": [
+        "hoa lúa",
+        "nhị đực",
+        "nhị cái",
+        "bao phấn",
+        "bầu noãn",
+        "thụ phấn",
+        "hạt lúa"
+      ]
+    },
+    {
+      "summary": "Thứ tự trổ hoa trên bông lúa diễn ra trong 7 ngày, với hoa ở nhánh phía trên nở trước. Bông lúa to có 196 hạt. Hoa phía dưới nở trễ thường cho hạt lửng. Giống cải tiến có từ 100-120 hạt trên mỗi bông.",
+      "full_text": "THỨ TỰ TRỔ HOA TRÊN BÔNG. Bông lúa to có 196 hạt. Ngày thứ 1. Ngày thứ 2. Ngày thứ 3. Ngày thứ 4. Ngày thứ 5. Ngày thứ 6. Ngày thứ 7. Hoa không nở. Hoa lúa ở những nhánh phía trên sẽ nở trước. Những hoa lúa ở phía dưới nở trễ thường cho hạt lửng (trên bông lúa có nhiều hạt). Giống cải tiến có từ 100-120 hạt trên mỗi bông.",
+      "sections": [
+        {
+          "heading": "Thứ tự trổ hoa trên bông",
+          "level": 1,
+          "text": "Quá trình trổ hoa trên bông lúa diễn ra theo thứ tự trong 7 ngày. Bông lúa to có thể có tới 196 hạt. Hoa lúa ở những nhánh phía trên sẽ nở trước, sau đó đến các hoa ở phía dưới. Những hoa lúa ở phía dưới nở trễ thường cho hạt lửng trên bông lúa có nhiều hạt. Một số hoa không nở. Giống cải tiến thường có từ 100-120 hạt trên mỗi bông."
+        }
+      ],
+      "key_phrases": [
+        "thứ tự trổ hoa",
+        "bông lúa 196 hạt",
+        "nhánh phía trên nở trước",
+        "hoa phía dưới nở trễ",
+        "hạt lửng",
+        "hoa không nở",
+        "giống cải tiến",
+        "100-120 hạt mỗi bông",
+        "7 ngày"
+      ]
+    },
+    {
+      "summary": "Hạt lúa hình thành sau khi thụ tinh và trải qua nhiều giai đoạn phát triển từ ngậm sữa đến chín hoàn toàn. Khoảng 21 ngày sau khi thụ tinh hạt đạt trọng lượng tối đa và thường chín hoàn toàn sau khoảng 30 ngày.",
+      "full_text": "CÁC GIAI ĐOẠN HÌNH THÀNH HẠT. Sau khi bao phấn nở, hạt phấn kết hợp với trứng trong bầu noãn để hình thành hạt lúa. Hạt lúa là bầu noãn đã trưởng thành nằm bên trong hai vỏ trấu lớn và nhỏ. Sự tạo bột bên trong hạt lúa bắt đầu sau khi giao tử trong hạt phấn phối hợp với trứng trong bầu noãn. Khoảng 21 ngày sau khi thụ tinh, hạt lúa đạt đến trọng lượng tối đa. Các hoa lúa nở trong vòng 7 ngày sau khi bông lúa trổ. Nếu lúa trổ bông không cùng lúc, thời gian đến khi lúa chín sẽ kéo dài. Các giai đoạn phát triển gồm: 2, 3, 4, 5, 6, 7 ngày sau khi bao phấn nở; giai đoạn ngậm sữa; giai đoạn chín sáp; và 30 ngày chín hoàn toàn.",
+      "sections": [
+        {
+          "heading": "Các giai đoạn hình thành hạt",
+          "level": 1,
+          "text": "Sau khi thụ tinh, hạt lúa bắt đầu hình thành và phát triển qua nhiều giai đoạn. Sự tạo bột trong hạt bắt đầu khi giao tử từ hạt phấn kết hợp với trứng trong bầu noãn. Hạt lúa thực chất là bầu noãn đã trưởng thành nằm trong hai vỏ trấu. Khoảng 21 ngày sau khi thụ tinh, hạt đạt trọng lượng tối đa và thường chín hoàn toàn sau khoảng 30 ngày."
+        }
+      ],
+      "key_phrases": [
+        "hình thành hạt",
+        "bao phấn nở",
+        "thụ tinh",
+        "giai đoạn ngậm sữa",
+        "giai đoạn chín sáp",
+        "21 ngày sau thụ tinh",
+        "30 ngày chín hoàn toàn"
+      ]
+    },
+    {
+      "summary": "Hạt lép là hạt lúa không có nội nhũ bên trong. Nhiều yếu tố ảnh hưởng đến sự chắc hạt gây ra hạt lép như: cây ngã, thiếu ánh sáng, lá khô bịnh, nướm hoa bị khô, bón quá nhiều đạm, nhiệt độ và ẩm độ cao làm hoa không nở, nhiệt độ thấp ở giai đoạn làm đòng. Hạt lép sẽ nổi khi bỏ vào nước.",
+      "full_text": "LÝ DO HẠT LÉP. Hình cắt dọc của hạt lúa chắc. Hình cắt dọc của hạt lúa lép. Nhiều yếu tố ảnh hưởng đến sự chắc hạt. Thiếu chất bột cho hạt chắc do cây ngã, thiếu ánh sáng, lá bị khô, bịnh. Nướm hoa bị khô do nhiệt độ cao và gió khô. Bón quá nhiều đạm ở giai đoạn làm đòng. Nhiệt độ thấp và ẩm độ cao làm cho hoa không nở. Nhiệt độ thấp ở giai đoạn làm đòng làm hạt phấn bị suy thoái đi. Hạt lép sẽ nổi khi được bỏ vào nước.",
+      "sections": [
+        {
+          "heading": "Lý do hạt lép",
+          "level": 1,
+          "text": "Hạt lép là hạt lúa không phát triển đầy đủ, bên trong không có nội nhũ, khác với hạt chắc có nội nhũ đầy đặn. Nhiều yếu tố ảnh hưởng đến sự chắc hạt gây ra hạt lép: thiếu chất bột cho hạt chắc do cây ngã, thiếu ánh sáng, lá bị khô hoặc bịnh; nướm hoa bị khô do nhiệt độ cao và gió khô; bón quá nhiều đạm ở giai đoạn làm đòng; nhiệt độ thấp và ẩm độ cao làm cho hoa không nở; nhiệt độ thấp ở giai đoạn làm đòng làm hạt phấn bị suy thoái. Hạt lép sẽ nổi khi được bỏ vào nước."
+        }
+      ],
+      "key_phrases": [
+        "hạt lép",
+        "hạt lúa chắc",
+        "hình cắt dọc",
+        "thiếu chất bột",
+        "cây ngã",
+        "thiếu ánh sáng",
+        "nướm hoa bị khô",
+        "nhiệt độ cao gió khô",
+        "bón nhiều đạm",
+        "giai đoạn làm đòng",
+        "hạt phấn suy thoái",
+        "hạt lép nổi trên nước"
+      ]
+    },
+    {
+      "summary": "Miên trạng là trạng thái hạt lúa đã trưởng thành nhưng chưa nảy mầm dù có điều kiện thích hợp. Thời gian miên trạng có thể kéo dài từ 0 đến 80 ngày tùy giống lúa và điều kiện thu hoạch.",
+      "full_text": "TÍNH MIÊN TRẠNG CỦA HẠT. Miên trạng là tình trạng hạt lúa trưởng thành nhưng chưa nảy mầm dù ở trong điều kiện thích hợp. Không phải hầu hết các giống đều có tính miên trạng. Hạt lúa có thể có thời gian miên trạng từ 0-80 ngày tùy thuộc vào giống lúa và điều kiện lúc thu hoạch.",
+      "sections": [
+        {
+          "heading": "Tính miên trạng của hạt",
+          "level": 1,
+          "text": "Miên trạng là trạng thái mà hạt lúa đã trưởng thành nhưng vẫn chưa nảy mầm dù có đủ điều kiện thích hợp như nước. Không phải tất cả các giống lúa đều có tính miên trạng. Thời gian miên trạng của hạt lúa có thể kéo dài từ 0 đến 80 ngày tùy theo giống lúa và điều kiện thu hoạch."
+        }
+      ],
+      "key_phrases": [
+        "miên trạng",
+        "hạt lúa",
+        "không nảy mầm",
+        "0 đến 80 ngày",
+        "giống lúa",
+        "điều kiện thu hoạch"
+      ]
+    },
+    {
+      "summary": "Tính miên trạng của hạt lúa có lợi ích ngăn sự nảy mầm trên bông lúa. Tính miên trạng rất quan trọng nếu lúa thu hoạch trong mùa mưa. Hạt không có tính miên trạng sẽ nảy mầm ngay trên bông khi gặp mưa. Hạt thu hoạch trong mùa khô có tỷ lệ miên trạng thấp.",
+      "full_text": "LỢI ÍCH CỦA TÍNH MIÊN TRẠNG - NGĂN SỰ NẢY MẦM TRÊN BÔNG LÚA. Hạt không miên trạng sẽ nảy mầm. Tính miên trạng của hạt rất quan trọng nếu lúa thu hoạch trong mùa mưa. Khi hạt lúa chín gặp trời mưa, hạt không có tính miên trạng có thể nảy mầm trên bông. Hạt được thu hoạch trong mùa khô có tỷ lệ miên trạng thấp.",
+      "sections": [
+        {
+          "heading": "Lợi ích của tính miên trạng - Ngăn sự nảy mầm trên bông lúa",
+          "level": 1,
+          "text": "Tính miên trạng là khả năng ức chế nảy mầm của hạt lúa ngay cả khi gặp điều kiện thuận lợi. Lợi ích chính của tính miên trạng là ngăn sự nảy mầm trên bông lúa khi gặp mưa. Tính miên trạng rất quan trọng nếu lúa thu hoạch trong mùa mưa, vì khi hạt lúa chín gặp trời mưa, hạt không có tính miên trạng có thể nảy mầm ngay trên bông. Hạt được thu hoạch trong mùa khô có tỷ lệ miên trạng thấp hơn."
+        }
+      ],
+      "key_phrases": [
+        "tính miên trạng",
+        "ngăn nảy mầm trên bông",
+        "hạt không miên trạng",
+        "thu hoạch mùa mưa",
+        "hạt lúa chín gặp mưa",
+        "nảy mầm trên bông",
+        "thu hoạch mùa khô",
+        "tỷ lệ miên trạng thấp"
+      ]
+    },
+    {
+      "summary": "Tính miên trạng giúp ngăn hạt lúa nảy mầm khi bị ẩm trong vài ngày sau khi gặt. Tuy nhiên, điều này cũng có thể gây bất lợi vì hạt lúa mới gặt không thể gieo trồng lại ngay.",
+      "full_text": "LỢI ÍCH CỦA TÍNH MIÊN TRẠNG - NGĂN LÚA NẢY MẦM NẾU LÚA BỊ ẨM TRONG VÀI NGÀY SAU KHI GẶT. Hạt lúa không miên trạng sẽ nảy mầm khi gặp ẩm. Nguyên nhân của miên trạng chưa được biết chắc chắn. Miên trạng có thể gây bất lợi vì hạt lúa mới gặt không thể trồng lại ngay được.",
+      "sections": [
+        {
+          "heading": "Lợi ích của tính miên trạng",
+          "level": 1,
+          "text": "Tính miên trạng giúp ngăn hạt lúa nảy mầm khi hạt bị ẩm trong vài ngày sau khi gặt. Nếu hạt lúa không có miên trạng, chúng có thể nảy mầm ngay khi gặp điều kiện ẩm. Tuy nhiên, miên trạng cũng có thể gây bất lợi vì hạt lúa mới thu hoạch không thể được gieo trồng lại ngay."
+        }
+      ],
+      "key_phrases": [
+        "lợi ích của miên trạng",
+        "ngăn lúa nảy mầm",
+        "ẩm sau khi gặt",
+        "hạt lúa không miên trạng",
+        "không thể trồng lại ngay"
+      ]
+    },
+    {
+      "summary": "Cây lúa cần nhiều loại dưỡng chất để phát triển, trong đó đạm, lân và kali là những chất cần với số lượng lớn. Ngoài ra còn có nhiều nguyên tố khác như lưu huỳnh, silic, kẽm và mangan.",
+      "full_text": "CÁC DƯỠNG CHẤT CÂY LÚA CẦN. Các dưỡng chất gồm: đạm, lân, kali, ô-xy, hy-drô, lưu huỳnh, silic, đồng, kẽm, ma-nhê, mangan, mô-lyp-đen, các-bon, sắt và vôi. Trừ các-bon, ô-xy và hy-drô, các chất khác được cung cấp dưới dạng phân bón. Cây cần nhiều loại dưỡng chất, nhưng đạm, kali và lân là những chất cây cần với số lượng lớn.",
+      "sections": [
+        {
+          "heading": "Các dưỡng chất cây lúa cần",
+          "level": 1,
+          "text": "Cây lúa cần nhiều loại dưỡng chất để sinh trưởng và phát triển như đạm, lân, kali, lưu huỳnh, silic, đồng, kẽm, mangan, ma-nhê, mô-lyp-đen, sắt và vôi. Các nguyên tố như các-bon, ô-xy và hy-drô được cây lấy từ không khí và nước, còn các chất khác thường được cung cấp thông qua phân bón. Trong số đó, đạm, lân và kali là các dưỡng chất cần với số lượng lớn."
+        }
+      ],
+      "key_phrases": [
+        "dưỡng chất cây lúa",
+        "đạm lân kali",
+        "nguyên tố dinh dưỡng",
+        "phân bón",
+        "silic",
+        "kẽm",
+        "mangan"
+      ]
+    },
+    {
+      "summary": "VAI TRÒ CỦA PHÂN BÓN. Tạo thực phẩm: Chất bột, Chất béo. Tái tạo cơ thể: Chất đạm. Duy trì sự sống. Tăng trưởng. Chất Đạm, Lân và Ka-li cần thiết cho đời sống của cây.",
+      "full_text": "Phân bón có 4 vai trò chính đối với cây lúa: tạo thực phẩm (chất bột, chất béo), tái tạo cơ thể (chất đạm), duy trì sự sống và tăng trưởng. Chất Đạm, Lân và Ka-li là những dưỡng chất cần thiết cho đời sống của cây.",
+      "sections": [
+        {
+          "heading": "Vai trò của phân bón",
+          "level": 1,
+          "text": "Phân bón đóng bốn vai trò quan trọng đối với cây lúa. Thứ nhất, tạo thực phẩm thông qua việc cung cấp chất bột và chất béo. Thứ hai, tái tạo cơ thể thông qua chất đạm giúp xây dựng và phục hồi các tế bào. Thứ ba, duy trì sự sống của cây. Thứ tư, thúc đẩy tăng trưởng giúp cây phát triển cao lớn hơn. Chất Đạm, Lân và Ka-li là những dưỡng chất cần thiết cho đời sống của cây."
+        }
+      ],
+      "key_phrases": [
+        "vai trò phân bón",
+        "tạo thực phẩm",
+        "chất bột",
+        "chất béo",
+        "tái tạo cơ thể",
+        "chất đạm",
+        "duy trì sự sống",
+        "tăng trưởng",
+        "đạm lân ka-li"
+      ]
+    },
+    {
+      "summary": "Phân hữu cơ có nguồn gốc từ xác bã thực vật và phân gia súc. Loại phân này chứa ít dưỡng chất nhưng giúp cải thiện cấu trúc đất.",
+      "full_text": "LOẠI PHÂN BÓN - HỮU CƠ. Ví dụ: phân chuồng hoai. Phân hữu cơ có từ xác bã các loại cây cỏ như lá mục và phân gia súc. Phân hữu cơ chứa ít các dưỡng chất mà cây cần. Dùng phân hữu cơ để cải thiện cấu trúc của đất.",
+      "sections": [
+        {
+          "heading": "Loại phân bón - Hữu cơ",
+          "level": 1,
+          "text": "Phân hữu cơ có nguồn gốc từ xác bã thực vật như lá mục và từ phân gia súc. Ví dụ phổ biến là phân chuồng hoai. Loại phân này chứa ít dưỡng chất cần thiết cho cây nhưng có tác dụng cải thiện cấu trúc và độ tơi xốp của đất."
+        }
+      ],
+      "key_phrases": [
+        "phân hữu cơ",
+        "phân chuồng hoai",
+        "xác bã thực vật",
+        "phân gia súc",
+        "cải thiện cấu trúc đất"
+      ]
+    },
+    {
+      "summary": "Loại phân bón vô cơ là những dưỡng chất được chế biến. Có nhiều loại phân hỗn hợp chứa đạm, lân và ka-li (N-P-K). Các số in trên bao chỉ rõ phần trăm trọng lượng của từng loại dưỡng chất. Ví dụ: UREA (46-0-0), DAP (18-46-0), Ammophosko (20-20-15).",
+      "full_text": "LOẠI PHÂN BÓN - VÔ CƠ. Thí dụ: U-rê (46-0-0), DAP (18-46-0), Hợp chất (16-16-8). UREA 46-0-0. DAP 18-46-0. Ammophosko 20-20-15. Phân vô cơ là những dưỡng chất được chế biến. Có nhiều loại phân hỗn hợp trong đó có chứa đạm, lân, và ka-li (N-P-K). Các số in trên bao chỉ rõ phần trăm trọng lượng của từng loại dưỡng chất trong phân. Thí dụ phân DAP 18-46-0 có nghĩa là trong phân chứa 18% đạm (N), 46% lân (P2O5) và không có chứa Ka-li (K2O). Phần còn lại trong bao phân là chất độn, có thể là vôi, lưu huỳnh.",
+      "sections": [
+        {
+          "heading": "Loại phân bón - Vô cơ",
+          "level": 1,
+          "text": "Phân bón vô cơ là những dưỡng chất được chế biến công nghiệp. Có nhiều loại phân hỗn hợp chứa đạm, lân và ka-li (N-P-K) với các tỷ lệ khác nhau. Các số in trên bao phân chỉ rõ phần trăm trọng lượng của từng loại dưỡng chất: UREA (46-0-0) chứa 46% đạm; DAP (18-46-0) chứa 18% đạm và 46% lân; Ammophosko (20-20-15) chứa 20% đạm, 20% lân và 15% ka-li. Phần còn lại trong bao phân là chất độn như vôi hoặc lưu huỳnh."
+        }
+      ],
+      "key_phrases": [
+        "phân bón vô cơ",
+        "dưỡng chất chế biến",
+        "phân hỗn hợp N-P-K",
+        "UREA 46-0-0",
+        "DAP 18-46-0",
+        "Ammophosko 20-20-15",
+        "phần trăm trọng lượng",
+        "đạm lân ka-li",
+        "chất độn vôi lưu huỳnh"
+      ]
+    },
+    {
+      "summary": "Khi phân đạm được bón vào đất, một phần được cây hấp thụ, một phần được giữ lại trong đất và một phần bị mất đi. Việc giảm lượng đạm thất thoát và tăng hiệu quả sử dụng là vấn đề quan trọng trong kỹ thuật canh tác.",
+      "full_text": "BIẾN CHUYỂN CỦA PHÂN ĐẠM KHI ĐƯỢC BÓN VÀO ĐẤT. Đạm bị mất: 40%. Đạm được cây hấp thu: 40%. Đạm được giữ trong đất: 20%. Phần lớn lượng đạm được bón bị mất đi. Lượng đạm được giữ trong đất có thể được cây sử dụng một phần. Làm thế nào để giảm thiểu lượng đạm bị mất đi và tăng lượng đạm hữu dụng là vấn đề quan trọng trong kỹ thuật trồng trọt.",
+      "sections": [
+        {
+          "heading": "Biến chuyển của phân đạm khi được bón vào đất",
+          "level": 1,
+          "text": "Sau khi bón vào đất, phân đạm có thể bị mất khoảng 40%, khoảng 40% được cây hấp thụ và khoảng 20% được giữ lại trong đất. Lượng đạm được giữ trong đất có thể tiếp tục được cây sử dụng sau đó. Việc giảm thất thoát đạm và tăng hiệu quả sử dụng đạm là một vấn đề quan trọng trong canh tác."
+        }
+      ],
+      "key_phrases": [
+        "phân đạm",
+        "biến chuyển của đạm",
+        "đạm bị mất 40 phần trăm",
+        "đạm cây hấp thu",
+        "đạm giữ trong đất",
+        "hiệu quả sử dụng đạm"
+      ]
+    },
+    {
+      "summary": "Trong thời vụ mùa mưa, cây lúa cao và nhiều lá, che khuất lẫn nhau làm thức ăn chế tạo từ lá thấp và năng lượng ánh sáng kém. Cây không sử dụng hết lượng phân bón, vì vậy nên bón ít phân trong mùa mưa.",
+      "full_text": "THỜI VỤ - MÙA MƯA. Mùa mưa - Cây cao, nhiều lá, che khuất lẫn nhau vì thế thức ăn cho cây chế tạo được từ lá thường thấp. Năng lượng ánh sáng kém. Trong mùa mưa, cây không sử dụng hết lượng phân được bón. Trong mùa mưa, nên bón ít phân.",
+      "sections": [
+        {
+          "heading": "Thời vụ - Mùa mưa",
+          "level": 1,
+          "text": "Trong thời vụ mùa mưa, điều kiện canh tác lúa có những đặc điểm riêng. Cây lúa cao và nhiều lá, các cây che khuất lẫn nhau khiến thức ăn chế tạo được từ lá thường thấp và năng lượng ánh sáng kém. Do điều kiện ánh sáng hạn chế, cây không sử dụng hết lượng phân được bón. Vì vậy, trong mùa mưa nên bón ít phân hơn so với mùa khô để tránh lãng phí và ô nhiễm môi trường."
+        }
+      ],
+      "key_phrases": [
+        "thời vụ mùa mưa",
+        "cây cao nhiều lá",
+        "che khuất lẫn nhau",
+        "thức ăn từ lá thấp",
+        "năng lượng ánh sáng kém",
+        "không sử dụng hết phân",
+        "bón ít phân"
+      ]
+    },
+    {
+      "summary": "Trong mùa khô, cây lúa thường thấp hơn và ít chồi nhưng nhận được nhiều ánh sáng. Bón phân đạm trong điều kiện này giúp tăng số chồi, tăng diện tích lá và nâng cao năng suất.",
+      "full_text": "THỜI VỤ - MÙA KHÔ. Mùa khô: cây thấp hơn và ít chồi, lượng ánh sáng đầy đủ. Phân bón làm tăng số chồi, tăng diện tích lá và thúc đẩy quá trình tạo thức ăn. Nhiều nắng và nhiều lá làm tăng việc tạo thức ăn nên bón phân cho hiệu quả cao. Cần bón nhiều phân đạm trong mùa khô để làm tăng năng suất lúa.",
+      "sections": [
+        {
+          "heading": "Thời vụ - Mùa khô",
+          "level": 1,
+          "text": "Trong mùa khô, cây lúa thường thấp hơn và có ít chồi hơn nhưng nhận được nhiều ánh sáng. Việc bón phân, đặc biệt là phân đạm, giúp tăng số chồi, tăng diện tích lá và thúc đẩy quá trình quang hợp tạo thức ăn cho cây. Do đó bón nhiều phân đạm trong mùa khô có thể giúp tăng năng suất lúa."
+        }
+      ],
+      "key_phrases": [
+        "thời vụ mùa khô",
+        "ánh sáng đầy đủ",
+        "bón phân đạm",
+        "tăng số chồi",
+        "tăng diện tích lá",
+        "tăng năng suất lúa"
+      ]
+    },
+    {
+      "summary": "Độ màu mỡ của đất ảnh hưởng đến lượng phân đạm cần bón. Đất phì nhiêu cộng nhiều phân đạm gây dư đạm làm cây mọc xum xuê, dễ đổ ngã, nhiều hạt lép và chồi trễ. Đất nghèo cộng nhiều phân đạm cho lượng đạm vừa đủ, điều chỉnh hợp lý diện tích lá, số chồi và phân bố ánh sáng, giúp tăng năng suất.",
+      "full_text": "ĐỘ MÀU MỠ CỦA ĐẤT. Đất phì nhiêu + Nhiều phân đạm = Dư đạm. Quá nhiều phân đạm trong đất làm cây mọc xum xuê, cây nhận ít ánh sáng và dễ bị đổ ngã. Quá nhiều phân đạm ở giai đoạn sau tạo nhiều hạt lép và nhiều chồi trễ muộn. Đất nghèo + Nhiều phân đạm = Đủ đạm. Lượng đạm vừa đủ trong đất sẽ điều chỉnh hợp lý diện tích lá, số chồi và sự phân bố ánh sáng, kết quả là năng suất hạt tăng cao hơn.",
+      "sections": [
+        {
+          "heading": "Độ màu mỡ của đất",
+          "level": 1,
+          "text": "Độ màu mỡ của đất quyết định lượng phân đạm cần bón để đạt hiệu quả tối ưu. Khi đất phì nhiêu được bón thêm nhiều phân đạm sẽ gây tình trạng dư đạm, làm cây mọc xum xuê, nhận ít ánh sáng, dễ đổ ngã, và ở giai đoạn sau tạo nhiều hạt lép và nhiều chồi trễ muộn. Ngược lại, khi đất nghèo được bón nhiều phân đạm sẽ đạt mức đủ đạm, giúp điều chỉnh hợp lý diện tích lá, số chồi và sự phân bố ánh sáng, kết quả là năng suất hạt tăng cao hơn."
+        }
+      ],
+      "key_phrases": [
+        "độ màu mỡ của đất",
+        "đất phì nhiêu",
+        "đất nghèo",
+        "dư đạm",
+        "đủ đạm",
+        "cây mọc xum xuê",
+        "dễ đổ ngã",
+        "hạt lép",
+        "chồi trễ muộn",
+        "diện tích lá",
+        "phân bố ánh sáng",
+        "năng suất hạt tăng"
+      ]
+    },
+    {
+      "summary": "Khả năng đạt năng suất của giống lúa phụ thuộc vào đặc điểm sinh trưởng của giống. Giống lúa năng suất cao có cây thấp vừa, lá thẳng và nhiều chồi nên ít đổ ngã, trong khi giống lúa cao dễ đổ ngã khi bón nhiều phân.",
+      "full_text": "KHẢ NĂNG VỀ NĂNG SUẤT CỦA GIỐNG LÚA. Giống năng suất cao - cây thấp vừa: khi bón phân đạm, lá thẳng, tăng nhiều chồi và không đổ ngã. Giống năng suất thấp - cây cao: khi bón phân đạm, lá rũ, tạo bông rợp và dễ đổ ngã. Dùng phân bón cho giống cao cây sẽ làm tăng chiều cao cây và làm cây dễ đổ ngã. Do lá nhiều, có bông rợp và đổ ngã nên năng suất giảm khi dùng phân bón.",
+      "sections": [
+        {
+          "heading": "Khả năng về năng suất của giống lúa",
+          "level": 1,
+          "text": "Giống lúa năng suất cao thường có cây thấp vừa, lá thẳng và khi bón phân đạm sẽ tăng nhiều chồi mà không bị đổ ngã. Ngược lại, giống lúa cây cao khi bón phân đạm thường làm cây cao hơn, lá rũ, bông rợp và dễ bị đổ ngã. Vì vậy năng suất của giống cây cao có thể giảm khi bón nhiều phân."
+        }
+      ],
+      "key_phrases": [
+        "năng suất giống lúa",
+        "giống lúa năng suất cao",
+        "cây thấp vừa",
+        "lá thẳng nhiều chồi",
+        "giống lúa cây cao",
+        "đổ ngã"
+      ]
+    },
+    {
+      "summary": "Lợi ích của việc bón phân phụ thuộc vào lượng phân bón sử dụng. Bón phân vừa đủ cho năng suất trung bình và thu nhập cao nhất. Ít phân cho năng suất thấp và thu nhập kém. Nhiều phân cho năng suất cao nhất nhưng thu nhập kém do chi phí cao. Bón phân đúng lượng sẽ cho lợi nhuận cao nhất.",
+      "full_text": "LỢI ÍCH CỦA VIỆC BÓN PHÂN. Ít phân - Năng suất thấp - Thu nhập kém. Bón phân vừa - Năng suất trung bình - Thu nhập cao. Nhiều phân - Năng suất cao nhất - Thu nhập kém. Bón phân đúng lượng sẽ cho lợi nhuận cao nhất. Lượng phân bón thích hợp phụ thuộc vào giá phân và hiệu quả gia tăng năng suất khi dùng phân. Bón phân trong mùa khô có lợi hơn trong mùa mưa. Lượng phân bón thích hợp, cho năng suất cao sẽ thay đổi tùy theo giống lúa sử dụng.",
+      "sections": [
+        {
+          "heading": "Lợi ích của việc bón phân",
+          "level": 1,
+          "text": "Lợi ích của việc bón phân phụ thuộc trực tiếp vào lượng phân sử dụng. Khi bón ít phân, năng suất thấp và thu nhập kém. Khi bón phân vừa đủ, đạt năng suất trung bình nhưng thu nhập cao nhất do chi phí hợp lý. Khi bón nhiều phân, năng suất cao nhất nhưng thu nhập lại kém vì chi phí phân bón quá lớn. Bón phân đúng lượng sẽ cho lợi nhuận cao nhất. Lượng phân bón thích hợp phụ thuộc vào giá phân và hiệu quả gia tăng năng suất. Bón phân trong mùa khô có lợi hơn mùa mưa. Lượng phân bón thích hợp cũng thay đổi tùy theo giống lúa sử dụng."
+        }
+      ],
+      "key_phrases": [
+        "lợi ích bón phân",
+        "ít phân năng suất thấp",
+        "bón phân vừa thu nhập cao",
+        "nhiều phân thu nhập kém",
+        "bón phân đúng lượng",
+        "lợi nhuận cao nhất",
+        "giá phân",
+        "hiệu quả năng suất",
+        "mùa khô lợi hơn mùa mưa",
+        "giống lúa sử dụng"
+      ]
+    },
+    {
+      "summary": "Giống lúa cải tiến cho năng suất cao hơn giống lúa cũ trong cả mùa khô và mùa mưa. Khi bón phân đạm, giống cải tiến vẫn đạt năng suất cao hơn so với giống cũ.",
+      "full_text": "DÙNG GIỐNG CAO SẢN. Giống mới và giống cũ được so sánh về năng suất hạt. Trong mùa khô và mùa mưa, khi có hoặc không bón phân đạm, giống cải tiến đều cho năng suất cao hơn giống lúa cũ. Dù trồng ở mùa nào và bón lượng phân đạm nhiều hay ít, năng suất giống lúa cải tiến luôn cao hơn giống lúa cũ khi được bón thêm phân đạm.",
+      "sections": [
+        {
+          "heading": "Dùng giống cao sản",
+          "level": 1,
+          "text": "Giống lúa cải tiến cho năng suất hạt cao hơn giống lúa cũ. Trong cả mùa khô và mùa mưa, dù có bón phân đạm hay không, giống cải tiến vẫn đạt năng suất cao hơn. Khi được bón thêm phân đạm, năng suất của giống lúa cải tiến càng vượt trội so với giống cũ."
+        }
+      ],
+      "key_phrases": [
+        "giống cao sản",
+        "giống lúa cải tiến",
+        "giống lúa cũ",
+        "năng suất hạt",
+        "mùa khô",
+        "mùa mưa",
+        "bón phân đạm"
+      ]
+    },
+    {
+      "summary": "BÓN PHÂN ĐÚNG LƯỢNG. Lợi nhuận. Năng suất. Phân bón. Phân thấp - Năng suất thấp - Lợi nhuận thấp. Phân vừa đủ - Năng suất trung bình - Lợi nhuận cao. Phân nhiều - Năng suất cao nhất - Lợi nhuận thấp. Lượng phân bón thích hợp tùy thuộc vào: Thời vụ trồng. Độ màu mỡ của đất. Khả năng cho năng suất của giống. Giá phân bón. Thời điểm và phương pháp bón.",
+      "full_text": "Bón phân đúng lượng giúp tối ưu hóa lợi nhuận. Phân thấp cho năng suất thấp và lợi nhuận thấp. Phân vừa đủ cho năng suất trung bình và lợi nhuận cao. Phân nhiều cho năng suất cao nhất nhưng lợi nhuận thấp. Lượng phân bón thích hợp tùy thuộc vào thời vụ trồng, độ màu mỡ của đất, khả năng cho năng suất của giống, giá phân bón, và thời điểm và phương pháp bón.",
+      "sections": [
+        {
+          "heading": "Bón phân đúng lượng",
+          "level": 1,
+          "text": "Bón phân đúng lượng là yếu tố then chốt để tối ưu hóa lợi nhuận trong canh tác lúa. Khi bón phân thấp, năng suất thấp và lợi nhuận thấp. Khi bón phân vừa đủ, năng suất ở mức trung bình nhưng lợi nhuận đạt cao nhất. Khi bón phân nhiều, tuy năng suất cao nhất nhưng lợi nhuận lại thấp do chi phí phân bón quá lớn. Lượng phân bón thích hợp tùy thuộc vào các yếu tố: thời vụ trồng, độ màu mỡ của đất, khả năng cho năng suất của giống, giá phân bón, và thời điểm cùng phương pháp bón."
+        }
+      ],
+      "key_phrases": [
+        "bón phân đúng lượng",
+        "phân thấp năng suất thấp",
+        "phân vừa đủ lợi nhuận cao",
+        "phân nhiều lợi nhuận thấp",
+        "năng suất cao nhất",
+        "thời vụ trồng",
+        "độ màu mỡ đất",
+        "khả năng năng suất giống",
+        "giá phân bón",
+        "thời điểm phương pháp bón"
+      ]
+    },
+    {
+      "summary": "Phân đạm cần được bón đúng giai đoạn sinh trưởng của lúa để đạt hiệu quả cao. Thời điểm bón hiệu quả nhất là khi cấy và khi lúa bước vào giai đoạn tượng đòng.",
+      "full_text": "BÓN ĐÚNG GIAI ĐOẠN SINH TRƯỞNG CỦA LÚA. Các giai đoạn gồm: gieo, cấy, tượng đòng, trổ và thu hoạch. Nơi có đường gạch càng thưa là lúc bón phân đạm cho hiệu quả càng nhiều. Thời điểm bón phân đạm cho hiệu quả nhất là lúc cấy và khi lúa tượng đòng.",
+      "sections": [
+        {
+          "heading": "Bón đúng giai đoạn sinh trưởng của lúa",
+          "level": 1,
+          "text": "Việc bón phân đạm cần thực hiện đúng giai đoạn sinh trưởng của cây lúa để đạt hiệu quả cao. Các giai đoạn sinh trưởng gồm gieo, cấy, tượng đòng, trổ và thu hoạch. Trong đó, thời điểm bón phân đạm hiệu quả nhất là lúc cấy và khi lúa bước vào giai đoạn tượng đòng."
+        }
+      ],
+      "key_phrases": [
+        "bón đúng giai đoạn",
+        "sinh trưởng của lúa",
+        "bón phân đạm",
+        "lúc cấy",
+        "giai đoạn tượng đòng",
+        "hiệu quả bón phân"
+      ]
+    },
+    {
+      "summary": "Không cho ruộng khô nước để tránh mất phân đạm. Khi ruộng có nước, phân đạm ít bị bốc hơi mất. Khi ruộng khô, kẽ nứt của đất tạo điều kiện không khí xâm nhập làm phân đạm biến đổi và bốc hơi mất. Cần củng cố bờ để giữ nước.",
+      "full_text": "KHÔNG CHO RUỘNG KHÔ NƯỚC. Đạm bốc hơi. Nước. Phân đạm. Không nước. Kẽ nứt của đất. Nước trên ruộng ngập rồi khô sau đó sẽ làm phần lớn phân đạm bón vào bị mất đi do bay hơi. Phân đạm bón trên đất ngập nước, gặp không khí sẽ biến đổi thành dạng khác. Dạng này dễ bị bốc hơi mất. Mực nước trên ruộng sẽ làm giới hạn sự xâm nhập của không khí vào đất, đất ít không khí, phân đạm ít bị bốc hơi mất. Cần củng cố bờ để giữ nước.",
+      "sections": [
+        {
+          "heading": "Không cho ruộng khô nước",
+          "level": 1,
+          "text": "Duy trì mực nước trên ruộng là yếu tố quan trọng để giảm thiểu thất thoát phân đạm. Khi ruộng ngập nước rồi bị khô, phần lớn phân đạm bón vào sẽ bị mất do bay hơi. Phân đạm bón trên đất ngập nước khi gặp không khí sẽ biến đổi thành dạng dễ bốc hơi mất. Ngược lại, mực nước trên ruộng giới hạn sự xâm nhập của không khí vào đất, giúp phân đạm ít bị bốc hơi mất hơn. Do đó cần củng cố bờ để giữ nước trên ruộng."
+        }
+      ],
+      "key_phrases": [
+        "không cho ruộng khô nước",
+        "đạm bốc hơi",
+        "phân đạm bị mất",
+        "đất ngập nước",
+        "kẽ nứt của đất",
+        "không khí xâm nhập",
+        "mực nước ruộng",
+        "củng cố bờ giữ nước"
+      ]
+    },
+    {
+      "summary": "Phân bón nên được vùi vào đất để tránh thất thoát do bốc hơi và giúp rễ cây hấp thụ tốt hơn. Không nên rải phân trên mặt đất hoặc bón khi phân không được vùi xuống đất.",
+      "full_text": "VÙI PHÂN VÀO ĐẤT. Phân được bón vùi trong đất giúp cây hấp thụ tốt hơn. Nếu phân được bón trên mặt đất, đạm có thể bị bốc hơi và thất thoát. Phân bón trước khi cấy cần được vùi trong đất để tránh bị mất phân do bốc hơi và giúp phân tiếp xúc gần rễ hơn. Không nên bón phân nếu phân không được vùi vào đất. Không rải phân trên ruộng ngay sau khi cấy.",
+      "sections": [
+        {
+          "heading": "Vùi phân vào đất",
+          "level": 1,
+          "text": "Phân bón nên được vùi vào đất để tránh thất thoát do bốc hơi và giúp phân tiếp xúc gần rễ cây hơn. Nếu phân được bón trên mặt đất, đạm có thể bị bốc hơi và làm giảm hiệu quả sử dụng. Vì vậy phân bón trước khi cấy cần được vùi vào đất. Không nên bón phân nếu không thể vùi phân xuống đất và cũng không nên rải phân ngay sau khi cấy."
+        }
+      ],
+      "key_phrases": [
+        "vùi phân vào đất",
+        "phân bón",
+        "đạm bốc hơi",
+        "tiếp xúc gần rễ",
+        "tránh thất thoát phân"
+      ]
+    },
+    {
+      "summary": "KHÔNG RẢI PHÂN KHI LÁ ƯỚT. Phân sẽ dính vào lá ướt và có thể gây cháy lá. Phân bị ngấm nước sẽ bị bốc hơi mất khi các giọt phân khô lại. Cũng không nên rải phân khi trời sắp mưa lớn: phân có thể bị trôi mất.",
+      "full_text": "Không nên rải phân khi lá ướt vì phân sẽ dính vào lá ướt và có thể gây cháy lá. Phân bị ngấm nước sẽ bị bốc hơi mất khi các giọt phân khô lại. Cũng không nên rải phân khi trời sắp mưa lớn vì phân có thể bị trôi mất.",
+      "sections": [
+        {
+          "heading": "Không rải phân khi lá ướt",
+          "level": 1,
+          "text": "Thời điểm rải phân ảnh hưởng trực tiếp đến hiệu quả sử dụng phân bón. Không nên rải phân khi lá ướt vì phân sẽ dính vào lá và có thể gây cháy lá. Phân bị ngấm nước sẽ bị bốc hơi mất khi các giọt phân khô lại, gây lãng phí. Ngoài ra, cũng không nên rải phân khi trời sắp mưa lớn vì phân có thể bị nước mưa cuốn trôi mất, không phát huy được tác dụng."
+        }
+      ],
+      "key_phrases": [
+        "không rải phân lá ướt",
+        "phân dính vào lá",
+        "cháy lá",
+        "phân bốc hơi mất",
+        "giọt phân khô",
+        "không rải phân trời mưa lớn",
+        "phân bị trôi mất"
+      ]
+    },
+    {
+      "summary": "GIỮ CHO RUỘNG SẠCH CỎ. Cỏ cạnh tranh phân đạm với lúa. Làm cỏ sạch trước khi bón phân đạm. Bón phân sẽ làm cỏ mọc tốt hơn. Nếu cỏ phát triển nhiều sẽ át lúa.",
+      "full_text": "Cỏ dại cạnh tranh dinh dưỡng, đặc biệt là phân đạm, với cây lúa. Vì vậy cần làm sạch cỏ trước khi bón phân để tránh cỏ phát triển mạnh và làm giảm năng suất lúa.",
+      "sections": [
+        {
+          "heading": "Giữ cho ruộng sạch cỏ",
+          "level": 1,
+          "text": "Cỏ dại cạnh tranh phân đạm và các chất dinh dưỡng với cây lúa. Vì vậy cần làm sạch cỏ trước khi bón phân đạm. Nếu bón phân khi ruộng còn nhiều cỏ, cỏ sẽ phát triển mạnh và có thể át lúa, làm giảm năng suất."
+        }
+      ],
+      "key_phrases": [
+        "ruộng sạch cỏ",
+        "cỏ cạnh tranh dinh dưỡng",
+        "phân đạm",
+        "làm cỏ trước khi bón phân",
+        "cỏ át lúa"
+      ]
+    },
+    {
+      "summary": "Bón phân đạm làm năng suất cao hơn so với không bón đạm, đặc biệt hiệu quả hơn trong mùa khô. Ánh sáng mặt trời cần để cho cây tạo thức ăn, có nhiều hơn trong mùa khô nên phân đạm bón vào mùa khô cho hiệu quả cao hơn mùa mưa.",
+      "full_text": "BÓN PHÂN ĐẠM LÀM NĂNG SUẤT CAO HƠN. Không bón đạm - Năng suất thấp hơn. Mùa mưa: bón đạm - Năng suất tăng. Không bón đạm - Năng suất thấp hơn. Mùa khô: bón đạm - Năng suất tăng nhiều hơn. Phân đạm bón vào mùa khô sẽ cho hiệu quả cao hơn. Ánh sáng mặt trời cần để cho cây tạo thức ăn, có nhiều trong mùa khô.",
+      "sections": [
+        {
+          "heading": "Bón phân đạm làm năng suất cao hơn",
+          "level": 1,
+          "text": "Bón phân đạm giúp tăng năng suất lúa so với không bón đạm trong cả hai mùa. Tuy nhiên, hiệu quả của phân đạm khác nhau theo mùa vụ. Trong mùa mưa, bón đạm có tăng năng suất nhưng mức tăng hạn chế do ánh sáng mặt trời ít hơn. Trong mùa khô, bón đạm cho hiệu quả cao hơn nhiều vì ánh sáng mặt trời dồi dào hơn, giúp cây tạo thức ăn tốt hơn. Phân đạm bón vào mùa khô sẽ cho hiệu quả cao hơn mùa mưa."
+        }
+      ],
+      "key_phrases": [
+        "bón phân đạm",
+        "năng suất cao hơn",
+        "không bón đạm",
+        "mùa mưa",
+        "mùa khô",
+        "hiệu quả cao hơn",
+        "ánh sáng mặt trời",
+        "cây tạo thức ăn"
+      ]
+    },
+    {
+      "summary": "Trong mùa khô, cây lúa nhận được nhiều ánh sáng hơn nên lá ngắn và mọc thẳng, ít bị rợp. Khi lá bị rợp, khả năng nhận ánh sáng giảm và năng suất lúa cũng giảm.",
+      "full_text": "LÚA ÍT BỊ RỢP. Mùa mưa có khoảng 300 đơn vị ánh sáng, trong khi mùa khô có khoảng 500 đơn vị ánh sáng. Trong mùa khô, lá lúa ngắn và mọc thẳng nên không bị rợp. Lượng ánh sáng nhiều giúp cây lúa nhận ánh sáng tốt hơn. Nếu lá bị rợp thì năng suất sẽ giảm.",
+      "sections": [
+        {
+          "heading": "Lúa ít bị rợp",
+          "level": 1,
+          "text": "Trong mùa khô, lượng ánh sáng nhiều hơn so với mùa mưa nên cây lúa nhận được ánh sáng tốt hơn. Lá lúa trong mùa khô thường ngắn và mọc thẳng nên ít bị rợp. Khi lá bị rợp, khả năng nhận ánh sáng giảm và năng suất lúa cũng giảm."
+        }
+      ],
+      "key_phrases": [
+        "lúa ít bị rợp",
+        "ánh sáng",
+        "mùa khô",
+        "mùa mưa",
+        "lá lúa mọc thẳng",
+        "năng suất giảm"
+      ]
+    },
+    {
+      "summary": "Trong mùa khô, lúa ít bị hại do đổ ngã hơn mùa mưa. Cây lúa trong mùa khô không cao bằng mùa mưa, vì thế lúa ít bị đổ ngay cả khi dùng lượng phân đạm cao hơn.",
+      "full_text": "ÍT BỊ HẠI DO ĐỔ NGÃ. Mùa khô. Mùa mưa. Mùa khô (có bón đạm). Mùa mưa (có bón đạm). Trong mùa khô lúa không cao cây như trong mùa mưa, vì thế lúa ít bị đổ ngay khi dùng lượng phân đạm cao hơn.",
+      "sections": [
+        {
+          "heading": "Ít bị hại do đổ ngã",
+          "level": 1,
+          "text": "So sánh giữa mùa khô và mùa mưa cho thấy sự khác biệt rõ rệt về nguy cơ đổ ngã của cây lúa. Trong mùa mưa, cây lúa cao hơn và dễ bị đổ ngã hơn khi bón nhiều phân đạm. Trong mùa khô, cây lúa không cao bằng mùa mưa nên ít bị đổ ngã hơn, ngay cả khi sử dụng lượng phân đạm cao hơn. Đây là một trong những lợi thế của canh tác lúa trong mùa khô."
+        }
+      ],
+      "key_phrases": [
+        "đổ ngã",
+        "mùa khô",
+        "mùa mưa",
+        "cây lúa không cao",
+        "ít bị đổ ngã",
+        "phân đạm cao hơn",
+        "hại do đổ ngã"
+      ]
+    },
+    {
+      "summary": "Bón phân đạm giúp tăng số chồi của cây lúa. Trong mùa khô, lúa thường có ít chồi hơn do mật độ cấy dày, nhưng bón phân đạm có thể làm tăng số chồi hữu hiệu.",
+      "full_text": "GIA TĂNG SỐ CHỒI. Mùa mưa: 12 chồi tăng lên 14 chồi khi bón phân đạm. Mùa khô: 10 chồi tăng lên 15 chồi khi bón phân đạm. Phân đạm làm tăng số chồi. Thường vào mùa khô lúa nhảy chồi ít hơn so với mùa mưa. Trong mùa khô, lúa thường được cấy dày nên sẽ nhảy chồi ít hơn so với mùa mưa. Bón phân đạm vào mùa khô làm tăng thêm số chồi hữu hiệu.",
+      "sections": [
+        {
+          "heading": "Gia tăng số chồi",
+          "level": 1,
+          "text": "Phân đạm giúp làm tăng số chồi của cây lúa. Trong mùa mưa, số chồi có thể tăng từ khoảng 12 lên 14 khi bón phân đạm. Trong mùa khô, số chồi có thể tăng từ khoảng 10 lên 15 khi bón phân đạm. Do trong mùa khô lúa thường được cấy dày nên số chồi tự nhiên ít hơn, nhưng việc bón phân đạm có thể giúp tăng số chồi hữu hiệu."
+        }
+      ],
+      "key_phrases": [
+        "gia tăng số chồi",
+        "phân đạm",
+        "mùa mưa",
+        "mùa khô",
+        "tăng số chồi hữu hiệu",
+        "mật độ cấy dày"
+      ]
+    },
+    {
+      "summary": "Lá cây là nơi chế tạo thức ăn (chất bột) thông qua quá trình quang hợp. Nước từ đất và thán khí từ khí trời là nguyên liệu chính để tạo chất bột, với năng lượng từ ánh sáng mặt trời. Nước được rễ hút lên từ đất, khí trời đi vào cây qua các lỗ hổng ở mặt lá.",
+      "full_text": "NƠI CHẾ TẠO THỨC ĂN. Năng lượng ánh sáng. Không khí. Nước. Lá được tạo thành bởi nhiều tế bào, đây là hình một tế bào được rọi lớn nhiều lần. Chất bột được tạo thành ở trên những lá xanh. Nước từ đất và thán khí từ khí trời là những nguyên liệu chính để tạo nên chất bột. Nước được rễ hút lên từ đất. Khí trời đi vào trong cây qua các lỗ hổng ở mặt lá.",
+      "sections": [
+        {
+          "heading": "Nơi chế tạo thức ăn",
+          "level": 1,
+          "text": "Lá xanh là nơi chế tạo thức ăn (chất bột) cho cây lúa thông qua quá trình quang hợp. Lá được tạo thành bởi nhiều tế bào chứa diệp lục. Để tạo chất bột, cây cần ba yếu tố chính: năng lượng ánh sáng mặt trời, nước từ đất được rễ hút lên, và thán khí (CO2) từ không khí đi vào cây qua các lỗ hổng ở mặt lá. Nước từ đất và thán khí từ khí trời là những nguyên liệu chính để tạo nên chất bột."
+        }
+      ],
+      "key_phrases": [
+        "nơi chế tạo thức ăn",
+        "lá xanh",
+        "chất bột",
+        "năng lượng ánh sáng",
+        "nước từ đất",
+        "thán khí",
+        "không khí",
+        "tế bào lá",
+        "lỗ hổng mặt lá",
+        "quang hợp"
+      ]
+    },
+    {
+      "summary": "Lá lúa là nơi chế tạo thức ăn thông qua quá trình quang hợp. Năng lượng ánh sáng, nước và khí từ không khí được chất diệp lục trong lá sử dụng để tạo ra chất bột nuôi cây.",
+      "full_text": "NƠI CHẾ TẠO THỨC ĂN. Tế bào lá chứa nhiều đơn vị tạo thức ăn. Năng lượng ánh sáng được chất diệp lục hấp thụ và sử dụng cùng với nước và khí từ không khí để tạo ra chất bột. Năng lượng ánh sáng được dùng để phân giải nước và kết hợp với khí trời để tạo ra thức ăn cho cây.",
+      "sections": [
+        {
+          "heading": "Nơi chế tạo thức ăn",
+          "level": 1,
+          "text": "Lá là nơi chế tạo thức ăn cho cây lúa. Trong tế bào lá có các đơn vị quang hợp chứa chất diệp lục. Chất diệp lục hấp thụ năng lượng ánh sáng và sử dụng cùng với nước và khí từ không khí để tạo ra chất bột, cung cấp dinh dưỡng cho cây."
+        }
+      ],
+      "key_phrases": [
+        "chế tạo thức ăn",
+        "lá lúa",
+        "quang hợp",
+        "chất diệp lục",
+        "năng lượng ánh sáng",
+        "tạo chất bột"
+      ]
+    },
+    {
+      "summary": "CÁC YẾU TỐ ẢNH HƯỞNG ĐẾN VIỆC TẠO CHẤT BỘT - CHẤT DIỆP LỤC. Số lá khác nhau. Kích thước lá khác nhau. Tăng số lá và kích thước lá sẽ làm tăng số lượng chất diệp lục trên mỗi cây.",
+      "full_text": "Chất diệp lục là một trong các yếu tố ảnh hưởng đến việc tạo chất bột của cây lúa. Số lá và kích thước lá khác nhau giữa các cây ảnh hưởng đến lượng chất diệp lục. Tăng số lá và kích thước lá sẽ làm tăng số lượng chất diệp lục trên mỗi cây.",
+      "sections": [
+        {
+          "heading": "Các yếu tố ảnh hưởng đến việc tạo chất bột - Chất diệp lục",
+          "level": 1,
+          "text": "Chất diệp lục là yếu tố quan trọng ảnh hưởng đến khả năng tạo chất bột của cây lúa thông qua quang hợp. Các cây lúa khác nhau về số lá và kích thước lá, điều này ảnh hưởng trực tiếp đến tổng lượng chất diệp lục có trên mỗi cây. Tăng số lá và kích thước lá sẽ làm tăng số lượng chất diệp lục trên mỗi cây, từ đó tăng khả năng tạo chất bột và năng suất."
+        }
+      ],
+      "key_phrases": [
+        "chất diệp lục",
+        "tạo chất bột",
+        "số lá khác nhau",
+        "kích thước lá khác nhau",
+        "tăng số lá",
+        "tăng kích thước lá",
+        "số lượng chất diệp lục",
+        "quang hợp"
+      ]
+    },
+    {
+      "summary": "Chất diệp lục trong lá ảnh hưởng đến khả năng tạo chất bột của cây lúa. Khi lá dày và chứa nhiều chất diệp lục, cây sẽ có nhiều đơn vị tạo chất bột hơn và khả năng tạo thức ăn tăng lên.",
+      "full_text": "CÁC YẾU TỐ ẢNH HƯỞNG ĐẾN VIỆC TẠO CHẤT BỘT - CHẤT DIỆP LỤC. Khi trong lá có nhiều đơn vị tạo chất bột thì khả năng tạo chất bột cao hơn. Khi lá có ít đơn vị tạo chất bột thì khả năng tạo chất bột thấp hơn. Tổng số lượng chất diệp lục trên cây sẽ tăng nếu lá dày và trong lá chứa nhiều chất diệp lục.",
+      "sections": [
+        {
+          "heading": "Các yếu tố ảnh hưởng đến việc tạo chất bột - Chất diệp lục",
+          "level": 1,
+          "text": "Chất diệp lục trong lá đóng vai trò quan trọng trong quá trình tạo chất bột. Khi lá có nhiều đơn vị tạo chất bột và chứa nhiều chất diệp lục, cây sẽ tạo ra nhiều thức ăn hơn. Tổng lượng chất diệp lục của cây tăng khi lá dày và giàu chất diệp lục."
+        }
+      ],
+      "key_phrases": [
+        "tạo chất bột",
+        "chất diệp lục",
+        "đơn vị tạo chất bột",
+        "lá dày",
+        "quang hợp",
+        "tạo thức ăn"
+      ]
+    },
+    {
+      "summary": "Lượng ánh sáng là một trong các yếu tố ảnh hưởng đến việc tạo chất bột của cây lúa. Nhiều ánh sáng cho nhiều năng lượng sẽ tạo thành nhiều tinh bột hơn so với ít ánh sáng.",
+      "full_text": "CÁC YẾU TỐ ẢNH HƯỞNG ĐẾN VIỆC TẠO CHẤT BỘT - LƯỢNG ÁNH SÁNG. Tinh bột. Nhiều ánh sáng cho nhiều năng lượng sẽ tạo thành nhiều chất bột. Ít ánh sáng tạo thành ít tinh bột hơn.",
+      "sections": [
+        {
+          "heading": "Các yếu tố ảnh hưởng đến việc tạo chất bột - Lượng ánh sáng",
+          "level": 1,
+          "text": "Lượng ánh sáng là yếu tố then chốt ảnh hưởng trực tiếp đến quá trình tạo chất bột (tinh bột) của cây lúa. Khi có nhiều ánh sáng, cây nhận được nhiều năng lượng hơn và sẽ tạo thành nhiều tinh bột hơn. Ngược lại, khi ánh sáng ít, năng lượng cung cấp cho quá trình quang hợp bị hạn chế, dẫn đến lượng tinh bột tạo ra ít hơn. Nhiều ánh sáng cho nhiều năng lượng sẽ tạo thành nhiều chất bột."
+        }
+      ],
+      "key_phrases": [
+        "lượng ánh sáng",
+        "tạo chất bột",
+        "tinh bột",
+        "nhiều ánh sáng",
+        "nhiều năng lượng",
+        "nhiều chất bột",
+        "ít ánh sáng ít tinh bột",
+        "quang hợp"
+      ]
+    },
+    {
+      "summary": "CÁC YẾU TỐ ẢNH HƯỞNG ĐẾN VIỆC TẠO CHẤT BỘT - LƯỢNG ÁNH SÁNG. Lá lúa thẳng sẽ nhận được nhiều ánh sáng và từ đó sẽ tạo được nhiều chất bột.",
+      "full_text": "Lượng ánh sáng ảnh hưởng đến khả năng tạo chất bột của cây lúa. Lá lúa mọc thẳng sẽ nhận được nhiều ánh sáng hơn và tạo ra nhiều chất bột hơn.",
+      "sections": [
+        {
+          "heading": "Các yếu tố ảnh hưởng đến việc tạo chất bột - Lượng ánh sáng",
+          "level": 1,
+          "text": "Ánh sáng là yếu tố quan trọng trong quá trình tạo chất bột của cây lúa. Khi lá lúa mọc thẳng, chúng có thể nhận được nhiều ánh sáng hơn, từ đó tăng khả năng quang hợp và tạo ra nhiều chất bột hơn."
+        }
+      ],
+      "key_phrases": [
+        "tạo chất bột",
+        "lượng ánh sáng",
+        "lá lúa thẳng",
+        "quang hợp",
+        "tăng chất bột"
+      ]
+    },
+    {
+      "summary": "Lượng nước trong lá là yếu tố ảnh hưởng đến việc tạo thành chất bột. Khi đủ nước, khí khẩu mở cho không khí vào lá. Khi thiếu nước, khí khẩu đóng lại làm không khí không vào lá được, giảm mức tạo thức ăn. Nước là thành phần cấu tạo quan trọng của chất bột.",
+      "full_text": "CÁC YẾU TỐ ẢNH HƯỞNG ĐẾN VIỆC TẠO THÀNH CHẤT BỘT - LƯỢNG NƯỚC TRONG LÁ. Hình cắt ngang của một lá được rọi lớn. Không khí. Nước. Khí khẩu. Đủ nước. Thiếu nước. Thiếu nước làm các khí khẩu đóng lại. Nước là thành phần cấu tạo quan trọng của chất bột. Thiếu nước làm giảm mức tạo thức ăn và khi khí khẩu đóng lại thì không khí không vào lá được.",
+      "sections": [
+        {
+          "heading": "Các yếu tố ảnh hưởng đến việc tạo thành chất bột - Lượng nước trong lá",
+          "level": 1,
+          "text": "Lượng nước trong lá đóng vai trò quan trọng trong quá trình tạo chất bột của cây lúa. Khi lá đủ nước, khí khẩu mở ra cho phép không khí (CO2) đi vào lá phục vụ quang hợp. Khi lá thiếu nước, các khí khẩu đóng lại làm không khí không vào lá được, từ đó giảm mức tạo thức ăn. Ngoài ra, nước còn là thành phần cấu tạo quan trọng của chất bột, vì vậy thiếu nước ảnh hưởng kép đến quá trình tạo chất bột."
+        }
+      ],
+      "key_phrases": [
+        "lượng nước trong lá",
+        "tạo thành chất bột",
+        "khí khẩu",
+        "đủ nước khí khẩu mở",
+        "thiếu nước khí khẩu đóng",
+        "không khí không vào lá",
+        "nước thành phần chất bột",
+        "giảm mức tạo thức ăn"
+      ]
+    },
+    {
+      "summary": "Không khí là một yếu tố quan trọng trong quá trình tạo tinh bột của cây lúa. Cây sử dụng khí từ không khí kết hợp với nước, ánh sáng và chất diệp lục để tạo ra thức ăn.",
+      "full_text": "CÁC YẾU TỐ ẢNH HƯỞNG ĐẾN VIỆC TẠO TINH BỘT - LƯỢNG KHÔNG KHÍ. Thức ăn được chế tạo từ nước và không khí dưới tác dụng của ánh sáng và chất diệp lục của lá để tạo ra chất bột. Cây dùng thán khí từ khí trời để tạo thức ăn. Thán khí có khắp nơi nên ít khi là nguyên nhân làm giảm sự tạo thức ăn. Nước, không khí, ánh sáng và chất diệp lục đều cần thiết cho việc chế tạo thức ăn; nếu thiếu một trong các yếu tố này thì sự tạo thức ăn cũng giảm.",
+      "sections": [
+        {
+          "heading": "Các yếu tố ảnh hưởng đến việc tạo tinh bột - Lượng không khí",
+          "level": 1,
+          "text": "Cây lúa sử dụng khí từ không khí kết hợp với nước, ánh sáng và chất diệp lục của lá để tạo ra chất bột. Thán khí có nhiều trong không khí nên hiếm khi là yếu tố hạn chế việc tạo thức ăn. Tuy nhiên, nước, không khí, ánh sáng và chất diệp lục đều cần thiết; nếu thiếu một trong các yếu tố này thì quá trình tạo thức ăn sẽ giảm."
+        }
+      ],
+      "key_phrases": [
+        "tạo tinh bột",
+        "không khí",
+        "thán khí",
+        "quang hợp",
+        "nước ánh sáng diệp lục",
+        "tạo thức ăn"
+      ]
+    },
+    {
+      "summary": "CÁC THÀNH PHẦN CẤU TẠO CHÍNH CỦA CÂY. 100g mẫu lá tươi. 88g nước mất đi khi sấy. 12g trọng lượng khô. Đốt cháy hoàn toàn trọng lượng khô. 1,5g tro.",
+      "full_text": "Các thành phần cấu tạo chính của cây gồm: nước và chất khô. Từ 100g mẫu lá tươi, sau khi sấy mất 88g nước, còn lại 12g trọng lượng khô. Khi đốt cháy hoàn toàn trọng lượng khô chỉ còn lại 1,5g tro (khoáng chất), phần còn lại là các chất hữu cơ đã bị đốt cháy.",
+      "sections": [
+        {
+          "heading": "Các thành phần cấu tạo chính của cây",
+          "level": 1,
+          "text": "Thành phần cấu tạo chính của cây lúa được phân tích qua các bước: từ 100g mẫu lá tươi, sau khi sấy khô mất đi 88g nước, còn lại 12g trọng lượng khô. Khi đốt cháy hoàn toàn 12g trọng lượng khô, chỉ còn lại 1,5g tro (là khoáng chất vô cơ). Điều này cho thấy cây chủ yếu cấu tạo từ nước (88%), chất hữu cơ (khoảng 10,5%) và khoáng chất (1,5%)."
+        }
+      ],
+      "key_phrases": [
+        "thành phần cấu tạo cây",
+        "100g lá tươi",
+        "88g nước",
+        "12g trọng lượng khô",
+        "đốt cháy hoàn toàn",
+        "1,5g tro",
+        "khoáng chất",
+        "chất hữu cơ"
+      ]
+    },
+    {
+      "summary": "Cây lúa chế tạo thức ăn nhờ nước, không khí và ánh sáng mặt trời. Nếu thiếu nước, lượng thức ăn được tạo ra sẽ giảm vì nước thường là yếu tố hạn chế.",
+      "full_text": "NGUYÊN LIỆU CHO VIỆC CHẾ TẠO THỨC ĂN. Không khí được lá hút vào. Ánh sáng mặt trời cung cấp năng lượng cho quá trình tạo thức ăn. Nước được rễ hút lên từ đất. Chất bột được tạo trong lá. Thiếu nước làm giảm lượng thức ăn được chế tạo. Nước, ánh sáng và không khí rất cần thiết trong việc chế tạo thức ăn, và nước thường là yếu tố giới hạn.",
+      "sections": [
+        {
+          "heading": "Nguyên liệu cho việc chế tạo thức ăn",
+          "level": 1,
+          "text": "Cây lúa tạo thức ăn trong lá nhờ các nguyên liệu gồm nước, không khí và ánh sáng mặt trời. Rễ hút nước từ đất, lá hấp thụ không khí và nhận ánh sáng để thực hiện quá trình quang hợp tạo chất bột. Nếu thiếu nước, lượng thức ăn được tạo ra sẽ giảm vì nước thường là yếu tố giới hạn trong quá trình này."
+        }
+      ],
+      "key_phrases": [
+        "nguyên liệu chế tạo thức ăn",
+        "nước",
+        "không khí",
+        "ánh sáng mặt trời",
+        "quang hợp",
+        "chất bột"
+      ]
+    },
+    {
+      "summary": "Nước vận chuyển thức ăn trong cây lúa, bao gồm chất bột và các chất khoáng đến các phần khác nhau của cây. Nước di chuyển lên và xuống trong cây. Một hecta lúa cần ít nhất 8 triệu lít nước trong suốt vụ.",
+      "full_text": "VẬN CHUYỂN THỨC ĂN. Bông lúa. Nước + chất khoáng. Nước + chất bột. Nước di chuyển lên và xuống trong cây. Nước + chất khoáng (từ rễ). Nước vận chuyển chất bột, và các chất khoáng đến các phần khác nhau của cây. Một hecta lúa cần ít nhất 8 triệu lít nước trong suốt vụ.",
+      "sections": [
+        {
+          "heading": "Vận chuyển thức ăn",
+          "level": 1,
+          "text": "Nước đóng vai trò quan trọng trong việc vận chuyển thức ăn trong cây lúa. Nước di chuyển lên và xuống trong cây, mang theo chất bột từ lá và chất khoáng từ rễ đến các phần khác nhau của cây, bao gồm cả bông lúa. Nước vận chuyển chất bột và các chất khoáng đến các phần khác nhau của cây. Một hecta lúa cần ít nhất 8 triệu lít nước trong suốt vụ canh tác."
+        }
+      ],
+      "key_phrases": [
+        "vận chuyển thức ăn",
+        "nước vận chuyển",
+        "chất bột",
+        "chất khoáng",
+        "nước di chuyển lên xuống",
+        "bông lúa",
+        "8 triệu lít nước",
+        "một hecta lúa"
+      ]
+    },
+    {
+      "summary": "Nước giúp làm mát cây lúa thông qua quá trình bốc hơi ở lá. Nếu thiếu nước, khí khổng đóng lại, quá trình trao đổi khí bị ngừng và sự sinh trưởng của cây sẽ chậm lại.",
+      "full_text": "LÀM MÁT CÂY. Nước làm mát lá nhờ sự bốc hơi qua khí khổng. Nước có thể làm mát lá tương tự như mồ hôi làm mát cơ thể người. Khi không có nước trong lá thì khí khổng đóng lại, nước không thể thoát ra và không khí cũng không thể vào lá, làm cho sự sinh trưởng bị ngừng lại. Nếu nhiệt độ quá cao và nước không bốc hơi, lá sẽ khô đi. Gần hết số lượng nước được cây lúa hút lên đều mất đi qua sự bốc hơi.",
+      "sections": [
+        {
+          "heading": "Làm mát cây",
+          "level": 1,
+          "text": "Nước giúp làm mát cây lúa thông qua quá trình bốc hơi ở lá. Quá trình này diễn ra qua các khí khổng trên lá. Khi thiếu nước, khí khổng sẽ đóng lại, làm ngừng sự trao đổi khí và ảnh hưởng đến quá trình sinh trưởng của cây. Phần lớn nước được cây hút lên sẽ mất đi qua quá trình bốc hơi."
+        }
+      ],
+      "key_phrases": [
+        "làm mát cây",
+        "bốc hơi nước",
+        "khí khổng",
+        "thiếu nước",
+        "trao đổi khí",
+        "sinh trưởng cây"
+      ]
+    },
+    {
+      "summary": "Nước làm cây lúa được cứng chắc. Khi có nước, lá thẳng và trải ra đều. Khi không có nước, lá sẽ rũ xuống hoặc cuộn lại. Nước trong cây giống như không khí trong bánh xe.",
+      "full_text": "LÀM CÂY ĐƯỢC CỨNG CHẮC. Có nước. Không có nước. Không nước lá sẽ rũ xuống. Không nước lá sẽ cuộn lại. Nước giúp cho lá thẳng và trải ra đều. Nước trong cây giống như không khí trong bánh xe.",
+      "sections": [
+        {
+          "heading": "Làm cây được cứng chắc",
+          "level": 1,
+          "text": "Nước đóng vai trò quan trọng trong việc duy trì độ cứng chắc của cây lúa. Khi cây có đủ nước, lá thẳng và trải ra đều, cây đứng vững. Khi cây không có nước, lá sẽ rũ xuống hoặc cuộn lại tùy theo mức độ thiếu nước. Nước trong cây có tác dụng tương tự như không khí trong bánh xe - tạo áp lực giữ cho cấu trúc cây được cứng chắc."
+        }
+      ],
+      "key_phrases": [
+        "cây cứng chắc",
+        "có nước",
+        "không có nước",
+        "lá rũ xuống",
+        "lá cuộn lại",
+        "lá thẳng trải ra đều",
+        "nước như không khí bánh xe",
+        "áp lực nước"
+      ]
+    },
+    {
+      "summary": "Mỗi giai đoạn sinh trưởng của cây lúa đều ảnh hưởng đến các thành phần tạo nên năng suất. Năng suất hạt được xác định bởi số bông trên diện tích, số hạt trên bông, tỉ lệ hạt chắc và trọng lượng hạt.",
+      "full_text": "ẢNH HƯỞNG CỦA TỪNG GIAI ĐOẠN SINH TRƯỞNG ĐẾN THÀNH PHẦN NĂNG SUẤT. Các giai đoạn gồm: gieo, đâm chồi, tượng đòng, trổ và chín. Năng suất hạt = số bông trên đơn vị diện tích × số hạt trên bông × tỉ lệ hạt chắc × trọng lượng hạt. Mỗi giai đoạn sinh trưởng của cây đều góp phần tạo năng suất hạt. Cần chăm sóc cây tốt suốt các giai đoạn và các yếu tố môi trường xung quanh cũng ảnh hưởng đến các giai đoạn sinh trưởng này.",
+      "sections": [
+        {
+          "heading": "Ảnh hưởng của từng giai đoạn sinh trưởng đến thành phần năng suất",
+          "level": 1,
+          "text": "Các giai đoạn sinh trưởng của cây lúa gồm gieo, đâm chồi, tượng đòng, trổ và chín. Mỗi giai đoạn đều ảnh hưởng đến năng suất cuối cùng của cây. Năng suất hạt được xác định bởi số bông trên đơn vị diện tích, số hạt trên bông, tỉ lệ hạt chắc và trọng lượng hạt. Việc chăm sóc tốt trong từng giai đoạn sinh trưởng và điều kiện môi trường thuận lợi sẽ giúp tăng năng suất lúa."
+        }
+      ],
+      "key_phrases": [
+        "thành phần năng suất",
+        "giai đoạn sinh trưởng",
+        "đâm chồi",
+        "tượng đòng",
+        "tỉ lệ hạt chắc",
+        "trọng lượng hạt"
+      ]
+    },
+    {
+      "summary": "Số chồi của cây lúa sẽ quyết định số bông lúa, là yếu tố quan trọng nhất để đạt năng suất hạt cao. Có đủ lá thì mới có nhiều hạt và hạt chắc.",
+      "full_text": "ẢNH HƯỞNG CỦA CÁC GIAI ĐOẠN SINH TRƯỞNG ĐẾN CÁC THÀNH PHẦN NĂNG SUẤT. Số chồi của cây sẽ quyết định số bông lúa, yếu tố quan trọng nhất để đạt năng suất hạt cao. Có đủ lá thì mới có nhiều hạt và hạt chắc.",
+      "sections": [
+        {
+          "heading": "Ảnh hưởng của các giai đoạn sinh trưởng đến các thành phần năng suất",
+          "level": 1,
+          "text": "Hình ảnh minh họa cây lúa với hệ thống rễ và thân lá. Số chồi của cây sẽ quyết định số bông lúa, đây là yếu tố quan trọng nhất để đạt năng suất hạt cao. Có đủ lá thì mới có nhiều hạt và hạt chắc."
+        }
+      ],
+      "key_phrases": [
+        "giai đoạn sinh trưởng",
+        "thành phần năng suất",
+        "số chồi quyết định số bông lúa",
+        "năng suất hạt cao",
+        "nhiều hạt và hạt chắc"
+      ]
+    },
+    {
+      "summary": "Trong giai đoạn làm đòng, số hạt trên bông lúa được hình thành và xác định. Nếu nhiệt độ quá thấp hoặc thiếu ánh sáng trong giai đoạn này, số hạt bị thoái hóa sẽ tăng.",
+      "full_text": "CÁC GIAI ĐOẠN SINH TRƯỞNG THÀNH PHẦN NĂNG SUẤT - GIAI ĐOẠN LÀM ĐÒNG. Trong giai đoạn này, số hạt trên bông được xác định. Nếu nhiệt độ quá thấp hoặc thiếu ánh sáng trong suốt giai đoạn này thì số hạt thoái hóa sẽ tăng.",
+      "sections": [
+        {
+          "heading": "Các giai đoạn sinh trưởng thành phần năng suất - Giai đoạn làm đòng",
+          "level": 1,
+          "text": "Trong giai đoạn làm đòng của cây lúa, số lượng hạt trên mỗi bông được hình thành và xác định. Điều kiện môi trường trong giai đoạn này rất quan trọng; nếu nhiệt độ quá thấp hoặc thiếu ánh sáng thì số hạt bị thoái hóa sẽ tăng, làm giảm năng suất."
+        }
+      ],
+      "key_phrases": [
+        "giai đoạn làm đòng",
+        "số hạt trên bông",
+        "nhiệt độ thấp",
+        "thiếu ánh sáng",
+        "hạt thoái hóa",
+        "thành phần năng suất"
+      ]
+    },
+    {
+      "summary": "Giai đoạn trổ bông là thời điểm giao tử đực kết hợp với trứng ở bầu noãn, sự kết hợp này làm phát triển hạt, tích lũy chất bột và tạo mầm lúa.",
+      "full_text": "CÁC GIAI ĐOẠN SINH TRƯỞNG THÀNH PHẦN NĂNG SUẤT - GIAI ĐOẠN TRỔ BÔNG. Giao tử đực sẽ kết hợp với trứng ở bầu noãn vào giai đoạn trổ bông. Sự kết hợp này sẽ làm phát triển hạt, tích lũy chất bột và tạo mầm lúa.",
+      "sections": [
+        {
+          "heading": "Các giai đoạn sinh trưởng thành phần năng suất - Giai đoạn trổ bông",
+          "level": 1,
+          "text": "Hình ảnh minh họa bông lúa đang trổ với các hạt hình thành. Vào giai đoạn trổ bông, giao tử đực sẽ kết hợp với trứng ở bầu noãn. Sự kết hợp này sẽ làm phát triển hạt, tích lũy chất bột và tạo mầm lúa."
+        }
+      ],
+      "key_phrases": [
+        "giai đoạn trổ bông",
+        "giao tử đực kết hợp với trứng",
+        "bầu noãn",
+        "phát triển hạt",
+        "tích lũy chất bột",
+        "tạo mầm lúa"
+      ]
+    },
+    {
+      "summary": "Trong giai đoạn lúa chín, trọng lượng hạt được xác định và chịu ảnh hưởng của điều kiện môi trường. Nếu ruộng có ít chồi thì năng suất sẽ không cao dù có cố gắng tăng trọng lượng hạt.",
+      "full_text": "CÁC GIAI ĐOẠN SINH TRƯỞNG THÀNH PHẦN NĂNG SUẤT - GIAI ĐOẠN LÚA CHÍN. Trọng lượng hạt được xác định vào giai đoạn này và chịu ảnh hưởng của các yếu tố xung quanh. Nếu lúa nhảy chồi kém hoặc ruộng có ít chồi thì sẽ không đạt năng suất cao, dù có cố gắng làm tăng trọng lượng hạt hoặc số hạt trên bông lúa.",
+      "sections": [
+        {
+          "heading": "Các giai đoạn sinh trưởng thành phần năng suất - Giai đoạn lúa chín",
+          "level": 1,
+          "text": "Ở giai đoạn lúa chín, trọng lượng hạt được hình thành và quyết định. Các yếu tố môi trường trong giai đoạn này ảnh hưởng đến trọng lượng hạt. Nếu cây lúa nhảy chồi kém hoặc ruộng có ít chồi thì năng suất cuối cùng sẽ thấp, ngay cả khi cố gắng tăng trọng lượng hạt hoặc số hạt trên bông."
+        }
+      ],
+      "key_phrases": [
+        "giai đoạn lúa chín",
+        "trọng lượng hạt",
+        "thành phần năng suất",
+        "số chồi",
+        "yếu tố môi trường",
+        "năng suất lúa"
+      ]
+    },
+    {
+      "summary": "Sự biến động của các thành phần năng suất lúa thể hiện qua hai loại hình: ít bông nhưng bông lớn và nhiều bông nhưng bông nhỏ. Các giống mới cao sản thường thuộc loại hình nhiều bông, trong khi giống cũ thường thuộc loại hình bông lớn.",
+      "full_text": "SỰ BIẾN ĐỘNG CỦA CÁC THÀNH PHẦN NĂNG SUẤT. Ít bông nhưng bông lớn. Nhiều bông nhưng bông nhỏ. Ở loại hình nhiều bông năng suất hạt tăng thường do tăng số bông. Ở loại hình bông lớn năng suất hạt tăng thường do tăng số hạt trên bông. Đa số các giống mới cao sản đều là giống có loại hình nhiều bông, trong khi đó các giống cũ thường thuộc loại hình bông lớn.",
+      "sections": [
+        {
+          "heading": "Sự biến động của các thành phần năng suất",
+          "level": 1,
+          "text": "Hình ảnh minh họa hai kiểu cây lúa: loại ít bông nhưng bông lớn (bên trái) và loại nhiều bông nhưng bông nhỏ (bên phải). Ở loại hình nhiều bông, năng suất hạt tăng thường do tăng số bông. Ở loại hình bông lớn, năng suất hạt tăng thường do tăng số hạt trên bông. Đa số các giống mới cao sản đều là giống có loại hình nhiều bông, trong khi đó các giống cũ thường thuộc loại hình bông lớn."
+        }
+      ],
+      "key_phrases": [
+        "biến động thành phần năng suất",
+        "ít bông nhưng bông lớn",
+        "nhiều bông nhưng bông nhỏ",
+        "giống mới cao sản",
+        "tăng số bông",
+        "tăng số hạt trên bông"
+      ]
+    },
+    {
+      "summary": "Năng suất lúa được quyết định bởi các thành phần như số bông, số hạt trên bông, tỉ lệ hạt chắc và trọng lượng hạt. Phân tích các yếu tố này giúp hiểu vì sao năng suất cao hay thấp.",
+      "full_text": "SỰ QUAN TRỌNG CỦA THÀNH PHẦN NĂNG SUẤT. Nghiên cứu các chi tiết của yếu tố tạo thành năng suất hạt có thể biết được lý do tại sao năng suất cao hay thấp. Năng suất = 200 giạ/ha hoặc 4000 kg/ha hoặc 400 g trên một mét vuông. Các đặc điểm của giống lúa đang dùng gồm: số bông trên bụi = 14; số hạt trên bông = 100; phần trăm hạt chắc = 83,3%; trọng lượng một hạt = 0,025 g.",
+      "sections": [
+        {
+          "heading": "Sự quan trọng của thành phần năng suất",
+          "level": 1,
+          "text": "Năng suất lúa phụ thuộc vào các thành phần cấu thành như số bông trên mỗi bụi, số hạt trên mỗi bông, tỉ lệ hạt chắc và trọng lượng hạt. Việc nghiên cứu các yếu tố này giúp xác định nguyên nhân làm năng suất cao hay thấp và có thể biểu thị năng suất bằng các đơn vị như giạ/ha, kg/ha hoặc g/m²."
+        }
+      ],
+      "key_phrases": [
+        "thành phần năng suất",
+        "số bông trên bụi",
+        "số hạt trên bông",
+        "tỉ lệ hạt chắc",
+        "trọng lượng hạt",
+        "năng suất lúa"
+      ]
+    },
+    {
+      "summary": "Sự quan trọng của thành phần năng suất lúa được tính toán qua công thức liên quan đến số bông, số hạt trên bông, phần trăm hạt chắc và trọng lượng một hạt. Ví dụ minh họa cho thấy với mật độ cấy 25x25cm đạt 192 bông/m², tương đương 12 chồi/bụi, năng suất có thể đạt 4 tấn/ha.",
+      "full_text": "SỰ QUAN TRỌNG CỦA THÀNH PHẦN NĂNG SUẤT. Để tìm số bông trên mỗi bụi. Năng suất trên một mét vuông = Số bông trên một mét vuông x Số hạt trên mỗi bông x Phần trăm hạt chắc x Trọng lượng của một hạt. Số bông trên một mét vuông = Năng suất trên một mét vuông / (Số hạt trên một bông x Phần trăm hạt chắc x Trọng lượng một hạt) = 400 / (100 x 83,3/100 x 0,025) = 192 bông. Nếu cấy khoảng cách 25 x 25 cm hoặc 16 bụi/m²: 192 bông/m² / 16 bụi/m² = 12 chồi/bụi. Giống lúa cho 12 bông/bụi ở mật độ cấy 25 x 25 cm, thì năng suất đạt 4 tấn/ha có thể chấp nhận được. Nếu năng suất không đạt: Năng suất dưới 400 g/m² mặc dù bạn dùng giống tốt và mật độ hợp lý, như thế là có sự sai phạm trong canh tác, nghiên cứu chi tiết về thành phần năng suất có thể cho biết những sai sót trong quá trình sinh trưởng của cây.",
+      "sections": [
+        {
+          "heading": "Sự quan trọng của thành phần năng suất",
+          "level": 1,
+          "text": "Công thức tính năng suất: Năng suất trên một mét vuông = Số bông trên một mét vuông x Số hạt trên mỗi bông x Phần trăm hạt chắc x Trọng lượng của một hạt. Ví dụ tính số bông trên một mét vuông: 400 / (100 x 83,3/100 x 0,025) = 192 bông. Với mật độ cấy 25x25 cm (16 bụi/m²): 192 bông/m² / 16 bụi/m² = 12 chồi/bụi. Giống lúa cho 12 bông/bụi ở mật độ cấy 25x25 cm thì năng suất đạt 4 tấn/ha là chấp nhận được. Nếu năng suất dưới 400 g/m² dù dùng giống tốt và mật độ hợp lý, cần nghiên cứu chi tiết về thành phần năng suất để tìm sai sót trong quá trình sinh trưởng."
+        }
+      ],
+      "key_phrases": [
+        "thành phần năng suất",
+        "số bông trên mét vuông",
+        "số hạt trên bông",
+        "phần trăm hạt chắc",
+        "trọng lượng một hạt",
+        "mật độ cấy 25x25 cm",
+        "12 chồi/bụi",
+        "4 tấn/ha"
+      ]
+    },
+    {
+      "summary": "So sánh thành phần năng suất giúp xác định nguyên nhân năng suất thấp trong canh tác lúa. Nếu số bông thực tế thấp hơn mong muốn, nguyên nhân có thể do đất, kỹ thuật bón phân, thiếu nước hoặc sâu bệnh.",
+      "full_text": "TỪ THÀNH PHẦN NĂNG SUẤT XÁC ĐỊNH LẠI CÁC ĐIỀU KIỆN CANH TÁC. Vấn đề: mong muốn có 14 bông nhưng thực tế chỉ có 6 bông. Sai chỗ nào có thể do đất hoặc trong kỹ thuật bón phân, cũng có thể do thiếu nước hoặc sâu bệnh gây hại trong giai đoạn sinh trưởng.",
+      "sections": [
+        {
+          "heading": "Từ thành phần năng suất xác định lại các điều kiện canh tác",
+          "level": 1,
+          "text": "Việc so sánh giữa năng suất mong muốn và năng suất thực tế giúp xác định các vấn đề trong quá trình canh tác. Nếu số bông thực tế thấp hơn mong muốn, nguyên nhân có thể do chất lượng đất, kỹ thuật bón phân chưa phù hợp, thiếu nước hoặc do sâu bệnh gây hại trong các giai đoạn sinh trưởng của cây lúa."
+        }
+      ],
+      "key_phrases": [
+        "thành phần năng suất",
+        "điều kiện canh tác",
+        "số bông",
+        "kỹ thuật bón phân",
+        "thiếu nước",
+        "sâu bệnh"
+      ]
+    },
+    {
+      "summary": "Từ thành phần năng suất có thể xác định lại các điều kiện canh tác. So sánh giữa mong muốn (100 hạt) và thực có (60 hạt) cho thấy sai chỗ có thể xảy ra khoảng trước, trong và sau khi lúa trượng đồng do thiếu ánh sáng, thiếu phân hoặc sâu hại.",
+      "full_text": "TỪ THÀNH PHẦN NĂNG SUẤT XÁC ĐỊNH LẠI CÁC ĐIỀU KIỆN CANH TÁC. Vấn đề: Mong muốn: 100 hạt. Thực có: 60 hạt. Sai chỗ nào: có vấn đề xảy ra khoảng trước, trong và sau khi lúa trượng đồng (26-16 ngày trước khi trổ) có thể do thiếu ánh sáng, thiếu phân, hoặc do sâu gây hại trên lá.",
+      "sections": [
+        {
+          "heading": "Từ thành phần năng suất xác định lại các điều kiện canh tác",
+          "level": 1,
+          "text": "Hình ảnh minh họa so sánh hai trường hợp: mong muốn đạt 100 hạt và thực tế chỉ đạt 60 hạt trên bông lúa. Sai chỗ có thể xảy ra khoảng trước, trong và sau khi lúa trượng đồng (26-16 ngày trước khi trổ), nguyên nhân có thể do thiếu ánh sáng, thiếu phân, hoặc do sâu gây hại trên lá."
+        }
+      ],
+      "key_phrases": [
+        "thành phần năng suất",
+        "điều kiện canh tác",
+        "mong muốn 100 hạt",
+        "thực có 60 hạt",
+        "lúa trượng đồng",
+        "26-16 ngày trước khi trổ",
+        "thiếu ánh sáng",
+        "thiếu phân",
+        "sâu gây hại trên lá"
+      ]
+    },
+    {
+      "summary": "So sánh tỉ lệ hạt chắc giữa mong muốn và thực tế giúp xác định vấn đề trong canh tác lúa. Tỉ lệ hạt chắc thấp có thể do nhiệt độ không phù hợp, cây bị đổ ngã, thiếu nước khi trổ hoặc bón quá nhiều phân đạm.",
+      "full_text": "TỪ THÀNH PHẦN NĂNG SUẤT XÁC ĐỊNH LẠI CÁC ĐIỀU KIỆN CANH TÁC. Vấn đề: mong muốn có 80% hạt chắc nhưng thực tế chỉ đạt 50% hạt chắc. Sai chỗ nào có thể do nhiệt độ quá thấp (dưới 20°C) hoặc quá cao (trên 35°C), cây bị đổ ngã, thiếu nước lúc trổ hoặc bón quá nhiều phân đạm (N).",
+      "sections": [
+        {
+          "heading": "Từ thành phần năng suất xác định lại các điều kiện canh tác",
+          "level": 1,
+          "text": "Việc so sánh tỉ lệ hạt chắc giữa mong muốn và thực tế giúp xác định nguyên nhân làm giảm năng suất. Nếu tỉ lệ hạt chắc thấp, nguyên nhân có thể do nhiệt độ quá thấp hoặc quá cao, cây bị đổ ngã, thiếu nước trong giai đoạn trổ hoặc bón quá nhiều phân đạm."
+        }
+      ],
+      "key_phrases": [
+        "thành phần năng suất",
+        "tỉ lệ hạt chắc",
+        "80 phần trăm",
+        "50 phần trăm",
+        "nhiệt độ thấp hoặc cao",
+        "bón nhiều đạm"
+      ]
+    },
+    {
+      "summary": "TỪ THÀNH PHẦN NĂNG SUẤT XÁC ĐỊNH LẠI CÁC ĐIỀU KIỆN CANH TÁC. Vấn đề: Mong muốn: 25g trên 1000 hạt. Thực có: 20g trên 1000 hạt. Sai chỗ nào: Do điều kiện không thuận lợi sau khi trổ như thiếu phân, không đủ lá để tạo thức ăn hoặc trời nhiều mây.",
+      "full_text": "Từ thành phần năng suất xác định lại các điều kiện canh tác qua so sánh trọng lượng hạt: mong muốn đạt 25g trên 1000 hạt nhưng thực có chỉ 20g trên 1000 hạt, do điều kiện không thuận lợi sau khi trổ như thiếu phân, không đủ lá hoặc trời nhiều mây.",
+      "sections": [
+        {
+          "heading": "Từ thành phần năng suất xác định lại các điều kiện canh tác",
+          "level": 1,
+          "text": "Hình ảnh minh họa so sánh hai hạt lúa: mong muốn đạt trọng lượng 25g trên 1000 hạt (hạt to, chắc hơn) và thực tế chỉ đạt 20g trên 1000 hạt (hạt nhỏ, lép hơn). Nguyên nhân sai lệch do điều kiện không thuận lợi sau khi trổ như thiếu phân, không đủ lá để tạo thức ăn hoặc trời nhiều mây."
+        }
+      ],
+      "key_phrases": [
+        "thành phần năng suất",
+        "điều kiện canh tác",
+        "trọng lượng hạt",
+        "25g trên 1000 hạt",
+        "20g trên 1000 hạt",
+        "điều kiện không thuận lợi sau khi trổ",
+        "thiếu phân",
+        "không đủ lá",
+        "trời nhiều mây"
+      ]
+    },
+    {
+      "summary": "Giảm chiều cao cây lúa giúp tăng tiềm năng năng suất và giảm nguy cơ đổ ngã. Cây lúa thấp thường có khả năng chống đổ tốt hơn so với cây cao.",
+      "full_text": "THẤP GIÀN. Việc giảm chiều cao cây lúa là yếu tố quan trọng nhất để tăng tiềm năng năng suất của cây lúa. Giảm chiều cao cây lúa làm tăng tính chống đổ ngã.",
+      "sections": [
+        {
+          "heading": "Thấp giàn",
+          "level": 1,
+          "text": "Giảm chiều cao cây lúa là một yếu tố quan trọng giúp tăng tiềm năng năng suất. Cây lúa thấp có khả năng chống đổ ngã tốt hơn so với cây cao, từ đó giúp duy trì năng suất ổn định."
+        }
+      ],
+      "key_phrases": [
+        "thấp giàn",
+        "chiều cao cây lúa",
+        "tăng năng suất",
+        "chống đổ ngã"
+      ]
+    },
+    {
+      "summary": "Bón phân đạm làm tăng chiều cao cây, dễ dẫn đến đổ ngã lúa. Lá lúa trên cây ngã sẽ hư khi bị ngập trong nước và không nhận được đủ ánh sáng. Thân thấp và cứng giúp chống đổ ngã.",
+      "full_text": "KHÔNG ĐỔ NGÃ. Giống cao cây + Giống thấp cây + Phân đạm = Cây cao hơn, Bông nặng hơn, Cây nặng ngọn = Đổ ngã. Giống cao so với Giống thấp khi bị ngập nước. Bón phân Đạm làm tăng chiều cao cây, dễ dẫn đến đổ ngã lúa. Lá lúa trên cây ngã sẽ hư khi bị ngập trong nước và không nhận được đủ ánh sáng. Thân thấp và cứng chống đổ ngã.",
+      "sections": [
+        {
+          "heading": "Không đổ ngã",
+          "level": 1,
+          "text": "Hình ảnh minh họa so sánh giống cao cây và giống thấp cây khi bón phân đạm dẫn đến cây cao hơn, bông nặng hơn, cây nặng ngọn và kết quả là đổ ngã. Hình dưới cho thấy giống cao bị đổ ngã ngập trong nước trong khi giống thấp vẫn đứng thẳng. Bón phân đạm làm tăng chiều cao cây, dễ dẫn đến đổ ngã lúa. Lá lúa trên cây ngã sẽ hư khi bị ngập trong nước và không nhận được đủ ánh sáng. Thân thấp và cứng chống đổ ngã."
+        }
+      ],
+      "key_phrases": [
+        "không đổ ngã",
+        "phân đạm tăng chiều cao cây",
+        "giống cao cây",
+        "giống thấp cây",
+        "bông nặng hơn",
+        "cây nặng ngọn",
+        "lá lúa hư khi ngập nước",
+        "thân thấp và cứng chống đổ ngã"
+      ]
+    },
+    {
+      "summary": "Kiểu cây lúa có lá mọc thẳng giúp các lá nhận ánh sáng tốt hơn và tăng khả năng tạo thức ăn. Khi cây quá cao và nhiều lá, các lá phía dưới sẽ nhận ít ánh sáng, làm giảm năng suất.",
+      "full_text": "TIẾP NHẬN ÁNH SÁNG TỐT. Kiểu cây xấu: cây cao nhiều lá làm các lá phía dưới nhận ít ánh sáng. Kiểu cây tốt: chồi mọc thẳng và các lá cao hơn bông sẽ nhận ánh sáng tốt hơn. Điều này giúp cây tạo nhiều thức ăn hơn và cho năng suất cao.",
+      "sections": [
+        {
+          "heading": "Tiếp nhận ánh sáng tốt",
+          "level": 1,
+          "text": "Kiểu cây lúa có lá mọc thẳng giúp các lá trong cây nhận được nhiều ánh sáng hơn. Nếu cây quá cao và có nhiều lá, các lá phía dưới sẽ bị che khuất và nhận ít ánh sáng. Khi lá nhận được ánh sáng tốt hơn, cây sẽ tạo ra nhiều thức ăn hơn và cho năng suất cao hơn."
+        }
+      ],
+      "key_phrases": [
+        "tiếp nhận ánh sáng",
+        "lá mọc thẳng",
+        "kiểu cây tốt",
+        "quang hợp",
+        "tăng năng suất"
+      ]
+    },
+    {
+      "summary": "LÁ THẲNG. 100% ánh sáng. Lá rũ: Các lá phía dưới tiếp nhận ánh sáng rất ít, chỉ 1%. Lá thẳng: 100% ánh sáng. Các lá phía dưới ít bị rợp, dù có cùng mật độ và chiều dài, nhận được 10% ánh sáng.",
+      "full_text": "Lá thẳng giúp các lá phía dưới nhận được nhiều ánh sáng hơn so với lá rũ. Lá rũ chỉ cho phép 1% ánh sáng lọt xuống các lá phía dưới, trong khi lá thẳng cho phép đến 10% ánh sáng đi qua, dù có cùng mật độ và chiều dài.",
+      "sections": [
+        {
+          "heading": "Lá thẳng",
+          "level": 1,
+          "text": "Hình ảnh minh họa so sánh hai kiểu lá lúa. Trường hợp lá rũ: các lá phía dưới tiếp nhận ánh sáng rất ít, chỉ đạt 1% trong khi mặt trời cung cấp 100% ánh sáng. Trường hợp lá thẳng: các lá phía dưới ít bị rợp hơn, dù có cùng mật độ và chiều dài, nhận được đến 10% ánh sáng từ 100% ánh sáng mặt trời."
+        }
+      ],
+      "key_phrases": [
+        "lá thẳng",
+        "lá rũ",
+        "ánh sáng 1%",
+        "ánh sáng 10%",
+        "các lá phía dưới",
+        "ít bị rợp",
+        "cùng mật độ và chiều dài",
+        "tiếp nhận ánh sáng"
+      ]
+    },
+    {
+      "summary": "Lá cờ cao hơn bông giúp cây lúa nhận ánh sáng tốt hơn và giảm hiện tượng che rợp. Nếu bông lúa mọc thấp hơn lá cờ thì các lá phía trên ít bị che khuất.",
+      "full_text": "LÁ CỜ CAO HƠN BÔNG. Kiểu cây xấu: lá cong che ánh sáng. Kiểu cây tốt: lá thẳng và lá cờ cao hơn bông nên nhận ánh sáng tốt hơn. Nếu bông lúa mọc thấp hơn lá cờ (lúa giấu bông) thì các lá phía trên ít bị che rợp.",
+      "sections": [
+        {
+          "heading": "Lá cờ cao hơn bông",
+          "level": 1,
+          "text": "Trong kiểu cây lúa tốt, lá cờ mọc thẳng và cao hơn bông lúa giúp lá nhận ánh sáng tốt hơn. Nếu bông lúa thấp hơn lá cờ thì các lá phía trên ít bị che khuất, giúp cây quang hợp hiệu quả hơn."
+        }
+      ],
+      "key_phrases": [
+        "lá cờ",
+        "lá cờ cao hơn bông",
+        "nhận ánh sáng",
+        "che rợp",
+        "kiểu cây lúa tốt"
+      ]
+    },
+    {
+      "summary": "LÁ NGẮN. Dạng lá xấu. Dạng lá tốt. Lá ngắn thường thẳng hơn vì nhẹ. Các lá thẳng giúp ánh sáng dễ chiếu xuống phần dưới của cây.",
+      "full_text": "Lá ngắn thường thẳng hơn vì nhẹ, giúp ánh sáng dễ chiếu xuống phần dưới của cây. Hình minh họa so sánh dạng lá xấu (lá rũ cong) và dạng lá tốt (lá thẳng đứng).",
+      "sections": [
+        {
+          "heading": "Lá ngắn",
+          "level": 1,
+          "text": "Hình ảnh minh họa so sánh hai dạng lá lúa: dạng lá xấu (lá dài, cong rũ xuống) và dạng lá tốt (lá ngắn, thẳng đứng). Lá ngắn thường thẳng hơn vì nhẹ. Các lá thẳng giúp ánh sáng dễ chiếu xuống phần dưới của cây."
+        }
+      ],
+      "key_phrases": [
+        "lá ngắn",
+        "dạng lá xấu",
+        "dạng lá tốt",
+        "lá thẳng hơn vì nhẹ",
+        "ánh sáng chiếu xuống phần dưới",
+        "lá thẳng đứng"
+      ]
+    },
+    {
+      "summary": "Khả năng nhảy chồi tốt giúp cây lúa có đủ số chồi trên một đơn vị diện tích. Điều này đảm bảo số bông cần thiết cho năng suất, dù một số chồi có thể chết sớm.",
+      "full_text": "NHẢY CHỒI TỐT. Khả năng nhảy chồi kém và khả năng nhảy chồi tốt. Khả năng nhảy chồi tốt bảo đảm đủ số chồi trên một đơn vị diện tích, mặc dù có một số chồi bị chết sớm.",
+      "sections": [
+        {
+          "heading": "Nhảy chồi tốt",
+          "level": 1,
+          "text": "Cây lúa có khả năng nhảy chồi tốt sẽ tạo ra đủ số chồi trên một đơn vị diện tích. Điều này giúp đảm bảo số bông cần thiết để đạt năng suất cao, dù một số chồi có thể bị chết sớm trong quá trình sinh trưởng."
+        }
+      ],
+      "key_phrases": [
+        "nhảy chồi tốt",
+        "khả năng nhảy chồi",
+        "số chồi",
+        "đơn vị diện tích",
+        "năng suất lúa"
+      ]
+    },
+    {
+      "summary": "CHỒI MỌC ĐỨNG. Chồi mọc xòe. Chồi mọc đứng. Các chồi mọc đứng giúp cây nhận được ánh sáng tốt hơn.",
+      "full_text": "Chồi mọc đứng giúp cây nhận được ánh sáng tốt hơn so với chồi mọc xòe. Hình minh họa so sánh hai kiểu mọc chồi của cây lúa dưới ánh sáng mặt trời.",
+      "sections": [
+        {
+          "heading": "Chồi mọc đứng",
+          "level": 1,
+          "text": "Hình ảnh minh họa so sánh hai kiểu mọc chồi của cây lúa dưới ánh sáng mặt trời: chồi mọc xòe (các chồi lan rộng ra hai bên, che khuất nhau) và chồi mọc đứng (các chồi mọc thẳng đứng, gọn hơn). Các chồi mọc đứng giúp cây nhận được ánh sáng tốt hơn."
+        }
+      ],
+      "key_phrases": [
+        "chồi mọc đứng",
+        "chồi mọc xòe",
+        "nhận được ánh sáng tốt hơn",
+        "kiểu mọc chồi"
+      ]
+    },
+    {
+      "summary": "Chồi lúa lý tưởng có thân thẳng, lá dày và ngắn, lóng ngắn và khả năng nhảy chồi nhiều. Kiểu cây này giúp nhận ánh sáng tốt, chống đổ ngã và cho năng suất cao.",
+      "full_text": "CHỒI LÝ TƯỞNG. Đặc điểm của chồi lý tưởng gồm: ít hạt lép khi bón đạm cao, cho phép dùng lượng phân đạm lớn; lá thẳng, dày và ngắn; chồi thẳng đứng; lóng ngắn; nhảy chồi nhiều. Các đặc điểm này giúp ánh sáng phân bố tốt hơn, tăng khả năng chế tạo thức ăn, chống đổ ngã và tạo nhiều lá và bông.",
+      "sections": [
+        {
+          "heading": "Chồi lý tưởng",
+          "level": 1,
+          "text": "Chồi lúa lý tưởng có các đặc điểm như lá thẳng, dày và ngắn; chồi mọc thẳng; lóng ngắn và khả năng nhảy chồi nhiều. Những đặc điểm này giúp ánh sáng phân bố tốt trong tán lá, tăng khả năng quang hợp, cho phép sử dụng nhiều phân đạm hơn, giảm nguy cơ đổ ngã và tạo nhiều lá và bông."
+        }
+      ],
+      "key_phrases": [
+        "chồi lý tưởng",
+        "lá thẳng dày ngắn",
+        "lóng ngắn",
+        "nhảy chồi nhiều",
+        "chống đổ ngã",
+        "tăng năng suất"
+      ]
+    },
+    {
+      "summary": "CHIỀU CAO CÂY. Không kháng. Kháng. Cây càng cao càng dễ ngã. Tránh dùng các giống cao cây trong mùa mưa.",
+      "full_text": "Chiều cao cây lúa ảnh hưởng đến khả năng đổ ngã. Cây càng cao càng dễ ngã, vì vậy cần tránh dùng các giống cao cây trong mùa mưa. Hình minh họa so sánh giống không kháng (cao cây) và giống kháng (thấp cây).",
+      "sections": [
+        {
+          "heading": "Chiều cao cây",
+          "level": 1,
+          "text": "Hình ảnh minh họa so sánh hai giống lúa: giống không kháng (cây cao, thân dài) và giống kháng (cây thấp, thân ngắn và cứng hơn). Cây càng cao càng dễ ngã. Cần tránh dùng các giống cao cây trong mùa mưa."
+        }
+      ],
+      "key_phrases": [
+        "chiều cao cây",
+        "không kháng",
+        "kháng",
+        "cây cao dễ ngã",
+        "tránh giống cao cây",
+        "mùa mưa"
+      ]
+    },
+    {
+      "summary": "Lúa cấy có khả năng đứng vững hơn so với lúa sạ vì thân cây được giữ chặt trong đất. Nhờ đó, lúa cấy ít bị đổ ngã hơn.",
+      "full_text": "KỸ THUẬT SẠ CẤY. Lúa sạ: thân cây chôn sâu vào đất nhưng không kháng đổ tốt. Lúa cấy: cây kháng đổ tốt hơn. Lúa cấy ít đổ ngã vì thân cây được giữ chặt trong đất tốt hơn.",
+      "sections": [
+        {
+          "heading": "Kỹ thuật sạ cấy",
+          "level": 1,
+          "text": "Trong kỹ thuật trồng lúa, lúa cấy có khả năng đứng vững hơn so với lúa sạ. Thân cây lúa cấy được giữ chặt trong đất nên cây ít bị đổ ngã hơn, giúp cây phát triển ổn định và đảm bảo năng suất."
+        }
+      ],
+      "key_phrases": [
+        "kỹ thuật sạ cấy",
+        "lúa sạ",
+        "lúa cấy",
+        "chống đổ ngã",
+        "thân cây giữ chặt trong đất"
+      ]
+    },
+    {
+      "summary": "KIỂU BẸ LÁ. Không kháng: Hở bẹ. Kháng: Ôm bẹ. Các bộ phận: Phiến lá, Bẹ lá, Lóng.",
+      "full_text": "Kiểu bẹ lá lúa có hai dạng: hở bẹ (không kháng) và ôm bẹ (kháng). Hình minh họa chỉ rõ các bộ phận gồm phiến lá, bẹ lá và lóng, trong đó kiểu ôm bẹ có khả năng kháng tốt hơn kiểu hở bẹ.",
+      "sections": [
+        {
+          "heading": "Kiểu bẹ lá",
+          "level": 1,
+          "text": "Hình ảnh minh họa so sánh hai kiểu bẹ lá lúa: hở bẹ (không kháng) ở bên trái và ôm bẹ (kháng) ở bên phải. Các bộ phận được chú thích gồm phiến lá, bẹ lá và lóng. Kiểu ôm bẹ có khả năng kháng tốt hơn so với kiểu hở bẹ."
+        }
+      ],
+      "key_phrases": [
+        "kiểu bẹ lá",
+        "hở bẹ",
+        "ôm bẹ",
+        "không kháng",
+        "kháng",
+        "phiến lá",
+        "bẹ lá",
+        "lóng"
+      ]
+    },
+    {
+      "summary": "Độ dày của lóng và thân cây lúa ảnh hưởng đến khả năng chống đổ ngã. Thân và lóng dày giúp cây lúa đứng vững và ít bị đổ.",
+      "full_text": "ĐỘ DÀY CỦA LÓNG. Lóng và thân cây có thể không kháng hoặc kháng đổ ngã tùy theo độ dày. Khi lóng và thân cây dày thì cây sẽ kháng đổ tốt hơn. Thân cây và lóng dày sẽ ít bị đổ ngã.",
+      "sections": [
+        {
+          "heading": "Độ dày của lóng",
+          "level": 1,
+          "text": "Độ dày của lóng và thân cây lúa ảnh hưởng đến khả năng chống đổ ngã. Khi lóng và thân cây dày, cây lúa có khả năng đứng vững hơn và ít bị đổ ngã. Ngược lại, nếu lóng mỏng thì cây dễ bị đổ."
+        }
+      ],
+      "key_phrases": [
+        "độ dày của lóng",
+        "thân cây lúa",
+        "kháng đổ",
+        "chống đổ ngã",
+        "lóng dày"
+      ]
+    },
+    {
+      "summary": "GIÓ VÀ MƯA. Kháng. Không kháng. Gió và mưa có thể làm cây đổ ngã. Gió càng mạnh, cây càng dễ ngã. Tránh dùng giống cao cây trong mùa mưa.",
+      "full_text": "Gió và mưa có thể làm cây lúa đổ ngã. Gió càng mạnh, cây càng dễ ngã. Giống kháng đứng vững trước gió và mưa, trong khi giống không kháng bị đổ ngã. Cần tránh dùng giống cao cây trong mùa mưa.",
+      "sections": [
+        {
+          "heading": "Gió và mưa",
+          "level": 1,
+          "text": "Hình ảnh minh họa tác động của gió và mưa lên hai giống lúa: giống kháng (thân thấp, cứng) đứng vững trước gió và mưa, trong khi giống không kháng (thân cao) bị đổ ngã hoàn toàn dưới tác động của mưa. Gió và mưa có thể làm cây đổ ngã, gió càng mạnh cây càng dễ ngã. Cần tránh dùng giống cao cây trong mùa mưa."
+        }
+      ],
+      "key_phrases": [
+        "gió và mưa",
+        "cây đổ ngã",
+        "gió càng mạnh càng dễ ngã",
+        "giống kháng",
+        "giống không kháng",
+        "tránh giống cao cây",
+        "mùa mưa"
+      ]
+    },
+    {
+      "summary": "Cường độ ánh sáng ảnh hưởng đến chiều cao và khả năng đổ ngã của cây lúa. Khi ánh sáng ít như trong mùa mưa, cây lúa thường mọc cao hơn và dễ đổ ngã.",
+      "full_text": "CƯỜNG ĐỘ ÁNH SÁNG. Trong mùa khô, cây lúa lùn hơn do nhận được nhiều ánh sáng. Trong mùa mưa, trời nhiều mây nên cây lúa mọc cao hơn. Trời nhiều mây làm cây mọc cao hơn và dễ đổ ngã. Cây lúa thường bị ngã nhiều trong mùa mưa.",
+      "sections": [
+        {
+          "heading": "Cường độ ánh sáng",
+          "level": 1,
+          "text": "Cường độ ánh sáng ảnh hưởng đến sự sinh trưởng của cây lúa. Khi ánh sáng nhiều như trong mùa khô, cây lúa thường thấp hơn và cứng cáp hơn. Ngược lại, trong mùa mưa khi trời nhiều mây và ánh sáng giảm, cây lúa mọc cao hơn và dễ bị đổ ngã."
+        }
+      ],
+      "key_phrases": [
+        "cường độ ánh sáng",
+        "mùa khô",
+        "mùa mưa",
+        "cây lúa cao",
+        "đổ ngã",
+        "ánh sáng giảm"
+      ]
+    },
+    {
+      "summary": "MẬT ĐỘ. Mật độ dày: Không kháng, cây bị đổ ngã. Mật độ vừa: Kháng, cây đứng vững. Mật độ dày làm cây cao, thân yếu.",
+      "full_text": "Mật độ cấy ảnh hưởng đến khả năng kháng đổ ngã của cây lúa. Mật độ dày làm cây cao, thân yếu và dễ đổ ngã (không kháng), trong khi mật độ vừa giúp cây phát triển khỏe mạnh và kháng đổ ngã tốt hơn.",
+      "sections": [
+        {
+          "heading": "Mật độ",
+          "level": 1,
+          "text": "Hình ảnh minh họa so sánh hai trường hợp mật độ cấy lúa: mật độ dày dẫn đến cây không kháng, bị đổ ngã; mật độ vừa giúp cây kháng tốt, đứng thẳng và phát triển khỏe mạnh. Mật độ dày làm cây cao, thân yếu."
+        }
+      ],
+      "key_phrases": [
+        "mật độ cấy",
+        "mật độ dày",
+        "mật độ vừa",
+        "không kháng",
+        "kháng",
+        "cây cao thân yếu",
+        "đổ ngã"
+      ]
+    },
+    {
+      "summary": "Lượng phân bón ảnh hưởng đến chiều cao và khả năng chống đổ của cây lúa. Bón quá nhiều phân có thể làm cây cao và dễ đổ, trong khi bón lượng phân vừa phải giúp cây phát triển tốt và đứng vững.",
+      "full_text": "LƯỢNG PHÂN BÓN. Khi bón quá nhiều phân, cây lúa mọc cao và không kháng đổ ngã. Khi bón lượng phân vừa phải, cây lúa phát triển tốt và có khả năng chống đổ tốt hơn. Bón phân làm cây cao, và các giống lúa cao cây không chịu được lượng phân nhiều.",
+      "sections": [
+        {
+          "heading": "Lượng phân bón",
+          "level": 1,
+          "text": "Lượng phân bón có ảnh hưởng lớn đến sự sinh trưởng của cây lúa. Nếu bón quá nhiều phân, cây lúa sẽ mọc cao và dễ bị đổ ngã. Ngược lại, khi bón lượng phân vừa phải, cây lúa phát triển tốt hơn và có khả năng chống đổ tốt hơn."
+        }
+      ],
+      "key_phrases": [
+        "lượng phân bón",
+        "bón quá nhiều phân",
+        "cây lúa cao",
+        "chống đổ ngã",
+        "bón phân vừa phải"
+      ]
+    },
+    {
+      "summary": "Cỏ dại làm giảm năng suất lúa cả trong mùa khô lẫn mùa mưa. So sánh giữa có diệt cỏ và không diệt cỏ cho thấy diệt cỏ giúp thu được nhiều bao lúa hơn đáng kể.",
+      "full_text": "CỎ DẠI LÀM GIẢM NĂNG SUẤT LÚA. Năng suất hạt trong mùa khô: Có diệt cỏ cho năng suất cao hơn không diệt cỏ. Năng suất hạt trong mùa mưa: Có diệt cỏ cho năng suất cao hơn không diệt cỏ. Cỏ dại làm giảm năng suất hạt.",
+      "sections": [
+        {
+          "heading": "Cỏ dại làm giảm năng suất lúa",
+          "level": 1,
+          "text": "Hình ảnh minh họa so sánh số lượng bao lúa thu hoạch giữa có diệt cỏ và không diệt cỏ trong hai mùa vụ. Trong mùa khô: có diệt cỏ cho nhiều bao lúa hơn so với không diệt cỏ. Trong mùa mưa: có diệt cỏ cũng cho năng suất cao hơn không diệt cỏ. Cỏ dại làm giảm năng suất hạt lúa."
+        }
+      ],
+      "key_phrases": [
+        "cỏ dại làm giảm năng suất",
+        "diệt cỏ",
+        "không diệt cỏ",
+        "năng suất hạt mùa khô",
+        "năng suất hạt mùa mưa",
+        "so sánh năng suất"
+      ]
+    },
+    {
+      "summary": "Cỏ dại cạnh tranh với lúa về ánh sáng, dinh dưỡng và nước. Sự cạnh tranh này làm cây lúa sinh trưởng kém và dẫn đến năng suất thấp.",
+      "full_text": "CỎ DẠI CẠNH TRANH VỚI LÚA. Cỏ dại cạnh tranh với lúa về ánh sáng mặt trời, chất dinh dưỡng và nước. Nếu thiếu một trong ba yếu tố này, các yếu tố còn lại sẽ không phát huy hiệu quả dù có nhiều. Sự cạnh tranh này làm cây lúa sinh trưởng kém và dẫn đến năng suất thấp.",
+      "sections": [
+        {
+          "heading": "Cỏ dại cạnh tranh với lúa",
+          "level": 1,
+          "text": "Cỏ dại cạnh tranh với cây lúa về các nguồn tài nguyên quan trọng như ánh sáng, chất dinh dưỡng và nước. Khi một trong các yếu tố này bị hạn chế do cỏ dại sử dụng, cây lúa sẽ sinh trưởng kém và năng suất giảm."
+        }
+      ],
+      "key_phrases": [
+        "cỏ dại",
+        "cạnh tranh với lúa",
+        "ánh sáng",
+        "chất dinh dưỡng",
+        "nước",
+        "năng suất thấp"
+      ]
+    },
+    {
+      "summary": "Cỏ dại làm giảm hiệu lực của phân đạm. Bón phân càng nhiều năng suất càng giảm nếu không làm cỏ, vì cỏ sẽ cạnh tranh ăn phân của lúa. Không nên bón phân đạm nếu ruộng lúa chưa được làm cỏ.",
+      "full_text": "CỎ DẠI LÀM GIẢM HIỆU LỰC CỦA PHÂN ĐẠM. Biểu đồ so sánh năng suất hạt theo lượng đạm (N) kg/ha giữa có diệt cỏ và không diệt cỏ. Bón phân càng nhiều năng suất càng giảm nếu không làm cỏ. Bón phân đạm, cỏ sẽ cạnh tranh ăn phân của lúa. Bón phân đạm trên ruộng lúa có cỏ, sẽ tạo thuận lợi cho cỏ hơn lúa. Không nên bón phân đạm nếu ruộng lúa chưa được làm cỏ.",
+      "sections": [
+        {
+          "heading": "Cỏ dại làm giảm hiệu lực của phân đạm",
+          "level": 1,
+          "text": "Biểu đồ minh họa so sánh năng suất hạt lúa (trục dọc) theo lượng phân đạm N kg/ha (trục ngang) giữa hai trường hợp: có diệt cỏ (cột cao, năng suất tăng theo lượng phân) và không diệt cỏ (cột thấp, năng suất không tăng hoặc giảm khi bón thêm phân). Bón phân càng nhiều năng suất càng giảm nếu không làm cỏ. Cỏ sẽ cạnh tranh ăn phân của lúa khi bón phân đạm. Bón phân đạm trên ruộng có cỏ sẽ tạo thuận lợi cho cỏ hơn lúa. Không nên bón phân đạm nếu ruộng lúa chưa được làm cỏ."
+        }
+      ],
+      "key_phrases": [
+        "cỏ dại giảm hiệu lực phân đạm",
+        "bón phân nhiều năng suất giảm",
+        "cỏ cạnh tranh phân với lúa",
+        "diệt cỏ",
+        "không diệt cỏ",
+        "không nên bón phân khi chưa làm cỏ",
+        "đạm N kg/ha"
+      ]
+    },
+    {
+      "summary": "Trong ruộng lúa thường gặp ba nhóm cỏ chính: cỏ hòa bản, cỏ lác và cỏ lá rộng. Các nhóm này có thể phân biệt qua đặc điểm phiến lá, gân lá và hình dạng thân cắt ngang.",
+      "full_text": "CỎ THƯỜNG GẶP TRONG RUỘNG LÚA. Các loại cỏ gồm: cỏ hòa bản, cỏ lác và cỏ lá rộng. Có thể phân biệt qua phiến lá, gân lá và thân cắt ngang. Ví dụ: cỏ hòa bản như cỏ lồng công; cỏ lác như cỏ cú; cỏ lá rộng như rau mác.",
+      "sections": [
+        {
+          "heading": "Cỏ thường gặp trong ruộng lúa",
+          "level": 1,
+          "text": "Trong ruộng lúa thường có ba nhóm cỏ chính: cỏ hòa bản, cỏ lác và cỏ lá rộng. Các nhóm này có thể được nhận biết thông qua đặc điểm phiến lá, gân lá và hình dạng thân khi cắt ngang. Ví dụ, cỏ hòa bản có phiến lá hẹp và gân song song, cỏ lác có thân tam giác, còn cỏ lá rộng có lá rộng và gân lá khác biệt."
+        }
+      ],
+      "key_phrases": [
+        "cỏ trong ruộng lúa",
+        "cỏ hòa bản",
+        "cỏ lác",
+        "cỏ lá rộng",
+        "phân biệt cỏ",
+        "thân cắt ngang"
+      ]
+    },
+    {
+      "summary": "CỎ THƯỜNG GẶP TRONG RUỘNG LÚA - CỎ HÒA BẢN. Tên khoa học: Echinochloa crusgalli. Tên thường: cỏ lồng công.",
+      "full_text": "Cỏ hòa bản là loại cỏ thường gặp trong ruộng lúa, có tên khoa học là Echinochloa crusgalli, tên thường gọi là cỏ lồng công.",
+      "sections": [
+        {
+          "heading": "Cỏ thường gặp trong ruộng lúa - Cỏ hòa bản",
+          "level": 1,
+          "text": "Hình ảnh minh họa cây cỏ hòa bản với hệ thống rễ, thân lá và bông. Đây là loại cỏ thường gặp trong ruộng lúa. Tên khoa học: Echinochloa crusgalli. Tên thường gọi: cỏ lồng công."
+        }
+      ],
+      "key_phrases": [
+        "cỏ hòa bản",
+        "cỏ thường gặp trong ruộng lúa",
+        "Echinochloa crusgalli",
+        "cỏ lồng công"
+      ]
+    },
+    {
+      "summary": "CỎ THƯỜNG GẶP TRONG RUỘNG LÚA - CỎ LÁC. Tên khoa học: Cyperus iria. Tên thường: Lác rận.",
+      "full_text": "Cỏ lác là một loại cỏ thường gặp trong ruộng lúa. Một ví dụ là lác rận với tên khoa học Cyperus iria.",
+      "sections": [
+        {
+          "heading": "Cỏ thường gặp trong ruộng lúa - Cỏ lác",
+          "level": 1,
+          "text": "Cỏ lác là một trong những loại cỏ thường gặp trong ruộng lúa. Một ví dụ là lác rận với tên khoa học Cyperus iria."
+        }
+      ],
+      "key_phrases": [
+        "cỏ lác",
+        "Cyperus iria",
+        "lác rận",
+        "cỏ ruộng lúa"
+      ]
+    },
+    {
+      "summary": "CỎ THƯỜNG GẶP TRONG RUỘNG LÚA - CỎ LÁ RỘNG. Tên khoa học: Monochoria vaginalis. Tên thường: Rau mác.",
+      "full_text": "Cỏ lá rộng là loại cỏ thường gặp trong ruộng lúa, có tên khoa học là Monochoria vaginalis, tên thường gọi là rau mác.",
+      "sections": [
+        {
+          "heading": "Cỏ thường gặp trong ruộng lúa - Cỏ lá rộng",
+          "level": 1,
+          "text": "Hình ảnh minh họa cây cỏ lá rộng với lá hình tim to bản, hệ thống rễ và hoa. Đây là loại cỏ thường gặp trong ruộng lúa. Tên khoa học: Monochoria vaginalis. Tên thường gọi: Rau mác."
+        }
+      ],
+      "key_phrases": [
+        "cỏ lá rộng",
+        "cỏ thường gặp trong ruộng lúa",
+        "Monochoria vaginalis",
+        "rau mác"
+      ]
+    },
+    {
+      "summary": "SỰ KHÁC BIỆT GIỮA CỎ HÒA BẢN VÀ LÚA. Lúa có phiến lá, bẹ lá, thìa lá và tai lá. Cỏ hòa bản có thể không có thìa lá và tai lá, hoặc chỉ có thìa lá mà không có tai lá.",
+      "full_text": "Lúa có thể được phân biệt với cỏ hòa bản nhờ sự hiện diện của thìa lá và tai lá. Một số cỏ hòa bản không có thìa lá và tai lá, hoặc chỉ có thìa lá mà không có tai lá.",
+      "sections": [
+        {
+          "heading": "Sự khác biệt giữa cỏ hòa bản và lúa",
+          "level": 1,
+          "text": "Cây lúa có các bộ phận như phiến lá, bẹ lá, thìa lá và tai lá. Trong khi đó, cỏ hòa bản thường không có thìa lá và tai lá, hoặc chỉ có thìa lá mà không có tai lá. Nhờ các đặc điểm này có thể phân biệt lúa với cỏ hòa bản trong ruộng."
+        }
+      ],
+      "key_phrases": [
+        "cỏ hòa bản",
+        "cây lúa",
+        "thìa lá",
+        "tai lá",
+        "phân biệt cỏ và lúa"
+      ]
+    },
+    {
+      "summary": "Cần làm cỏ trong thời gian 30 ngày đầu sau khi cấy. Năng suất hạt sẽ giảm nghiêm trọng nếu lúa không được làm cỏ vào giai đoạn đầu. Biểu đồ cho thấy năng suất tăng dần khi làm cỏ sớm hơn trong 30 ngày đầu.",
+      "full_text": "KHI NÀO LÀM CỎ LÚA. Biểu đồ năng suất hạt theo số ngày (10, 20, 30, 40, 50, 60) với vùng quan trọng 30 ngày đầu. Cần làm cỏ trong thời gian 30 ngày sau khi cấy. Năng suất hạt sẽ giảm nghiêm trọng nếu lúa không được làm cỏ vào giai đoạn đầu.",
+      "sections": [
+        {
+          "heading": "Khi nào làm cỏ lúa",
+          "level": 1,
+          "text": "Biểu đồ minh họa mối quan hệ giữa thời điểm làm cỏ và năng suất hạt lúa. Trục ngang thể hiện số ngày (10 đến 60 ngày), trục dọc thể hiện năng suất hạt. Vùng 30 ngày đầu được đánh dấu là giai đoạn quan trọng cần làm cỏ. Năng suất thấp nhất khi làm cỏ ở ngày 10, tăng dần đến ngày 30-60. Cần làm cỏ trong thời gian 30 ngày sau khi cấy, vì năng suất hạt sẽ giảm nghiêm trọng nếu lúa không được làm cỏ vào giai đoạn đầu."
+        }
+      ],
+      "key_phrases": [
+        "khi nào làm cỏ lúa",
+        "30 ngày đầu sau khi cấy",
+        "năng suất giảm nghiêm trọng",
+        "làm cỏ giai đoạn đầu",
+        "thời điểm làm cỏ"
+      ]
+    },
+    {
+      "summary": "Diệt cỏ bằng tay là phương pháp phổ biến để loại bỏ cỏ trong ruộng lúa. Ví dụ một loại cỏ lá rộng thường gặp là rau mác (Monochoria vaginalis).",
+      "full_text": "DIỆT CỎ BẰNG TAY. Cỏ lá rộng. Tên khoa học: Monochoria vaginalis. Tên thường: Rau mác. Nhổ cỏ bằng tay là phương pháp thông dụng nhưng mất nhiều thời gian.",
+      "sections": [
+        {
+          "heading": "Diệt cỏ bằng tay",
+          "level": 1,
+          "text": "Diệt cỏ bằng tay là phương pháp phổ biến để loại bỏ cỏ dại trong ruộng lúa. Một ví dụ về cỏ lá rộng thường gặp là rau mác với tên khoa học Monochoria vaginalis. Phương pháp nhổ cỏ bằng tay tuy hiệu quả nhưng thường mất nhiều thời gian."
+        }
+      ],
+      "key_phrases": [
+        "diệt cỏ bằng tay",
+        "cỏ lá rộng",
+        "Monochoria vaginalis",
+        "rau mác",
+        "nhổ cỏ"
+      ]
+    },
+    {
+      "summary": "Làm cỏ bằng dụng cụ (cào cỏ) hiệu quả hơn nhổ cỏ bằng tay. Cần cấy thẳng hàng để có thể dùng cào cỏ, và nên rút nước khi dùng cào cỏ.",
+      "full_text": "LÀM CỎ BẰNG DỤNG CỤ. Dùng cào cỏ có hiệu quả hơn nhổ cỏ bằng tay. Cấy thẳng hàng cần thiết nếu dùng cào cỏ. Nên rút nước khi dùng cào cỏ.",
+      "sections": [
+        {
+          "heading": "Làm cỏ bằng dụng cụ",
+          "level": 1,
+          "text": "Hình ảnh minh họa người nông dân đang dùng cào cỏ trên ruộng lúa ngập nước. Dùng cào cỏ có hiệu quả hơn nhổ cỏ bằng tay. Cần cấy lúa thẳng hàng để có thể sử dụng cào cỏ. Nên rút nước khi dùng cào cỏ."
+        }
+      ],
+      "key_phrases": [
+        "làm cỏ bằng dụng cụ",
+        "cào cỏ",
+        "hiệu quả hơn nhổ bằng tay",
+        "cấy thẳng hàng",
+        "rút nước khi dùng cào cỏ"
+      ]
+    },
+    {
+      "summary": "Quản lý nước trong ruộng lúa là một biện pháp thủy lợi giúp hạn chế sự phát triển của cỏ dại. Mực nước khoảng 5–10 cm có thể kiểm soát nhiều loại cỏ hòa bản và cỏ lác.",
+      "full_text": "DIỆT CỎ BẰNG BIỆN PHÁP THỦY LỢI. Khi mực nước trong ruộng khoảng 5–10 cm thì sự sinh trưởng của cỏ giảm ít. Khi mực nước chỉ khoảng 1–5 cm thì sự sinh trưởng của cỏ giảm nhiều. Đa số cỏ hòa bản và cỏ lác được khống chế khi cho mực nước ruộng ở khoảng từ 5–10 cm. Một số cỏ lá rộng không diệt được khi cho ngập nước. Nhiều loại cỏ không nảy mầm dưới nước.",
+      "sections": [
+        {
+          "heading": "Diệt cỏ bằng biện pháp thủy lợi",
+          "level": 1,
+          "text": "Quản lý mực nước trong ruộng lúa là một phương pháp quan trọng để kiểm soát cỏ dại. Khi duy trì mực nước thích hợp, nhiều loại cỏ hòa bản và cỏ lác có thể bị hạn chế phát triển. Tuy nhiên, một số cỏ lá rộng vẫn có thể tồn tại trong điều kiện ngập nước."
+        }
+      ],
+      "key_phrases": [
+        "diệt cỏ",
+        "biện pháp thủy lợi",
+        "mực nước ruộng",
+        "cỏ hòa bản",
+        "cỏ lác",
+        "cỏ lá rộng"
+      ]
+    },
+    {
+      "summary": "Diệt cỏ bằng cách sửa soạn đất kỹ và đều. Cỏ dại phát triển nhiều nếu sửa soạn đất không kỹ, không đều và nước không ngập hết mặt ruộng.",
+      "full_text": "DIỆT CỎ BẰNG CÁCH SỬA SOẠN ĐẤT. Sửa soạn đất không tốt. Cỏ dại phát triển nhiều nếu sửa soạn đất không kỹ, không đều, nước không ngập hết mặt ruộng.",
+      "sections": [
+        {
+          "heading": "Diệt cỏ bằng cách sửa soạn đất",
+          "level": 1,
+          "text": "Hình ảnh minh họa ruộng lúa bị cỏ dại mọc nhiều do sửa soạn đất không tốt, mặt đất không bằng phẳng và nước không ngập đều. Cỏ dại phát triển nhiều nếu sửa soạn đất không kỹ, không đều và nước không ngập hết mặt ruộng."
+        }
+      ],
+      "key_phrases": [
+        "diệt cỏ bằng sửa soạn đất",
+        "sửa soạn đất không tốt",
+        "cỏ dại phát triển nhiều",
+        "đất không kỹ không đều",
+        "nước không ngập hết mặt ruộng"
+      ]
+    },
+    {
+      "summary": "Trồng lúa với mật độ dày giúp hạn chế cỏ dại nhờ giảm ánh sáng cho cỏ nảy mầm và phát triển. Khoảng cách trồng càng lớn thì cỏ dại càng dễ phát triển.",
+      "full_text": "KHỐNG CHẾ CỎ BẰNG NGUYÊN TẮC CẠNH TRANH. Khi trồng với khoảng cách 10 x 10 cm, cỏ dại ít phát triển hơn. Khi khoảng cách 15 x 15 cm, cỏ dại phát triển nhiều hơn. Khi khoảng cách 20 x 20 cm, cỏ dại phát triển mạnh. Cây trồng dày sẽ có ít cỏ dại vì thiếu ánh sáng cho cỏ nảy mầm và phát triển. Các loại cỏ thân ngắn ít gây hại hơn.",
+      "sections": [
+        {
+          "heading": "Khống chế cỏ bằng nguyên tắc cạnh tranh",
+          "level": 1,
+          "text": "Một cách kiểm soát cỏ dại trong ruộng lúa là tăng khả năng cạnh tranh của cây lúa. Khi trồng lúa với mật độ dày, ánh sáng đến mặt đất giảm, làm cỏ khó nảy mầm và phát triển. Nếu khoảng cách trồng lớn, ánh sáng nhiều hơn và cỏ dại dễ phát triển."
+        }
+      ],
+      "key_phrases": [
+        "khống chế cỏ",
+        "cạnh tranh",
+        "mật độ trồng",
+        "khoảng cách 10x10",
+        "khoảng cách 15x15",
+        "khoảng cách 20x20"
+      ]
+    },
+    {
+      "summary": "DIỆT CỎ BẰNG THUỐC HÓA HỌC. Dùng thuốc bột hòa nước hoặc thuốc dạng lỏng. Dùng thuốc dạng hạt.",
+      "full_text": "Diệt cỏ bằng thuốc hóa học có thể dùng thuốc bột hòa nước hoặc thuốc dạng lỏng (phun bình), hoặc thuốc dạng hạt (rải trực tiếp trên ruộng).",
+      "sections": [
+        {
+          "heading": "Diệt cỏ bằng thuốc hóa học",
+          "level": 1,
+          "text": "Hình ảnh minh họa hai phương pháp diệt cỏ bằng thuốc hóa học trên ruộng lúa: người đứng phun thuốc bột hòa nước hoặc thuốc dạng lỏng bằng bình phun đeo lưng, và người ngồi rải thuốc dạng hạt trực tiếp trên mặt ruộng."
+        }
+      ],
+      "key_phrases": [
+        "diệt cỏ bằng thuốc hóa học",
+        "thuốc bột hòa nước",
+        "thuốc dạng lỏng",
+        "thuốc dạng hạt",
+        "phun thuốc diệt cỏ",
+        "rải thuốc trên ruộng"
+      ]
+    },
+    {
+      "summary": "Thuốc diệt cỏ có nhiều dạng khác nhau như dạng hạt, dạng lỏng và dạng bột hòa nước. Mỗi dạng thuốc có cách sử dụng khác nhau, trong đó thuốc dạng hạt có thể rải trực tiếp mà không cần bình xịt.",
+      "full_text": "LOẠI THUỐC DIỆT CỎ CĂN CỨ VÀO DẠNG THUỐC. Thuốc diệt cỏ có thể ở dạng hạt, dạng lỏng hoặc dạng bột hòa nước. Thuốc dạng hạt được rải trực tiếp xuống ruộng mà không cần sử dụng bình xịt. Các dạng lỏng hoặc bột hòa nước thường được phun bằng bình xịt.",
+      "sections": [
+        {
+          "heading": "Loại thuốc diệt cỏ căn cứ vào dạng thuốc",
+          "level": 1,
+          "text": "Thuốc diệt cỏ trên thị trường thường có các dạng như hạt, lỏng và bột hòa nước. Mỗi dạng thuốc có cách sử dụng khác nhau. Thuốc dạng hạt có thể rải trực tiếp trên ruộng, trong khi dạng lỏng và dạng bột hòa nước thường được phun bằng bình xịt."
+        }
+      ],
+      "key_phrases": [
+        "thuốc diệt cỏ",
+        "dạng hạt",
+        "dạng lỏng",
+        "bột hòa nước",
+        "phun thuốc",
+        "rải thuốc"
+      ]
+    },
+    {
+      "summary": "LOẠI THUỐC DIỆT CỎ CĂN CỨ VÀO THỜI GIAN DÙNG. Trước khi cỏ mọc. Sau khi cỏ mọc.",
+      "full_text": "Loại thuốc diệt cỏ được phân loại căn cứ vào thời gian dùng: trước khi cỏ mọc và sau khi cỏ mọc.",
+      "sections": [
+        {
+          "heading": "Loại thuốc diệt cỏ căn cứ vào thời gian dùng",
+          "level": 1,
+          "text": "Hình ảnh minh họa hai thời điểm sử dụng thuốc diệt cỏ: trước khi cỏ mọc (hạt cỏ còn trong đất, chưa nảy mầm) và sau khi cỏ mọc (cỏ đã mọc thành cây con trên mặt đất). Việc lựa chọn loại thuốc diệt cỏ phụ thuộc vào thời điểm sử dụng."
+        }
+      ],
+      "key_phrases": [
+        "loại thuốc diệt cỏ",
+        "thời gian dùng thuốc",
+        "trước khi cỏ mọc",
+        "sau khi cỏ mọc",
+        "phân loại thuốc diệt cỏ"
+      ]
+    },
+    {
+      "summary": "Thuốc diệt cỏ có thể được phân loại theo tính chọn lọc hoặc không chọn lọc. Thuốc chọn lọc chỉ diệt một số loại cây, trong khi thuốc không chọn lọc sẽ diệt tất cả các loại cây.",
+      "full_text": "LOẠI THUỐC DIỆT CỎ CĂN CỨ VÀO BIỆT TÍNH. Thuốc diệt cỏ biệt tính chỉ diệt một số cây nhất định như cỏ mà không làm hại lúa khi dùng đúng liều lượng. Thuốc diệt cỏ không biệt tính sẽ diệt tất cả các loại cây, bao gồm cả lúa và cỏ.",
+      "sections": [
+        {
+          "heading": "Loại thuốc diệt cỏ căn cứ vào biệt tính",
+          "level": 1,
+          "text": "Thuốc diệt cỏ có thể được phân loại theo tính chọn lọc. Thuốc diệt cỏ biệt tính (chọn lọc) chỉ tiêu diệt một số loại cây như cỏ mà không làm hại cây trồng khi dùng đúng liều lượng. Ngược lại, thuốc diệt cỏ không biệt tính sẽ tiêu diệt tất cả các loại cây."
+        }
+      ],
+      "key_phrases": [
+        "thuốc diệt cỏ",
+        "biệt tính",
+        "không biệt tính",
+        "thuốc chọn lọc",
+        "diệt cỏ"
+      ]
+    },
+    {
+      "summary": "LOẠI THUỐC DIỆT CỎ CĂN CỨ VÀO CÁCH TÁC ĐỘNG. Thuốc diệt cỏ tiếp xúc chỉ làm chết phần nào của cây bị phun trúng thuốc. Thuốc lưu dẫn có thể di chuyển bên trong cây và làm chết cả cây.",
+      "full_text": "Thuốc diệt cỏ có thể được phân loại theo cách tác động gồm thuốc tiếp xúc và thuốc lưu dẫn. Thuốc tiếp xúc chỉ làm chết phần cây bị phun, còn thuốc lưu dẫn di chuyển trong cây và làm chết toàn bộ cây.",
+      "sections": [
+        {
+          "heading": "Loại thuốc diệt cỏ căn cứ vào cách tác động",
+          "level": 1,
+          "text": "Thuốc diệt cỏ có thể được phân loại theo cách tác động lên cây. Thuốc tiếp xúc chỉ tiêu diệt phần của cây bị phun trúng. Trong khi đó, thuốc lưu dẫn có khả năng di chuyển bên trong cây và tiêu diệt toàn bộ cây."
+        }
+      ],
+      "key_phrases": [
+        "thuốc diệt cỏ",
+        "thuốc tiếp xúc",
+        "thuốc lưu dẫn",
+        "cách tác động",
+        "diệt cỏ"
+      ]
+    },
+    {
+      "summary": "LÚA BỊ HẠI KHI DÙNG NHIỀU THUỐC DIỆT CỎ - BỤI LÚA MỌC XÒE. Xịt quá nhiều thuốc: bụi lúa mọc xòe. Xịt đúng lượng thuốc: bụi lúa mọc thẳng, phát triển bình thường.",
+      "full_text": "Lúa bị hại khi dùng nhiều thuốc diệt cỏ, biểu hiện bụi lúa mọc xòe. Hình minh họa so sánh cây lúa bị xịt quá nhiều thuốc (bụi mọc xòe, lá rũ) với cây lúa được xịt đúng lượng thuốc (bụi mọc thẳng, khỏe mạnh).",
+      "sections": [
+        {
+          "heading": "Lúa bị hại khi dùng nhiều thuốc diệt cỏ - Bụi lúa mọc xòe",
+          "level": 1,
+          "text": "Hình ảnh minh họa so sánh hai cây lúa: cây bên trái bị xịt quá nhiều thuốc diệt cỏ dẫn đến bụi lúa mọc xòe, lá rũ xuống; cây bên phải được xịt đúng lượng thuốc nên bụi lúa mọc thẳng đứng, phát triển khỏe mạnh bình thường."
+        }
+      ],
+      "key_phrases": [
+        "lúa bị hại do thuốc diệt cỏ",
+        "bụi lúa mọc xòe",
+        "xịt quá nhiều thuốc",
+        "xịt đúng lượng thuốc",
+        "tác hại thuốc diệt cỏ"
+      ]
+    },
+    {
+      "summary": "Sử dụng quá nhiều thuốc diệt cỏ có thể gây hại cho lúa, làm lá xuất hiện các đốm nâu giống như bị cháy lá. Khi dùng đúng liều lượng, lá lúa sẽ không bị ảnh hưởng.",
+      "full_text": "LÚA BỊ HẠI KHI DÙNG NHIỀU THUỐC DIỆT CỎ - LÁ BỊ ĐỐM NÂU. Khi dùng quá nhiều thuốc diệt cỏ, lá lúa có thể bị đốm nâu hoặc trông như bị cháy lá. Các đốm này thường tròn, nhiều và rải rác. Khi dùng đúng lượng thuốc, lá lúa sẽ không bị ảnh hưởng.",
+      "sections": [
+        {
+          "heading": "Lúa bị hại khi dùng nhiều thuốc diệt cỏ - Lá bị đốm nâu",
+          "level": 1,
+          "text": "Nếu sử dụng thuốc diệt cỏ quá liều, lá lúa có thể xuất hiện các đốm nâu giống như bị cháy lá. Các đốm thường có dạng tròn, xuất hiện nhiều và phân bố rải rác trên lá. Việc sử dụng thuốc đúng liều lượng sẽ giúp tránh hiện tượng này."
+        }
+      ],
+      "key_phrases": [
+        "thuốc diệt cỏ",
+        "lá bị đốm nâu",
+        "dùng quá nhiều thuốc",
+        "cháy lá",
+        "liều lượng thuốc"
+      ]
+    },
+    {
+      "summary": "LÚA BỊ HẠI KHI DÙNG NHIỀU THUỐC DIỆT CỎ - LÚA LÁ NĂNG. Phiến lá. Hình cắt ngang: Đúng lượng. Quá nhiều. Nếu xịt quá nhiều, những lá mới ra cuộn tròn hình ống như lá năng.",
+      "full_text": "Lúa bị hại khi dùng nhiều thuốc diệt cỏ biểu hiện qua triệu chứng lúa lá năng. Nếu xịt quá nhiều, những lá mới ra cuộn tròn hình ống như lá năng. Hình minh họa so sánh phiến lá và hình cắt ngang giữa xịt đúng lượng và xịt quá nhiều.",
+      "sections": [
+        {
+          "heading": "Lúa bị hại khi dùng nhiều thuốc diệt cỏ - Lúa lá năng",
+          "level": 1,
+          "text": "Hình ảnh minh họa so sánh hai trường hợp: xịt đúng lượng thuốc (phiến lá phẳng, hình cắt ngang dẹt bình thường) và xịt quá nhiều thuốc (lá cuộn tròn hình ống, hình cắt ngang tròn như lá năng). Nếu xịt quá nhiều thuốc diệt cỏ, những lá mới ra sẽ cuộn tròn hình ống như lá năng."
+        }
+      ],
+      "key_phrases": [
+        "lúa lá năng",
+        "tác hại thuốc diệt cỏ",
+        "xịt quá nhiều thuốc",
+        "lá cuộn tròn hình ống",
+        "đúng lượng thuốc",
+        "phiến lá",
+        "hình cắt ngang"
+      ]
+    },
+    {
+      "summary": "Sử dụng quá nhiều thuốc diệt cỏ có thể làm cây lúa bị lùn và sinh trưởng kém. Vì vậy cần dùng thuốc đúng liều lượng theo hướng dẫn.",
+      "full_text": "LÚA BỊ HẠI KHI DÙNG NHIỀU THUỐC DIỆT CỎ - CÂY LÙN. Khi dùng quá nhiều thuốc diệt cỏ, cây lúa có thể bị lùn và phát triển kém. Khi dùng đúng lượng thuốc theo hướng dẫn, cây lúa phát triển bình thường.",
+      "sections": [
+        {
+          "heading": "Lúa bị hại khi dùng nhiều thuốc diệt cỏ - Cây lùn",
+          "level": 1,
+          "text": "Nếu sử dụng thuốc diệt cỏ quá liều, cây lúa có thể bị lùn và sinh trưởng kém. Để tránh gây hại cho cây lúa, cần sử dụng thuốc đúng liều lượng theo hướng dẫn."
+        }
+      ],
+      "key_phrases": [
+        "thuốc diệt cỏ",
+        "cây lùn",
+        "dùng quá nhiều thuốc",
+        "liều lượng thuốc",
+        "sinh trưởng kém"
+      ]
+    },
+    {
+      "summary": "Thuốc diệt cỏ có thể làm chết cây vì ngăn cản việc tạo thức ăn. Thuốc diệt cỏ có thể làm gián đoạn nhiều hoạt động xảy ra bên trong cây lúa và ảnh hưởng đến quá trình tạo thức ăn của cây lúa.",
+      "full_text": "THUỐC DIỆT CỎ CÓ THỂ LÀM CHẾT CÂY VÌ NGĂN CẢN VIỆC TẠO THỨC ĂN. Ánh sáng + Nước và không khí = Tinh bột. Thuốc diệt cỏ ngăn cản quá trình này. Thuốc diệt cỏ có thể làm gián đoạn nhiều hoạt động xảy ra bên trong cây lúa. Thuốc diệt cỏ ảnh hưởng đến quá trình tạo thức ăn của cây lúa.",
+      "sections": [
+        {
+          "heading": "Thuốc diệt cỏ có thể làm chết cây vì ngăn cản việc tạo thức ăn",
+          "level": 1,
+          "text": "Hình ảnh minh họa quá trình quang hợp của cây lúa: ánh sáng kết hợp với nước và không khí tạo ra tinh bột. Thuốc diệt cỏ can thiệp và ngăn cản quá trình này. Thuốc diệt cỏ có thể làm gián đoạn nhiều hoạt động xảy ra bên trong cây lúa và ảnh hưởng đến quá trình tạo thức ăn của cây."
+        }
+      ],
+      "key_phrases": [
+        "thuốc diệt cỏ làm chết cây",
+        "ngăn cản tạo thức ăn",
+        "quang hợp",
+        "ánh sáng nước không khí tinh bột",
+        "gián đoạn hoạt động cây lúa",
+        "ảnh hưởng quá trình tạo thức ăn"
+      ]
+    },
+    {
+      "summary": "Thuốc diệt cỏ có thể làm chết cây vì chúng can thiệp vào các quá trình sinh hóa cần thiết cho sự phát triển của cây. Khi các phản ứng tạo năng lượng và chất dinh dưỡng bị cản trở, cây không thể tiếp tục sinh trưởng.",
+      "full_text": "THUỐC DIỆT CỎ CÓ THỂ LÀM CHẾT CÂY. Sự tạo thành chất đạm và năng lượng để cây phát triển được thực hiện qua nhiều bước. Mỗi bước được tiến hành với sự tác động của một chất xúc tác. Thuốc diệt cỏ có thể gây thiệt hại cho những chất xúc tác này. Việc ngăn trở các bước phát triển này là nguyên nhân dẫn đến chết cây.",
+      "sections": [
+        {
+          "heading": "Thuốc diệt cỏ có thể làm chết cây",
+          "level": 1,
+          "text": "Quá trình tạo chất đạm và năng lượng giúp cây phát triển diễn ra qua nhiều bước sinh hóa khác nhau. Mỗi bước đều cần các chất xúc tác (enzyme). Thuốc diệt cỏ có thể phá hủy hoặc làm gián đoạn hoạt động của các chất xúc tác này, khiến các phản ứng sinh hóa bị ngừng lại. Khi quá trình tạo năng lượng và dinh dưỡng bị cản trở, cây sẽ ngừng phát triển và có thể chết."
+        }
+      ],
+      "key_phrases": [
+        "thuốc diệt cỏ",
+        "chất xúc tác",
+        "quá trình sinh hóa",
+        "tạo năng lượng",
+        "cây chết"
+      ]
+    },
+    {
+      "summary": "LÚC TRỔ LÚA TỐT CÓ CHIỀU CAO CÂY ĐỒNG ĐỀU. Chiều cao cây không đồng đều có thể do: Cây thiếu nước hoặc do sâu bệnh hại. Làm đất không tốt. Bón phân không đều. Giống không rặc.",
+      "full_text": "Lúc trổ, lúa tốt có chiều cao cây đồng đều. Chiều cao cây không đồng đều có thể do cây thiếu nước hoặc do sâu bệnh hại, làm đất không tốt, bón phân không đều, hoặc giống không rặc.",
+      "sections": [
+        {
+          "heading": "Lúc trổ lúa tốt có chiều cao cây đồng đều",
+          "level": 1,
+          "text": "Hình ảnh minh họa so sánh hai ruộng lúa lúc trổ bông: hàng trên chiều cao cây đồng đều (lúa tốt), hàng dưới chiều cao cây không đồng đều (lúa xấu). Chiều cao cây không đồng đều có thể do cây thiếu nước hoặc sâu bệnh hại, làm đất không tốt, bón phân không đều, hoặc giống không rặc."
+        }
+      ],
+      "key_phrases": [
+        "lúc trổ",
+        "chiều cao cây đồng đều",
+        "chiều cao không đồng đều",
+        "thiếu nước",
+        "sâu bệnh hại",
+        "làm đất không tốt",
+        "bón phân không đều",
+        "giống không rặc"
+      ]
+    },
+    {
+      "summary": "LÚA ĐỔ NGÃ CÓ THỂ DO SẠ CẤY QUÁ DÀY. Mật độ quá dày: lúa bị đổ ngã. Mật độ vừa phải: lúa đứng thẳng, phát triển tốt.",
+      "full_text": "Lúa đổ ngã có thể do sạ cấy quá dày. Hình minh họa so sánh mật độ quá dày dẫn đến lúa đổ ngã với mật độ vừa phải giúp lúa đứng thẳng và phát triển tốt.",
+      "sections": [
+        {
+          "heading": "Lúa đổ ngã có thể do sạ cấy quá dày",
+          "level": 1,
+          "text": "Hình ảnh minh họa so sánh hai trường hợp mật độ sạ cấy: mật độ quá dày (hàng trên) dẫn đến cây lúa bị đổ ngã hoàn toàn; mật độ vừa phải (hàng dưới) giúp cây lúa đứng thẳng và phát triển khỏe mạnh."
+        }
+      ],
+      "key_phrases": [
+        "lúa đổ ngã",
+        "sạ cấy quá dày",
+        "mật độ quá dày",
+        "mật độ vừa phải",
+        "nguyên nhân đổ ngã"
+      ]
+    },
+    {
+      "summary": "Bón quá nhiều phân có thể làm cây lúa mọc cao và yếu, dẫn đến hiện tượng đổ ngã. Bón phân với lượng vừa phải giúp cây đứng vững và phát triển tốt hơn.",
+      "full_text": "ĐỔ NGÃ CÓ THỂ DO DÙNG QUÁ NHIỀU PHÂN. Khi bón quá nhiều phân, cây lúa sẽ phát triển quá nhanh, thân cao và yếu nên dễ bị đổ ngã. Nếu bón phân với lượng vừa phải, cây sẽ phát triển cân đối, thân chắc và đứng thẳng.",
+      "sections": [
+        {
+          "heading": "Ảnh hưởng của lượng phân bón đến đổ ngã",
+          "level": 1,
+          "text": "Việc bón quá nhiều phân làm cây lúa vươn cao nhanh nhưng thân yếu, dễ bị đổ ngã khi gặp gió, mưa hoặc khi bông lúa nặng. Ngược lại, khi bón phân với lượng vừa phải, cây phát triển cân đối, thân chắc và khả năng chống đổ ngã tốt hơn."
+        }
+      ],
+      "key_phrases": [
+        "đổ ngã",
+        "phân bón",
+        "bón quá nhiều phân",
+        "lúa cao yếu",
+        "chống đổ ngã"
+      ]
+    },
+    {
+      "summary": "ĐỔ NGÃ CÓ THỂ DO GIỐNG LÚA CAO GIÀN. Giống cao giàn: Đổ ngã. Giống thấp cây: Đứng thẳng.",
+      "full_text": "Đổ ngã có thể do giống lúa cao giàn. Hình minh họa so sánh giống lúa cao giàn bị đổ ngã hoàn toàn với giống lúa thấp cây đứng thẳng vững chắc.",
+      "sections": [
+        {
+          "heading": "Đổ ngã có thể do giống lúa cao giàn",
+          "level": 1,
+          "text": "Hình ảnh minh họa so sánh hai giống lúa: giống cao giàn (bên trái) sau khi phát triển bị đổ ngã hoàn toàn xuống mặt ruộng; giống thấp cây (bên phải) vẫn đứng thẳng vững chắc. Nguyên nhân đổ ngã có thể do sử dụng giống lúa cao giàn."
+        }
+      ],
+      "key_phrases": [
+        "đổ ngã do giống lúa cao giàn",
+        "giống cao giàn",
+        "giống thấp cây",
+        "đổ ngã",
+        "đứng thẳng",
+        "nguyên nhân đổ ngã"
+      ]
+    },
+    {
+      "summary": "Ở giai đoạn lúa trổ, rễ khỏe thường có màu từ trắng đến nâu. Nếu rễ chuyển sang màu đen và bị thối thì thường do điều kiện đất ruộng không tốt.",
+      "full_text": "LÚC TRỔ LÚA TỐT CÓ MÀU RỄ TỪ TRẮNG ĐẾN NÂU. Rễ khỏe mạnh giúp cây lúa hấp thu nước và dinh dưỡng tốt trong giai đoạn trổ bông. Nếu rễ chuyển sang màu đen và bị thối thì thường do điều kiện đất ruộng không thuận lợi như đất bị trám, thiếu không khí, có nhiều chất sắt hoặc có nhiều cây cỏ tiết ra các chất độc gây hại cho rễ.",
+      "sections": [
+        {
+          "heading": "Màu sắc và tình trạng rễ lúa lúc trổ",
+          "level": 1,
+          "text": "Ở giai đoạn trổ, rễ lúa khỏe mạnh thường có màu trắng đến nâu. Nếu rễ có màu đen và bị thối thì đó là dấu hiệu cho thấy đất ruộng có vấn đề."
+        },
+        {
+          "heading": "Nguyên nhân làm rễ lúa bị đen và thối",
+          "level": 1,
+          "text": "Các nguyên nhân chính gồm: đất bị trám hoặc bí, đất thiếu không khí, hàm lượng sắt trong đất cao gây hại cho cây, hoặc sự hiện diện của nhiều loại cỏ tiết ra các chất độc ảnh hưởng đến rễ lúa."
+        }
+      ],
+      "key_phrases": [
+        "rễ lúa",
+        "màu rễ lúa",
+        "rễ trắng đến nâu",
+        "rễ đen và thối",
+        "đất thiếu không khí",
+        "đất nhiều chất sắt"
+      ]
+    },
+    {
+      "summary": "Lúc trổ, lúa tốt có lá xanh và sạch bệnh. Các lá xanh sạch bệnh nhờ trong đất không có chất độc hoặc cây không bị sâu hại. Lá bị vàng có thể do thiếu đạm hoặc cây bị bệnh siêu vi trùng.",
+      "full_text": "LÚC TRỔ LÚA TỐT CÓ LÁ XANH VÀ SẠCH BỆNH. Lá bình thường. Lá bị hại. Các lá xanh sạch bệnh nhờ trong đất không có chất độc, hoặc cây không bị sâu hại. Lá bị vàng có thể do thiếu đạm hoặc cây bị bệnh siêu vi trùng.",
+      "sections": [
+        {
+          "heading": "Lúc trổ lúa tốt có lá xanh và sạch bệnh",
+          "level": 1,
+          "text": "Hình ảnh minh họa so sánh lá lúa bình thường (lá xanh, phẳng, không có đốm) với các lá bị hại (có đốm bệnh, rách mép, biến dạng). Các lá xanh sạch bệnh nhờ trong đất không có chất độc hoặc cây không bị sâu hại. Lá bị vàng có thể do thiếu đạm hoặc cây bị bệnh siêu vi trùng."
+        }
+      ],
+      "key_phrases": [
+        "lúc trổ",
+        "lá xanh và sạch bệnh",
+        "lá bình thường",
+        "lá bị hại",
+        "đất không có chất độc",
+        "không bị sâu hại",
+        "lá bị vàng",
+        "thiếu đạm",
+        "bệnh siêu vi trùng"
+      ]
+    },
+    {
+      "summary": "Ở giai đoạn lúa trổ, mỗi chồi khỏe nên có ít nhất 3–4 lá để đảm bảo cung cấp đủ dinh dưỡng và tạo nhiều chất bột cho hạt. Nếu chồi chỉ có 2 lá, cây có thể đã bị ảnh hưởng bởi thiếu phân, hạn hán hoặc ngập nước ở giai đoạn đầu.",
+      "full_text": "LÚC TRỔ Ở LÚA TỐT, MỖI CHỒI CÓ ÍT NHẤT 3–4 LÁ. Các lá xanh trên chồi có vai trò tạo chất bột thông qua quá trình quang hợp và vận chuyển đến bông lúa. Mỗi chồi cần có từ 3–4 lá để cung cấp đầy đủ dinh dưỡng cho rễ và các bộ phận khác của cây, đồng thời tạo ra nhiều chất bột giúp hạt lúa phát triển tốt. Nếu mỗi chồi chỉ có hai lá khi trổ, điều này có thể cho thấy cây đã chịu tác động bất lợi trong giai đoạn sinh trưởng trước đó, chẳng hạn như thiếu phân bón, hạn hán hoặc bị ngập nước.",
+      "sections": [
+        {
+          "heading": "Số lượng lá cần thiết trên mỗi chồi khi lúa trổ",
+          "level": 1,
+          "text": "Ở thời điểm lúa trổ, mỗi chồi khỏe mạnh thường có ít nhất 3–4 lá. Đây là số lá cần thiết để đảm bảo quá trình quang hợp tạo đủ chất dinh dưỡng cho cây."
+        },
+        {
+          "heading": "Vai trò của lá trong việc tạo năng suất",
+          "level": 1,
+          "text": "Các lá xanh trên chồi tạo ra chất bột thông qua quang hợp và cung cấp dinh dưỡng cho rễ, thân và bông lúa. Nhờ đó cây có thể hình thành và phát triển hạt tốt hơn."
+        },
+        {
+          "heading": "Dấu hiệu cây sinh trưởng kém",
+          "level": 1,
+          "text": "Nếu mỗi chồi chỉ có hai lá khi trổ, cây có thể đã bị thiếu phân, gặp hạn hán hoặc bị ngập nước trong giai đoạn sinh trưởng ban đầu."
+        }
+      ],
+      "key_phrases": [
+        "lúa trổ",
+        "số lá trên chồi",
+        "3–4 lá mỗi chồi",
+        "quang hợp tạo chất bột",
+        "dấu hiệu sinh trưởng kém"
+      ]
+    },
+    {
+      "summary": "LÚC TRỔ LÚA TỐT CÓ MẬT ĐỘ CÂY VỪA PHẢI. Nếu mật độ vừa, đứng trên bờ có thể nhìn thấy mặt nước ruộng hoặc tia nắng phản chiếu lên. Nếu không nhìn thấy mặt nước ruộng có thể là do cấy quá dày, bón nhiều phân hoặc giống quá cao giàn.",
+      "full_text": "Lúc trổ, lúa tốt có mật độ cây vừa phải. Nếu mật độ vừa, đứng trên bờ có thể nhìn thấy mặt nước ruộng hoặc tia nắng phản chiếu lên. Nếu không nhìn thấy mặt nước ruộng có thể là do cấy quá dày, bón nhiều phân hoặc giống quá cao giàn.",
+      "sections": [
+        {
+          "heading": "Lúc trổ lúa tốt có mật độ cây vừa phải",
+          "level": 1,
+          "text": "Hình ảnh minh họa người nông dân đứng trên bờ quan sát ruộng lúa lúc trổ bông dưới ánh nắng mặt trời. Nếu mật độ vừa phải, đứng trên bờ có thể nhìn thấy mặt nước ruộng hoặc tia nắng phản chiếu lên. Nếu không nhìn thấy mặt nước ruộng, nguyên nhân có thể do cấy quá dày, bón nhiều phân hoặc giống quá cao giàn."
+        }
+      ],
+      "key_phrases": [
+        "lúc trổ",
+        "mật độ cây vừa phải",
+        "nhìn thấy mặt nước ruộng",
+        "tia nắng phản chiếu",
+        "cấy quá dày",
+        "bón nhiều phân",
+        "giống quá cao giàn"
+      ]
+    },
+    {
+      "summary": "Ở giai đoạn lúa trổ, ruộng lúa tốt cần đạt khoảng 250–350 bông trên mỗi mét vuông. Việc đếm bông nên thực hiện ở ít nhất 3 bụi lúa trong ruộng, tránh các hàng biên để đánh giá chính xác mật độ cây.",
+      "full_text": "LÚC TRỔ LÚA TỐT PHẢI CÓ 250–350 BÔNG TRÊN MỖI MÉT VUÔNG. Đây là chỉ tiêu quan trọng để đánh giá tiềm năng năng suất của ruộng lúa. Để xác định mật độ bông chính xác, cần đếm số bông trên ít nhất 3 bụi lúa trong ruộng và tránh sử dụng các hàng lúa ở rìa ruộng (hàng biên) vì các cây ở vị trí này thường phát triển khác với cây trong ruộng. Sau khi đếm số bông, có thể tính mật độ cây và đánh giá xem ruộng lúa có đạt mức bông cần thiết cho năng suất tốt hay không.",
+      "sections": [
+        {
+          "heading": "Số bông cần thiết trên mỗi mét vuông",
+          "level": 1,
+          "text": "Ở giai đoạn trổ, ruộng lúa sinh trưởng tốt cần có khoảng 250–350 bông trên mỗi mét vuông để đảm bảo năng suất cao."
+        },
+        {
+          "heading": "Cách đếm số bông lúa",
+          "level": 1,
+          "text": "Khi kiểm tra mật độ bông, nên đếm số bông trên ít nhất 3 bụi lúa đại diện trong ruộng và tránh đếm ở các hàng biên vì các cây này thường có điều kiện sinh trưởng khác."
+        },
+        {
+          "heading": "Ý nghĩa của mật độ bông",
+          "level": 1,
+          "text": "Mật độ bông là một trong những yếu tố quan trọng quyết định năng suất lúa, vì nó phản ánh số bông mang hạt trên một đơn vị diện tích."
+        }
+      ],
+      "key_phrases": [
+        "lúa trổ",
+        "250–350 bông mỗi mét vuông",
+        "đếm số bông lúa",
+        "mật độ bông",
+        "đánh giá năng suất lúa"
+      ]
+    },
+    {
+      "summary": "Hướng dẫn tính số bụi và số bông trên mỗi mét vuông theo khoảng cách cấy. Khoảng cách 25x25cm cho 16 bụi/m², khoảng cách 20x20cm cho 25 bụi/m². Ví dụ với 17 bông/bụi và 16 bụi/m² tính được 272 bông/m². Số bông dưới 250/m² cần xem lại mật độ sạ cấy và cách bón phân.",
+      "full_text": "Khoảng cách 25 x 25cm = 16 bụi/m². Khoảng cách 20 x 20cm = 25 bụi/m². Nếu khoảng cách giữa hai bụi 25 x 25 cm: Diện tích mỗi bụi = 25 x 25 = 625 cm² = 0,0625 m². Số bụi trên mỗi mét vuông = 1m² / Diện tích một bụi = 1 / 0,0625 = 16. Tính số bông trên mỗi mét vuông: Giả dụ 17 bông trên mỗi bụi, 16 bụi trên mỗi mét vuông. Số bông trên mỗi mét vuông = số bông trên mỗi bụi x số bụi trên 1 mét vuông = 17 x 16 = 272. Số bông trên mỗi mét vuông dưới 250, có thể khuyết điểm do ở kỹ thuật canh tác, giống lúa hoặc do đất. Nên xem lại mật độ sạ cấy và cách bón phân.",
+      "sections": [
+        {
+          "heading": "Tính số bụi và số bông trên mỗi mét vuông",
+          "level": 1,
+          "text": "Hình minh họa hai sơ đồ bố trí bụi lúa trong 100cm x 100cm: khoảng cách 25x25cm cho 16 bụi/m² và khoảng cách 20x20cm cho 25 bụi/m². Công thức: Số bụi/m² = 1m² / diện tích một bụi. Ví dụ tính số bông: 17 bông/bụi x 16 bụi/m² = 272 bông/m². Nếu số bông dưới 250/m² có thể do khuyết điểm kỹ thuật canh tác, giống lúa hoặc đất, cần xem lại mật độ sạ cấy và cách bón phân."
+        }
+      ],
+      "key_phrases": [
+        "khoảng cách cấy 25x25cm",
+        "khoảng cách cấy 20x20cm",
+        "16 bụi/m²",
+        "25 bụi/m²",
+        "số bông trên mét vuông",
+        "272 bông/m²",
+        "số bông dưới 250",
+        "mật độ sạ cấy",
+        "cách bón phân"
+      ]
+    }
+  ]
+}

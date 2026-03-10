@@ -18,8 +18,7 @@
     "python-dotenv"
   ],
   "graphs": {
-    "main_workflow": "./workflow.py:app",
-    "demo_workflow": "./workflow_demo.py:app"
+    "main_workflow": "./Agent/Agent.py:app"
   },
   "env": ".env",
   "python_version": "3.11"

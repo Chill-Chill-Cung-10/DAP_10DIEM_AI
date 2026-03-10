@@ -1,0 +1,1934 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "LLM Training Data Schema — Lĩnh vực Cây Trồng",
+  "description": "Khung JSON chuyên biệt để crawl và cấu trúc dữ liệu huấn luyện LLM cho lĩnh vực nông nghiệp, cây trồng, canh tác",
+  "version": "1.0.0",
+  "crawl_config": {
+    "source": {
+      "url": "https://example.com/cay-trong/lua-nuoc",
+      "domain": "example.com",
+      "source_type": "web | pdf | youtube | forum | extension_service | research_paper | government_doc",
+      "language": "vi",
+      "crawled_at": "2026-03-06T10:00:00Z",
+      "crawl_method": "playwright | scrapy | selenium | rss | api",
+      "is_dynamic": false
+    },
+    "trusted_sources": [
+      "vaas.vn",
+      "mard.gov.vn",
+      "cimmyt.org",
+      "fao.org",
+      "irri.org",
+      "khuyennongvn.gov.vn"
+    ]
+  },
+  "contents": [
+    {
+      "summary": "Dòi đục ngọn (Hydrellia philippina) gây thiệt hại bằng cách ăn bìa trong của lá non, tạo vết hư màu vàng rõ rệt, làm cây lúa giảm nở bụi và chậm tăng trưởng. Ruồi dài 2mm đẻ trứng đơn độc trên mặt lá, dòi nở ra chui vào đọt lúa và ăn bìa trong lá đang phát triển. Vòng đời dài 4 tuần.",
+      "full_text": "DÒI ĐỤC NGỌN Hydrellia philippina. Thiệt hại tiêu biểu là mô bị thoái hóa ở bìa trong của lá non vừa nhô ra (Hình 1). Khi lá nở xuất hiện những vết hư màu vàng rất rõ rệt trên lá. Cây lúa giảm nở bụi và có thể bị chậm tăng trưởng. Sự gây hại bắt đầu từ giai đoạn mạ cho đến cuối thời kỳ đẻ chồi tối đa. Dòi thường tấn công ruộng lúa có đầy đủ nước. Ruồi dài 2mm (Hình 2) đẻ trứng đơn độc trên mặt lá (Hình 3). Dòi nở ra chui vào đọt lúa và ăn bìa trong của lá đang phát triển. Dòi màu vàng xanh (Hình 4) ở trong đọt non rất giống màu của lá lúa non. Làm nhộng ở bên ngoài thân cây. Vòng đời dài 4 tuần.",
+      "sections": [
+        {
+          "heading": "Dòi đục ngọn Hydrellia philippina",
+          "level": 1,
+          "text": "Dòi đục ngọn (Hydrellia philippina) gây thiệt hại bằng cách làm thoái hóa mô ở bìa trong của lá non vừa nhô ra, tạo vết hư màu vàng rõ rệt khi lá nở ra. Cây lúa giảm nở bụi và có thể bị chậm tăng trưởng. Sự gây hại bắt đầu từ giai đoạn mạ đến cuối thời kỳ đẻ chồi tối đa, thường tấn công ruộng lúa có đầy đủ nước. Ruồi dài 2mm đẻ trứng đơn độc trên mặt lá, dòi nở ra chui vào đọt lúa và ăn bìa trong lá đang phát triển. Dòi màu vàng xanh rất giống màu lá lúa non. Làm nhộng bên ngoài thân cây. Vòng đời dài 4 tuần."
+        }
+      ],
+      "key_phrases": [
+        "dòi đục ngọn Hydrellia philippina",
+        "mô thoái hóa bìa trong lá non",
+        "vết hư màu vàng",
+        "giảm nở bụi chậm tăng trưởng",
+        "giai đoạn mạ đến đẻ chồi",
+        "ruồi 2mm đẻ trứng trên lá",
+        "dòi màu vàng xanh",
+        "vòng đời 4 tuần"
+      ]
+    },
+    {
+      "summary": "Bù lạch (Baliothrips biformis) là côn trùng nhỏ gây hại cho lúa bằng cách chích hút nhựa lá, làm lá vàng đỏ và cuốn lại. Chúng thường gây hại mạnh ở giai đoạn đâm chồi và trổ, đặc biệt trong điều kiện ruộng thiếu nước.",
+      "full_text": "BÙ LẠCH (Baliothrips biformis). Thành trùng và ấu trùng chích phiến lá để hút nhựa làm cho lá có màu vàng đỏ và phiến lá bị cuốn. Bông lúa có hạt bị lửng hoặc lép hoàn toàn. Cây lúa có thể bị gây hại ở giai đoạn đâm chồi và trổ. Bù lạch thường tấn công những ruộng thiếu nước. Bù lạch là loại côn trùng rất nhỏ, thân thon dài, thường dài từ 1–2 mm, có râu dài gồm 5–8 đốt. Có hai dạng là có cánh và không cánh. Nếu có cánh thì cánh hình thon dài, hẹp và có rìa lông. Trứng giống nhau và được đẻ từng cái trong mô của phiến lá do kim đẻ hình lưỡi cưa của con cái tạo ra. Trứng rất nhỏ, dài khoảng 0,25 mm và rộng 0,1 mm, trong mờ lúc mới đẻ nhưng chuyển sang vàng xanh khi sắp nở. Ấu trùng mới nở có màu trong suốt. Ấu trùng mới nở ban đầu bất động trong một thời gian ngắn, sau đó di chuyển và chích hút trên phần mô mềm của lá non chưa nở, ngay dưới chỗ cuốn của lá ở gần bìa, phần dưới của bẹ lá và trên bông đang phát triển. Ấu trùng, trứng, nhộng và thành trùng đều sống ở những vị trí này.",
+      "sections": [
+        {
+          "heading": "Bù lạch (Baliothrips biformis)",
+          "level": 1,
+          "text": "Bù lạch là loài côn trùng rất nhỏ có thân thon dài khoảng 1–2 mm. Chúng gây hại bằng cách chích hút nhựa ở phiến lá làm lá chuyển sang màu vàng đỏ và bị cuốn lại. Cây lúa có thể bị hại ở giai đoạn đâm chồi và trổ, làm hạt lúa bị lửng hoặc lép. Bù lạch thường xuất hiện nhiều trong điều kiện ruộng thiếu nước. Trứng được đẻ vào trong mô lá và ấu trùng sau khi nở sẽ chích hút trên các phần mềm của lá non, bẹ lá và bông đang phát triển."
+        }
+      ],
+      "key_phrases": [
+        "bù lạch",
+        "Baliothrips biformis",
+        "chích hút nhựa",
+        "lá vàng đỏ",
+        "lá cuốn",
+        "hạt lép",
+        "côn trùng hại lúa",
+        "ấu trùng",
+        "trứng trong mô lá"
+      ]
+    },
+    {
+      "summary": "Sâu đục thân gồm nhiều loài: Chilo suppressalis (sọc nâu), C. polychrusus (đầu đen), Rupela albinella (trắng Nam Mỹ), Scirpophaga incertulas (hai chấm), S. innotata (trắng) và Sesamia inferens (hồng). Ấu trùng ăn bên trong thân gây chết đọt trước trổ và bông bạc sau trổ. Chuột và khô hạn cũng có thể gây triệu chứng tương tự.",
+      "full_text": "SÂU ĐỤC THÂN Chilo suppressalis (sọc nâu), C. polychrusus (đầu đen), Rupela albinella (trắng Nam Mỹ), Scirpophaga incertulas (hai chấm), S. innotata (trắng), và Sesamia inferens (hồng). Thiệt hại do ấu trùng ăn bên trong thân, cắn đứt hệ thống dẫn nhựa gây ra triệu chứng 'chết đọt' trước khi trổ. Nếu gây hại trước khi đẻ chồi tối đa, cây lúa có thể phục hồi một phần thiệt hại bằng cách sinh ra các chồi phụ. Sâu đục thân: Đôi khi chết đọt có thể làm với thiệt hại do bệnh cháy bìa lá Kresek hay do chuột cắn. Nhưng ở đây đọt lúa có thể rút ra dễ dàng do bị sâu cắn đứt bên dưới và có thể thấy phân của chúng thải ra. Bông bạc là thiệt hại gây ra khi lúa đã trổ làm cho cả bông bị khô trắng. Chuột và khô hạn có thể gây ra triệu chứng tương tự. Nếu trước khi lúa chín mà thân cây lúa không bị cắn đứt hoàn toàn thì thiệt hại chỉ giới hạn ở bẹ lá và một phần thân ở gần mặt đất. Một số hạt ở dưới bông sẽ bị lép.",
+      "sections": [
+        {
+          "heading": "Sâu đục thân",
+          "level": 1,
+          "text": "Sâu đục thân gồm nhiều loài: Chilo suppressalis (sọc nâu), C. polychrusus (đầu đen), Rupela albinella (trắng Nam Mỹ), Scirpophaga incertulas (hai chấm), S. innotata (trắng) và Sesamia inferens (hồng). Ấu trùng ăn bên trong thân, cắn đứt hệ thống dẫn nhựa gây triệu chứng chết đọt trước khi trổ. Nếu gây hại trước khi đẻ chồi tối đa, cây lúa có thể phục hồi bằng cách sinh chồi phụ. Chết đọt có thể nhầm với bệnh cháy bìa lá Kresek hoặc chuột cắn, nhưng đọt bị sâu có thể rút ra dễ dàng và thấy phân sâu. Bông bạc xảy ra khi lúa đã trổ làm cả bông khô trắng. Chuột và khô hạn cũng gây triệu chứng tương tự. Nếu thân không bị cắn đứt hoàn toàn trước khi lúa chín, thiệt hại giới hạn ở bẹ lá và phần thân gần mặt đất, một số hạt dưới bông sẽ bị lép."
+        }
+      ],
+      "key_phrases": [
+        "sâu đục thân các loài",
+        "Chilo suppressalis Scirpophaga incertulas Sesamia inferens",
+        "ấu trùng ăn trong thân",
+        "chết đọt trước trổ",
+        "bông bạc sau trổ",
+        "nhầm với bệnh Kresek chuột cắn",
+        "đọt rút ra dễ thấy phân sâu",
+        "hạt lép dưới bông"
+      ]
+    },
+    {
+      "summary": "Sâu đục thân gây hại cho lúa bằng cách đục vào thân và bẹ lá, làm cây bị héo hoặc chết. Trứng thường được đẻ thành ổ trên lá và ấu trùng sau khi nở sẽ chui vào thân lúa để phát triển.",
+      "full_text": "SÂU ĐỤC THÂN. Sự gây hại của sâu đục thân được nhận biết qua sự hiện diện của sâu trong thân lúa, dấu vết sâu cắn trên thân hoặc các lỗ trên bẹ lá và thân lúa. Ổ trứng là dấu hiệu cho thấy sắp có thiệt hại. Trứng của sâu đục thân hai chấm có màu trắng và có sọc nâu, thường được đẻ trên nửa phần trên của phiến lá; trứng của sâu màu hồng được đẻ ở mặt trong của lá. Trứng của sâu hai chấm và sâu trắng thường được phủ bởi lớp lông màu nâu nhạt. Trứng của sâu sọc nâu có hình vảy cá và chuyển sang màu đậm trước khi nở. Sau khi nở, ấu trùng chui vào giữa các bẹ lá lúa và sau đó vào thân cây. Ở giai đoạn đầu, ấu trùng có thể tập trung trong một thân lúa. Ấu trùng của sâu hai chấm có màu trắng sọc nâu, trong khi ấu trùng sâu hại chấm vàng có màu trắng sọc dọc. Ấu trùng và nhộng thường được tìm thấy trong bẹ lá hoặc trong thân từ dưới mặt đất đến bông lúa. Nếu nhiều bướm trưởng thành xuất hiện trong ruộng vào buổi tối thì trong đêm đó sẽ có nhiều trứng được đẻ. Các loài sâu đục thân như Chilo zacconius và Scirpophaga sp. được ghi nhận ở Tây Châu Phi với mức độ gây hại tương tự như các loài ở châu Á. Ngoài ra còn có loài Diopsis macrophthalma (sâu đục thân mắt lồi) được tìm thấy ở Tây Châu Phi, có ấu trùng màu trắng ngà vàng nhạt với hai đuôi ở cuối bụng.",
+      "sections": [
+        {
+          "heading": "Sâu đục thân",
+          "level": 1,
+          "text": "Sâu đục thân là loài sâu hại quan trọng của cây lúa. Trứng thường được đẻ trên lá và khi nở, ấu trùng sẽ chui vào bẹ lá rồi đục vào thân cây. Việc gây hại làm thân lúa bị yếu hoặc chết. Các loài sâu đục thân phổ biến gồm Chilo zacconius, Scirpophaga sp. và Diopsis macrophthalma. Ấu trùng và nhộng thường được tìm thấy trong thân hoặc bẹ lá của cây lúa."
+        }
+      ],
+      "key_phrases": [
+        "sâu đục thân",
+        "ấu trùng",
+        "ổ trứng",
+        "bẹ lá",
+        "thân lúa",
+        "Chilo zacconius",
+        "Scirpophaga",
+        "Diopsis macrophthalma",
+        "sâu hại lúa"
+      ]
+    },
+    {
+      "summary": "Muỗi hành (Orseolia oryzae) gây thiệt hại bằng cách tạo ống tròn giống lá hành (còn gọi là đọt biếc), làm chồi không cho bông. Ấu trùng ăn tại điểm sinh trưởng làm đọt phát triển thành ống. Thành trùng bằng kích thước muỗi thường, con cái bụng đỏ lợt, hoạt động ban đêm. Chu kỳ thay đổi theo mùa.",
+      "full_text": "MUỖI HÀNH Orseolia oryzae. Thiệt hại tiêu biểu là một ống tròn tương tự như lá hành, nên đôi khi còn gọi là 'lá hành'. Nó cũng được gọi là 'đọt biếc' do có màu lợt và óng ánh. Ống tròn có thể dài bằng lá và dễ nhận, hay rất ngắn và khó phát hiện. Chồi có lá hành thì không cho bông. Khi bông đã tượng hình thì ấu trùng của muỗi hành không gây hại được nữa. Ấu trùng ăn tại điểm sinh trưởng làm cho đọt phát triển thành ống. Ấu trùng làm nhộng trong ống. Thành trùng chui ra ở đầu ống, chỉ để lại vỏ nhộng. Muỗi hành có thành trùng bằng kích thước của con muỗi thường nhưng con cái có bụng màu đỏ lợt. Thành trùng hoạt động ban đêm. Trứng thường đẻ ở mặt dưới của phiến lá nhưng một số có thể đẻ trên bẹ lá. Chu kỳ hằng năm thay đổi theo thời tiết. Trong mùa nắng chúng sống tiềm sinh trong lúa ma hay cỏ ở dạng sắp hóa nhộng. Thành trùng hoạt động trở lại vào đầu mùa mưa và thường hoàn tất một hay hai lứa trên các ký chủ phụ.",
+      "sections": [
+        {
+          "heading": "Muỗi hành Orseolia oryzae",
+          "level": 1,
+          "text": "Muỗi hành (Orseolia oryzae) gây thiệt hại tiêu biểu bằng cách tạo ra ống tròn giống lá hành, còn gọi là đọt biếc do màu lợt và óng ánh. Chồi có lá hành không cho bông, nhưng khi bông đã tượng hình thì ấu trùng không gây hại được nữa. Ấu trùng ăn tại điểm sinh trưởng làm đọt phát triển thành ống, làm nhộng trong ống và thành trùng chui ra ở đầu ống. Thành trùng bằng kích thước muỗi thường, con cái bụng đỏ lợt, hoạt động ban đêm, đẻ trứng ở mặt dưới phiến lá hoặc trên bẹ lá. Trong mùa nắng chúng sống tiềm sinh trong lúa ma hay cỏ, hoạt động trở lại vào đầu mùa mưa và hoàn tất một hay hai lứa trên ký chủ phụ."
+        }
+      ],
+      "key_phrases": [
+        "muỗi hành Orseolia oryzae",
+        "ống tròn lá hành đọt biếc",
+        "chồi không cho bông",
+        "ấu trùng ăn điểm sinh trưởng",
+        "thành trùng bụng đỏ lợt ban đêm",
+        "trứng mặt dưới phiến lá",
+        "tiềm sinh mùa nắng lúa ma",
+        "hoạt động đầu mùa mưa"
+      ]
+    },
+    {
+      "summary": "Rầy nâu (Nilaparvata lugens) là loài côn trùng gây hại nghiêm trọng cho lúa, có thể gây hiện tượng cháy rầy làm cây lúa vàng và chết. Chúng cũng là tác nhân truyền bệnh lúa cỏ và lùn xoắn lá.",
+      "full_text": "RẦY NÂU (Nilaparvata lugens). Rầy nâu thường tấn công các giống lúa nhiễm với mật số cao gây ra hiện tượng cháy rầy, làm cây lúa bị vàng và chết. Ngoài ra, rầy nâu còn truyền các bệnh như lúa cỏ, lùn xoắn lá và lùn nheo. Thành trùng cánh dài xâm nhập ruộng lúa và đẻ trứng trên bẹ hoặc gần lá. Trứng có nắp rộng và rõ. Ấu trùng nở sau khoảng 7–9 ngày và có khoảng 5–6 tuổi. Giai đoạn ấu trùng kéo dài khoảng 13–15 ngày. Ấu trùng tuổi đầu có màu trắng, các tuổi sau có màu nâu. Thành trùng có hai dạng là cánh dài và cánh ngắn. Thành trùng cánh ngắn chiếm đa số lúc lúa trổ và con cái thường sống giữa các thân lúa gần gốc. Khi lúa già, chúng sinh ra dạng cánh dài có khả năng bay xa.",
+      "sections": [
+        {
+          "heading": "Rầy nâu (Nilaparvata lugens)",
+          "level": 1,
+          "text": "Rầy nâu là loài côn trùng gây hại nghiêm trọng trên cây lúa. Chúng gây hiện tượng cháy rầy làm cây lúa vàng và chết. Ngoài ra, rầy nâu còn truyền nhiều bệnh nguy hiểm như lúa cỏ và lùn xoắn lá. Trứng được đẻ trên bẹ lá và sau khoảng một tuần sẽ nở thành ấu trùng. Ấu trùng phát triển qua nhiều tuổi trước khi trở thành rầy trưởng thành có cánh dài hoặc cánh ngắn."
+        }
+      ],
+      "key_phrases": [
+        "rầy nâu",
+        "Nilaparvata lugens",
+        "cháy rầy",
+        "lúa vàng chết",
+        "truyền bệnh lúa",
+        "lùn xoắn lá",
+        "ấu trùng rầy",
+        "cánh dài",
+        "cánh ngắn"
+      ]
+    },
+    {
+      "summary": "Rầy lưng trắng (Sogatella furcifera) thường xuất hiện cùng rầy nâu và dễ lộn nhau. Ấu trùng màu trắng hoặc có vết xám đậm hay đen, thành trùng dài 5mm có sọc trắng trên lưng. Rầy trắng không truyền bệnh, ít khi gây cháy rầy vì mật số giảm dần lúc lúa trổ, nhưng khi bị tấn công nặng thì bụi lúa có dấu hiệu cháy.",
+      "full_text": "RẦY LƯNG TRẮNG Sogatella furcifera. Thường xuất hiện chung với rầy nâu và chúng dễ lộn nhau. Ấu trùng có màu trắng hoặc trắng có vết xám đậm hay đen. Thành trùng dài 5mm và có sọc trắng trên lưng. Chỉ có con cái có cánh ngắn. Rầy trắng không truyền bệnh, ít khi gây ra cháy rầy vì mật số thường giảm dần lúc lúa trổ. Tuy nhiên khi bị tấn công nặng là gié của bụi lúa có dấu hiệu cháy.",
+      "sections": [
+        {
+          "heading": "Rầy lưng trắng Sogatella furcifera",
+          "level": 1,
+          "text": "Rầy lưng trắng (Sogatella furcifera) thường xuất hiện cùng rầy nâu và dễ bị nhầm lẫn. Ấu trùng có màu trắng hoặc trắng với vết xám đậm hay đen. Thành trùng dài 5mm, có sọc trắng trên lưng, chỉ con cái có cánh ngắn. Rầy lưng trắng không truyền bệnh và ít khi gây cháy rầy vì mật số thường giảm dần lúc lúa trổ. Tuy nhiên khi bị tấn công nặng, gié của bụi lúa có thể có dấu hiệu cháy."
+        }
+      ],
+      "key_phrases": [
+        "rầy lưng trắng Sogatella furcifera",
+        "xuất hiện cùng rầy nâu",
+        "ấu trùng màu trắng vết xám đen",
+        "thành trùng 5mm sọc trắng lưng",
+        "không truyền bệnh",
+        "ít gây cháy rầy",
+        "mật số giảm lúc lúa trổ",
+        "dấu hiệu cháy khi tấn công nặng"
+      ]
+    },
+    {
+      "summary": "Rầy nâu nhỏ (Laodelphax striatellus) là loài có mật số cao nhất trong vùng bán nhiệt đới, truyền bệnh lúa lùn có sọc đen, thành trùng có hai dạng cánh dài và ngắn. Rầy Châu Mỹ (Sogatodes Oryzicola) xuất hiện ở châu Mỹ, là tác nhân chính truyền bệnh hoja blanca hay bệnh lá trắng, cũng có hai dạng cánh.",
+      "full_text": "RẦY NÂU NHỎ Laodelphax striatellus. Là loại có mật số cao nhất trong vùng bán nhiệt đới. Nó truyền bệnh lúa lùn có sọc đen. Thành trùng có hai dạng cánh dài và cánh ngắn. RẦY CHÂU MỸ Sogatodes Oryzicola. Xuất hiện ở châu Mỹ và là tác nhân chính truyền bệnh hoja blanca hay bệnh lá trắng. Thành trùng có hai dạng cánh dài và cánh ngắn.",
+      "sections": [
+        {
+          "heading": "Rầy nâu nhỏ và Rầy Châu Mỹ",
+          "level": 1,
+          "text": "Rầy nâu nhỏ (Laodelphax striatellus) là loài có mật số cao nhất trong vùng bán nhiệt đới, truyền bệnh lúa lùn có sọc đen. Thành trùng có hai dạng cánh dài và cánh ngắn. Rầy Châu Mỹ (Sogatodes Oryzicola) xuất hiện ở châu Mỹ và là tác nhân chính truyền bệnh hoja blanca hay bệnh lá trắng. Thành trùng cũng có hai dạng cánh dài và cánh ngắn."
+        }
+      ],
+      "key_phrases": [
+        "rầy nâu nhỏ Laodelphax striatellus",
+        "mật số cao nhất vùng bán nhiệt đới",
+        "truyền bệnh lúa lùn sọc đen",
+        "rầy Châu Mỹ Sogatodes Oryzicola",
+        "bệnh hoja blanca lá trắng",
+        "thành trùng cánh dài cánh ngắn"
+      ]
+    },
+    {
+      "summary": "Rầy xanh (Nephotettix spp.) và rầy bông (Recilia dorsalis) là các loài côn trùng gây hại cho lúa chủ yếu bằng cách truyền bệnh virus và vi khuẩn. Những bệnh này có thể làm cây lúa vàng lá, lùn và giảm năng suất.",
+      "full_text": "RẦY XANH (Nephotettix spp.) VÀ RẦY BÔNG (Recilia dorsalis). Rầy xanh phân bố rộng và là tác nhân truyền nhiều bệnh nguy hiểm như bệnh lùn, vàng lá tạm thời, tungro và vàng lùn. Thành trùng dài khoảng 3–5 mm, màu xanh lợt với một đốm đen trên lưng. Trứng được đẻ gần gân chính của phiến lá hoặc trên bẹ lá. Ấu trùng có 5 tuổi với màu sắc thay đổi theo giai đoạn phát triển. Rầy bông (Recilia dorsalis) cũng là loài truyền các bệnh như lùn cỏ bướu, tungro và bệnh lá cam. Cánh của thành trùng có hình gãy khúc và ấu trùng có màu nâu vàng.",
+      "sections": [
+        {
+          "heading": "Rầy xanh (Nephotettix spp.) và rầy bông (Recilia dorsalis)",
+          "level": 1,
+          "text": "Rầy xanh và rầy bông là hai loài côn trùng gây hại quan trọng cho cây lúa. Chúng chủ yếu gây hại bằng cách truyền các bệnh virus và vi khuẩn như bệnh lùn, tungro và vàng lá. Rầy xanh có màu xanh nhạt với đốm đen trên lưng và đẻ trứng gần gân lá hoặc trên bẹ lá. Rầy bông có cánh đặc trưng với hình gãy khúc và ấu trùng màu nâu vàng."
+        }
+      ],
+      "key_phrases": [
+        "rầy xanh",
+        "Nephotettix",
+        "rầy bông",
+        "Recilia dorsalis",
+        "truyền bệnh lúa",
+        "tungro",
+        "vàng lùn",
+        "ấu trùng",
+        "côn trùng hại lúa"
+      ]
+    },
+    {
+      "summary": "Sâu cuốn lá (Cnaphalocrocis medinalis) gây thiệt hại bằng những vùng bị ăn trắng trong ruộng lúa. Bị hại nặng cây lúa có dạng như bị cháy. Ấu trùng còn non ăn lớp mô lá, khi lớn cuốn lá lại thành hình ống và làm nhộng bên trong phần lá bị cuốn.",
+      "full_text": "SÂU CUỐN LÁ Cnaphalocrocis medinalis. Thiệt hại thể hiện bằng những vùng bị ăn trắng trong ruộng lúa. Bị hại nặng cây lúa có dạng như bị cháy. Các bệnh trên lá, đặc biệt là bệnh sọc trong có thể bắt đầu từ bìa lá bị sâu hại. Thành trùng đẻ trứng trên mặt lá gần gân chính. Ấu trùng còn non ăn lớp mô của lá và khi chúng lớn cuốn lá lại thành hình ống. Chúng làm nhộng bên trong phần lá bị cuốn.",
+      "sections": [
+        {
+          "heading": "Sâu cuốn lá Cnaphalocrocis medinalis",
+          "level": 1,
+          "text": "Sâu cuốn lá (Cnaphalocrocis medinalis) gây thiệt hại thể hiện bằng những vùng bị ăn trắng trong ruộng lúa. Bị hại nặng cây lúa có dạng như bị cháy. Các bệnh trên lá, đặc biệt là bệnh sọc trong, có thể bắt đầu từ bìa lá bị sâu hại. Thành trùng đẻ trứng trên mặt lá gần gân chính. Ấu trùng còn non ăn lớp mô của lá, khi lớn cuốn lá lại thành hình ống và làm nhộng bên trong phần lá bị cuốn."
+        }
+      ],
+      "key_phrases": [
+        "sâu cuốn lá Cnaphalocrocis medinalis",
+        "vùng bị ăn trắng ruộng lúa",
+        "cây lúa dạng bị cháy",
+        "bệnh sọc trong từ bìa lá",
+        "trứng trên mặt lá gần gân chính",
+        "ấu trùng ăn mô lá",
+        "cuốn lá thành hình ống",
+        "làm nhộng trong lá cuốn"
+      ]
+    },
+    {
+      "summary": "Sâu đeo (Nymphula depunctalis) là sâu hại lúa ăn phần biểu bì lá, làm lá xuất hiện các vệt xanh giống bậc thang và có thể làm ruộng lúa bị trắng khi bị hại nặng. Ấu trùng thường cuốn lá lúa thành đoạn và vòng đời của chúng khoảng 35 ngày.",
+      "full_text": "SÂU ĐEO (Nymphula depunctalis). Sâu đeo ăn phần biểu bì của lá lúa trước giai đoạn đâm chồi tối đa, chỉ để lại lớp biểu bì mỏng phía trên. Trên lá thường xuất hiện các hàng ngang màu xanh giống bậc thang. Khi bị tấn công nặng, ruộng lúa có thể có màu hơi trắng do đầu lá bị hư, đặc biệt là ở ruộng mạ. Thành trùng dài khoảng 6 mm với sải cánh khoảng 15 mm, là loài bướm đêm thích ánh sáng. Trứng được đẻ ở mặt dưới của lá nổi trên mặt nước. Ấu trùng thường xuất hiện trên ruộng mạ đã lớn và trên lúa sau khi cấy. Chúng cắn lá và cuốn lá thành từng đoạn. Những lá bị cuốn này thường bị gió hoặc nước đưa vào bờ ruộng, trông giống như bị cắt bằng kéo. Vòng đời của sâu đeo khoảng 35 ngày.",
+      "sections": [
+        {
+          "heading": "Sâu đeo (Nymphula depunctalis)",
+          "level": 1,
+          "text": "Sâu đeo là loài sâu hại lúa gây hại bằng cách ăn lớp biểu bì của lá, tạo ra các vệt xanh giống bậc thang trên lá. Khi bị hại nặng, ruộng lúa có thể trông trắng do đầu lá bị hư. Ấu trùng thường cuốn lá lúa thành từng đoạn và có thể thấy trên ruộng mạ hoặc lúa mới cấy. Thành trùng là bướm đêm nhỏ, thích ánh sáng. Vòng đời của sâu khoảng 35 ngày."
+        }
+      ],
+      "key_phrases": [
+        "sâu đeo",
+        "Nymphula depunctalis",
+        "ăn biểu bì lá",
+        "vệt xanh bậc thang",
+        "cuốn lá lúa",
+        "bướm đêm",
+        "ruộng mạ",
+        "vòng đời 35 ngày"
+      ]
+    },
+    {
+      "summary": "Bọ xít hôi (Leptocorisa oratorius) là một trong nhiều loại bọ xít ăn trên bông lúa đang chín. Cả thành trùng lẫn ấu trùng chích hút hạt lúa, gây lép hạt ở giai đoạn ngậm sữa và giảm phẩm chất hạt ở giai đoạn vào chắc. Thành trùng màu nâu, hình thon, chân và râu dài, có mùi hôi đặc biệt.",
+      "full_text": "BỌ XÍT HÔI Leptocorisa oratorius. Là một trong số nhiều loại bọ xít ăn trên bông lúa đang chín. Cả thành trùng lẫn ấu trùng chích vào hạt lúa ở giữa hai vỏ trấu. Chích hút trong giai đoạn ngậm sữa làm lép hạt, trong giai đoạn vào chắc làm giảm phẩm chất hạt và tăng số hạt bể. Thành trùng có màu nâu, hình thon với chân và râu dài. Trứng đẻ thành hàng trên lá và trên bông. Ấu trùng màu xanh và cũng như thành trùng có mùi hôi đặc biệt.",
+      "sections": [
+        {
+          "heading": "Bọ xít hôi Leptocorisa oratorius",
+          "level": 1,
+          "text": "Bọ xít hôi (Leptocorisa oratorius) là một trong nhiều loại bọ xít ăn trên bông lúa đang chín. Cả thành trùng lẫn ấu trùng chích vào hạt lúa ở giữa hai vỏ trấu. Chích hút trong giai đoạn ngậm sữa gây lép hạt, trong giai đoạn vào chắc làm giảm phẩm chất hạt và tăng số hạt bể. Thành trùng màu nâu, hình thon, chân và râu dài. Trứng đẻ thành hàng trên lá và trên bông. Ấu trùng màu xanh, cả thành trùng lẫn ấu trùng đều có mùi hôi đặc biệt."
+        }
+      ],
+      "key_phrases": [
+        "bọ xít hôi Leptocorisa oratorius",
+        "chích hút hạt lúa giữa hai vỏ trấu",
+        "giai đoạn ngậm sữa lép hạt",
+        "giai đoạn vào chắc giảm phẩm chất",
+        "tăng số hạt bể",
+        "thành trùng màu nâu hình thon",
+        "ấu trùng màu xanh mùi hôi đặc biệt",
+        "trứng đẻ thành hàng trên lá bông"
+      ]
+    },
+    {
+      "summary": "Sâu đàn (Mythimna separata) là sâu hại lúa thường xuất hiện tập trung thành đàn và gây hại bằng cách ăn lá và cắn bông lúa. Khi hết thức ăn ở một ruộng, chúng di chuyển sang ruộng lúa khác.",
+      "full_text": "SÂU ĐÀN (Mythimna separata). Loài sâu này được gọi là sâu đàn do tập quán xuất hiện tập trung thành đàn lớn. Khi nguồn thức ăn cạn kiệt, chúng sẽ di chuyển sang ruộng lúa mới. Sâu đàn ăn được nhiều loại cỏ nhưng gây hại chủ yếu bằng cách ăn lá lúa. Chúng ăn từ bìa lá vào trong, chỉ còn lại phần gần gân lá và thân. Ngoài ra, sâu đàn còn cắn bông lúa ở cổ bông nên còn được gọi là sâu cắn gié.",
+      "sections": [
+        {
+          "heading": "Sâu đàn (Mythimna separata)",
+          "level": 1,
+          "text": "Sâu đàn là loài sâu hại lúa có tập tính xuất hiện tập trung thành đàn. Chúng gây hại bằng cách ăn lá lúa từ mép vào trong, chỉ để lại phần gân lá và thân. Khi thức ăn ở một ruộng không còn, sâu sẽ di chuyển sang ruộng lúa khác. Ngoài việc ăn lá, sâu đàn còn cắn bông lúa ở cổ bông nên còn được gọi là sâu cắn gié."
+        }
+      ],
+      "key_phrases": [
+        "sâu đàn",
+        "Mythimna separata",
+        "ăn lá lúa",
+        "di chuyển theo đàn",
+        "cắn gié lúa",
+        "sâu hại lúa",
+        "ăn từ bìa lá"
+      ]
+    },
+    {
+      "summary": "Sâu keo (Spodoptera litura) gây hại chủ yếu trên lúa cạn vì chúng cần đất khô để hoàn tất chu kỳ sinh trưởng. Sâu non chỉ ăn lá, sâu lớn ăn cả cây và cắn mạ ở sát gốc. Lúa nước bị hại do ấu trùng di chuyển vào từ những đám cỏ lân cận.",
+      "full_text": "SÂU KEO Spodoptera litura. Loài này gây hại chủ yếu trên lúa cạn vì chúng cần đất khô để hoàn tất chu kỳ sinh trưởng. Lúa nước bị hại do ấu trùng di chuyển vào từ những đám cỏ lân cận. Sâu non chỉ ăn lá, sâu lớn ăn cả cây. Chúng cắn mạ ở sát gốc.",
+      "sections": [
+        {
+          "heading": "Sâu keo Spodoptera litura",
+          "level": 1,
+          "text": "Sâu keo (Spodoptera litura) gây hại chủ yếu trên lúa cạn do cần đất khô để hoàn tất chu kỳ sinh trưởng. Lúa nước bị hại khi ấu trùng di chuyển vào từ những đám cỏ lân cận. Sâu non chỉ ăn lá, trong khi sâu lớn ăn cả cây và cắn mạ ở sát gốc."
+        }
+      ],
+      "key_phrases": [
+        "sâu keo Spodoptera litura",
+        "gây hại lúa cạn",
+        "cần đất khô chu kỳ sinh trưởng",
+        "ấu trùng di chuyển từ đám cỏ",
+        "sâu non ăn lá",
+        "sâu lớn ăn cả cây",
+        "cắn mạ sát gốc"
+      ]
+    },
+    {
+      "summary": "Sâu sừng xanh (Melanitis leda ismene) và sâu đo xanh (Naranga aenescens) là hai loài sâu hại lúa. Chúng thường xuất hiện nhiều từ giai đoạn mạ đến khi lúa đâm chồi và gây hại bằng cách ăn lá.",
+      "full_text": "SÂU SỪNG XANH (Melanitis leda ismene) VÀ SÂU ĐO XANH (Naranga aenescens). Bướm của sâu sừng xanh đẻ trứng trên lá lúa. Ấu trùng có hai sừng dài, một mọc từ đầu và một từ đốt ngực gần đầu. Sâu đo xanh có ấu trùng có kích thước và tập quán giống sâu sừng xanh. Chúng thường xuất hiện nhiều từ giai đoạn mạ đến khi lúa đâm chồi tối đa. Ấu trùng di chuyển giống sâu đo, thường uốn cong lưng khi bò.",
+      "sections": [
+        {
+          "heading": "Sâu sừng xanh và sâu đo xanh",
+          "level": 1,
+          "text": "Sâu sừng xanh và sâu đo xanh là các loài sâu hại lúa thường gặp. Bướm của sâu sừng xanh đẻ trứng trên lá và ấu trùng có hai sừng đặc trưng trên cơ thể. Sâu đo xanh có hình dạng và tập tính tương tự, thường xuất hiện nhiều từ giai đoạn mạ đến khi lúa đâm chồi. Ấu trùng của chúng di chuyển giống sâu đo bằng cách uốn cong thân khi bò."
+        }
+      ],
+      "key_phrases": [
+        "sâu sừng xanh",
+        "Melanitis leda ismene",
+        "sâu đo xanh",
+        "Naranga aenescens",
+        "ấu trùng",
+        "ăn lá lúa",
+        "giai đoạn mạ",
+        "đâm chồi"
+      ]
+    },
+    {
+      "summary": "Sâu cuốn lá lớn (Pelopidas mathias) có ấu trùng ăn từ bìa phiến lá vào trong rồi ăn dọc gân lá. Thiệt hại tương tự với sâu sừng xanh, sâu rọm xanh và sâu đo. Thành trùng là loài bướm có móc ở cuối râu, bay nhanh theo đường gãy khúc, nhộng có tơ bám vào lá lúa cuốn lại.",
+      "full_text": "SÂU CUỐN LÁ LỚN Pelopidas mathias. Ấu trùng ăn từ bìa phiến lá vào trong rồi ăn dọc gân lá. Thiệt hại của sâu cuốn lá lớn, sâu sừng xanh, sâu rọm xanh và sâu đo đều tương tự. Thành trùng là loại bướm có móc ở cuối râu, bay nhanh theo đường gãy khúc. Nhộng có tơ bám vào lá lúa cuốn lại.",
+      "sections": [
+        {
+          "heading": "Sâu cuốn lá lớn Pelopidas mathias",
+          "level": 1,
+          "text": "Sâu cuốn lá lớn (Pelopidas mathias) có ấu trùng ăn từ bìa phiến lá vào trong rồi ăn dọc gân lá. Thiệt hại của loài này tương tự với sâu sừng xanh, sâu rọm xanh và sâu đo. Thành trùng là loài bướm có móc ở cuối râu, bay nhanh theo đường gãy khúc. Nhộng có tơ bám vào lá lúa cuốn lại."
+        }
+      ],
+      "key_phrases": [
+        "sâu cuốn lá lớn Pelopidas mathias",
+        "ăn từ bìa phiến lá dọc gân lá",
+        "sâu sừng xanh sâu rọm xanh sâu đo",
+        "bướm có móc cuối râu",
+        "bay nhanh đường gãy khúc",
+        "nhộng tơ bám lá lúa cuốn lại"
+      ]
+    },
+    {
+      "summary": "Dế (Euscyrtus concinnus) và cào cào (Oxya spp.) là côn trùng gây hại cho lúa bằng cách ăn lá. Dế tạo các lỗ trên lá, còn cào cào cắn phá lá và có thể truyền bệnh khảm vàng.",
+      "full_text": "DẾ (Euscyrtus concinnus) VÀ CÀO CÀO (Oxya spp.). Dế ăn trên lá lúa và tạo ra các lỗ trên phiến lá trong khi phần bìa lá không bị hư, làm cho toàn bộ lá có dạng lỗ chỗ. Cào cào cắn phá lá lúa tạo thành các vết lớn dọc theo bìa lá. Ngoài ra, cào cào còn có thể truyền bệnh khảm vàng cho cây lúa. Chúng thường bay thành đàn lớn, hiện tượng này được gọi là cào cào di đàn.",
+      "sections": [
+        {
+          "heading": "Dế và cào cào",
+          "level": 1,
+          "text": "Dế và cào cào là những côn trùng gây hại cho cây lúa bằng cách ăn lá. Dế tạo ra nhiều lỗ trên phiến lá nhưng không làm hư bìa lá. Cào cào gây hại bằng cách cắn phá lá tạo thành các vết lớn dọc theo bìa lá và có thể truyền bệnh khảm vàng. Chúng có thể xuất hiện với số lượng lớn và bay thành đàn."
+        }
+      ],
+      "key_phrases": [
+        "dế",
+        "Euscyrtus concinnus",
+        "cào cào",
+        "Oxya",
+        "ăn lá lúa",
+        "lỗ trên lá",
+        "bệnh khảm vàng",
+        "cào cào di đàn"
+      ]
+    },
+    {
+      "summary": "Kiến lửa (Solenopsis geminata) tha hạt giống từ lúc gieo đến khi nảy mầm làm mạ bị thưa và mọc không đều. Rầy bông (Brevennia rehi) phổ biến ở vùng lúa nước thoát nước tốt, chích hút nhựa làm cây lùn, mật số cao làm cây khó trổ bông, sống từng tập đoàn bám vào thân và bẹ lá lúa.",
+      "full_text": "KIẾN LỬA Solenopsis geminata. Tha hạt giống trong ruộng từ lúc gieo đến khi nảy mầm làm cho mạ bị thưa và mọc không đều. RẦY BÔNG Brevennia rehi. Phổ biến trong những vùng lúa nước trời thoát nước tốt. Chích hút nhựa làm cây bị lùn. Mật số cao làm cây khó trổ bông. Ruộng bị xâm nhập có những chòm cây bị lùn. Rầy bông có dạng hình nhỏ, màu trắng hồng, thân mềm, không cánh và có lông trắng bao phủ. Chúng sống từng tập đoàn bám vào thân và bẹ lá lúa.",
+      "sections": [
+        {
+          "heading": "Kiến lửa và Rầy bông",
+          "level": 1,
+          "text": "Kiến lửa (Solenopsis geminata) tha hạt giống trong ruộng từ lúc gieo đến khi nảy mầm, làm mạ bị thưa và mọc không đều. Rầy bông (Brevennia rehi) phổ biến ở vùng lúa nước trời thoát nước tốt, chích hút nhựa làm cây bị lùn, mật số cao làm cây khó trổ bông. Ruộng bị xâm nhập có những chòm cây bị lùn. Rầy bông có hình nhỏ, màu trắng hồng, thân mềm, không cánh, có lông trắng bao phủ, sống từng tập đoàn bám vào thân và bẹ lá lúa."
+        }
+      ],
+      "key_phrases": [
+        "kiến lửa Solenopsis geminata",
+        "tha hạt giống mạ thưa mọc không đều",
+        "rầy bông Brevennia rehi",
+        "chích hút nhựa cây lùn",
+        "mật số cao khó trổ bông",
+        "chòm cây bị lùn",
+        "thân mềm không cánh lông trắng",
+        "tập đoàn bám thân bẹ lá"
+      ]
+    },
+    {
+      "summary": "Bọ gai (Dicladispa armigera) là côn trùng gây hại cho lúa bằng cách ăn phần trên của phiến lá, để lại lớp biểu bì phía dưới và tạo các vệt trắng dài. Khi bị hại nặng, ruộng lúa có thể trông như bị cháy rầy.",
+      "full_text": "BỌ GAI (Dicladispa armigera). Dấu hiệu thiệt hại điển hình là các vệt dài màu trắng trên lá. Khi ruộng bị hại nặng, cây lúa có thể trông giống như bị cháy rầy. Cả thành trùng và ấu trùng đều gây hại. Thành trùng có gai trên cơ thể và ăn phần trên của phiến lá, chỉ để lại lớp biểu bì phía dưới. Thành trùng thường xuất hiện nhiều ở các ruộng bị thiệt hại nặng và thường di chuyển vào ruộng lúa non từ các ruộng lúa rải rác hoặc lúa chết xung quanh, gây hại mạnh ở bờ ruộng. Thành trùng thường biến mất khi lúa trổ. Con cái đẻ trứng ở mặt dưới lá. Ấu trùng đục vào dưới biểu bì lá tạo thành các đường hầm không đều và hóa nhộng ngay tại đó. Vòng đời của bọ gai kéo dài khoảng 3 đến 4 tuần.",
+      "sections": [
+        {
+          "heading": "Bọ gai (Dicladispa armigera)",
+          "level": 1,
+          "text": "Bọ gai là loài côn trùng gây hại cho lúa bằng cách ăn lớp trên của phiến lá, tạo ra các vệt trắng dài trên lá. Cả thành trùng và ấu trùng đều gây hại. Ấu trùng đục dưới lớp biểu bì lá và tạo các đường hầm trước khi hóa nhộng. Khi bị hại nặng, ruộng lúa có thể trông giống như bị cháy rầy. Vòng đời của bọ gai khoảng 3–4 tuần."
+        }
+      ],
+      "key_phrases": [
+        "bọ gai",
+        "Dicladispa armigera",
+        "vệt trắng trên lá",
+        "ăn phiến lá",
+        "ấu trùng đục lá",
+        "cháy rầy",
+        "vòng đời 3-4 tuần",
+        "côn trùng hại lúa"
+      ]
+    },
+    {
+      "summary": "Bọ lá (Leptispa pygmaea) gây thiệt hại tương tự bọ gai nhưng các vết cắn trên lá hẹp hơn. Ấu trùng màu vàng cũng ăn trên lá. Thành trùng là loại cánh cứng nhỏ, hình thon dài. Bọ lá và bọ gai thường xuất hiện chung trong một ruộng lúa.",
+      "full_text": "BỌ LÁ Leptispa pygmaea. Gây thiệt hại tương tự như bọ gai, nhưng các vết cắn trên lá hẹp hơn. Ấu trùng màu vàng cũng ăn trên lá. Thành trùng là loại cánh cứng nhỏ, hình thon dài. Bọ lá và bọ gai thường xuất hiện chung trong một ruộng lúa.",
+      "sections": [
+        {
+          "heading": "Bọ lá Leptispa pygmaea",
+          "level": 1,
+          "text": "Bọ lá (Leptispa pygmaea) gây thiệt hại tương tự bọ gai nhưng các vết cắn trên lá hẹp hơn. Ấu trùng màu vàng cũng ăn trên lá. Thành trùng là loại cánh cứng nhỏ, hình thon dài. Bọ lá và bọ gai thường xuất hiện chung trong một ruộng lúa."
+        }
+      ],
+      "key_phrases": [
+        "bọ lá Leptispa pygmaea",
+        "thiệt hại tương tự bọ gai",
+        "vết cắn trên lá hẹp hơn",
+        "ấu trùng màu vàng ăn lá",
+        "thành trùng cánh cứng nhỏ thon dài",
+        "bọ lá bọ gai xuất hiện chung"
+      ]
+    },
+    {
+      "summary": "Dế nhũi (Gryllotalpa africana) gây hại cho lúa bằng cách cắn ngang cây gần mặt đất và ăn rễ non dưới đất. Loài này thường xuất hiện nhiều ở ruộng thiếu nước hoặc ruộng khô nứt.",
+      "full_text": "DẾ NHŨI (Gryllotalpa africana). Dế nhũi gây hại cho cây lúa bằng cách cắn ngang thân cây sát mặt đất. Thiệt hại có thể bị nhầm với sâu đục thân, nhưng dế nhũi còn ăn rễ non và phần gốc cây lúa ở dưới mặt đất. Chúng thường gây hại nhiều ở các ruộng thiếu nước. Lúa nước ít bị tấn công hơn so với ruộng bị khô hạn hoặc nơi có mực nước thay đổi thường xuyên làm đất bị bày ra. Khi ruộng ngập nước, dế nhũi thường lên sống ở bờ ruộng và đẻ trứng trong các xoang đất cứng ở dưới mặt đất. Đất có hang của dế nhũi thường trông như bị xáo trộn.",
+      "sections": [
+        {
+          "heading": "Dế nhũi (Gryllotalpa africana)",
+          "level": 1,
+          "text": "Dế nhũi là côn trùng sống dưới đất, gây hại bằng cách cắn ngang thân lúa gần mặt đất và ăn rễ non. Chúng thường xuất hiện ở những ruộng thiếu nước hoặc ruộng khô nứt. Khi ruộng bị ngập nước, dế nhũi thường di chuyển lên bờ ruộng và đẻ trứng trong đất cứng. Dấu hiệu nhận biết là đất có các hang nhỏ giống như bị xáo trộn."
+        }
+      ],
+      "key_phrases": [
+        "dế nhũi",
+        "Gryllotalpa africana",
+        "cắn ngang thân lúa",
+        "ăn rễ non",
+        "côn trùng hại lúa",
+        "hang dưới đất",
+        "ruộng thiếu nước",
+        "sâu hại rễ lúa"
+      ]
+    },
+    {
+      "summary": "Bọ xít đen (Scotinophara spp.) gây hại bằng cách hút nhựa cây lúa, tạo vết chích ngã màu nâu giống vết bệnh cháy lá. Thành trùng thích ẩm ướt, tiềm sinh khi thời tiết khô hoặc nhiệt độ cao, di chuyển vào ruộng ăn lá non hoặc bẹ lá. Trứng xếp 2-4 hàng trên mặt lá, ấu trùng nở ăn gần ổ trứng rồi di chuyển xuống gốc lúa.",
+      "full_text": "BỌ XÍT ĐEN Scotinophara spp. Gây hại bằng cách hút nhựa cây lúa. Vùng xung quanh vết chích ngã màu nâu với rìa ngoài nâu đậm, giống vết bệnh cháy lá. Đầu lá hay bìa lá, các lá ở giữa, hay cả cây có thể khô và lá ở giữa có thể cuốn dọc gân chính. Bọ xít đen thích ẩm ướt và trở thành tiềm sinh trong thời tiết khô hay khi độ nhiệt lên cao. Trong điều kiện thích hợp, thành trùng di chuyển vô ruộng lúa và ăn trên lá non hay bẹ lá của lúa non. Trên lúa đã lớn chúng chích hút bẹ lá gần gốc lúa. Trứng xếp thành 2-4 hàng trên mặt lá và bẹ lá của lúa và của vài loại cỏ. Trứng mới đẻ màu lợt, nhưng trở nên vàng đậm trước khi nở vào ngày thứ sáu. Ấu trùng mới nở trước tiên ăn gần ổ trứng, sau đó di chuyển xuống gốc lúa.",
+      "sections": [
+        {
+          "heading": "Bọ xít đen Scotinophara spp.",
+          "level": 1,
+          "text": "Bọ xít đen (Scotinophara spp.) gây hại bằng cách hút nhựa cây lúa, tạo vùng xung quanh vết chích ngã màu nâu với rìa ngoài nâu đậm giống vết bệnh cháy lá. Đầu lá, bìa lá hoặc cả cây có thể khô, lá ở giữa có thể cuốn dọc gân chính. Thành trùng thích ẩm ướt, tiềm sinh khi thời tiết khô hoặc nhiệt độ cao. Khi điều kiện thích hợp, thành trùng di chuyển vào ruộng ăn lá non hoặc bẹ lá lúa non; trên lúa lớn chúng chích hút bẹ lá gần gốc. Trứng xếp 2-4 hàng trên mặt lá và bẹ lá, màu lợt khi mới đẻ rồi chuyển vàng đậm trước khi nở ngày thứ sáu. Ấu trùng nở ăn gần ổ trứng rồi di chuyển xuống gốc lúa."
+        }
+      ],
+      "key_phrases": [
+        "bọ xít đen Scotinophara spp.",
+        "hút nhựa cây lúa",
+        "vết chích nâu giống cháy lá",
+        "tiềm sinh thời tiết khô nhiệt độ cao",
+        "ăn lá non bẹ lá lúa non",
+        "chích hút bẹ lá gần gốc",
+        "trứng 2-4 hàng trên lá bẹ lá",
+        "ấu trùng di chuyển xuống gốc lúa"
+      ]
+    },
+    {
+      "summary": "Chuột gây hại cho cây lúa ở mọi giai đoạn sinh trưởng, nhưng thiệt hại nghiêm trọng nhất xảy ra sau khi lúa trổ bông. Chúng cắn gốc bông non hoặc thân lúa để ăn hạt, có thể phá hủy toàn bộ ruộng lúa nếu bị tấn công nặng.",
+      "full_text": "CHUỘT. Chuột ăn cây lúa ở bất cứ giai đoạn nào của cây nhưng gây thiệt hại lớn nhất sau khi lúa trổ bông. Khi đó chúng có thể ăn phần gốc của bông lúa non hoặc cắn đứt thân cây lúa để ăn hạt. Dấu hiệu nhận biết thiệt hại do chuột là đầu thân cây bị cắn ở gốc, giúp phân biệt với thiệt hại do sâu đục thân. Chuột có thể gây hại trên diện rộng trong ruộng lúa và thậm chí phá hủy hoàn toàn một vụ lúa nếu chúng đến từ các khu vực xung quanh bìa ruộng. Nếu thiệt hại xảy ra sớm, những cây bị cắn có thể mọc chồi mới, vì vậy ruộng có thể xuất hiện bông non ở giữa ruộng và bông chín ở phía ngoài. Nếu chuột tấn công muộn, cây lúa thường không thể phục hồi được.",
+      "sections": [
+        {
+          "heading": "Chuột gây hại cho lúa",
+          "level": 1,
+          "text": "Chuột có thể ăn cây lúa ở mọi giai đoạn sinh trưởng nhưng gây thiệt hại nặng nhất sau khi lúa trổ bông. Chúng cắn gốc bông lúa non hoặc cắn đứt thân cây để ăn hạt. Thiệt hại do chuột có thể phân biệt với sâu đục thân bằng dấu hiệu thân cây bị cắn ở gốc. Chuột có thể phá hoại trên diện rộng và thậm chí làm mất hoàn toàn mùa vụ. Nếu bị tấn công sớm, cây lúa có thể mọc chồi mới; nhưng nếu bị tấn công muộn thì cây lúa khó phục hồi."
+        }
+      ],
+      "key_phrases": [
+        "chuột hại lúa",
+        "ăn bông lúa",
+        "cắn thân lúa",
+        "thiệt hại sau trổ",
+        "phá hoại ruộng lúa",
+        "mất mùa",
+        "chuột phá hại cây lúa"
+      ]
+    },
+    {
+      "summary": "Chim gây hại cho lúa từ sau khi trổ bông, nặng nhất ở giai đoạn ngậm sữa đến vào chắc. Chim cắn hạt đang ngậm sữa làm hạt dính chất màu trắng sữa và bị lép. Lúa gần chín chim ăn cả hạt. Thiệt hại do chim khác với bông bạc do sâu đục thân ở chỗ không bị lép tất cả các hạt trên bông.",
+      "full_text": "CHIM. Có thể gây hại cho lúa ngay sau khi trổ bông nhưng gây hại nặng nhất là ở giữa thời kỳ ngậm sữa và vào chắc. Chúng cắn hạt đang ngậm sữa để ăn phần bên trong nên một phần hạt bị dính một chất màu trắng sữa và kết quả là hạt lép. Lúa gần chín chim ăn cả hạt. Thiệt hại trong thời kỳ ngậm sữa dễ phân biệt với bông bạc do sâu đục thân gây ra vì thường không bị lép tất cả các hạt trên bông. Trên bông lúa gây hại bởi sâu đục thân, tất cả mọi hạt đều lép và có thể rút bông lúa ra được dễ dàng.",
+      "sections": [
+        {
+          "heading": "Chim",
+          "level": 1,
+          "text": "Chim có thể gây hại cho lúa ngay sau khi trổ bông, nhưng gây hại nặng nhất ở giai đoạn ngậm sữa đến vào chắc. Chúng cắn hạt ngậm sữa để ăn phần bên trong, làm hạt dính chất màu trắng sữa và bị lép. Lúa gần chín chim ăn cả hạt. Thiệt hại do chim trong thời kỳ ngậm sữa dễ phân biệt với bông bạc do sâu đục thân vì không bị lép tất cả các hạt trên bông, trong khi bông bị sâu đục thân tất cả hạt đều lép và rút bông ra dễ dàng."
+        }
+      ],
+      "key_phrases": [
+        "chim gây hại lúa",
+        "giai đoạn ngậm sữa vào chắc",
+        "cắn hạt ngậm sữa hạt lép",
+        "chất màu trắng sữa",
+        "lúa gần chín chim ăn cả hạt",
+        "phân biệt với bông bạc sâu đục thân",
+        "không lép tất cả hạt trên bông"
+      ]
+    },
+    {
+      "summary": "Bệnh cháy bìa lá do vi khuẩn Xanthomonas campestris pv. oryzae gây ra, bắt đầu bằng các vết thấm nước màu vàng đến trắng ở rìa lá rồi lan rộng khắp phiến lá. Vi khuẩn xâm nhập qua rễ hoặc vết thương và lây lan nhờ nước, gió và giọt sương, đặc biệt dễ bùng phát khi bón nhiều đạm hoặc trồng giống lúa dễ nhiễm.",
+      "full_text": "BỆNH CHÁY BÌA LÁ do vi khuẩn Xanthomonas campestris pv. oryzae (X. oryzae) — lúc đầu vết bệnh ở rìa phiến lá như thấm nước, có màu vàng đến trắng. Vết bệnh ở một hoặc hai bên bìa lá hay nơi lá bị thương tích và bệnh sẽ lan rộng ra khắp phiến lá. Trên giống lúa dễ nhiễm bệnh, vết bệnh lan xuống tới gốc của bẹ lá. Vi khuẩn xâm nhập hệ thống mạch dẫn nhựa của cây lúa lúc cấy, khi rễ bị đứt khi nhổ mạ, hoặc khi lá bị thương tích.\n\nKhi vi khuẩn xâm nhập vào cây lúa qua rễ và gốc thân, cây có thể xuất hiện triệu chứng Kresek. Lá hay cả cây bị héo từ giai đoạn mạ đến đầu giai đoạn đâm chồi. Đôi khi lá bệnh của giống lúa dễ nhiễm có màu vàng lợt. Trong khi lá bình thường có màu xanh, những lá non có thể có màu vàng lợt đều khắp lá hoặc có sọc vàng hay vàng hơi xanh.\n\nMầm bệnh có trong rơm rạ lúa bệnh, cây lúa chết, hạt giống và cỏ dại. Vi khuẩn lây lan qua giọt sương, nước tưới ruộng, nước mưa, nước ngập tràn và gió mạnh. Vào buổi sáng vi khuẩn hình thành những giọt nhỏ, cứng và dính vào mặt lá. Nước trên bề mặt lá làm tan các giọt vi khuẩn này và giúp vi khuẩn dễ dàng lây lan.\n\nDịch bệnh dễ xảy ra khi bón nhiều phân đạm, đặc biệt khi trồng các giống lúa dễ nhiễm.",
+      "sections": [
+        {
+          "heading": "Bệnh cháy bìa lá",
+          "level": 1,
+          "text": "Bệnh cháy bìa lá do vi khuẩn Xanthomonas campestris pv. oryzae gây ra. Ban đầu vết bệnh xuất hiện ở rìa phiến lá như vết thấm nước màu vàng đến trắng rồi lan dọc bìa lá và ra khắp phiến lá. Trên các giống lúa dễ nhiễm, vết bệnh có thể lan xuống đến gốc bẹ lá. Khi vi khuẩn xâm nhập qua rễ hoặc gốc thân, cây có thể bị triệu chứng Kresek với hiện tượng héo từ giai đoạn mạ đến đầu đâm chồi."
+        },
+        {
+          "heading": "Nguồn bệnh và sự lây lan",
+          "level": 2,
+          "text": "Mầm bệnh tồn tại trong rơm rạ lúa bệnh, cây lúa chết, hạt giống và cỏ dại. Vi khuẩn lây lan qua giọt sương, nước mưa, nước tưới, nước tràn ruộng và gió mạnh. Vào buổi sáng vi khuẩn tạo thành các giọt nhỏ bám trên lá, khi gặp nước sẽ tan ra và dễ dàng lây lan sang cây khác."
+        },
+        {
+          "heading": "Điều kiện phát sinh bệnh",
+          "level": 2,
+          "text": "Bệnh dễ phát sinh và bùng phát khi bón nhiều phân đạm hoặc khi trồng các giống lúa dễ nhiễm bệnh."
+        }
+      ],
+      "key_phrases": [
+        "bệnh cháy bìa lá",
+        "Xanthomonas campestris pv. oryzae",
+        "vi khuẩn hại lúa",
+        "triệu chứng Kresek",
+        "vết thấm nước trên lá",
+        "lây lan qua nước và gió",
+        "bón nhiều đạm",
+        "giống lúa dễ nhiễm"
+      ]
+    },
+    {
+      "summary": "Bệnh sọc trong do vi khuẩn Xanthomonas campestris pv. oryzae translucens f. sp. oryzicola gây ra, xâm nhiễm trong phạm vi phiến lá. Triệu chứng là vết hẹp trong suốt giữa các gân lá, vết lớn dần đổi màu nâu và bè ngang. Giống dễ nhiễm toàn bộ lá có thể bị nâu và chết, cả đám ruộng có màu vàng cam. Vi khuẩn lây qua vết thương hoặc khẩu lá, mưa và gió giúp bệnh lây lan.",
+      "full_text": "BỆNH SỌC TRONG do vi khuẩn Xanthomonas campestris pv. oryzae translucens f. sp. oryzicola. Xâm nhiễm trong phạm vi phiến lá. Triệu chứng là những vết hẹp, trong suốt giữa các gân lá. Các vết lớn dần, đổi ra màu nâu và bè ngang ra. Ở giống lúa dễ nhiễm, toàn thể lá có thể bị nâu và chết. Trong điều kiện thích hợp, cả đám ruộng có màu vàng cam. Vi khuẩn xâm nhập vào cây qua vết thương hay khẩu lá. Trên mặt lá có thể gặp những giọt vi khuẩn. Mưa và gió giúp bệnh lây lan.",
+      "sections": [
+        {
+          "heading": "Bệnh sọc trong",
+          "level": 1,
+          "text": "Bệnh sọc trong do vi khuẩn Xanthomonas campestris pv. oryzae translucens f. sp. oryzicola gây ra, xâm nhiễm trong phạm vi phiến lá. Triệu chứng là những vết hẹp trong suốt giữa các gân lá, lớn dần đổi màu nâu và bè ngang. Ở giống dễ nhiễm, toàn bộ lá có thể bị nâu và chết; trong điều kiện thích hợp cả đám ruộng có màu vàng cam. Vi khuẩn xâm nhập qua vết thương hoặc khẩu lá, trên mặt lá có thể gặp những giọt vi khuẩn. Mưa và gió giúp bệnh lây lan."
+        }
+      ],
+      "key_phrases": [
+        "bệnh sọc trong vi khuẩn",
+        "Xanthomonas campestris oryzicola",
+        "vết hẹp trong suốt giữa gân lá",
+        "vết đổi màu nâu bè ngang",
+        "toàn lá nâu chết giống dễ nhiễm",
+        "đám ruộng màu vàng cam",
+        "xâm nhập qua vết thương khẩu lá",
+        "mưa gió lây lan bệnh"
+      ]
+    },
+    {
+      "summary": "Bệnh thối gốc do vi khuẩn Erwinia chrysanthemi gây ra, làm lá vàng và chồi chuyển sang màu nâu đậm rồi thối. Bệnh thường bắt đầu ở chồi non, lan nhanh xuống thân và gốc, khiến cây mềm nhũn, có mùi khó ngửi và có thể bị ngã hoặc nhổ lên dễ dàng.",
+      "full_text": "BỆNH THỐI GỐC do vi khuẩn Erwinia chrysanthemi. Triệu chứng chính là lá bị vàng và chồi có màu nâu đậm rồi bị thối. Bệnh thường xuất hiện đầu tiên trên từng chồi non, làm bẹ lá bị thối và chuyển sang màu nâu. Vết bệnh lan nhanh xuống các đốt, lóng và gốc thân lúa. Thân lúa trở nên mềm nhũn và có mùi khó chịu. Ở giai đoạn sau, nhiều chồi bị thối khiến cả cây dễ bị ngã hoặc bị nhổ lên rất dễ dàng. Bệnh thường thấy từ giai đoạn đâm chồi đến giai đoạn trổ bông, nhưng cũng có thể gây hại ở mọi giai đoạn sinh trưởng của cây lúa khi ruộng bị ngập nước.",
+      "sections": [
+        {
+          "heading": "Bệnh thối gốc",
+          "level": 1,
+          "text": "Bệnh thối gốc do vi khuẩn Erwinia chrysanthemi gây ra. Triệu chứng gồm lá vàng, chồi chuyển sang màu nâu đậm rồi bị thối. Bệnh thường bắt đầu ở chồi non, sau đó lan xuống các đốt, lóng và gốc thân lúa. Thân cây bị mềm nhũn và có mùi khó chịu."
+        },
+        {
+          "heading": "Diễn biến và tác hại",
+          "level": 2,
+          "text": "Ở giai đoạn nặng, nhiều chồi bị thối khiến cây lúa dễ bị đổ ngã hoặc nhổ lên dễ dàng. Bệnh thường xuất hiện từ giai đoạn đâm chồi đến trổ bông, nhưng có thể xảy ra ở bất kỳ giai đoạn nào nếu ruộng bị ngập nước."
+        }
+      ],
+      "key_phrases": [
+        "bệnh thối gốc lúa",
+        "Erwinia chrysanthemi",
+        "lá vàng chồi thối",
+        "thân lúa mềm nhũn",
+        "thối gốc cây lúa",
+        "bệnh vi khuẩn trên lúa",
+        "ruộng ngập nước"
+      ]
+    },
+    {
+      "summary": "Bệnh sọc lá do vi khuẩn Pseudomonas setariae gây ra. Triệu chứng đầu tiên là sọc dài màu xanh đậm trong như thấm nước ở bên dưới bẹ lá mạ, sau chuyển sang màu nâu đậm dài 3-10cm rộng 0,5-1mm. Bệnh nặng làm mạ lùn và chết. Bệnh cũng xảy ra trên lá đọt chưa bung gọi là thối đọt, làm lúa chết nhanh chóng.",
+      "full_text": "BỆNH SỌC LÁ do vi khuẩn Pseudomonas setariae. Triệu chứng đầu tiên là những sọc dài ở bên dưới bẹ lá mạ, màu xanh đậm trong như thấm nước. Trong điều kiện ẩm, sọc kéo dài suốt bẹ lá và lên phiến lá. Sọc chuyển sang màu nâu đậm. Sọc thường dài 3-10cm và rộng 0,5-1mm đôi khi kết lại thành sọc to hơn. Khi nhiễm bệnh nhẹ, cây mạ có thể tăng trưởng nhưng vẫn bị thiệt hại nặng. Bệnh nặng thì mạ bị lùn và chết. Bệnh xảy ra trên lá đọt chưa bung gọi là thối đọt, làm lúa bị chết nhanh chóng. Bệnh thường xuất hiện trên lúa lớn, đôi khi thấy ở lúa chét.",
+      "sections": [
+        {
+          "heading": "Bệnh sọc lá",
+          "level": 1,
+          "text": "Bệnh sọc lá do vi khuẩn Pseudomonas setariae gây ra. Triệu chứng đầu tiên là sọc dài màu xanh đậm trong như thấm nước ở bên dưới bẹ lá mạ. Trong điều kiện ẩm, sọc kéo dài suốt bẹ lá lên phiến lá rồi chuyển sang màu nâu đậm, dài 3-10cm rộng 0,5-1mm, đôi khi kết thành sọc to hơn. Khi nhiễm nhẹ cây mạ có thể tăng trưởng nhưng vẫn thiệt hại nặng; bệnh nặng làm mạ lùn và chết. Bệnh cũng xảy ra trên lá đọt chưa bung gọi là thối đọt, làm lúa chết nhanh chóng, thường gặp trên lúa lớn và đôi khi ở lúa chét."
+        }
+      ],
+      "key_phrases": [
+        "bệnh sọc lá Pseudomonas setariae",
+        "sọc xanh đậm thấm nước bẹ lá mạ",
+        "sọc chuyển nâu đậm 3-10cm",
+        "điều kiện ẩm sọc kéo dài phiến lá",
+        "mạ lùn và chết",
+        "thối đọt lá chưa bung",
+        "lúa chết nhanh chóng",
+        "xuất hiện lúa lớn lúa chét"
+      ]
+    },
+    {
+      "summary": "Bệnh cháy lá do nấm Pyricularia oryzae gây ra và có thể tấn công cây lúa ở mọi giai đoạn. Đốm bệnh điển hình trên lá có hình thoi, giữa màu xám, và bệnh có thể gây hại trên lá, thân và cổ bông, đặc biệt phát triển mạnh khi bón nhiều đạm và lá bị ướt.",
+      "full_text": "BỆNH CHÁY LÁ do nấm Pyricularia oryzae Cav. Nấm này có thể tấn công cây lúa ở mọi giai đoạn sinh trưởng. Đốm bệnh điển hình trên lá có hình thoi, rộng ở giữa và nhọn ở hai đầu. Những đốm bệnh có kích thước khoảng 1–1,5 x 0,3–0,5 cm và thường có màu xám ở phần giữa. Lá của những giống lúa dễ nhiễm có thể bị khô và chết. Phản ứng kháng bệnh có thể tạo ra các đốm màu nâu nhỏ ở đầu lá giống như đầu kim gút, dễ nhầm với triệu chứng bệnh đốm nâu.\n\nBệnh cháy lá cũng có thể tấn công các đốt của thân lúa. Gốc phồng của bẹ lá có thể bị thối, có màu hơi đen và dễ gãy. Bệnh cũng có thể xuất hiện ở cổ bông. Khi cổ bông bị nhiễm bệnh, phần cổ bông có màu hơi đen và gãy, khiến bông lúa không có hạt hoặc chỉ có rất ít hạt. Bệnh phát triển mạnh khi lượng phân đạm cao và khi lá lúa bị ướt.",
+      "sections": [
+        {
+          "heading": "Bệnh cháy lá",
+          "level": 1,
+          "text": "Bệnh cháy lá do nấm Pyricularia oryzae gây ra và có thể tấn công cây lúa ở mọi giai đoạn sinh trưởng. Đốm bệnh điển hình trên lá có hình thoi, rộng ở giữa và nhọn ở hai đầu, phần giữa thường có màu xám. Trên các giống lúa dễ nhiễm, lá có thể bị khô và chết."
+        },
+        {
+          "heading": "Tác hại trên thân và bông",
+          "level": 2,
+          "text": "Nấm gây bệnh cũng có thể tấn công các đốt thân, làm gốc bẹ lá bị thối và có màu hơi đen. Khi bệnh xuất hiện ở cổ bông, cổ bông bị thối và gãy khiến bông lúa không có hạt hoặc chỉ có rất ít hạt."
+        },
+        {
+          "heading": "Điều kiện phát sinh bệnh",
+          "level": 2,
+          "text": "Bệnh cháy lá phát triển mạnh trong điều kiện bón nhiều phân đạm và khi lá lúa thường xuyên bị ướt."
+        }
+      ],
+      "key_phrases": [
+        "bệnh cháy lá lúa",
+        "Pyricularia oryzae",
+        "đốm hình thoi trên lá",
+        "cháy cổ bông",
+        "nấm hại lúa",
+        "lá khô chết",
+        "bón nhiều đạm",
+        "bệnh đạo ôn"
+      ]
+    },
+    {
+      "summary": "Bệnh đốm vằn do nấm Rhizoctonia solani Kuhn (Thanatephorus cucumeris) gây ra. Triệu chứng khởi phát là đốm xám xanh ở bẹ lá gần mực nước, dài khoảng 1cm hình bầu dục hay tròn, lớn dần đến 2-3cm và liên kết lại. Triệu chứng rõ rệt ở giai đoạn lúa trổ hay chín, bệnh nặng làm hạt lép nhiều.",
+      "full_text": "BỆNH ĐỐM VẰN do nấm Rhizoctonia solani Kuhn (Thanatephorus cucumeris [FR] Donk). Triệu chứng khởi phát là những đốm xám xanh ở phần bẹ lá gần mực nước. Đốm dài chừng 1cm hình bầu dục hay tròn, lớn rộng ra và dài tới 2-3cm và liên kết lại. Ria của vết bệnh và màu sắc không đồng đều tạo cho nơi bị nhiễm bệnh có một dạng hình đặc biệt. Trong điều kiện ẩm độ thích hợp, phiến lá tiếp xúc với thân lúa bệnh ở kế cận cũng có thể bị lây bệnh. Triệu chứng thường rõ rệt ở giai đoạn lúa trổ hay chín. Bệnh nặng làm hạt lép nhiều.",
+      "sections": [
+        {
+          "heading": "Bệnh đốm vằn",
+          "level": 1,
+          "text": "Bệnh đốm vằn do nấm Rhizoctonia solani Kuhn (Thanatephorus cucumeris) gây ra. Triệu chứng khởi phát là đốm xám xanh ở bẹ lá gần mực nước, dài khoảng 1cm hình bầu dục hay tròn, lớn dần đến 2-3cm và liên kết lại. Ria vết bệnh và màu sắc không đồng đều tạo dạng hình đặc biệt ở nơi bị nhiễm. Trong điều kiện ẩm độ thích hợp, phiến lá tiếp xúc thân lúa bệnh kế cận cũng có thể bị lây. Triệu chứng rõ rệt ở giai đoạn lúa trổ hay chín, bệnh nặng làm hạt lép nhiều."
+        }
+      ],
+      "key_phrases": [
+        "bệnh đốm vằn Rhizoctonia solani",
+        "Thanatephorus cucumeris",
+        "đốm xám xanh bẹ lá gần mực nước",
+        "đốm bầu dục tròn 1cm lớn đến 2-3cm",
+        "ria vết bệnh màu sắc không đồng đều",
+        "lây bệnh qua tiếp xúc ẩm độ cao",
+        "triệu chứng rõ lúa trổ chín",
+        "bệnh nặng hạt lép nhiều"
+      ]
+    },
+    {
+      "summary": "Bệnh than vàng do nấm Ustilaginoidea virens gây ra, thường xuất hiện khi hạt lúa bắt đầu chín. Một số hạt trên bông biến thành khối bào tử có màu xanh bên ngoài và vàng cam bên trong.",
+      "full_text": "BỆNH THAN VÀNG do nấm Ustilaginoidea virens. Triệu chứng thường thấy khi hạt lúa bắt đầu chín. Một số hạt trên bông lúa biến thành một khối bào tử, bên ngoài có màu hơi xanh và bên trong có màu vàng cam. Khối bào tử lúc non có kích thước khoảng 1 cm và khi trưởng thành sẽ dài hơn. Các bào tử rất khó tách rời khỏi khối than vàng vì có chất kết dính. Thường chỉ có một số ít hạt trên bông lúa bị nhiễm bệnh.",
+      "sections": [
+        {
+          "heading": "Bệnh than vàng",
+          "level": 1,
+          "text": "Bệnh than vàng do nấm Ustilaginoidea virens gây ra và thường xuất hiện khi hạt lúa bắt đầu chín. Một số hạt trên bông lúa bị biến đổi thành khối bào tử có màu xanh ở bên ngoài và vàng cam ở bên trong. Khối bào tử lúc đầu nhỏ, khoảng 1 cm, sau đó phát triển dài hơn khi trưởng thành."
+        },
+        {
+          "heading": "Đặc điểm khối bào tử",
+          "level": 2,
+          "text": "Các bào tử trong khối than vàng có chất kết dính nên rất khó tách rời. Thông thường chỉ có một số ít hạt trên bông lúa bị nhiễm bệnh."
+        }
+      ],
+      "key_phrases": [
+        "bệnh than vàng lúa",
+        "Ustilaginoidea virens",
+        "khối bào tử vàng cam",
+        "bệnh nấm trên lúa",
+        "hạt lúa bị biến dạng",
+        "nhiễm bệnh trên bông lúa"
+      ]
+    },
+    {
+      "summary": "Bệnh đốm nâu do nấm Helminthosporium oryzae (Cochliobolus miyabeanus) gây ra. Triệu chứng rõ nhất trên lá và vỏ trấu: đốm hình bầu dục giống hạt mè, rải đều khắp mặt lá. Đốm mới nhỏ tròn đường kính 0,05-0,1cm màu nâu đậm; đốm phát triển dài 0,4-1cm rộng 0,1-0,2cm, màu nâu với tâm xám hay hơi trắng, viền hơi vàng. Đốm to hơn và không rõ nét như bệnh gạch nâu.",
+      "full_text": "BỆNH ĐỐM NÂU do nấm Helminthosporium oryzae Breda de Haan (Cochliobolus miyabeanus Drech ex Dastur). Triệu chứng rõ nhất thấy trên lá và vỏ trấu. Đốm trên lá hình bầu dục, gần giống cỡ và hình dáng của hạt mè. Dạng của vết bệnh thường giống nhau và rải đều khắp mặt lá lúa. Đốm bệnh mới thì nhỏ, tròn, đường kính 0,05-0,1cm, màu nâu đậm. Đốm bệnh phát triển đúng mức có chiều dài 0,4-1cm, rộng 0,1-0,2cm, màu nâu với tâm màu xám hay hơi trắng. Hầu như quanh rìa các đốm bệnh có vành màu hơi vàng. Đốm bệnh to hơn và không rõ nét như bệnh gạch nâu.",
+      "sections": [
+        {
+          "heading": "Bệnh đốm nâu",
+          "level": 1,
+          "text": "Bệnh đốm nâu do nấm Helminthosporium oryzae (Cochliobolus miyabeanus) gây ra. Triệu chứng rõ nhất trên lá và vỏ trấu: đốm hình bầu dục giống hạt mè, rải đều khắp mặt lá. Đốm mới nhỏ tròn đường kính 0,05-0,1cm màu nâu đậm. Khi phát triển đúng mức, đốm dài 0,4-1cm rộng 0,1-0,2cm, màu nâu với tâm xám hay hơi trắng, rìa có vành hơi vàng. Đốm bệnh to hơn và không rõ nét như bệnh gạch nâu."
+        }
+      ],
+      "key_phrases": [
+        "bệnh đốm nâu Helminthosporium oryzae",
+        "Cochliobolus miyabeanus",
+        "đốm bầu dục giống hạt mè",
+        "rải đều khắp mặt lá vỏ trấu",
+        "đốm mới 0,05-0,1cm nâu đậm",
+        "đốm phát triển 0,4-1cm tâm xám trắng",
+        "vành rìa hơi vàng",
+        "to hơn không rõ nét như gạch nâu"
+      ]
+    },
+    {
+      "summary": "Bệnh gạch nâu do nấm Cercospora oryzae gây ra, biểu hiện bằng các vết sọc nâu hẹp và dài chạy song song với gân lá. Bệnh có thể xuất hiện trên lá, bẹ lá, thân và cả vỏ trấu của hạt.",
+      "full_text": "BỆNH GẠCH NÂU do nấm Cercospora oryzae Miyake (Sphaerulina oryzina Hara). Trên phiến lá xuất hiện nhiều vết gạch rõ nét, ngắn, hẹp, màu nâu và chạy song song với gân lá. Bệnh đôi khi cũng xuất hiện trên bẹ lá, thân và vỏ trấu của hạt lúa. Ở các giống lúa kháng bệnh, vết gạch nâu có kích thước khoảng 2–10 mm, hẹp và có màu nâu đậm. Trên các giống lúa dễ nhiễm, vết bệnh rộng hơn, có màu nâu nhạt và phần giữa có màu sáng hơn. Thông thường các vết bệnh gạch nâu có màu nâu đỏ và phần rìa vết bệnh có màu nhạt hơn.",
+      "sections": [
+        {
+          "heading": "Bệnh gạch nâu",
+          "level": 1,
+          "text": "Bệnh gạch nâu do nấm Cercospora oryzae gây ra. Trên lá xuất hiện nhiều vết sọc nâu hẹp và ngắn chạy song song với gân lá. Bệnh cũng có thể xuất hiện trên bẹ lá, thân và vỏ trấu của hạt lúa."
+        },
+        {
+          "heading": "Đặc điểm vết bệnh",
+          "level": 2,
+          "text": "Ở giống lúa kháng bệnh, vết gạch nâu thường hẹp, dài khoảng 2–10 mm và có màu nâu đậm. Ở giống lúa dễ nhiễm, vết bệnh rộng hơn, có màu nâu nhạt với phần giữa sáng màu. Thông thường vết bệnh có màu nâu đỏ và rìa nhạt hơn."
+        }
+      ],
+      "key_phrases": [
+        "bệnh gạch nâu lúa",
+        "Cercospora oryzae",
+        "Sphaerulina oryzina",
+        "vết sọc nâu trên lá",
+        "bệnh nấm trên lúa",
+        "gân lá",
+        "vết gạch nâu"
+      ]
+    },
+    {
+      "summary": "Bệnh thối thân do nấm Helminthosporium sigmoideum (Leptosphaeria salvinii hay Magnaporthe salvinii) gây ra. Nấm xâm nhập qua vết thương cây lúa ở gần mực nước. Vết bệnh đầu tiên ở bẹ lá ngoài có hình dạng bất thường, đậm màu hoặc hơi đen, từ từ lớn rộng ra. Sau đó nấm xuyên vào thân làm suy yếu và gây đổ ngã.",
+      "full_text": "BỆNH THỐI THÂN do nấm Helminthosporium sigmoideum (Leptosphaeria salvinii hay Magnaporthe salvinii). Nấm thường xâm nhập qua vết thương của cây lúa ở gần mực nước. Lúc đầu vết bệnh ở các bẹ lá ngoài, hình dạng bất thường, đậm màu hoặc hơi đen và từ từ lớn rộng ra. Sau đó nấm xuyên vào thân, làm suy yếu thân lúa và gây đổ ngã.",
+      "sections": [
+        {
+          "heading": "Bệnh thối thân",
+          "level": 1,
+          "text": "Bệnh thối thân do nấm Helminthosporium sigmoideum (Leptosphaeria salvinii hay Magnaporthe salvinii) gây ra. Nấm thường xâm nhập qua vết thương của cây lúa ở gần mực nước. Vết bệnh ban đầu ở bẹ lá ngoài có hình dạng bất thường, đậm màu hoặc hơi đen, từ từ lớn rộng ra. Sau đó nấm xuyên vào thân làm suy yếu thân lúa và gây đổ ngã."
+        }
+      ],
+      "key_phrases": [
+        "bệnh thối thân Helminthosporium sigmoideum",
+        "Leptosphaeria salvinii Magnaporthe salvinii",
+        "xâm nhập qua vết thương gần mực nước",
+        "vết bệnh bẹ lá ngoài hình bất thường",
+        "đậm màu hơi đen lớn rộng ra",
+        "nấm xuyên vào thân",
+        "suy yếu thân lúa gây đổ ngã"
+      ]
+    },
+    {
+      "summary": "Bệnh thối bẹ do nấm Sarocladium oryzae gây ra, thường xuất hiện ở bẹ lá cờ vào giai đoạn sắp trổ. Bệnh tạo các đốm nâu xám trên bẹ lá, lan rộng và có thể làm bông lúa bị nghẹn hoặc không trổ được.",
+      "full_text": "BỆNH THỐI BẸ do nấm Sarocladium oryzae (Sawada) Gums and Hawksworth gây ra. Bệnh thường xảy ra ở bẹ lá cờ vào giai đoạn sắp trổ. Triệu chứng ban đầu là các đốm nâu đục kéo dài hoặc có hình dạng bất thường, dài khoảng 0,5–1,5 cm với phần trung tâm màu xám. Sau đó toàn bộ vết bệnh chuyển sang màu nâu xám. Vết bệnh lớn dần, thường liên kết với nhau và có thể lan khắp bẹ lá. Khi bệnh nặng, bông lúa bị nghẹn và không thể trổ. Bên trong bẹ lá chứa bông không trổ thường có lớp nấm màu trắng. Một số bông có thể trổ một phần và mang hạt nhưng hạt không no. Cây bị bệnh thường có thể bị sâu đục thân hoặc bị thương gần gốc, và bệnh cũng có thể xuất hiện trên cây bị nhiễm vi-rút.",
+      "sections": [
+        {
+          "heading": "Bệnh thối bẹ",
+          "level": 1,
+          "text": "Bệnh thối bẹ do nấm Sarocladium oryzae gây ra và thường xuất hiện ở bẹ lá cờ vào giai đoạn sắp trổ. Triệu chứng ban đầu là các đốm nâu đục dài hoặc có hình dạng bất thường với trung tâm màu xám."
+        },
+        {
+          "heading": "Triệu chứng và tác hại",
+          "level": 2,
+          "text": "Vết bệnh lan rộng, có thể liên kết lại và chiếm toàn bộ bẹ lá. Khi bệnh nặng, bông lúa bị nghẹn và không trổ được. Trong bẹ lá có thể xuất hiện lớp nấm màu trắng và những bông trổ được thường mang hạt không no."
+        }
+      ],
+      "key_phrases": [
+        "bệnh thối bẹ lúa",
+        "Sarocladium oryzae",
+        "đốm nâu xám trên bẹ lá",
+        "bông lúa bị nghẹn",
+        "nấm hại lúa",
+        "bệnh trên bẹ lá",
+        "hạt lúa không no"
+      ]
+    },
+    {
+      "summary": "Bệnh phỏng lá do nấm Rhynchosporium oryzae (Metasphaeria albescens) lưu truyền qua hột. Thường xảy ra trên chóp lá trưởng thành. Vết bệnh bầu dục dài 1-5cm, rộng 0,5cm, trong như thấm nước, phát triển thành vùng to màu xanh bầu dục có viền hẹp đậm và vành nâu lợt. Phân biệt với bệnh cháy bìa lá bằng cách nhúng lá vào nước 5-10 phút: đầu lá chảy ra chất đục là bệnh cháy bìa lá, không có là bệnh phỏng lá.",
+      "full_text": "BỆNH PHỎNG LÁ lưu truyền qua hột do nấm Rhynchosporium oryzae Has. and Yokogi (Metasphaeria albescens [Von Thumen] Wei). Thường xảy ra trên chóp lá đã trưởng thành. Đôi khi dọc theo bìa lá hoặc phần khác của phiến lá. Vết bệnh bầu dục dài hoặc có góc cạnh, dài 1-5cm, rộng 0,5cm, trong như bị thấm nước. Vết bệnh phát triển thành những vùng to màu xanh hình bầu dục hoặc hơi dài, có viền hẹp đậm màu bao quanh và ngoài cùng có vành màu nâu lợt. Các vết bệnh tạo nên những quảng đặc biệt với viền nâu đậm và tâm màu lợt hơn. Lá bệnh nặng bị khô có màu vàng rơm lợt với những quảng lợt màu và viền nâu. Vết bệnh lớn rộng ra khắp phiến lá. Bệnh này phân biệt bằng cách cắt lá bệnh, nhúng vào nước trong chừng 5-10 phút. Nếu ở đầu lá bị cắt tuôn ra chất đục đó là bệnh cháy bìa lá. Nếu không có, là bệnh phỏng lá.",
+      "sections": [
+        {
+          "heading": "Bệnh phỏng lá",
+          "level": 1,
+          "text": "Bệnh phỏng lá do nấm Rhynchosporium oryzae (Metasphaeria albescens) lưu truyền qua hột. Thường xảy ra trên chóp lá trưởng thành, đôi khi dọc theo bìa lá. Vết bệnh bầu dục dài 1-5cm rộng 0,5cm, trong như thấm nước, phát triển thành vùng to màu xanh bầu dục có viền hẹp đậm và vành nâu lợt. Lá bệnh nặng khô có màu vàng rơm lợt với quảng lợt và viền nâu. Phân biệt với bệnh cháy bìa lá bằng cách nhúng lá cắt vào nước 5-10 phút: nếu đầu lá tuôn ra chất đục là bệnh cháy bìa lá, nếu không có là bệnh phỏng lá."
+        }
+      ],
+      "key_phrases": [
+        "bệnh phỏng lá Rhynchosporium oryzae",
+        "Metasphaeria albescens lưu truyền qua hột",
+        "vết bệnh bầu dục chóp lá trưởng thành",
+        "trong như thấm nước 1-5cm",
+        "viền hẹp đậm vành nâu lợt",
+        "lá khô màu vàng rơm",
+        "phân biệt bệnh cháy bìa lá",
+        "nhúng nước 5-10 phút chất đục"
+      ]
+    },
+    {
+      "summary": "Bệnh mạ đực (lúa von) do nấm Fusarium moniliforme gây ra và lây truyền qua hạt giống. Cây bệnh thường cao bất thường, thân mảnh, lá xanh nhạt và có thể chết hoặc tạo bông lửng không có hạt.",
+      "full_text": "BỆNH MẠ ĐỰC (lúa von), lây truyền qua hạt do nấm Fusarium moniliforme Shel (Gibberella fujikuroi Saw.). Mạ bệnh đôi khi có chiều cao gấp đôi bình thường và có màu xanh hơi vàng. Những cây bị bệnh nặng có thể chết. Ngoài ra còn có những triệu chứng khác như cây lùn, thối gốc hoặc chết mạ.\n\nCây bệnh thường có chồi cao và mảnh khảnh. Lá cờ có màu xanh lợt và vươn cao hơn so với các cây khác trong đám lúa. Ở các đốt dưới có thể mọc ra các rễ khí sinh. Nếu cây bệnh còn sống sót đến giai đoạn trổ bông thì bông thường lửng hoặc bông lép. Bệnh thường xảy ra khi bón nhiều phân đạm và trong điều kiện nhiệt độ khoảng 30–35°C.",
+      "sections": [
+        {
+          "heading": "Bệnh mạ đực (lúa von)",
+          "level": 1,
+          "text": "Bệnh mạ đực do nấm Fusarium moniliforme gây ra và lây truyền qua hạt giống. Cây bệnh thường cao hơn bình thường, thân mảnh, lá có màu xanh vàng và đôi khi cây có thể chết."
+        },
+        {
+          "heading": "Triệu chứng",
+          "level": 2,
+          "text": "Cây bệnh có chồi cao, mảnh và lá cờ xanh nhạt vươn cao trên đám lúa. Các đốt dưới có thể mọc rễ khí sinh. Nếu cây sống sót đến giai đoạn trổ, bông thường lửng hoặc lép."
+        },
+        {
+          "heading": "Điều kiện phát sinh",
+          "level": 2,
+          "text": "Bệnh dễ xảy ra khi bón nhiều phân đạm và khi nhiệt độ môi trường khoảng 30–35°C."
+        }
+      ],
+      "key_phrases": [
+        "bệnh mạ đực",
+        "lúa von",
+        "Fusarium moniliforme",
+        "Gibberella fujikuroi",
+        "cây lúa cao bất thường",
+        "bông lửng",
+        "bệnh truyền qua hạt",
+        "nhiệt độ 30-35°C"
+      ]
+    },
+    {
+      "summary": "Bệnh lúa lùn có bướu trên lá làm cây bệnh lùn, ít chồi, lá ngắn và xoắn ở chóp màu xanh đậm. Bướu màu xanh lợt đến trong suốt xuất hiện trên mặt phiến lá và bẹ lá. Siêu vi khuẩn gây bệnh được lan truyền nhờ rầy xanh và rầy bông.",
+      "full_text": "BỆNH LÚA LÙN CÓ BƯỚU TRÊN LÁ. Cây bệnh lùn, ít chồi. Lá ngắn, thường xoắn ở chóp, màu xanh tới xanh đậm (Hình 88). Trổ bông trễ, bông lúa nhỏ không mang nhánh phụ. Gân lá phồng lên hoặc có bướu trên mặt phiến lá, bẹ lá. Bướu màu xanh lợt đến trong suốt, rộng 0,4-0,5mm, dài 0,4-8mm nhưng thường ngắn hơn 2mm. Biểu bì của lá có thể bị trốc lên (Hình 89). Bướu rất khó thấy, nhưng có thể cảm giác được bằng cách vuốt nhẹ phiến lá giữa ngón tay cái và ngón trỏ từ gốc lá lên chóp. Một lá có thể có hơn 10 bướu. Siêu vi khuẩn gây bệnh được lan truyền nhờ rầy xanh và rầy bông. Rầy có thể mang mầm bệnh liên tục, nhưng không lưu truyền qua trứng rầy.",
+      "sections": [
+        {
+          "heading": "Bệnh lúa lùn có bướu trên lá",
+          "level": 1,
+          "text": "Bệnh lúa lùn có bướu trên lá gây ra các triệu chứng: cây bệnh lùn, ít chồi, lá ngắn và thường xoắn ở chóp với màu xanh tới xanh đậm, trổ bông trễ và bông lúa nhỏ không mang nhánh phụ. Đặc trưng của bệnh là gân lá phồng lên hoặc có bướu trên mặt phiến lá và bẹ lá, bướu màu xanh lợt đến trong suốt, rộng 0,4-0,5mm, dài 0,4-8mm nhưng thường ngắn hơn 2mm. Bướu rất khó thấy nhưng có thể cảm giác bằng cách vuốt nhẹ phiến lá, một lá có thể có hơn 10 bướu. Siêu vi khuẩn gây bệnh được lan truyền nhờ rầy xanh và rầy bông, rầy mang mầm bệnh liên tục nhưng không lưu truyền qua trứng rầy."
+        }
+      ],
+      "key_phrases": [
+        "bệnh lúa lùn",
+        "bướu trên lá",
+        "cây bệnh lùn ít chồi",
+        "lá ngắn xoắn chóp",
+        "gân lá phồng lên",
+        "bướu xanh lợt trong suốt",
+        "0,4-0,5mm rộng",
+        "hơn 10 bướu mỗi lá",
+        "siêu vi khuẩn",
+        "rầy xanh rầy bông",
+        "lan truyền mầm bệnh"
+      ]
+    },
+    {
+      "summary": "Bệnh lúa cỏ làm cây lúa lùn và mọc nhiều chồi giống như bụi cỏ. Lá hẹp, ngắn, cứng và bông nhỏ với hạt lép; bệnh được lan truyền bởi rầy mang siêu vi khuẩn.",
+      "full_text": "BỆNH LÚA CỎ. Cây bị bệnh rất lùn và có nhiều chồi giống như một bụi cỏ. Lá thường hẹp, ngắn, cứng và có màu xanh đến xanh nhạt, đôi khi xuất hiện các đốm rỉ sắt. Cây bệnh có thể sống đến khi trưởng thành nhưng cho rất ít bông. Bông lúa nhỏ, hạt thường lép và có màu nâu đậm.\n\nKhi cây bị nhiễm bệnh ở giai đoạn trễ, triệu chứng có thể không xuất hiện trước khi lúa trổ mà chỉ thấy rõ trên những cây mọc sau đó. Bệnh do siêu vi khuẩn gây ra và được lan truyền bởi rầy. Rầy có thể mang mầm bệnh lâu dài nhưng bệnh không được truyền qua trứng.",
+      "sections": [
+        {
+          "heading": "Bệnh lúa cỏ",
+          "level": 1,
+          "text": "Bệnh lúa cỏ làm cho cây lúa lùn, mọc nhiều chồi giống như bụi cỏ. Lá hẹp, ngắn, cứng và có màu xanh hoặc xanh nhạt, đôi khi có đốm rỉ sắt."
+        },
+        {
+          "heading": "Triệu chứng và tác hại",
+          "level": 2,
+          "text": "Cây bệnh thường sống đến khi trưởng thành nhưng cho rất ít bông. Bông nhỏ và hạt lép có màu nâu đậm. Nếu nhiễm bệnh muộn, triệu chứng có thể chỉ xuất hiện rõ trên những cây mọc sau."
+        },
+        {
+          "heading": "Lan truyền bệnh",
+          "level": 2,
+          "text": "Bệnh do siêu vi khuẩn gây ra và được lan truyền bởi rầy. Rầy có thể mang mầm bệnh trong thời gian dài nhưng không truyền bệnh qua trứng."
+        }
+      ],
+      "key_phrases": [
+        "bệnh lúa cỏ",
+        "cây lúa lùn",
+        "nhiều chồi như bụi cỏ",
+        "bông nhỏ hạt lép",
+        "siêu vi khuẩn",
+        "rầy truyền bệnh",
+        "lá hẹp và cứng"
+      ]
+    },
+    {
+      "summary": "Bệnh lá trắng (hoja blanca) làm cây bệnh lùn nhưng lá đọt có thể trổ bình thường. Triệu chứng rõ nhất là nhiều sọc trắng đến hơi vàng làm trắng cả phiến lá hoặc có màu lốm đốm. Cây bệnh cho bông nhỏ, vỏ trấu màu hơi nâu. Siêu vi khuẩn truyền bởi rầy châu Mỹ, rầy có thể truyền qua trứng rầy.",
+      "full_text": "BỆNH LÁ TRẮNG (hoja blanca) (Hình 92). Cây bệnh lùn nhưng lá đọt có thể trổ bình thường. Bệnh nhiễm càng sớm, cây càng bị lùn nhiều. Triệu chứng rõ rệt nhất là một hay nhiều sọc trắng đến hơi vàng làm trắng cả phiến lá hay lá có màu lốm đốm không đều như kiểu khảm (Hình 93). Cây bệnh cho bông nhỏ và thường không trổ ra khỏi bẹ lá. Vỏ trấu màu hơi nâu, khô nhanh và thường cong queo. Bông lúa có ít hay không có hột nên vẫn đứng thẳng. Cây bệnh thường không chết trừ khi nhiễm bệnh rất sớm. Siêu vi khuẩn truyền bởi rầy châu Mỹ. Rầy có thể mang mầm bệnh liên tục và có thể truyền qua trứng rầy.",
+      "sections": [
+        {
+          "heading": "Bệnh lá trắng (hoja blanca)",
+          "level": 1,
+          "text": "Bệnh lá trắng (hoja blanca) gây ra triệu chứng cây bệnh lùn nhưng lá đọt vẫn có thể trổ bình thường. Bệnh nhiễm càng sớm thì cây càng bị lùn nhiều. Triệu chứng rõ rệt nhất là một hay nhiều sọc trắng đến hơi vàng làm trắng cả phiến lá hoặc lá có màu lốm đốm không đều như kiểu khảm. Cây bệnh cho bông nhỏ và thường không trổ ra khỏi bẹ lá, vỏ trấu màu hơi nâu khô nhanh và cong queo, bông lúa ít hoặc không có hột nên vẫn đứng thẳng. Cây bệnh thường không chết trừ khi nhiễm rất sớm. Siêu vi khuẩn truyền bởi rầy châu Mỹ, rầy có thể mang mầm bệnh liên tục và truyền qua trứng rầy."
+        }
+      ],
+      "key_phrases": [
+        "bệnh lá trắng",
+        "hoja blanca",
+        "cây bệnh lùn",
+        "lá đọt trổ bình thường",
+        "sọc trắng hơi vàng",
+        "phiến lá trắng",
+        "màu lốm đốm khảm",
+        "bông nhỏ",
+        "vỏ trấu nâu cong queo",
+        "siêu vi khuẩn",
+        "rầy châu Mỹ",
+        "truyền qua trứng rầy"
+      ]
+    },
+    {
+      "summary": "Bệnh vàng cam làm cây lúa lùn, ít chồi và lá chuyển sang màu vàng đến cam. Bệnh bắt đầu từ chóp lá, lan dọc theo gân và có thể khiến cây chết sớm hoặc bông không trổ hoàn toàn với nhiều hạt lép.",
+      "full_text": "BỆNH VÀNG CAM. Cây bị bệnh thường hơi lùn và có ít chồi. Lá có màu vàng đến màu cam. Triệu chứng ban đầu xuất hiện gần chóp lá với nhiều sọc rõ rệt chạy dọc theo gân lá. Bệnh tiến triển làm lá chuyển từ màu vàng sang cam và khô dần từ chóp lá xuống. Những cây bị nhiễm bệnh sớm thường chết nhanh. Nếu cây bị nhiễm bệnh muộn, cây có thể vẫn có bông nhưng bông không trổ hoàn toàn và hầu hết các hạt đều lép.\n\nBệnh này có xu hướng tự hạn chế sự lây lan vì cây bệnh thường chết sớm. Khi cây chết, bệnh không còn khả năng truyền tiếp. Mầm bệnh được lan truyền bởi rầy bông. Rầy có thể mang mầm bệnh trong thời gian dài nhưng không truyền bệnh qua trứng.",
+      "sections": [
+        {
+          "heading": "Bệnh vàng cam",
+          "level": 1,
+          "text": "Bệnh vàng cam làm cây lúa lùn và ít chồi. Lá chuyển màu từ vàng đến cam và triệu chứng thường bắt đầu từ chóp lá với các sọc dọc theo gân lá."
+        },
+        {
+          "heading": "Triệu chứng và tác hại",
+          "level": 2,
+          "text": "Bệnh phát triển khiến lá khô từ chóp xuống. Cây nhiễm sớm có thể chết nhanh, còn cây nhiễm muộn có thể trổ bông nhưng bông không trổ hoàn toàn và hạt thường bị lép."
+        },
+        {
+          "heading": "Lan truyền bệnh",
+          "level": 2,
+          "text": "Mầm bệnh được lan truyền bởi rầy bông. Rầy có thể mang mầm bệnh lâu dài nhưng bệnh không được truyền qua trứng."
+        }
+      ],
+      "key_phrases": [
+        "bệnh vàng cam lúa",
+        "lá vàng cam",
+        "cây lúa lùn",
+        "bông lép",
+        "rầy bông truyền bệnh",
+        "bệnh virus trên lúa",
+        "lá khô từ chóp"
+      ]
+    },
+    {
+      "summary": "Bệnh lùn xoắn lá làm cây bệnh lùn với triệu chứng thay đổi theo giai đoạn sinh trưởng. Lúc nhỏ lá bị rách với bìa lá không đều, màu vàng hay vàng nâu. Lúa lớn lá ngắn, xoắn, dị hình. Trên bẹ và phiến lá có gân lá bị phồng lên, gân phồng màu vàng lợt đến nâu đậm. Siêu vi khuẩn lan truyền bởi rầy nâu.",
+      "full_text": "BỆNH LÙN XOẮN LÁ. Cây bệnh lùn. Những triệu chứng khác thay đổi theo giai đoạn sinh trưởng. Cây bệnh và không bệnh có số chồi ban đầu bằng nhau nhưng cây bệnh vẫn giữ màu xanh tới lúc trưởng thành và có nhiều chồi hơn cây lành. Lúc lúa còn nhỏ, triệu chứng quan trọng là lá bị rách (Hình 95). Trước khi lá mở ra, có thể thấy bìa lá không đều hay bị rách. Chỗ lá bị rách có màu vàng hay vàng nâu và rời ra. Ở cây lúa lớn, ít có lá rách hơn mà lá thường xoắn ở chóp lá hay gốc lá. Trên bẹ và phiến lá nhất là vùng gần cổ lá có các gân lá bị phồng lên do tế bào li-be phát triển hướng ra ngoài. Gân phồng và có màu vàng lợt hay trắng đến nâu đậm, dài 1mm đến 10cm và rộng 0,2-1mm, nhỏ lên mặt lá từ 0,1-1mm. Giai đoạn lúa lớn có triệu chứng là lá ngắn, xoắn, dị hình hay lá cờ bị rách (Hình 96). Cây bệnh thường trổ muộn và bông không trổ ra hoàn toàn. Chồi đâm nhánh phụ ở các đốt bên trên cho ra những bông nhỏ. Cây bệnh có nhiều bông và hột hơn cây mạnh, nhưng ít hột chắc hơn. Siêu vi khuẩn được lan truyền bởi rầy nâu. Rầy có thể mang mầm bệnh liên tục nhưng không lưu truyền qua trứng.",
+      "sections": [
+        {
+          "heading": "Bệnh lùn xoắn lá",
+          "level": 1,
+          "text": "Bệnh lùn xoắn lá gây ra nhiều triệu chứng khác nhau theo giai đoạn sinh trưởng. Cây bệnh lùn nhưng giữ màu xanh lâu hơn và có nhiều chồi hơn cây lành. Lúc lúa còn nhỏ, triệu chứng chính là lá bị rách với bìa lá không đều, chỗ rách màu vàng hay vàng nâu. Ở cây lớn, lá thường xoắn ở chóp hay gốc lá. Trên bẹ và phiến lá gần cổ lá có các gân lá bị phồng lên do tế bào li-be phát triển hướng ra ngoài, gân phồng màu vàng lợt đến nâu đậm, dài 1mm-10cm, rộng 0,2-1mm. Giai đoạn lúa lớn lá ngắn, xoắn, dị hình hoặc lá cờ bị rách. Cây bệnh trổ muộn, bông không trổ ra hoàn toàn, có nhiều bông và hột hơn cây mạnh nhưng ít hột chắc hơn. Siêu vi khuẩn lan truyền bởi rầy nâu, rầy mang mầm bệnh liên tục nhưng không lưu truyền qua trứng."
+        }
+      ],
+      "key_phrases": [
+        "bệnh lùn xoắn lá",
+        "cây bệnh lùn",
+        "lá bị rách",
+        "bìa lá không đều",
+        "màu vàng vàng nâu",
+        "lá xoắn chóp gốc",
+        "gân lá phồng lên",
+        "tế bào li-be",
+        "lá ngắn xoắn dị hình",
+        "trổ muộn",
+        "ít hột chắc",
+        "rầy nâu",
+        "không lưu truyền qua trứng"
+      ]
+    },
+    {
+      "summary": "Bệnh vàng tạm thời làm cây lúa lùn và lá vàng từ chóp lá dưới. Cây có thể hồi phục bằng cách ra lá xanh mới nhưng năng suất giảm, đặc biệt nếu nhiễm sớm; bệnh được lan truyền bởi rầy xanh.",
+      "full_text": "BỆNH VÀNG TẠM THỜI (Transitory yellowing). Cây lúa bị bệnh thường lùn. Lá bị vàng bắt đầu từ chóp của các lá dưới. Trên các lá bị vàng thường có những đốm rỉ màu nâu. Sau khi lá bị vàng nặng, cây có thể hồi phục bằng cách cho ra các lá xanh mới, tuy nhiên lá vẫn có thể còn màu vàng nhạt. Nếu cây nhiễm bệnh sớm thì thường không có bông hoặc bông phát triển kém.\n\nTriệu chứng của bệnh này khá giống với bệnh tungro. Bệnh được lan truyền bởi rầy xanh. Việc xác định bệnh dựa vào dạng của siêu vi khuẩn và khả năng truyền bệnh của rầy. Siêu vi khuẩn được truyền bởi các loài rầy Nephotettix cincticeps, N. nigropictus và N. virescens. Rầy có thể mang mầm bệnh liên tục nhưng không truyền qua trứng.",
+      "sections": [
+        {
+          "heading": "Bệnh vàng tạm thời",
+          "level": 1,
+          "text": "Bệnh vàng tạm thời làm cây lúa lùn và lá bị vàng bắt đầu từ chóp các lá dưới. Trên lá vàng thường xuất hiện các đốm rỉ màu nâu."
+        },
+        {
+          "heading": "Triệu chứng và ảnh hưởng",
+          "level": 2,
+          "text": "Sau khi lá bị vàng nặng, cây có thể phục hồi bằng cách mọc lá xanh mới nhưng vẫn có thể còn vàng nhạt. Nếu cây bị nhiễm sớm thì thường không có bông hoặc bông phát triển kém."
+        },
+        {
+          "heading": "Lan truyền bệnh",
+          "level": 2,
+          "text": "Bệnh được truyền bởi rầy xanh thuộc các loài Nephotettix cincticeps, N. nigropictus và N. virescens. Rầy có thể mang mầm bệnh trong thời gian dài nhưng không truyền bệnh qua trứng."
+        }
+      ],
+      "key_phrases": [
+        "bệnh vàng tạm thời",
+        "transitory yellowing",
+        "lá vàng từ chóp",
+        "rầy xanh",
+        "Nephotettix",
+        "bệnh virus trên lúa",
+        "cây lúa lùn",
+        "bông kém phát triển"
+      ]
+    },
+    {
+      "summary": "Bệnh tungrô làm cây bệnh lùn, ít chồi, phiến lá và bẹ lá ngắn. Lá đọt bị kẹt trong bẹ lá ngoài và cong queo. Màu lá thay đổi từ xanh sang vàng lợt, vàng cam, vàng nâu bắt đầu từ chóp. Bông lúa nhỏ, lép và không trổ hoàn toàn. Năng suất thấp do số hột chắc trên bông ít hơn.",
+      "full_text": "BỆNH TUNGRÔ (Hình 98). Cây bệnh lùn và hơi ít chồi. Chiều dài phiến và bẹ lá ngắn lại. Phiến lá đọt đã nở ra, bị kẹt trong bẹ lá ngoài và lá cong queo hay hơi cuộn tròn. Màu lá thay đổi từ xanh, vàng lợt, vàng cam, vàng nâu, bắt đầu từ chóp của lá già. Lá non thường có màu lốm đốm không đều hay có sọc xanh lợt đến trắng, dài ngắn khác nhau, chạy song song với gân lá. Sự vàng lá thay đổi tùy theo thời gian tăng trưởng. Cây bệnh thường sống đến trưởng thành. Trổ bông muộn nên kéo dài thời gian chín. Bông lúa thường nhỏ, lép và không trổ hoàn toàn. Trên vỏ trấu có vệt nâu đậm và hột lúa nhẹ hơn so với hạt bình thường. Năng suất thấp do số hột chắc trên bông ít hơn. Cây nhiễm bệnh trễ có thể không lộ triệu chứng trước khi gặt nhưng có thể thấy bệnh trên lúa chét mọc sau đó.",
+      "sections": [
+        {
+          "heading": "Bệnh tungrô",
+          "level": 1,
+          "text": "Bệnh tungrô gây ra triệu chứng cây bệnh lùn và hơi ít chồi, phiến lá và bẹ lá ngắn lại. Phiến lá đọt bị kẹt trong bẹ lá ngoài và cong queo hay hơi cuộn tròn. Màu lá thay đổi từ xanh sang vàng lợt, vàng cam đến vàng nâu, bắt đầu từ chóp lá già. Lá non có màu lốm đốm không đều hoặc sọc xanh lợt đến trắng chạy song song với gân lá. Cây bệnh thường sống đến trưởng thành nhưng trổ bông muộn, bông nhỏ lép và không trổ hoàn toàn. Vỏ trấu có vệt nâu đậm, hột lúa nhẹ hơn bình thường và năng suất thấp do ít hột chắc. Cây nhiễm bệnh trễ có thể không lộ triệu chứng trước khi gặt."
+        }
+      ],
+      "key_phrases": [
+        "bệnh tungrô",
+        "cây bệnh lùn ít chồi",
+        "phiến lá bẹ lá ngắn",
+        "lá đọt bị kẹt cong queo",
+        "màu lá vàng lợt vàng cam vàng nâu",
+        "chóp lá già",
+        "lá non lốm đốm sọc trắng",
+        "trổ bông muộn",
+        "bông nhỏ lép",
+        "vỏ trấu nâu đậm",
+        "năng suất thấp",
+        "lúa chét"
+      ]
+    },
+    {
+      "summary": "Bệnh tungrô càng trầm trọng hơn khi lúa càng nhỏ và giống càng dễ nhiễm. Đây là bệnh siêu vi khuẩn quan trọng nhất của lúa vùng Châu Á nhiệt đới, có thể bùng phát nhanh chóng làm chết lúa trên diện rộng. Siêu vi khuẩn lan truyền bằng rầy Nephotettix malayanus, N. nigropictus, N. parvus, N. virescens và rầy bông, không lưu truyền qua trứng rầy.",
+      "full_text": "BỆNH TUNGRÔ. Bệnh càng trầm trọng hơn khi lúa càng nhỏ và khi trồng giống càng dễ nhiễm. Tungrô là bệnh siêu vi khuẩn quan trọng nhất của lúa vùng Châu Á nhiệt đới. Dịch bệnh bộc phát nhanh chóng làm chết lúa ở một vùng rộng lớn (Hình 99). Siêu vi khuẩn được lan truyền bằng rầy Nephotettix malayanus, N. nigropictus, N. parvus, N. virescens và rầy bông. Rầy không mang siêu vi khuẩn liên tục và mầm bệnh không lưu truyền qua trứng rầy.",
+      "sections": [
+        {
+          "heading": "Bệnh tungrô - Mức độ và lan truyền",
+          "level": 1,
+          "text": "Bệnh tungrô càng trầm trọng hơn khi lúa càng nhỏ tuổi và khi trồng những giống dễ nhiễm bệnh. Tungrô là bệnh siêu vi khuẩn quan trọng nhất của lúa vùng Châu Á nhiệt đới, có thể bùng phát nhanh chóng làm chết lúa trên một vùng rộng lớn. Siêu vi khuẩn được lan truyền bằng các loài rầy: Nephotettix malayanus, N. nigropictus, N. parvus, N. virescens và rầy bông. Rầy không mang siêu vi khuẩn liên tục và mầm bệnh không lưu truyền qua trứng rầy."
+        }
+      ],
+      "key_phrases": [
+        "bệnh tungrô",
+        "bệnh trầm trọng hơn lúa nhỏ",
+        "giống dễ nhiễm",
+        "siêu vi khuẩn quan trọng nhất",
+        "Châu Á nhiệt đới",
+        "dịch bệnh bộc phát nhanh",
+        "chết lúa vùng rộng lớn",
+        "rầy Nephotettix malayanus",
+        "N. nigropictus N. parvus N. virescens",
+        "rầy bông",
+        "không lưu truyền qua trứng rầy"
+      ]
+    },
+    {
+      "summary": "Bệnh vàng lùn làm cây lúa vàng từng đốm trên lá, cây rất lùn và đẻ nhiều chồi với lá mềm rũ xuống. Cây bệnh thường cho ít hoặc không có bông và bệnh được lan truyền bởi rầy xanh.",
+      "full_text": "BỆNH VÀNG LÙN. Cây bị bệnh thường có lá vàng thành từng đốm trên phiến lá. Màu lá thay đổi từ xanh vàng đến vàng nhạt hoặc hơi trắng. Khi bệnh phát triển nặng, cây lúa trở nên rất lùn, đẻ nhiều chồi và lá mềm rũ xuống. Một số cây có thể chết nhưng phần lớn vẫn sống đến khi trưởng thành.\n\nCây bị bệnh thường cho rất ít bông hoặc không có bông. Nếu cây bị nhiễm bệnh muộn thì triệu chứng có thể chưa rõ ràng ngay, nhưng những cây mọc sau đó thường biểu hiện triệu chứng rất rõ.\n\nMầm bệnh được lan truyền bởi rầy xanh thuộc các loài Nephotettix cincticeps, N. malayanus, N. nigropictus, N. parvus và N. virescens. Rầy có thể mang mầm bệnh trong thời gian dài nhưng bệnh không được truyền qua trứng.",
+      "sections": [
+        {
+          "heading": "Bệnh vàng lùn",
+          "level": 1,
+          "text": "Bệnh vàng lùn làm lá lúa xuất hiện các đốm vàng và cây trở nên lùn. Màu lá thay đổi từ xanh vàng đến vàng nhạt hoặc trắng nhạt."
+        },
+        {
+          "heading": "Triệu chứng và ảnh hưởng",
+          "level": 2,
+          "text": "Khi bệnh nặng, cây lúa rất lùn, đẻ nhiều chồi và lá mềm rũ xuống. Cây bệnh thường cho ít bông hoặc không có bông."
+        },
+        {
+          "heading": "Lan truyền bệnh",
+          "level": 2,
+          "text": "Bệnh được lan truyền bởi các loài rầy xanh thuộc giống Nephotettix. Rầy có thể mang mầm bệnh lâu dài nhưng không truyền bệnh qua trứng."
+        }
+      ],
+      "key_phrases": [
+        "bệnh vàng lùn",
+        "lá lúa vàng đốm",
+        "cây lúa lùn",
+        "đẻ nhiều chồi",
+        "rầy xanh",
+        "Nephotettix",
+        "bệnh virus trên lúa"
+      ]
+    },
+    {
+      "summary": "Bệnh khảm vàng làm cây bệnh lùn, ít chồi, lá nhăn màu lốm đốm không đều và có sọc vàng. Bông dị hình, không trổ hoàn toàn và hột lép. Bệnh nặng lúa bị chết. Bệnh khảm vàng được lan truyền bởi nhiều bọ cánh cứng.",
+      "full_text": "BỆNH KHẢM VÀNG. Cây bệnh lùn, ít chồi, lá nhăn, màu lốm đốm không đều và có sọc vàng. Bông dị hình, không trổ hoàn toàn và hột lép (Hình 101). Bệnh nặng lúa bị chết. Triệu chứng lúc đầu là trên lá đọt có vài đốm màu vàng xanh. Đốm lớn ra dọc theo gân, tạo thành những lằn dài (Hình 102). Các lá đó có khi bị vàng và sau đó khô đi. Bẹ lá cũng có màu lốm đốm không đều. Bông không trổ ra khỏi bẹ và dị hình, mang hột nhỏ thường bị lép. Ngoài đồng, cây bệnh trở nên vàng 3-4 tuần sau khi cấy (Hình 103). Trên lá đọt có sọc màu vàng xanh hay màu lốm đốm không đều. Bệnh khảm vàng được lan truyền bởi nhiều bọ cánh cứng.",
+      "sections": [
+        {
+          "heading": "Bệnh khảm vàng",
+          "level": 1,
+          "text": "Bệnh khảm vàng gây ra triệu chứng cây bệnh lùn, ít chồi, lá nhăn với màu lốm đốm không đều và sọc vàng. Bông dị hình, không trổ hoàn toàn và hột lép; bệnh nặng lúa bị chết. Triệu chứng ban đầu là vài đốm vàng xanh trên lá đọt, đốm lớn dần dọc theo gân tạo thành lằn dài, lá có thể bị vàng rồi khô. Bẹ lá cũng lốm đốm không đều, bông không trổ ra khỏi bẹ và mang hột nhỏ thường bị lép. Ngoài đồng, cây bệnh trở nên vàng 3-4 tuần sau khi cấy với sọc vàng xanh hay lốm đốm trên lá đọt. Bệnh khảm vàng được lan truyền bởi nhiều bọ cánh cứng."
+        }
+      ],
+      "key_phrases": [
+        "bệnh khảm vàng",
+        "cây bệnh lùn ít chồi",
+        "lá nhăn lốm đốm sọc vàng",
+        "bông dị hình hột lép",
+        "bệnh nặng lúa chết",
+        "đốm vàng xanh lá đọt",
+        "lằn dài dọc gân lá",
+        "bẹ lá lốm đốm",
+        "vàng 3-4 tuần sau cấy",
+        "bọ cánh cứng lan truyền"
+      ]
+    },
+    {
+      "summary": "Bệnh tiêm đọt sần do tuyến trùng Ditylenchus angustus gây ra, ký sinh ở đọt non và bông lúa đang hình thành. Bệnh làm lá non xuất hiện các chấm trắng, sau đó lá gục xuống và bông lúa bị cong, lép hoặc nghẹn.",
+      "full_text": "BỆNH TIÊM ĐỌT SẦN do tuyến trùng Ditylenchus angustus gây ra. Đây là loài tuyến trùng ký sinh trên các đọt non và bông lúa đang hình thành. Triệu chứng ban đầu là các chấm nhỏ hơi trắng xuất hiện trên những lá non nhất. Các chấm này lan rộng và làm cho toàn bộ lá bị gục xuống. Một số lá bị nhăn nheo và hầu hết các bông lúa trổ ra đều bị cong queo với hạt lép. Một số bông lúa còn bị nghẹn không trổ được. Bệnh có thể lan truyền qua nước từ ruộng này sang ruộng khác, đặc biệt phổ biến ở các ruộng lúa nước sâu.",
+      "sections": [
+        {
+          "heading": "Bệnh tiêm đọt sần",
+          "level": 1,
+          "text": "Bệnh tiêm đọt sần do tuyến trùng Ditylenchus angustus gây ra và ký sinh ở đọt non cũng như bông lúa đang hình thành."
+        },
+        {
+          "heading": "Triệu chứng",
+          "level": 2,
+          "text": "Triệu chứng ban đầu là các chấm trắng nhỏ trên lá non. Các chấm này lan rộng làm lá gục xuống, lá nhăn nheo và bông lúa bị cong, lép hoặc nghẹn."
+        },
+        {
+          "heading": "Lan truyền bệnh",
+          "level": 2,
+          "text": "Bệnh lan truyền qua nước từ ruộng này sang ruộng khác và thường xảy ra nhiều ở các ruộng lúa nước sâu."
+        }
+      ],
+      "key_phrases": [
+        "bệnh tiêm đọt sần",
+        "Ditylenchus angustus",
+        "tuyến trùng hại lúa",
+        "chấm trắng trên lá",
+        "lá lúa gục xuống",
+        "bông lúa cong",
+        "hạt lép",
+        "lan truyền qua nước"
+      ]
+    },
+    {
+      "summary": "Bệnh bướu rễ do tuyến trùng Meloidogyne graminicola tấn công cây lúa non trong ruộng khô, gây lá vàng cam rồi khô, tạo lõm vàng trong ruộng và rễ sưng thành bướu. Các loại tuyến trùng khác gồm tuyến trùng rễ, tuyến trùng chích rễ, tuyến trùng nang và tuyến trùng khô đầu lá cũng gây nhiều thiệt hại cho lúa.",
+      "full_text": "BỆNH BƯỚU RỄ do tuyến trùng Meloidogyne graminicola tấn công cây lúa non trong ruộng khô. Lá vàng cam, rồi khô, tạo nên những lõm màu vàng trong ruộng (Hình 107). Rễ cây bệnh bị sưng thành bướu. Những tuyến trùng khác gây thiệt hại tương tự. Tuyến trùng rễ làm rễ bị nâu (Hình 108), cây thấp lùn đồng loạt và ốm yếu. Tuyến trùng chích rễ (oot lesion nematode) gây triệu chứng vàng, lùn, ít chồi, mạ chết từng lõm. Tuyến trùng nang làm lá vàng, lúa lùn từng lõm, ít chồi và rễ nâu. Tuyến trùng khô đầu lá lưu truyền qua hột gây hại cho lúa và bông.",
+      "sections": [
+        {
+          "heading": "Bệnh bướu rễ và các loại tuyến trùng hại lúa",
+          "level": 1,
+          "text": "Bệnh bướu rễ do tuyến trùng Meloidogyne graminicola tấn công cây lúa non trong ruộng khô, gây ra lá vàng cam rồi khô, tạo những lõm màu vàng trong ruộng và rễ cây bệnh bị sưng thành bướu. Ngoài ra còn có các loại tuyến trùng khác gây thiệt hại: tuyến trùng rễ làm rễ bị nâu, cây thấp lùn đồng loạt và ốm yếu; tuyến trùng chích rễ gây vàng, lùn, ít chồi và mạ chết từng lõm; tuyến trùng nang làm lá vàng, lúa lùn từng lõm, ít chồi và rễ nâu; tuyến trùng khô đầu lá lưu truyền qua hột gây hại cho lúa và bông."
+        }
+      ],
+      "key_phrases": [
+        "bệnh bướu rễ",
+        "tuyến trùng Meloidogyne graminicola",
+        "ruộng khô",
+        "lá vàng cam",
+        "lõm màu vàng trong ruộng",
+        "rễ sưng thành bướu",
+        "tuyến trùng rễ",
+        "tuyến trùng chích rễ",
+        "tuyến trùng nang",
+        "tuyến trùng khô đầu lá",
+        "lưu truyền qua hột"
+      ]
+    },
+    {
+      "summary": "Cỏ chao hay cỏ lác mỡ (Cyperus difformis) là loài cỏ họ cói mọc thành bụi, thân tam giác cao 20–70 cm. Cây sinh sản bằng hạt và có cụm hoa dạng tán với nhiều gié nhỏ màu xanh lục.",
+      "full_text": "CỎ CHAO, CỎ LÁC MỠ (Cyperus difformis L.). Đây là loài cỏ mọc thành bụi với nhiều chồi, sống hằng năm, thân đứng thẳng, cao khoảng 20–70 cm. Thân có dạng tam giác, dày khoảng 1–4 mm. Bẹ lá có dạng hình ống và dính nhau ở gốc, phần dưới có màu vàng rơm đến nâu. Cây thường có ba lá mọc ở gốc, hẹp, thẳng, dài khoảng 10–40 cm và rộng 2–3 mm.\n\nCụm hoa mọc ở ngọn thân dưới dạng tán đơn hoặc tán kép, dày và có dạng hình cầu với đường kính khoảng 5–15 mm. Mỗi cụm hoa thường có 2–4 lá bắc, phổ biến là 3 lá bắc, dài khoảng 15–30 cm và rộng khoảng 6 mm. Trục hoa bậc nhất dài 2–4 cm và trục hoa bậc hai dài khoảng 1 cm. Các trục hoa có thể thẳng hoặc cong dài. Ở đầu các trục hoa có những cụm hình cầu hoặc hình xoan đường kính khoảng 6 mm. Các cụm này gồm nhiều gié hoa màu xanh lục, dài đến khoảng 2–5 mm và rộng 1–1,5 mm, mỗi cụm có khoảng 10–30 hoa.\n\nQuả là bế quả màu nâu, có dạng bầu dục hoặc thuôn dài, dài khoảng 0,6 mm. Cây sinh sản chủ yếu bằng hạt.",
+      "sections": [
+        {
+          "heading": "Cỏ chao (Cyperus difformis)",
+          "level": 1,
+          "text": "Cỏ chao hay cỏ lác mỡ là loài cỏ thuộc họ cói, mọc thành bụi với nhiều chồi và sống hằng năm. Thân đứng thẳng, có tiết diện tam giác và cao từ 20–70 cm."
+        },
+        {
+          "heading": "Đặc điểm hình thái",
+          "level": 2,
+          "text": "Thân cây tam giác, dày 1–4 mm. Lá hẹp, thẳng, dài 10–40 cm và rộng 2–3 mm. Bẹ lá hình ống và dính nhau ở gốc."
+        },
+        {
+          "heading": "Hoa và sinh sản",
+          "level": 2,
+          "text": "Cụm hoa dạng tán đơn hoặc kép, hình cầu với nhiều gié hoa màu xanh lục. Quả là bế quả màu nâu hình bầu dục dài khoảng 0,6 mm. Cây sinh sản bằng hạt."
+        }
+      ],
+      "key_phrases": [
+        "cỏ chao",
+        "cỏ lác mỡ",
+        "Cyperus difformis",
+        "cỏ họ cói",
+        "thân tam giác",
+        "cụm hoa dạng tán",
+        "cỏ dại ruộng lúa",
+        "sinh sản bằng hạt"
+      ]
+    },
+    {
+      "summary": "Cỏ lác rận (Cyperus iria L.) là loại cỏ 3 cạnh, hằng niên, cao 20-60cm, rễ sợi màu đỏ vàng. Phát hoa là tán kép với nhiều giẻ hoa nâu vàng đến xanh lục. Trái là bế quả nâu vàng hình thuần tam giác. Sinh sản bằng hột.",
+      "full_text": "CỎ LÁC RẬN (Cyperus iria L.) (Hình 111). Là loại cỏ 3 cạnh buội nhiều chồi, hằng niên, láng, thân tam giác cao 20-60cm. Rễ sợi màu đỏ vàng. Bẹ lá màng mỏng, bao gốc thân. Phiến hẹp, hình mũi giáo, rộng khoảng 5mm, ngắn hơn thân mang hoa. Phát hoa là tán kép với trục hoa bậc nhất dài khoảng 10cm và trục hoa bậc 2 dài khoảng 2cm, mọc từ 3-5, đôi khi 7, lá bắc (Hình 112). Lá bắc dưới cùng dài hơn phát hoa. Giẻ dài 2-4cm, mọc dài và rời ở đầu nhánh hoa. Nhiều giẻ hoa nâu vàng đến xanh lục đứng, xòe, dài 3-10mm, rộng 1,5-2mm. Đỉnh hình thuần dài 1-2mm. Trái là bế quả nâu vàng, hình thuần, tam giác, dài 1-1,5mm. Sinh sản bằng hột.",
+      "sections": [
+        {
+          "heading": "Cỏ lác rận (Cyperus iria L.)",
+          "level": 1,
+          "text": "Cỏ lác rận (Cyperus iria L.) là loại cỏ 3 cạnh, hằng niên, thân tam giác cao 20-60cm, rễ sợi màu đỏ vàng, bẹ lá màng mỏng bao gốc thân, phiến hẹp hình mũi giáo rộng khoảng 5mm ngắn hơn thân mang hoa. Phát hoa là tán kép với trục hoa bậc nhất dài khoảng 10cm, trục hoa bậc 2 dài khoảng 2cm, mọc từ 3-5 đôi khi 7 lá bắc. Giẻ dài 2-4cm, giẻ hoa nâu vàng đến xanh lục đứng xòe dài 3-10mm rộng 1,5-2mm. Trái là bế quả nâu vàng hình thuần tam giác dài 1-1,5mm. Sinh sản bằng hột."
+        }
+      ],
+      "key_phrases": [
+        "cỏ lác rận",
+        "Cyperus iria",
+        "cỏ 3 cạnh hằng niên",
+        "thân tam giác 20-60cm",
+        "rễ sợi đỏ vàng",
+        "phiến hẹp mũi giáo 5mm",
+        "tán kép",
+        "giẻ hoa nâu vàng xanh lục",
+        "bế quả nâu vàng tam giác",
+        "sinh sản bằng hột"
+      ]
+    },
+    {
+      "summary": "Cỏ cú (Cyperus rotundus) là loài cỏ họ cói sống lâu năm, thân tam giác cao khoảng 15–20 cm và sinh sản mạnh bằng thân rễ, củ và hạt. Cây có cụm hoa dạng tán với nhiều gié hoa màu nâu đỏ.",
+      "full_text": "CỎ CÚ (Cyperus rotundus L.). Đây là loài cỏ họ cói sống lâu năm, có thân đứng cao khoảng 15–20 cm. Thân không phân nhánh, nhẵn và có dạng tam giác. Ở gốc thân có các củ hình thành từ thân rễ. Thân rễ mọc lan, mảnh, trắng và xốp, được bao bọc bởi những lá hình vảy lúc non và dạng sợi khi già. Củ có dạng bất định, dài khoảng 1–2,5 cm; khi còn non có màu trắng, khi già trở nên dạng sợi và có màu nâu hoặc đen. Lá có màu xanh lục đậm, hẹp, mọc ở gốc, dài khoảng 5–15 cm và rộng đến 5 mm.\n\nCụm hoa mọc ở ngọn dưới dạng tán đơn hoặc tán kép từ 2–4 lá bắc. Hoa gồm nhiều gié hoa màu nâu đỏ ở đầu tán. Mỗi cụm có khoảng 3–8 trục hoa bậc nhất dài 2–5 cm, mang các gié hoa hoặc các nhánh hoa ngắn. Gié hoa dài khoảng 1–2,5 cm, rộng 1,5–2 mm và chứa khoảng 10–40 hoa nhỏ xếp khít nhau. Vảy ngoài dài khoảng 3–4 mm và có đầu tù.\n\nQuả là bế quả có dạng hình trứng hoặc hình trứng thuôn dài với ba góc, dài khoảng 1,5 mm khi chín. Cây sinh sản bằng thân rễ, củ và hạt.",
+      "sections": [
+        {
+          "heading": "Cỏ cú (Cyperus rotundus)",
+          "level": 1,
+          "text": "Cỏ cú là loài cỏ họ cói sống lâu năm với thân đứng dạng tam giác cao khoảng 15–20 cm. Cây có thân rễ mọc lan dưới đất và hình thành các củ ở gốc."
+        },
+        {
+          "heading": "Đặc điểm hình thái",
+          "level": 2,
+          "text": "Thân không phân nhánh, nhẵn và tam giác. Lá xanh đậm, hẹp và mọc ở gốc, dài 5–15 cm và rộng đến 5 mm. Củ có màu trắng khi non và chuyển sang nâu hoặc đen khi già."
+        },
+        {
+          "heading": "Hoa và sinh sản",
+          "level": 2,
+          "text": "Cụm hoa dạng tán đơn hoặc kép với nhiều gié hoa màu nâu đỏ. Quả là bế quả hình trứng có ba góc. Cây sinh sản bằng thân rễ, củ và hạt."
+        }
+      ],
+      "key_phrases": [
+        "cỏ cú",
+        "Cyperus rotundus",
+        "cỏ họ cói",
+        "thân tam giác",
+        "cỏ dại ruộng lúa",
+        "củ dưới đất",
+        "sinh sản bằng thân rễ",
+        "gié hoa nâu đỏ"
+      ]
+    },
+    {
+      "summary": "Cỏ túc hình nhỏ (Digitaria ciliaris) là cỏ hằng niên hoặc đa niên ngắn hạn, nằm mọc lan, cao 20-60cm, dễ phân nhánh. Phát hoa là chùm tụ tán có 3-8 chùm. Giẻ hoa xếp thành 2 hàng dọc. Trái là đỉnh quả hình bầu dục. Sinh sản bằng hột.",
+      "full_text": "CỎ TÚC HÌNH NHỎ (Digitaria ciliaris Retz. Koel.) (đồng danh: D. adscendesn [H.B.K] Henr.) (Hình 115). Cỏ hằng niên hoặc đa niên ngắn hạn, nằm, mọc lan, cao 20-60cm, dễ phân nhánh và mọc rễ từ những mắc dưới cùng. Bẹ thường có lông. Phiến dẹp hẹp, dài 5-15cm, rộng 3-8mm. Lá thường không lông, mép lá nhám, dợn sóng. Lá thìa là màng mỏng, tà đầu, dài 1-3mm. Phát hoa là chùm tụ tán có 3-8 chùm dài 5-15cm (Hình 116) thường mọc vòng quanh đỉnh của trục chính, nhưng đôi khi xếp dọc theo một trục chung ngắn, dài khoảng 2cm. Trục hoa mảnh, có cánh, không lông. Giẻ hoa xếp thành 2 hàng dọc theo một phía của trục hoa, dài khoảng 3mm. Đỉnh dưới hình tam giác dài khoảng 2mm, đỉnh trên hình mũi giáo dài 1/2 đến 4/5 so với giẻ hoa. Trấu dưới hình mũi giáo rộng, có 5 đến 7 gân, mang lông không đều. Trái là đỉnh quả hình bầu dục. Sinh sản bằng hột.",
+      "sections": [
+        {
+          "heading": "Cỏ túc hình nhỏ (Digitaria ciliaris)",
+          "level": 1,
+          "text": "Cỏ túc hình nhỏ (Digitaria ciliaris) còn có tên đồng danh D. adscendesn, là cỏ hằng niên hoặc đa niên ngắn hạn, nằm mọc lan, cao 20-60cm, dễ phân nhánh và mọc rễ từ những mắc dưới cùng. Bẹ thường có lông, phiến dẹp hẹp dài 5-15cm rộng 3-8mm, lá không lông mép nhám dợn sóng, lá thìa màng mỏng dài 1-3mm. Phát hoa là chùm tụ tán có 3-8 chùm dài 5-15cm mọc vòng quanh đỉnh trục chính. Giẻ hoa xếp thành 2 hàng dọc theo một phía của trục hoa dài khoảng 3mm, trấu dưới hình mũi giáo rộng có 5-7 gân mang lông không đều. Trái là đỉnh quả hình bầu dục, sinh sản bằng hột."
+        }
+      ],
+      "key_phrases": [
+        "cỏ túc hình nhỏ",
+        "Digitaria ciliaris",
+        "cỏ hằng niên đa niên",
+        "nằm mọc lan 20-60cm",
+        "bẹ có lông",
+        "phiến 5-15cm rộng 3-8mm",
+        "chùm tụ tán 3-8 chùm",
+        "giẻ hoa 2 hàng dọc",
+        "trấu dưới 5-7 gân",
+        "đỉnh quả bầu dục",
+        "sinh sản bằng hột"
+      ]
+    },
+    {
+      "summary": "Cỏ túc bình lớn (Digitaria setigera) là loài cỏ có hình thái nhỏ nhưng thường cao tới khoảng 1 m hoặc hơn. Cụm hoa gồm 5–6 chùm mọc xoắn dọc theo trục chung và dài đến khoảng 6 cm.",
+      "full_text": "CỎ TÚC BÌNH LỚN (Digitaria setigera Roth ex R&S). Loài cỏ này có hình dạng tương đối nhỏ nhưng có thể phát triển cao khoảng 1 m hoặc hơn. Bẹ lá thường không có lông. Cụm hoa gồm khoảng 5–6 chùm mọc xoắn dọc theo một trục chung, mỗi chùm có thể dài đến khoảng 6 cm. Phần đỉnh dưới của cụm hoa có thể có màu vàng hoặc chỉ còn lại một vảy nhỏ không gân.",
+      "sections": [
+        {
+          "heading": "Cỏ túc bình lớn (Digitaria setigera)",
+          "level": 1,
+          "text": "Cỏ túc bình lớn là loài cỏ có kích thước tương đối nhỏ nhưng thường cao tới khoảng 1 m hoặc hơn. Bẹ lá thường nhẵn và không có lông."
+        },
+        {
+          "heading": "Đặc điểm cụm hoa",
+          "level": 2,
+          "text": "Cụm hoa gồm khoảng 5–6 chùm mọc xoắn dọc theo một trục chung, mỗi chùm dài khoảng 6 cm. Phần dưới của cụm hoa có thể có màu vàng hoặc chỉ còn lại một vảy nhỏ không gân."
+        }
+      ],
+      "key_phrases": [
+        "cỏ túc bình lớn",
+        "Digitaria setigera",
+        "cỏ họ hòa thảo",
+        "cụm hoa chùm",
+        "cỏ dại ruộng lúa",
+        "cao khoảng 1 m"
+      ]
+    },
+    {
+      "summary": "Cỏ lồng vực nước (Echinochloa colona) là cỏ hòa bản, hằng niên, cao 70-75cm, thân dẹp gốc tím đỏ. Phát hoa màu xanh lục đến tím, là chùm tụ tán hướng lên hoặc cong xuống. Giẻ hoa hình trứng đến trứng rộng, mọc thành 4 hàng dọc. Trái là đỉnh quả hình bầu dục. Sinh sản bằng hột.",
+      "full_text": "CỎ LỒNG VỰC NƯỚC (Echinochloa colona (L.) Link) (Hình 118). Cỏ hòa bản buội nhiều chồi, hằng niên, láng, cao 70-75cm, thường nằm và mọc rễ từ những mắc dưới. Thân dẹp, gốc thường tím đỏ, hay phủ ở mắc. Bẹ láng và dẹp. Mép bẹ mở ở phía trên, hơi đỏ phía dưới. Phiến láng, dẹp, hình mũi giáo hẹp, hơi mềm, dài đến 25cm, rộng 3-7mm. Đôi khi có những vệt tím ngang trên phiến. Phát hoa màu xanh lục đến tím, là chùm tụ tán hướng lên dài 6-12cm có 4 đến 8 nhánh hoa ngắn, xếp khít dài 1-3cm rộng 3-4mm (Hình 119). Các nhánh hoa này hướng lên hoặc cong xuống phân nữa, thường có độc hoặc đôi khi hợp thành cặp. Các giẻ ngắn xếp xen trên trục chính. Giẻ hoa hình trứng đến trứng rộng, nhọn đầu, dài 2-3mm, mọc tụ thành 4 hàng dọc theo một phía của nhánh hoa. Giẻ hoa gần như không cọng, đôi khi có một lông gai nhọn dài khoảng 1mm. Trái là đỉnh quả hình bầu dục. Sinh sản bằng hột.",
+      "sections": [
+        {
+          "heading": "Cỏ lồng vực nước (Echinochloa colona)",
+          "level": 1,
+          "text": "Cỏ lồng vực nước (Echinochloa colona) là cỏ hòa bản, hằng niên, cao 70-75cm, thân dẹp gốc thường tím đỏ, bẹ láng và dẹp, phiến láng dẹp hình mũi giáo hẹp dài đến 25cm rộng 3-7mm, đôi khi có vệt tím ngang trên phiến. Phát hoa màu xanh lục đến tím là chùm tụ tán hướng lên dài 6-12cm có 4-8 nhánh hoa ngắn xếp khít dài 1-3cm rộng 3-4mm. Giẻ hoa hình trứng đến trứng rộng nhọn đầu dài 2-3mm mọc tụ thành 4 hàng dọc theo một phía nhánh hoa, gần như không cọng. Trái là đỉnh quả hình bầu dục, sinh sản bằng hột."
+        }
+      ],
+      "key_phrases": [
+        "cỏ lồng vực nước",
+        "Echinochloa colona",
+        "cỏ hòa bản hằng niên",
+        "cao 70-75cm",
+        "thân dẹp gốc tím đỏ",
+        "phiến mũi giáo hẹp 25cm",
+        "vệt tím ngang phiến",
+        "phát hoa xanh lục đến tím",
+        "chùm tụ tán 4-8 nhánh",
+        "giẻ hoa 4 hàng dọc",
+        "đỉnh quả bầu dục",
+        "sinh sản bằng hột"
+      ]
+    },
+    {
+      "summary": "Cỏ lồng vực tía lớn (Echinochloa crus-galli ssp. hispidula) là loài cỏ hòa bản hàng năm, thân cao tới 2 m với lá hẹp dài đến 40 cm. Cụm hoa dạng chùm tán dày màu hồng đến tím và cây sinh sản chủ yếu bằng hạt.",
+      "full_text": "CỎ LỒNG VỰC TÍA LỚN, CỎ LỒNG CÔNG (Echinochloa crus-galli (L.) Beauv. ssp. hispidula (Retz.) Honda). Đây là loài cỏ hòa bản hàng năm, mọc đứng, có bộ rễ dày. Thân xốp, cao có thể đến 2 m và gốc thân thường bị ép lại. Lá hẹp, dài đến khoảng 40 cm và rộng khoảng 5–15 mm.\n\nCụm hoa có màu hồng đến tím, đôi khi xanh lục, dạng chùm tán với các nhánh dài khoảng 10–25 cm, mang nhiều gié hoa dày đặc. Các nhánh hoa phía dưới thường dài nhất, có thể đạt đến 10 cm. Chùm hoa thường phân nhánh thêm khi chín và có thể mọc xòe ra. Trục của cụm hoa thường có lông. Gié hoa có dạng hình bầu dục, nhọn đầu, dài khoảng 3–3,5 mm và thường có ít lông, dễ rụng khi chín. Đỉnh dưới dài khoảng 1/3 đến 3/5 chiều dài của gié hoa. Lông gai thường có màu đỏ hoặc tím, dài khoảng 2,5 cm. Trấu của hoa đầu tiên có dạng dẹp hoặc hơi lồi và có đầu tù.\n\nQuả là dạng đỉnh quả dài khoảng 2 mm. Cây sinh sản chủ yếu bằng hạt.",
+      "sections": [
+        {
+          "heading": "Cỏ lồng vực tía lớn (Echinochloa crus-galli ssp. hispidula)",
+          "level": 1,
+          "text": "Cỏ lồng vực tía lớn là loài cỏ hòa bản hàng năm có thân cao tới khoảng 2 m, thân xốp và gốc thường bị ép lại. Lá hẹp, dài đến 40 cm và rộng khoảng 5–15 mm."
+        },
+        {
+          "heading": "Đặc điểm cụm hoa",
+          "level": 2,
+          "text": "Cụm hoa dạng chùm tán dày màu hồng đến tím hoặc xanh lục với các nhánh dài 10–25 cm. Các gié hoa hình bầu dục, dài khoảng 3–3,5 mm và thường mang ít lông."
+        },
+        {
+          "heading": "Sinh sản",
+          "level": 2,
+          "text": "Quả dài khoảng 2 mm và cây sinh sản chủ yếu bằng hạt."
+        }
+      ],
+      "key_phrases": [
+        "cỏ lồng vực tía lớn",
+        "cỏ lồng công",
+        "Echinochloa crus-galli",
+        "cỏ hòa bản",
+        "cỏ dại ruộng lúa",
+        "cụm hoa chùm tán",
+        "gié hoa",
+        "sinh sản bằng hạt"
+      ]
+    },
+    {
+      "summary": "Cỏ lồng vực tía nhỏ (Echinochloa glabrescens) tương tự cỏ lồng vực tía lớn nhưng chỉ cao 0,5-1m. Phiến nhọn đầu, bẹ thường khép kín và dẹp. Giẻ hoa hình trứng dài khoảng 3mm. Trấu của hoa đầu tiên lồi và bóng. Lông gai nếu có dài khoảng 1cm.",
+      "full_text": "CỎ LỒNG VỰC TÍA NHỎ (Echinochloa glabrescens Munro ex Hook F.) (Hình 122). Tương tự cỏ lồng vực tía lớn, nhưng chỉ cao 0,5-1m. Phiến nhọn đầu. Bẹ thường khép kín và dẹp. Giẻ hoa hình trứng, dài khoảng 3mm. Trấu của hoa đầu tiên lồi và bóng. Lông gai, nếu có dài khoảng 1cm.",
+      "sections": [
+        {
+          "heading": "Cỏ lồng vực tía nhỏ (Echinochloa glabrescens)",
+          "level": 1,
+          "text": "Cỏ lồng vực tía nhỏ (Echinochloa glabrescens Munro ex Hook F.) tương tự cỏ lồng vực tía lớn nhưng chỉ cao 0,5-1m. Phiến lá nhọn đầu, bẹ thường khép kín và dẹp. Giẻ hoa hình trứng dài khoảng 3mm. Trấu của hoa đầu tiên lồi và bóng. Lông gai nếu có dài khoảng 1cm."
+        }
+      ],
+      "key_phrases": [
+        "cỏ lồng vực tía nhỏ",
+        "Echinochloa glabrescens",
+        "cao 0,5-1m",
+        "phiến nhọn đầu",
+        "bẹ khép kín dẹp",
+        "giẻ hoa hình trứng 3mm",
+        "trấu hoa đầu tiên lồi bóng",
+        "lông gai 1cm"
+      ]
+    },
+    {
+      "summary": "Cỏ mần trầu (Eleusine indica) là loài cỏ hòa bản hàng năm, cao 30–90 cm, thân trơn và lá hẹp dài. Cụm hoa gồm nhiều gié mọc từ một gốc và cây sinh sản chủ yếu bằng hạt.",
+      "full_text": "CỎ MẦN TRẦU (Eleusine indica (L.) Gaertn.). Đây là loài cỏ hòa bản mọc thành bụi, thân trơn hoặc hơi có lông, sống hàng năm và thường mọc lan hướng lên. Cây cao khoảng 30–90 cm. Thân có màu trắng hoặc xanh lục nhạt, ít lông dài và các đốt thường mọc ở những mấu dưới cùng. Bẹ lá dài khoảng 6–9 cm, nhẵn và ít lông dài ở cổ lá. Phiến lá dẹp hoặc hơi gấp dọc theo hình mũi giáo hẹp, dài khoảng 10–30 cm và rộng 3–6 mm, mép lá hơi sóng và mặt trên có ít lông thưa. Lá thìa là màng mỏng có răng cưa, ở cổ lá mép lá có lông dài.\n\nCụm hoa phát triển từ một gốc và phân thành nhiều nhánh. Thường có 3–6 gié hoa dài khoảng 4–8 cm, rộng khoảng 3,6 mm và mọc vòng ở đầu trục hoa. Đôi khi có thêm 1–2 gié phụ ở phía dưới. Nhiều gié hoa không cong và không mang lông gai, dài khoảng 4–5 mm, dẹp và mọc thành hai hàng dọc theo mặt dưới của trục hoa.\n\nQuả là đỉnh quả màu nâu đỏ, dài khoảng 1,5 mm, có dạng hình trứng thuôn dài và có mũi rõ. Cây sinh sản chủ yếu bằng hạt.",
+      "sections": [
+        {
+          "heading": "Cỏ mần trầu (Eleusine indica)",
+          "level": 1,
+          "text": "Cỏ mần trầu là loài cỏ hòa bản hàng năm mọc thành bụi, thân trơn hoặc hơi có lông và cao khoảng 30–90 cm."
+        },
+        {
+          "heading": "Đặc điểm lá và thân",
+          "level": 2,
+          "text": "Lá dẹp, dài 10–30 cm, rộng 3–6 mm, mép lá hơi sóng và mặt trên có ít lông thưa. Thân có màu trắng hoặc xanh lục nhạt và ít lông."
+        },
+        {
+          "heading": "Cụm hoa và sinh sản",
+          "level": 2,
+          "text": "Cụm hoa gồm 3–6 gié hoa mọc vòng ở đầu trục. Quả là đỉnh quả màu nâu đỏ dài khoảng 1,5 mm. Cây sinh sản bằng hạt."
+        }
+      ],
+      "key_phrases": [
+        "cỏ mần trầu",
+        "Eleusine indica",
+        "cỏ hòa bản",
+        "cỏ dại ruộng lúa",
+        "gié hoa",
+        "lá hẹp dài",
+        "cỏ mọc thành bụi",
+        "sinh sản bằng hạt"
+      ]
+    },
+    {
+      "summary": "Cỏ chác (Fimbristylis miliacea) là cỏ buội hằng niên, đứng, cao 20-70cm, thân yếu gốc dẹp ngọn có 4-5 góc. Phát hoa là tán xòe dài 6-10cm với nhiều giẻ hoa cô độc màu nâu hoặc vàng rơm hình cầu. Trái là bế quả màu ngà đến nâu có 3 góc. Sinh sản bằng hột.",
+      "full_text": "CỎ CHÁC (Fimbristylis miliacea (L.) Vahl (cùng tên F. littoralis Gaud) (Hình 125). Cỏ là buội hằng niên, đứng, cao 20-70cm. Thân yếu, gốc dẹp, ngọn có 4-5 góc. Thân mang hoa dày 0,5-1,5mm có 2-4 lá bắc không bằng nhau, ngắn hơn phát hoa. Lá ở gốc dài đến 35mm, rộng 1-2,5mm có bẹ rộng xếp lợp. Lá ở thân có phiến rất ngắn. Phát hoa là tán xòe, dài 6-10cm, rộng 2,5-8cm. Nhiều giẻ hoa cô độc, màu nâu hoặc vàng rơm, hình cầu, đường kính 2-2,5mm (Hình 126). Trái là bế quả màu ngà đến nâu có 3 góc, dài 0,5-1mm, rộng 0,75mm, mỗi cạnh có 3 rãnh sâu. Sinh sản bằng hột.",
+      "sections": [
+        {
+          "heading": "Cỏ chác (Fimbristylis miliacea)",
+          "level": 1,
+          "text": "Cỏ chác (Fimbristylis miliacea) còn gọi là F. littoralis, là cỏ buội hằng niên đứng cao 20-70cm, thân yếu gốc dẹp ngọn có 4-5 góc. Thân mang hoa dày 0,5-1,5mm có 2-4 lá bắc ngắn hơn phát hoa. Lá ở gốc dài đến 35mm rộng 1-2,5mm có bẹ rộng xếp lợp, lá ở thân có phiến rất ngắn. Phát hoa là tán xòe dài 6-10cm rộng 2,5-8cm với nhiều giẻ hoa cô độc màu nâu hoặc vàng rơm hình cầu đường kính 2-2,5mm. Trái là bế quả màu ngà đến nâu có 3 góc dài 0,5-1mm rộng 0,75mm mỗi cạnh có 3 rãnh sâu. Sinh sản bằng hột."
+        }
+      ],
+      "key_phrases": [
+        "cỏ chác",
+        "Fimbristylis miliacea",
+        "F. littoralis",
+        "buội hằng niên 20-70cm",
+        "thân yếu gốc dẹp 4-5 góc",
+        "tán xòe 6-10cm",
+        "giẻ hoa hình cầu nâu vàng rơm",
+        "đường kính 2-2,5mm",
+        "bế quả 3 góc",
+        "3 rãnh sâu mỗi cạnh",
+        "sinh sản bằng hột"
+      ]
+    },
+    {
+      "summary": "Rau muống (Ipomoea aquatica) là loài cây thân bò sống lâu năm, thường mọc trên bùn hoặc nổi trên mặt nước. Cây có lá đơn, hoa màu trắng đến tím và sinh sản bằng hạt hoặc cành giâm.",
+      "full_text": "RAU MUỐNG (Ipomoea aquatica Forsk.). Đây là loài cây thân bò sống lâu năm và có thân nhẵn. Thân có thể bò trên bùn hoặc nổi trên mặt nước. Rễ mọc tại các đốt thân. Lá đơn, dài khoảng 7–15 cm và rộng khoảng 3,5 cm, thường có dạng hình trứng dài hoặc hình trái tim với đầu nhọn. Mép lá có thể nguyên hoặc có thùy. Cuống lá dài khoảng 2,5–15 cm. Hoa mọc đơn độc ở nách lá, có màu trắng, kem hoặc tím. Cuống hoa dài khoảng 5–15 cm.\n\nQuả là dạng nang hình xoan dài khoảng 1 cm, có hai ngăn và chứa khoảng bốn hạt. Hạt có màu nâu nhạt, dài khoảng 4 mm và rộng khoảng 5–7 mm, bề mặt nhẵn hoặc có nhiều lông ngắn màu xám. Cây sinh sản bằng hạt và bằng cành giâm.",
+      "sections": [
+        {
+          "heading": "Rau muống (Ipomoea aquatica)",
+          "level": 1,
+          "text": "Rau muống là loài cây thân bò sống lâu năm, thường mọc trên bùn hoặc nổi trên mặt nước. Rễ mọc từ các đốt thân."
+        },
+        {
+          "heading": "Đặc điểm hình thái",
+          "level": 2,
+          "text": "Lá đơn, dài 7–15 cm, có dạng hình trứng dài hoặc hình trái tim với đầu nhọn. Hoa mọc đơn ở nách lá, có màu trắng, kem hoặc tím."
+        },
+        {
+          "heading": "Sinh sản",
+          "level": 2,
+          "text": "Quả là dạng nang có hai ngăn chứa khoảng bốn hạt. Cây có thể sinh sản bằng hạt hoặc bằng cành giâm."
+        }
+      ],
+      "key_phrases": [
+        "rau muống",
+        "Ipomoea aquatica",
+        "cây thân bò",
+        "cây thủy sinh",
+        "hoa trắng tím",
+        "cây mọc trên bùn",
+        "sinh sản bằng hạt",
+        "cành giâm"
+      ]
+    },
+    {
+      "summary": "Cỏ mồm (Ischaemum rugosum) là cỏ hòa bản hằng niên, buội mọc mạnh, cao 0,6-1,2m với 2 chùm hoa. Phiến hình mũi giáo hẹp dài 10-30cm. Phát hoa chia làm 2 chùm dài 5-10cm. Trái là đỉnh quả nâu đỏ hình mũi giáo tròn dài nhọn đầu. Sinh sản bằng hột.",
+      "full_text": "CỎ MỒM (Ischaemum rugosum Salisb.) (Hình 129). Cỏ hòa bản hằng niên, buội, mọc mạnh, đứng, cao 0,6-1,2m với 2 chùm hoa gồm nhiều giẻ hoa có lông gai dài có ngắn. Thân tím có mắc mang lông. Thân mang hoa ở đốt có lông dài. Phiến hình mũi giáo hẹp, dài 10-30cm, rộng 5-13mm, có lông thưa ở 2 mặt. Bẹ xanh lục hoặc tím, mở, mép có lông. Phát hoa trưởng thành chia làm 2 chùm, dài 5-10cm (Hình 130). Giẻ hoa xanh lục-vàng dài đến 6mm, mọc thành cặp, một không cọng và một có cọng dài đến 6mm. Lông gai dài 1,5-2,5cm, mảnh, gốc hơi xoắn. Đỉnh dưới có 3-6 ngắn ngang. Trái là đỉnh quả nâu đỏ, hình mũi giáo tròn dài, nhọn đầu, dài 1,5-2mm. Sinh sản bằng hột.",
+      "sections": [
+        {
+          "heading": "Cỏ mồm (Ischaemum rugosum)",
+          "level": 1,
+          "text": "Cỏ mồm (Ischaemum rugosum Salisb.) là cỏ hòa bản hằng niên, buội mọc mạnh, đứng, cao 0,6-1,2m với 2 chùm hoa. Thân tím có mắc mang lông, thân mang hoa ở đốt có lông dài. Phiến hình mũi giáo hẹp dài 10-30cm rộng 5-13mm có lông thưa ở 2 mặt, bẹ xanh lục hoặc tím mở mép có lông. Phát hoa chia làm 2 chùm dài 5-10cm, giẻ hoa xanh lục-vàng dài đến 6mm mọc thành cặp, lông gai dài 1,5-2,5cm mảnh gốc hơi xoắn. Trái là đỉnh quả nâu đỏ hình mũi giáo tròn dài nhọn đầu dài 1,5-2mm. Sinh sản bằng hột."
+        }
+      ],
+      "key_phrases": [
+        "cỏ mồm",
+        "Ischaemum rugosum",
+        "cỏ hòa bản hằng niên",
+        "cao 0,6-1,2m",
+        "thân tím mắc lông",
+        "phiến mũi giáo 10-30cm",
+        "phát hoa 2 chùm 5-10cm",
+        "giẻ hoa xanh lục vàng 6mm",
+        "lông gai 1,5-2,5cm xoắn",
+        "đỉnh quả nâu đỏ 1,5-2mm",
+        "sinh sản bằng hột"
+      ]
+    },
+    {
+      "summary": "Cỏ đuôi phụng (Leptochloa chinensis) là loài cỏ hòa bản thủy sinh hoặc bán thủy sinh, cao khoảng 30 cm đến 1 m. Cây có cụm hoa dạng chùm tán màu xanh lục hoặc đỏ và sinh sản chủ yếu bằng hạt.",
+      "full_text": "CỎ ĐUÔI PHỤNG (Leptochloa chinensis [L.] Nees). Đây là loài cỏ hòa bản sống trong môi trường thủy sinh hoặc bán thủy sinh, mọc thành bụi và có thể là cây hàng năm hoặc đa niên ngắn hạn. Cây cao khoảng 30 cm đến 1 m và phân bố phổ biến ở Đông Á, Nam Á và Đông Nam Á. Thân cây mảnh đến khá dày, mọc hướng lên từ gốc phân nhánh. Lá và chùm hoa có thể chuyển sang màu đỏ hoặc tím khi già. Phiến lá hẹp, nhọn đầu, dài khoảng 10–30 cm và rộng 0,3–1 cm. Lá thìa dài khoảng 1–2 mm và bị xẻ sâu thành nhiều phần giống như lông.\n\nCụm hoa dạng chùm tán, màu xanh lục nhạt hoặc đỏ, có trục chính thẳng dài khoảng 10–40 cm. Nhiều nhánh hoa mọc ngang hoặc hơi xòe, dài khoảng 5–15 cm. Gié hoa dài khoảng 2,5–3,5 mm và thường có 4–6 hoa, phổ biến là 5 hoa, mỗi hoa có một cuống ngắn dài khoảng 0,5–0,7 mm.\n\nQuả là đỉnh quả hình bầu dục dài khoảng 0,8 mm. Cây sinh sản chủ yếu bằng hạt.",
+      "sections": [
+        {
+          "heading": "Cỏ đuôi phụng (Leptochloa chinensis)",
+          "level": 1,
+          "text": "Cỏ đuôi phụng là loài cỏ hòa bản thủy sinh hoặc bán thủy sinh mọc thành bụi, cao khoảng 30 cm đến 1 m và phân bố rộng ở các vùng nhiệt đới châu Á."
+        },
+        {
+          "heading": "Đặc điểm hình thái",
+          "level": 2,
+          "text": "Thân mọc thẳng từ gốc phân nhánh. Lá hẹp, nhọn đầu, dài 10–30 cm và rộng 0,3–1 cm. Lá thìa nhỏ và bị xẻ sâu thành nhiều phần giống lông."
+        },
+        {
+          "heading": "Hoa và sinh sản",
+          "level": 2,
+          "text": "Cụm hoa dạng chùm tán màu xanh lục nhạt hoặc đỏ với nhiều nhánh hoa dài 5–15 cm. Quả là đỉnh quả hình bầu dục dài khoảng 0,8 mm. Cây sinh sản bằng hạt."
+        }
+      ],
+      "key_phrases": [
+        "cỏ đuôi phụng",
+        "Leptochloa chinensis",
+        "cỏ hòa bản thủy sinh",
+        "cỏ dại ruộng lúa",
+        "cụm hoa chùm tán",
+        "lá hẹp dài",
+        "sinh sản bằng hạt"
+      ]
+    },
+    {
+      "summary": "Rau mác bao (Monochria vaginalis) là cỏ lá rộng, bán thủy sinh, hằng niên, cao 40-50cm. Thân ngắn, xốp, rễ rất ngắn. Lá bóng xanh lục sậm, hình trứng dài hoặc rộng, nhọn đầu, đáy hình tim hoặc tròn dài 10-15cm. Phát hoa là giề dài 3-6cm. Trái là nang dài khoảng 1cm, sinh sản bằng hột.",
+      "full_text": "Rau mác bao (Monochria vaginalis [Burm. f.] Presl.) (Hình 133) — Cỏ lá rộng, bán thủy sinh, hằng niên, cao 40-50cm. Loại cỏ đơn tử diệp này có thân ngắn, xốp, rễ rất ngắn. Lá bóng, xanh lục sậm, hình trứng dài hoặc rộng, nhọn đầu. Đáy lá hình tim hoặc tròn dài 10-15cm, rộng 3-5cm. Cuống lá dài, mềm, bọng, dài 10-20cm, nhiều gân dọc. Phát hoa là giề dài 3-6cm có ít hoa màu xanh dài khoảng 1cm mọc ở một bẹ có dạng như lá. Cuống hoa ngắn hơn 1cm (Hình 134). Trái là nang dài khoảng 1cm, khai làm 3 mảnh. Nhiều hột tròn dài, khoảng 1mm. Sinh sản bằng hột.",
+      "sections": [
+        {
+          "heading": "Rau mác bao",
+          "level": 1,
+          "text": "Rau mác bao (Monochria vaginalis) là cỏ lá rộng, bán thủy sinh, hằng niên, cao 40-50cm. Thân ngắn, xốp, rễ rất ngắn. Lá bóng, xanh lục sậm, hình trứng dài hoặc rộng, nhọn đầu, đáy hình tim hoặc tròn dài 10-15cm, rộng 3-5cm, cuống lá dài 10-20cm, nhiều gân dọc. Phát hoa là giề dài 3-6cm, hoa màu xanh dài khoảng 1cm, cuống hoa ngắn hơn 1cm. Trái là nang dài khoảng 1cm, khai làm 3 mảnh, nhiều hột tròn dài khoảng 1mm, sinh sản bằng hột."
+        }
+      ],
+      "key_phrases": [
+        "rau mác bao",
+        "Monochria vaginalis",
+        "cỏ lá rộng bán thủy sinh",
+        "hằng niên cao 40-50cm",
+        "thân ngắn xốp rễ ngắn",
+        "lá xanh lục sậm hình trứng",
+        "phát hoa giề 3-6cm",
+        "trái nang 1cm",
+        "sinh sản bằng hột"
+      ]
+    },
+    {
+      "summary": "Lúa hoang (Oryza sativa L.) là loài có quan hệ rất gần với lúa trồng và có thể lai tự nhiên với lúa. Hạt của nhiều kiểu sinh thái lúa hoang dễ rụng trước khi chín và có thời gian ngủ dài trong đất.",
+      "full_text": "LÚA HOANG (Oryza sativa L.). Loài này có quan hệ rất gần với lúa trồng nên có thể xảy ra hiện tượng tạp giao tự nhiên. Tuy nhiên, khác với lúa trồng, hạt của phần lớn các kiểu sinh thái lúa hoang thường rụng trước khi chín và cụm hoa dạng chùm tụ tán vẫn đứng thẳng. Một số kiểu sinh thái lúa hoang có hạt không rụng và chùm tụ tán cong xuống.\n\nGié hoa có thể có lông gai (râu) hoặc không có, và chiều dài của lông gai thay đổi rất nhiều. Khi chín, hạt thường có màu rơm hoặc sẫm. Vỏ trấu (vỏ hạt gạo) có thể có nhiều màu khác nhau từ xám đến đỏ tùy theo mức độ chín của hạt.\n\nHạt lúa hoang có thời gian ngủ dài khi nằm trong đất. Tuy nhiên, nếu được gặt, đập và phơi giống như lúa trồng thì thời gian ngủ này sẽ bị phá vỡ.",
+      "sections": [
+        {
+          "heading": "Đặc điểm chung",
+          "level": 1,
+          "text": "Lúa hoang có quan hệ gần với lúa trồng và có khả năng lai tự nhiên với lúa."
+        },
+        {
+          "heading": "Đặc điểm hạt và chùm hoa",
+          "level": 2,
+          "text": "Hạt thường rụng trước khi chín, chùm hoa đứng thẳng hoặc cong xuống. Gié hoa có thể có râu hoặc không."
+        },
+        {
+          "heading": "Đặc điểm sinh học",
+          "level": 2,
+          "text": "Hạt có thời gian ngủ dài trong đất nhưng có thể bị phá vỡ khi được thu hoạch và xử lý như lúa trồng."
+        }
+      ],
+      "key_phrases": [
+        "lúa hoang",
+        "Oryza sativa",
+        "lai tự nhiên với lúa trồng",
+        "hạt rụng trước khi chín",
+        "thời gian ngủ của hạt",
+        "chùm hoa tụ tán"
+      ]
+    },
+    {
+      "summary": "Cỏ xà bông (Sphenoclea zeylanica) là cỏ lá rộng, hằng niên, nhiều thân phân nhánh, lăng, xốp bọng, mập, cao 0,3-1,5m. Lá đơn xếp xoắn ốc, tròn dài hình mũi giáo. Phát hoa là giế màu xanh lục hình trụ. Trái là nang hình cầu, sinh sản bằng hột.",
+      "full_text": "Cỏ xà bông (Sphenoclea zeylanica Gaertn.) (Hình 136) — Cỏ lá rộng, hằng niên, nhiều thân phân nhánh, lăng, xốp bọng, mập, cao 0,3-1,5m. Lá đơn, xếp xoắn ốc, tròn dài đến hình mũi giáo, dài đến 10cm, rộng 3cm. Lá hẹp dần đến nhọn ở đầu. Cuống lá ngắn và mép lá nguyên. Phát hoa là giế màu xanh lục hình trụ, dày, dài đến 7,5cm, rộng 12mm trên một trục hoa dài đến 8cm. Nhiều hoa trắng đến lục sậm mọc chụm, dài khoảng 2,5mm, rộng 2,5mm (Hình 137). Trái là nang hình cầu rộng 4-5mm, khai ngang. Nhiều hột màu nâu vàng, dài 0,5mm. Sinh sản bằng hột.",
+      "sections": [
+        {
+          "heading": "Cỏ xà bông",
+          "level": 1,
+          "text": "Cỏ xà bông (Sphenoclea zeylanica) là cỏ lá rộng, hằng niên, nhiều thân phân nhánh, xốp bọng, mập, cao 0,3-1,5m. Lá đơn xếp xoắn ốc, tròn dài đến hình mũi giáo, dài đến 10cm, rộng 3cm, cuống ngắn, mép nguyên. Phát hoa là giế xanh lục hình trụ dài đến 7,5cm, rộng 12mm, nhiều hoa trắng đến lục sậm mọc chụm dài và rộng khoảng 2,5mm. Trái là nang hình cầu rộng 4-5mm, khai ngang, nhiều hột nâu vàng dài 0,5mm, sinh sản bằng hột."
+        }
+      ],
+      "key_phrases": [
+        "cỏ xà bông",
+        "Sphenoclea zeylanica",
+        "cỏ lá rộng hằng niên",
+        "cao 0,3-1,5m",
+        "thân xốp bọng mập",
+        "lá hình mũi giáo",
+        "phát hoa hình trụ xanh lục",
+        "trái nang hình cầu",
+        "sinh sản bằng hột"
+      ]
+    },
+    {
+      "summary": "Thiếu đạm làm cây lúa sinh trưởng kém, lá vàng nhạt và cây lùn. Nếu thiếu đạm kéo dài đến giai đoạn trổ hoặc chín thì số hạt trên bông sẽ giảm.",
+      "full_text": "THIẾU ĐẠM (Hình 138) — Triệu chứng thiệt hại thay đổi tùy theo nhu cầu về đạm ở từng giai đoạn sinh trưởng của cây lúa. Thiếu đạm ở giai đoạn đầu làm cho lá trở nên vàng đến xanh lợt, cây lùn lại và mọc thẳng đứng, kém nở bụi (Hình 139). Nếu cây vẫn thiếu đạm cho đến giai đoạn lúa chín, số hạt trên bông sẽ giảm.\n\nTrong trường hợp đủ đạm trong giai đoạn đầu, nhưng sau đó lại thiếu thì những lá dưới bị vàng nhưng lá non vẫn còn xanh bình thường. Cả ruộng lúa sẽ trở nên vàng đều.\n\nLúa dư đạm có thể bị đổ ngã và dễ nhiễm bệnh.",
+      "sections": [
+        {
+          "heading": "Biểu hiện khi thiếu đạm",
+          "level": 1,
+          "text": "Lá lúa chuyển vàng hoặc xanh nhạt, cây lùn, sinh trưởng kém và đẻ nhánh ít."
+        },
+        {
+          "heading": "Ảnh hưởng đến năng suất",
+          "level": 1,
+          "text": "Thiếu đạm kéo dài đến giai đoạn trổ hoặc chín sẽ làm giảm số hạt trên bông và giảm năng suất."
+        },
+        {
+          "heading": "Thiếu đạm ở giai đoạn sau",
+          "level": 1,
+          "text": "Khi thiếu đạm sau giai đoạn đầu, lá già bị vàng còn lá non vẫn xanh; ruộng lúa thường có màu vàng đồng đều."
+        },
+        {
+          "heading": "Tác hại của dư đạm",
+          "level": 1,
+          "text": "Bón quá nhiều đạm làm cây lúa dễ bị đổ ngã và tăng nguy cơ nhiễm bệnh."
+        }
+      ],
+      "key_phrases": [
+        "thiếu đạm ở lúa",
+        "lá lúa vàng nhạt",
+        "cây lúa lùn",
+        "giảm số hạt trên bông",
+        "bón thừa đạm",
+        "đổ ngã và nhiễm bệnh"
+      ]
+    },
+    {
+      "summary": "Thiếu lân thể hiện bằng sự kém nở bụi, cây lùn lại, hạt lép nhiều. Lá lúa thiếu lân thường có màu xanh đậm, mọc thẳng hơn lá bình thường, lá già có thể trở màu vàng cam hoặc hơi tím. Sự thiếu lân có thể xảy ra trên đất rất chua, đất phèn, đất than bùn và đất kiềm.",
+      "full_text": "Thiếu lân (Hình 140) — Thể hiện bằng sự kém nở bụi, cây lùn lại, hạt lép nhiều. Lá lúa thiếu lân thường có màu xanh đậm, mọc thẳng hơn lá bình thường. Có những giống lúa, lá già trở nên màu vàng cam hoặc hơi tím (hình 141). Sự thiếu lân có thể xảy ra trên đất rất chua, đất phèn, đất than bùn, và đất kiềm. Chất lân dễ hòa tan trong đất ngập nước hơn đất khô.",
+      "sections": [
+        {
+          "heading": "Thiếu lân",
+          "level": 1,
+          "text": "Thiếu lân thể hiện qua triệu chứng kém nở bụi, cây lùn lại và hạt lép nhiều. Lá lúa thiếu lân thường có màu xanh đậm, mọc thẳng hơn lá bình thường; ở một số giống lúa, lá già trở màu vàng cam hoặc hơi tím. Sự thiếu lân có thể xảy ra trên đất rất chua, đất phèn, đất than bùn và đất kiềm. Chất lân dễ hòa tan trong đất ngập nước hơn đất khô."
+        }
+      ],
+      "key_phrases": [
+        "thiếu lân",
+        "kém nở bụi",
+        "cây lùn hạt lép",
+        "lá xanh đậm mọc thẳng",
+        "lá già vàng cam hoặc hơi tím",
+        "đất chua đất phèn đất than bùn đất kiềm",
+        "lân hòa tan đất ngập nước"
+      ]
+    },
+    {
+      "summary": "Thiếu kali làm lá lúa chuyển màu vàng hoặc vàng nâu, bắt đầu từ chóp lá già và lan xuống gốc. Thiếu nặng có thể làm hạt lúa nhỏ hơn bình thường và thường xảy ra trên đất cát, đất than bùn hoặc đất có khả năng cố định kali cao.",
+      "full_text": "THIẾU KALI (Hình 142) — Trường hợp chỉ hơi thiếu kali, lá lúa có màu xanh đậm, hơi kém nở bụi và hơi lùn lại. Nếu thiếu trầm trọng, lá trở màu vàng cam đến vàng nâu bắt đầu từ chóp lá già lan dần xuống dưới gốc. Có thể có nhiều đốm nâu trên phiến lá. Hạt lúa có thể nhỏ hơn bình thường.\n\nSự thiếu kali thường thấy trên đất thô, cát, và than bùn hoặc trên đất sét có khả năng cố định cao chất kali.",
+      "sections": [
+        {
+          "heading": "Triệu chứng thiếu kali nhẹ",
+          "level": 1,
+          "text": "Lá lúa có màu xanh đậm hơn bình thường, cây hơi lùn và khả năng đẻ nhánh giảm."
+        },
+        {
+          "heading": "Triệu chứng thiếu kali nặng",
+          "level": 1,
+          "text": "Lá chuyển sang vàng cam hoặc vàng nâu, bắt đầu từ chóp lá già rồi lan dần xuống gốc; có thể xuất hiện các đốm nâu trên phiến lá."
+        },
+        {
+          "heading": "Ảnh hưởng đến năng suất",
+          "level": 1,
+          "text": "Thiếu kali làm hạt lúa phát triển kém, kích thước hạt nhỏ hơn bình thường."
+        },
+        {
+          "heading": "Điều kiện đất dễ thiếu kali",
+          "level": 1,
+          "text": "Hiện tượng thiếu kali thường gặp ở đất cát, đất thô, đất than bùn hoặc đất sét có khả năng cố định kali cao."
+        }
+      ],
+      "key_phrases": [
+        "thiếu kali ở lúa",
+        "lá lúa vàng cam",
+        "đốm nâu trên lá lúa",
+        "hạt lúa nhỏ",
+        "thiếu kali trên đất cát",
+        "thiếu kali trên đất than bùn"
+      ]
+    },
+    {
+      "summary": "Thiếu lưu huỳnh thể hiện bằng sự mất màu của những lá non, tiếp theo lá già trở nên vàng, cây lùn lại và giảm nở bụi. Khác với thiếu đạm chỉ ảnh hưởng lá già, thiếu lưu huỳnh ảnh hưởng toàn thân cây lúa. Sự thiếu lưu huỳnh thường thấy ở vùng đất ẩm ướt có ít hữu cơ.",
+      "full_text": "Thiếu lưu huỳnh (Hình 143) — Thể hiện bằng sự mất màu của những lá non tiếp theo đó những lá già trở nên vàng, cây lùn lại và giảm nở bụi. Khi thiếu lưu huỳnh toàn thân cây lúa bị ảnh hưởng, khác với trường hợp thiếu đạm chỉ ảnh hưởng lá già. Sự thiếu lưu huỳnh thường thấy ở các vùng đất ẩm ướt có ít hữu cơ. Khi đất đó bị ngập nước, sun-phát (hòa tan) sẽ chuyển hóa thành sun-phít (không hòa tan) làm cho sự thiếu lưu huỳnh càng nặng hơn.",
+      "sections": [
+        {
+          "heading": "Thiếu lưu huỳnh",
+          "level": 1,
+          "text": "Thiếu lưu huỳnh thể hiện qua sự mất màu của lá non, lá già trở vàng, cây lùn và giảm nở bụi. Khác với thiếu đạm chỉ ảnh hưởng lá già, thiếu lưu huỳnh ảnh hưởng toàn thân cây lúa. Thường gặp ở vùng đất ẩm ướt ít hữu cơ. Khi đất bị ngập nước, sun-phát (hòa tan) chuyển thành sun-phít (không hòa tan) làm thiếu lưu huỳnh càng nặng hơn."
+        }
+      ],
+      "key_phrases": [
+        "thiếu lưu huỳnh",
+        "mất màu lá non",
+        "lá già trở vàng",
+        "cây lùn giảm nở bụi",
+        "ảnh hưởng toàn thân cây",
+        "khác với thiếu đạm",
+        "đất ẩm ướt ít hữu cơ",
+        "sun-phát chuyển thành sun-phít",
+        "đất ngập nước"
+      ]
+    },
+    {
+      "summary": "Thiếu silic làm lá lúa cong rũ, giảm khả năng hấp thụ ánh sáng và làm năng suất giảm. Silic giúp lá đứng thẳng, tăng hiệu quả quang hợp và tăng khả năng chống chịu sâu bệnh cho cây lúa.",
+      "full_text": "THIẾU SILIC (Hình 144) — Triệu chứng điển hình là các lá cong rũ, làm giảm sự hấp thụ ánh sáng nên năng suất cũng giảm. Trái lại nếu đầy đủ chất silic, lá lúa mọc thẳng hơn và sử dụng ánh sáng hữu hiệu hơn. Chất silic cũng có thể giúp cây lúa tăng khả năng kháng một số bệnh và côn trùng. Nếu lá lúa chứa dưới 5% silic chứng tỏ có sự thiếu silic.",
+      "sections": [
+        {
+          "heading": "Triệu chứng thiếu silic",
+          "level": 1,
+          "text": "Lá lúa cong rũ xuống làm giảm khả năng nhận ánh sáng và giảm hiệu quả quang hợp."
+        },
+        {
+          "heading": "Vai trò của silic đối với cây lúa",
+          "level": 1,
+          "text": "Silic giúp lá lúa mọc thẳng, tăng khả năng sử dụng ánh sáng và cải thiện khả năng quang hợp."
+        },
+        {
+          "heading": "Khả năng chống chịu sâu bệnh",
+          "level": 1,
+          "text": "Cây lúa có đủ silic sẽ tăng khả năng kháng một số bệnh và côn trùng gây hại."
+        },
+        {
+          "heading": "Ngưỡng xác định thiếu silic",
+          "level": 1,
+          "text": "Nếu hàm lượng silic trong lá lúa thấp hơn 5% thì được xem là cây lúa đang thiếu silic."
+        }
+      ],
+      "key_phrases": [
+        "thiếu silic ở lúa",
+        "lá lúa cong rũ",
+        "vai trò của silic trong lúa",
+        "silic giúp lúa chống sâu bệnh",
+        "quang hợp của lúa",
+        "thiếu silic dưới 5%"
+      ]
+    },
+    {
+      "summary": "Thiếu kẽm xuất hiện 2-4 tuần sau khi sạ cấy, lá non mới trổ ra có màu trắng, lá già có đốm nâu lan dần làm cả lá trở màu nâu. Cây lúa hầu như ngừng phát triển, có thể chết nếu thiếu trầm trọng. Sự thiếu kẽm thường thấy trên đất có nhiều vôi, đất kiềm, than bùn, đất núi lửa và đất ẩm ướt.",
+      "full_text": "Thiếu kẽm (Hình 145) — Triệu chứng xuất hiện 2-4 tuần sau khi sạ cấy, khi sống lá non mới trổ ra có màu trắng, nhất là gần cổ lá. Trên phiến lá già thường có những đốm nâu. Những đốm nâu này lan dần ra làm cho cả lá lúa trở màu nâu (Hình 146). Cây lúa hầu như ngừng phát triển. Trường hợp thiếu kẽm trầm trọng, cây lúa sẽ chết. Nếu thiếu vừa, lúa sẽ trổ chậm và giảm năng suất. Sự thiếu kẽm thường thấy trên đất có nhiều vôi, đất kiềm, than bùn, đất núi lửa, và đất ẩm ướt. Loại trầm thủy hậu như suốt năm. Sự thiệt hại càng trầm trọng khi đất được bón thêm nhiều đạm và lân.",
+      "sections": [
+        {
+          "heading": "Thiếu kẽm",
+          "level": 1,
+          "text": "Thiếu kẽm xuất hiện 2-4 tuần sau khi sạ cấy với triệu chứng lá non mới trổ có màu trắng gần cổ lá, lá già có đốm nâu lan dần làm cả lá trở màu nâu. Cây lúa hầu như ngừng phát triển; thiếu trầm trọng có thể gây chết cây; thiếu vừa làm lúa trổ chậm và giảm năng suất. Thường gặp trên đất nhiều vôi, đất kiềm, than bùn, đất núi lửa và đất ẩm ướt. Thiệt hại càng nặng khi đất được bón thêm nhiều đạm và lân."
+        }
+      ],
+      "key_phrases": [
+        "thiếu kẽm",
+        "triệu chứng 2-4 tuần sau sạ cấy",
+        "lá non màu trắng gần cổ lá",
+        "đốm nâu trên lá già",
+        "cây ngừng phát triển",
+        "thiếu trầm trọng cây chết",
+        "trổ chậm giảm năng suất",
+        "đất nhiều vôi đất kiềm than bùn đất núi lửa",
+        "bón nhiều đạm và lân làm nặng hơn"
+      ]
+    },
+    {
+      "summary": "Thiệt hại do mặn làm chóp lá lúa khô trắng và cuộn lại, lá chuyển màu nâu xám, cây sinh trưởng chậm và nở bụi kém. Hiện tượng này thường xảy ra ở vùng khô hạn, thiếu nước hoặc ở đất phù sa ven biển và cửa sông bị nhiễm mặn.",
+      "full_text": "THIỆT HẠI VÌ MẶN (Hình 147) — Triệu chứng gồm có chóp lá non bị khô trắng và cuộn lại, lá bìa nâu xám, sự tăng trưởng và nở bụi bị đình trệ (Hình 148). Ảnh hưởng mặn thường xảy ra ở các vùng khô hạn, khó tiêu nước và lượng nước bốc hơi nhiều hơn lượng nước mưa. Đất mặn ẩm ướt thường là đất phù sa ở đồng bằng, cửa sông và vùng ngập mặn duyên hải.",
+      "sections": [
+        {
+          "heading": "Triệu chứng thiệt hại do mặn",
+          "level": 1,
+          "text": "Chóp lá non bị khô trắng và cuộn lại, mép lá chuyển màu nâu xám; cây lúa sinh trưởng chậm và khả năng đẻ nhánh giảm."
+        },
+        {
+          "heading": "Điều kiện dễ xảy ra mặn",
+          "level": 1,
+          "text": "Thiệt hại do mặn thường xảy ra ở vùng khô hạn, nơi khó tiêu nước và nơi lượng nước bốc hơi cao hơn lượng nước mưa."
+        },
+        {
+          "heading": "Khu vực đất thường bị mặn",
+          "level": 1,
+          "text": "Đất mặn thường xuất hiện ở các vùng đồng bằng phù sa, khu vực cửa sông và các vùng ven biển bị ngập mặn."
+        }
+      ],
+      "key_phrases": [
+        "thiệt hại do mặn ở lúa",
+        "đất nhiễm mặn",
+        "chóp lá khô trắng",
+        "lá lúa nâu xám",
+        "đất phù sa cửa sông",
+        "đất ngập mặn ven biển"
+      ]
+    },
+    {
+      "summary": "Thiệt hại vì đất kiềm biểu hiện qua sự đổi màu lá từ trắng đến nâu đỏ từ chóp lá trở xuống. Ở các giống dễ bị nhiễm, cả lá bị đổi màu làm cả cây lúa bị xơ xác, kém nở bụi và lùn lại. Đất kiềm thường gặp ở vùng hơi khô hạn và thường liên quan với đất mặn. Đất kiềm nặng có thể thiếu lân.",
+      "full_text": "Thiệt hại vì đất kiềm (Hình 149) — Biểu hiện qua sự đổi màu lá từ trắng đến nâu đỏ từ chóp lá trở xuống. Ở các giống dễ bị nhiễm, có thể cả lá bị đổi màu nên cả cây lúa bị xơ xác (Hình 150), kém nở buội và lùn lại. Đất kiềm thường gặp ở các vùng hơi khô hạn, và thường liên quan với đất mặn. Đất kiềm nặng có thể thiếu lân.",
+      "sections": [
+        {
+          "heading": "Thiệt hại vì đất kiềm",
+          "level": 1,
+          "text": "Thiệt hại vì đất kiềm biểu hiện qua sự đổi màu lá từ trắng đến nâu đỏ từ chóp lá trở xuống. Ở các giống dễ bị nhiễm, cả lá bị đổi màu làm cây lúa xơ xác, kém nở bụi và lùn lại. Đất kiềm thường gặp ở vùng hơi khô hạn và liên quan với đất mặn. Đất kiềm nặng có thể gây thiếu lân."
+        }
+      ],
+      "key_phrases": [
+        "thiệt hại đất kiềm",
+        "đổi màu lá trắng đến nâu đỏ",
+        "chóp lá trở xuống",
+        "cây lúa xơ xác",
+        "kém nở bụi lùn lại",
+        "đất kiềm vùng khô hạn",
+        "liên quan đất mặn",
+        "đất kiềm nặng thiếu lân"
+      ]
+    },
+    {
+      "summary": "Nhiễm độc sắt ở lúa biểu hiện bằng các đốm nâu nhỏ trên lá già bắt đầu từ chóp lá, sau đó lan ra làm lá chuyển màu nâu, tím, vàng hoặc cam. Hiện tượng này thường xảy ra ở đất chưa ngập nước, đặc biệt trên đất Oxisols, Ultisols, đất hữu cơ và đất phèn, gây giảm năng suất lúa.",
+      "full_text": "NHIỄM ĐỘC VÌ SẮT (Hình 151) — Biểu hiện qua những đốm nâu nhỏ trên các lá già, từ chóp lá trở xuống. Lần lần các lá trở màu nâu, bầm tím, vàng, hoặc màu cam (Hình 152). Trường hợp bị nhiễm độc nặng, tất cả các lá trở nên nâu, và những lá già bị rụi sớm. Cây lúa lùn lại và kém nở bụi, rễ thưa màu nâu đậm và quằn queo.\n\nSự nhiễm độc sắt thường xảy ra khi đất chưa bị ngập nước cho ra nhiều ion sắt. Đó là nguyên nhân chính làm giảm năng suất lúa trồng trên đất thuộc bộ Oxisols, Ultisols, đất hữu cơ, và đất phèn.",
+      "sections": [
+        {
+          "heading": "Triệu chứng nhiễm độc sắt",
+          "level": 1,
+          "text": "Xuất hiện các đốm nâu nhỏ trên lá già, bắt đầu từ chóp lá và lan dần xuống. Lá chuyển màu nâu, tím, vàng hoặc cam; trường hợp nặng toàn bộ lá trở nâu và lá già bị rụi sớm."
+        },
+        {
+          "heading": "Ảnh hưởng đến cây lúa",
+          "level": 1,
+          "text": "Cây lúa bị lùn, đẻ nhánh kém, hệ rễ thưa và có màu nâu đậm, thường bị cong hoặc quằn."
+        },
+        {
+          "heading": "Điều kiện gây nhiễm độc",
+          "level": 1,
+          "text": "Thường xảy ra khi đất chưa được ngập nước, làm giải phóng nhiều ion sắt. Hiện tượng phổ biến trên các loại đất Oxisols, Ultisols, đất hữu cơ và đất phèn."
+        }
+      ],
+      "key_phrases": [
+        "nhiễm độc sắt ở lúa",
+        "đốm nâu trên lá lúa",
+        "đất Oxisols Ultisols",
+        "ngộ độc sắt trong đất",
+        "lá lúa chuyển màu nâu tím",
+        "giảm năng suất lúa"
+      ]
+    },
+    {
+      "summary": "Nhiễm độc trên đất hữu cơ có thể làm cho cây lúa lùn lại, kém nở bụi, lá trở màu vàng hoặc nâu và hạt bị lép nhiều. Đất than bùn hoặc hữu cơ chứa nhiều mùn thường chua, thiếu chất kẽm và đồng.",
+      "full_text": "Đất hữu cơ (Hình 153) — Nhiễm độc trên đất hữu cơ có thể làm cho cây lúa lùn lại, kém nở bụi, lá trở màu vàng hoặc nâu, và hạt bị lép nhiều. Đất than bùn, hoặc hữu cơ, chứa nhiều mùn, thường chua, thiếu chất kẽm và đồng.",
+      "sections": [
+        {
+          "heading": "Đất hữu cơ",
+          "level": 1,
+          "text": "Nhiễm độc trên đất hữu cơ có thể làm cây lúa lùn lại, kém nở bụi, lá trở màu vàng hoặc nâu và hạt bị lép nhiều. Đất than bùn hoặc hữu cơ chứa nhiều mùn thường chua, thiếu chất kẽm và đồng."
+        }
+      ],
+      "key_phrases": [
+        "đất hữu cơ",
+        "nhiễm độc đất hữu cơ",
+        "cây lúa lùn kém nở bụi",
+        "lá vàng hoặc nâu",
+        "hạt lép nhiều",
+        "đất than bùn",
+        "đất chua",
+        "thiếu kẽm và đồng"
+      ]
+    },
+    {
+      "summary": "Nhiễm độc boron ở lúa biểu hiện bằng sự đổi màu vàng dọc theo mép lá bắt đầu từ chóp lá và lan xuống. Các đốm nâu lớn hình bầu dục xuất hiện dọc mép lá, phần bị nhiễm độc chuyển nâu và chết; hiện tượng này thường xảy ra trên đất duyên hải, vùng khô ráo hoặc đất tưới nước chứa nhiều boron.",
+      "full_text": "NHIỄM ĐỘC VÌ CHẤT BORON (Hình 154) — Biểu hiện qua sự đổi màu vàng dọc theo các bìa lá bắt đầu từ chóp lá trở xuống. Nhiều đốm nâu lớn hình bầu dục đồng thời xuất hiện dọc bìa lá (Hình 155). Những phần bị nhiễm độc trở màu nâu và chết. Chỉ khi nào bị nhiễm độc nặng cây mới giảm tăng trưởng. Sự nhiễm độc vì boron xảy ra trên đất duyên hải, đất vùng khô ráo, hoặc trên đất tưới nước chứa nhiều boron, và vùng địa nhiệt.",
+      "sections": [
+        {
+          "heading": "Triệu chứng",
+          "level": 1,
+          "text": "Mép lá chuyển màu vàng bắt đầu từ chóp lá và lan dần xuống. Xuất hiện các đốm nâu lớn hình bầu dục dọc theo mép lá; các vùng bị nhiễm độc sau đó chuyển nâu và chết."
+        },
+        {
+          "heading": "Ảnh hưởng đến cây lúa",
+          "level": 1,
+          "text": "Trong trường hợp nhiễm độc nhẹ cây ít bị ảnh hưởng, nhưng nếu nhiễm độc nặng sẽ làm giảm sự sinh trưởng và phát triển của cây."
+        },
+        {
+          "heading": "Điều kiện xuất hiện",
+          "level": 1,
+          "text": "Thường gặp trên đất vùng duyên hải, đất khô hạn, đất được tưới bằng nguồn nước chứa nhiều boron hoặc ở các khu vực địa nhiệt."
+        }
+      ],
+      "key_phrases": [
+        "nhiễm độc boron ở lúa",
+        "lá lúa vàng mép",
+        "đốm nâu mép lá lúa",
+        "đất nhiễm boron",
+        "ngộ độc vi lượng boron",
+        "triệu chứng boron trên lúa"
+      ]
+    },
+    {
+      "summary": "Nhiễm độc vì nhôm biểu hiện qua những đốm bạc màu hoặc vàng giữa các gân lá, lá bị khô và chết đi, rễ lúa ngắn và quăn queo, cây lùn lại. Sự nhiễm độc nhôm xảy ra vì lượng nhôm trao đổi hoặc hòa tan quá cao, thường gặp ở lúa nước trồng trên đất phèn và lúa rẫy trồng trên đất chua mặn.",
+      "full_text": "Nhiễm độc vì nhôm (Hình 156) — Biểu hiện qua những đốm bạc màu hoặc vàng giữa các gân lá. Lá bị khô và chết đi (Hình 157). Rễ lúa ngắn và quăn queo. Cây lùn lại. Sự nhiễm độc nhôm xảy ra vì lượng nhôm trao đổi hoặc nhôm hòa tan quá cao làm giảm tăng trưởng của cây lúa nước trồng trên đất phèn và lúa rẫy trồng trên đất chua mặn.",
+      "sections": [
+        {
+          "heading": "Nhiễm độc vì nhôm",
+          "level": 1,
+          "text": "Nhiễm độc vì nhôm biểu hiện qua đốm bạc màu hoặc vàng giữa các gân lá, lá bị khô và chết đi, rễ lúa ngắn và quăn queo, cây lùn lại. Nguyên nhân do lượng nhôm trao đổi hoặc hòa tan quá cao, thường gặp ở lúa nước trồng trên đất phèn và lúa rẫy trồng trên đất chua mặn."
+        }
+      ],
+      "key_phrases": [
+        "nhiễm độc nhôm",
+        "đốm bạc màu hoặc vàng giữa gân lá",
+        "lá khô và chết",
+        "rễ ngắn quăn queo",
+        "cây lùn lại",
+        "nhôm trao đổi hòa tan quá cao",
+        "đất phèn",
+        "đất chua mặn",
+        "lúa nước lúa rẫy"
+      ]
+    },
+    {
+      "summary": "Nhiễm độc do chất mặn-ngăn ở lúa biểu hiện bằng các đốm nâu trên lá già, đầu lá bị khô và tỷ lệ hạt lép tăng. Cây vẫn sinh trưởng gần như bình thường nhưng hiện tượng này thường xuất hiện trên lúa rẫy trồng ở đất chua.",
+      "full_text": "NHIỄM ĐỘC VÌ CHẤT MẶN-NGĂN (Hình 158) — Biểu hiện qua những đốm nâu trên các lá già, đầu lá bị khô và hạt lép nhiều. Cây tăng trưởng gần như bình thường. Sự nhiễm độc mặn-ngăn thường xảy ra trên lúa rẫy trồng trên đất chua.",
+      "sections": [
+        {
+          "heading": "Triệu chứng",
+          "level": 1,
+          "text": "Các lá già xuất hiện những đốm nâu; đầu lá bị khô. Tỷ lệ hạt lép tăng mặc dù cây vẫn phát triển gần như bình thường."
+        },
+        {
+          "heading": "Ảnh hưởng đến năng suất",
+          "level": 1,
+          "text": "Số hạt lép tăng làm giảm năng suất, dù sinh trưởng sinh dưỡng của cây không bị ảnh hưởng nhiều."
+        },
+        {
+          "heading": "Điều kiện xuất hiện",
+          "level": 1,
+          "text": "Thường gặp ở lúa rẫy trồng trên đất chua, nơi các chất mặn-ngăn trong đất gây ảnh hưởng đến cây lúa."
+        }
+      ],
+      "key_phrases": [
+        "nhiễm độc mặn ngăn",
+        "đốm nâu trên lá già lúa",
+        "đầu lá khô",
+        "hạt lép nhiều",
+        "lúa rẫy trên đất chua",
+        "ngộ độc đất đối với lúa"
+      ]
+    }
+  ]
+}
