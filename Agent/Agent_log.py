@@ -1,15 +1,25 @@
 """
-Agent_log.py — Thin compatibility wrapper.
+Agent_log.py — Version with full logging enabled.
 
-This file previously contained a separate copy of the agent with logging.
-Agent.py now includes full structured logging, so this module simply
-re-exports everything from Agent.py.
+Same agent as Agent.py but with INFO-level logs visible in console.
+Use this for debugging / monitoring the agent pipeline.
 
 Usage:
-    from Agent.Agent_log import app   # works the same as before
+    from Agent.Agent_log import app   # logs visible
+    # vs
+    from Agent.Agent import app       # logs suppressed
 """
 
-from Agent.Agent import (  # noqa: F401
+import logging
+
+# Enable INFO logging BEFORE importing Agent (so logger picks it up)
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(name)s: %(message)s",
+    force=True,  # override Agent.py's WARNING-level config
+)
+
+from Agent import (  # noqa: F401, E402
     app,
     AgentState,
     test_pg_connection,
@@ -17,33 +27,23 @@ from Agent.Agent import (  # noqa: F401
     PG_HOST,
     PG_PORT,
     PG_DB,
-    LMSTUDIO_MODEL,
-    LMSTUDIO_BASE_URL,
+    OPENAI_MODEL,
     logger,
 )
 
+# Ensure the agent logger is set to INFO
+logger.setLevel(logging.INFO)
+
 if __name__ == "__main__":
-    # Delegate to the main agent entry point
-    from Agent.Agent import (
-        test_pg_connection as _check,
-        app as _app,
-    )
-    import logging as _logging
-
-    _logging.basicConfig(
-        level=_logging.INFO,
-        format="%(asctime)s [%(levelname)s] %(name)s: %(message)s",
-    )
-
     print("=" * 60)
-    print("  LangGraph Agent (via Agent_log wrapper)")
+    print("  LangGraph Agent (LOG MODE)")
     print("  DB: PostgreSQL @ %s:%s/%s" % (PG_HOST, PG_PORT, PG_DB))
-    print("  LLM: %s @ %s" % (LMSTUDIO_MODEL, LMSTUDIO_BASE_URL))
+    print("  LLM: %s (OpenAI)" % OPENAI_MODEL)
     print("=" * 60)
 
-    if not _check():
+    if not test_pg_connection():
         print(
-            "\n⚠️  Could not verify the 'dapchatbot' table.\n"
+            "\n⚠️  Could not verify the 'diseases' table.\n"
             "    Make sure Docker is running (docker compose up -d)\n"
             "    and embeddings/embedd.py has been executed.\n"
         )
@@ -62,7 +62,7 @@ if __name__ == "__main__":
             break
 
         try:
-            out = _app.invoke({"question": q, "chat_history": chat_history})
+            out = app.invoke({"question": q, "chat_history": chat_history})
             answer = out.get("answer", "(no answer)")
             print("\nAgent:", answer, "\n")
             chat_history.append({"role": "user", "content": q})

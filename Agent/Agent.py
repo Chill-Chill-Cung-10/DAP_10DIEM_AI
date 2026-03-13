@@ -8,7 +8,6 @@ from datetime import datetime
 from typing import TypedDict, List, Optional, Dict, Any
 
 import hashlib
-from functools import lru_cache
 
 import psycopg2
 import psycopg2.extras
@@ -19,11 +18,11 @@ from langchain_openai import ChatOpenAI
 from FlagEmbedding import BGEM3FlagModel
 
 # ---------------------------
-# Logging
+# Logging (quiet by default — use Agent_log.py to see full logs)
 # ---------------------------
 logger = logging.getLogger(__name__)
 logging.basicConfig(
-    level=logging.INFO,
+    level=logging.WARNING,
     format="%(asctime)s [%(levelname)s] %(name)s: %(message)s",
 )
 
@@ -44,8 +43,8 @@ if LANGSMITH_API_KEY:
 else:
     logger.info("LangSmith tracing disabled (no LANGCHAIN_API_KEY)")
 
-LMSTUDIO_BASE_URL = os.getenv("LMSTUDIO_BASE_URL", "http://localhost:1234/v1")
-LMSTUDIO_MODEL = os.getenv("LMSTUDIO_MODEL", "gemma-3n-e4b")
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
+OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4.1-mini")
 
 PG_HOST = os.getenv("PG_HOST", "localhost")
 PG_PORT = int(os.getenv("PG_PORT", "5432"))
@@ -54,12 +53,11 @@ PG_PASS = os.getenv("PG_PASS", "postgres")
 PG_DB   = os.getenv("PG_DB", "demo_db")
 
 # ---------------------------
-# LLM (LM Studio – OpenAI-compatible)
+# LLM (OpenAI API)
 # ---------------------------
 llm = ChatOpenAI(
-    base_url=LMSTUDIO_BASE_URL,
-    api_key="lm-studio",
-    model=LMSTUDIO_MODEL,
+    api_key=OPENAI_API_KEY,
+    model=OPENAI_MODEL,
     temperature=0.2,
     timeout=60,
 )
@@ -166,7 +164,7 @@ class Document:
 # Embedding cache (LRU via OrderedDict)
 # ---------------------------
 _embedding_cache: OrderedDict[str, list] = OrderedDict()
-_EMBEDDING_CACHE_MAX = 200
+_EMBEDDING_CACHE_MAX = 500
 
 
 def _get_embedding(text: str) -> list:
@@ -248,86 +246,151 @@ def pgvector_search(
     logger.info("Hybrid search returned %d docs for: %s", len(docs), query[:80])
     return docs
 
-def _normalize_for_match(text: str) -> str:
-    """Lowercase, strip punctuation & collapse whitespace for exact matching."""
-    text = re.sub(r'[^\w\s]', '', text, flags=re.UNICODE)
-    text = re.sub(r'\s+', ' ', text).strip().lower()
+
+def _normalize_question_text(text: str) -> str:
+    text = unicodedata.normalize("NFC", text or "")
+    text = re.sub(r"^\s*câu\s*hỏi\s*\d+\s*:\s*", "", text, flags=re.IGNORECASE)
+    text = re.sub(r"[^\w\s]", " ", text, flags=re.UNICODE)
+    text = re.sub(r"\s+", " ", text).strip().lower()
     return text
 
 
-def exact_match_search(question: str):
-    normalized = _normalize_for_match(question)
+def _strip_vietnamese_accents(text: str) -> str:
+    text = text.replace("đ", "d").replace("Đ", "D")
+    text = unicodedata.normalize("NFD", text)
+    text = "".join(ch for ch in text if unicodedata.category(ch) != "Mn")
+    return unicodedata.normalize("NFC", text)
+
+
+# Pre-compiled regex patterns for canonicalization (performance)
+_CANONICAL_PREFIX_PATTERNS = tuple(re.compile(p) for p in (
+    r"^cho\s+(toi|minh|em|anh|chi|ad|admin)\s+(hoi|biet)\s+",
+    r"^xin\s+(hoi|cho\s+biet|tu\s+van)\s+",
+    r"^toi\s+muon\s+(hoi|biet)\s+",
+    r"^minh\s+muon\s+(hoi|biet)\s+",
+    r"^giai\s+thich\s+cho\s+(toi|minh|em|anh|chi)\s+",
+    r"^tu\s+van\s+giu?p\s+(toi|minh|em|anh|chi)\s+",
+    r"^cho\s+(toi|minh|em|anh|chi)\s+hoi\s+ve\s+",
+    r"^quy\s+dinh\s+(phap\s+luat\s+)?ve\s+",
+    r"^theo\s+quy\s+dinh\s+(cua\s+)?phap\s+luat\s+(viet\s+nam\s+)?ve\s+",
+    r"^theo\s+luat\s+(viet\s+nam\s+)?ve\s+",
+    r"^thong\s+tin\s+ve\s+",
+    r"^noi\s+ve\s+",
+))
+
+_CANONICAL_SUFFIX_PATTERNS = tuple(re.compile(p) for p in (
+    r"\s+la\s+gi\s*$",
+    r"\s+la\s+sao\s*$",
+    r"\s+nhu\s+the\s+nao\s*$",
+    r"\s+ra\s+sao\s*$",
+    r"\s+duoc\s+khong\s*$",
+    r"\s+khong\s*$",
+    r"\s+ntn\s*$",
+    r"\s+nhe\s*$",
+    r"\s+a\s*$",
+    r"\s+ah\s*$",
+))
+
+_CANONICAL_NOISE_PATTERNS = tuple(re.compile(p) for p in (
+    r"\bphap\s+luat\b",
+    r"\bquy\s+dinh\b",
+    r"\btai\s+viet\s+nam\b",
+    r"\bo\s+viet\s+nam\b",
+    r"\bve\s+viec\b",
+    r"\blien\s+quan\s+den\b",
+    r"\bdoi\s+voi\b",
+    r"\btrong\s+truong\s+hop\b",
+    r"\bcho\s+biet\b",
+    r"\bxin\s+hoi\b",
+    r"\btu\s+van\b",
+    r"\bgiai\s+thich\b",
+))
+
+_CANONICAL_STOPWORDS = {
+    "cho", "toi", "minh", "em", "anh", "chi", "biet", "hoi",
+    "xin", "tu", "van", "giai", "thich", "giup", "dum", "nhe",
+    "a", "ah", "la", "gi", "nhu", "the", "nao", "ra", "sao",
+    "duoc", "khong", "ve", "tai", "o", "viet", "nam", "theo",
+    "cua", "noi", "thong", "tin", "lien", "quan", "den", "doi",
+    "voi", "trong", "truong", "hop", "viec",
+}
+
+
+def _canonicalize_question_text(text: str) -> str:
+    text = _normalize_question_text(text)
+    text = _strip_vietnamese_accents(text)
+    text = text.replace("ntn", "nhu the nao")
+
+    for pattern in _CANONICAL_PREFIX_PATTERNS:
+        text = pattern.sub("", text)
+
+    for pattern in _CANONICAL_SUFFIX_PATTERNS:
+        text = pattern.sub("", text)
+
+    for pattern in _CANONICAL_NOISE_PATTERNS:
+        text = pattern.sub(" ", text)
+
+    text = re.sub(r"\s+", " ", text).strip()
+
+    tokens = [token for token in text.split() if token not in _CANONICAL_STOPWORDS]
+    return " ".join(tokens)
+
+
+# ---------------------------
+# DB Question Key Cache (lazy-loaded, avoids re-computing on every lookup)
+# ---------------------------
+_db_question_cache: Optional[List[Dict[str, str]]] = None
+_db_question_cache_time: float = 0
+_DB_CACHE_TTL = 300  # 5 minutes
+
+
+def _get_db_question_cache() -> List[Dict[str, str]]:
+    """Load and cache DB questions with their normalized/canonical keys.
+    Cache is refreshed every 5 minutes to pick up DB changes."""
+    global _db_question_cache, _db_question_cache_time
+    import time
+    now = time.time()
+    
+    if _db_question_cache is not None and (now - _db_question_cache_time) < _DB_CACHE_TTL:
+        return _db_question_cache
+    
     conn = get_pg_connection()
     try:
         cur = conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
-
-        cur.execute(
-            """
-            SELECT question, answer
-            FROM   dapchatbot
-            WHERE  LOWER(TRIM(
-                     regexp_replace(
-                       regexp_replace(question, '[^[:alnum:][:space:]]', '', 'g'),
-                       '[[:space:]]+', ' ', 'g'
-                     )
-                   )) = %s
-            LIMIT  1
-            """,
-            (normalized,)
-        )
-
-        row = cur.fetchone()
+        cur.execute("SELECT question, answer FROM dapchatbot")
+        rows = cur.fetchall()
         cur.close()
-
-        return row
-
     finally:
         put_pg_connection(conn)
+    
+    cache = []
+    for row in rows:
+        cache.append({
+            "question": row["question"],
+            "answer": row["answer"],
+            "normalized": _normalize_question_text(row["question"]),
+            "canonical": _canonicalize_question_text(row["question"]),
+        })
+    
+    _db_question_cache = cache
+    _db_question_cache_time = now
+    logger.info("DB question cache refreshed: %d entries", len(cache))
+    return cache
 
 
-def trigram_search(question: str, threshold: float = 0.45):
-    """Find the best match using pg_trgm trigram similarity.
-
-    Returns the top row if similarity >= threshold, else None.
-    Requires: CREATE EXTENSION IF NOT EXISTS pg_trgm;
-    """
-    normalized = _normalize_for_match(question)
-    conn = get_pg_connection()
+def exact_db_lookup(question: str) -> Optional[Dict[str, str]]:
+    """Fast DB lookup using cached canonical keys."""
     try:
-        cur = conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
-        cur.execute(
-            """
-            SELECT question,
-                   answer,
-                   similarity(
-                     LOWER(TRIM(
-                       regexp_replace(
-                         regexp_replace(question, '[^[:alnum:][:space:]]', '', 'g'),
-                         '[[:space:]]+', ' ', 'g'
-                       )
-                     )),
-                     %s
-                   ) AS sim
-            FROM   dapchatbot
-            WHERE  similarity(
-                     LOWER(TRIM(
-                       regexp_replace(
-                         regexp_replace(question, '[^[:alnum:][:space:]]', '', 'g'),
-                         '[[:space:]]+', ' ', 'g'
-                       )
-                     )),
-                     %s
-                   ) >= %s
-            ORDER  BY sim DESC
-            LIMIT  1
-            """,
-            (normalized, normalized, threshold),
-        )
-        row = cur.fetchone()
-        cur.close()
-        return row
-    finally:
-        put_pg_connection(conn)
+        normalized = _normalize_question_text(question)
+        canonical = _canonicalize_question_text(question)
+        
+        for row in _get_db_question_cache():
+            if row["normalized"] == normalized or row["canonical"] == canonical:
+                return {"question": row["question"], "answer": row["answer"]}
+        return None
+    except Exception as e:
+        logger.warning("exact_db_lookup failed: %s", e)
+        return None
 
 
 # ---------------------------
@@ -345,8 +408,10 @@ class AgentState(TypedDict):
     plan: Optional[List[str]]
     evidence: Optional[List[str]]
     answer: Optional[str]
+    answer_source: Optional[str]
     verification: Optional[str]
     retry_count: Optional[int]  # verification retry counter
+    direct_quality: Optional[str]  # "good" or "insufficient"
 
 
 # ---------------------------
@@ -451,15 +516,15 @@ _KNOWLEDGE_KEYWORDS = re.compile(
 
 def intent_router(state: AgentState) -> AgentState:
     """
-    Routing:
-      1. Keyword detection (nhanh, không cần LLM) cho greeting / system_info
-      2. Keyword detection for knowledge_query (legal / analytical terms)
-      3. Fallback: length-based heuristic (>150 chars → knowledge, else → direct)
+    Routing đơn giản:
+      1. Greeting / system_info → keyword
+      2. Mọi câu hỏi khác → query (đi qua direct_answer trước,
+         nếu không đủ info → fallback sang knowledge_query)
     """
     question = state["question"]
     q_stripped = unicodedata.normalize("NFC", question.strip())
 
-    # --- Bước 1: Keyword detection (nhanh, chắc chắn) ---
+    # --- Greeting / System info ---
     if _GREETING_PATTERNS.match(q_stripped):
         logger.info("Router → greeting")
         return {**state, "intent": "greeting", "entities": []}
@@ -468,20 +533,9 @@ def intent_router(state: AgentState) -> AgentState:
         logger.info("Router → direct_system_info")
         return {**state, "intent": "direct_system_info", "entities": []}
 
-    # --- Bước 2: Keyword detection for complex/legal queries ---
-    if _KNOWLEDGE_KEYWORDS.search(q_stripped):
-        logger.info("Router → knowledge_query (keyword match)")
-        return {**state, "intent": "knowledge_query", "entities": []}
-
-    # --- Bước 3: Length-based fallback ---
-    WHITEBOX_THRESHOLD = 150
-    if len(q_stripped) > WHITEBOX_THRESHOLD:
-        intent = "knowledge_query"
-    else:
-        intent = "direct_answer"
-
-    logger.info("Router → %s (length=%d)", intent, len(q_stripped))
-    return {**state, "intent": intent, "entities": []}
+    # --- Mọi câu hỏi khác → thử direct_answer trước ---
+    logger.info("Router → query (unified path)")
+    return {**state, "intent": "query", "entities": []}
 
 
 def system_info_node(state: AgentState) -> AgentState:
@@ -505,33 +559,9 @@ def system_info_node(state: AgentState) -> AgentState:
         answer = f"Bây giờ là {now}. Tôi có thể giúp gì thêm cho bạn?"
     return {**state, "answer": answer}
 
-def exact_match_node(state: AgentState) -> AgentState:
-
-    row = exact_match_search(state["question"])
-
-    if row:
-        return {
-            **state,
-            "answer": row["answer"],
-            "intent": "exact_answer"
-        }
-
-    return state
-
-
-def trigram_match_node(state: AgentState) -> AgentState:
-    """Tầng 1.5: trigram fuzzy match — bắt lỗi chính tả & biến thể nhỏ."""
-    row = trigram_search(state["question"], threshold=0.45)
-    if row:
-        return {
-            **state,
-            "answer": row["answer"],
-            "intent": "trigram_answer",
-        }
-    return state
-
 
 def query_rewriter(state: AgentState) -> AgentState:
+    logger.info("Entering knowledge pipeline via query_rewriter")
     history_text = _chat_history_text(state)
     history_block = f"\nLịch sử hội thoại:\n{history_text}\n" if history_text else ""
     prompt = (
@@ -549,7 +579,7 @@ def query_rewriter(state: AgentState) -> AgentState:
     content = _safe_llm_invoke(prompt, fallback="")
     data = safe_json_loads(content, {"rewritten_query": state["question"]})
     logger.info("Rewritten query: %s", data.get("rewritten_query", "")[:80])
-    return {**state, **data}
+    return {**state, **data, "answer_source": "knowledge_pipeline"}
 
 
 def rag_lookup(state: AgentState) -> AgentState:
@@ -560,33 +590,13 @@ def rag_lookup(state: AgentState) -> AgentState:
     return {**state, "docs": docs}
 
 
-def relevance_judge(state: AgentState) -> AgentState:
-    """Deterministic relevance check based on max similarity score (no LLM)."""
-    docs = state.get("docs") or []
-    if docs:
-        max_sim = max(d.metadata.get("similarity", 0) for d in docs)
-    else:
-        max_sim = 0.0
-    relevance = "high" if max_sim >= 0.6 else "low"
-    return {**state, "relevance": relevance}
-
-
 def topic_judge(state: AgentState) -> AgentState:
-    prompt = (
-        "Classify the topic of this question.\n"
-        'Return ONLY JSON: {"topic": "legal"} or {"topic": "other"}.\n\n'
-        "Example 1:\n"
-        "Question: Điều kiện thành lập công ty TNHH theo Luật Doanh nghiệp 2020?\n"
-        '{"topic": "legal"}\n\n'
-        "Example 2:\n"
-        "Question: Thời tiết hôm nay thế nào?\n"
-        '{"topic": "other"}\n\n'
-        f"Question: {state['question']}"
-    )
-    content = _safe_llm_invoke(prompt, fallback='{"topic": "other"}')
-    data = safe_json_loads(content, {"topic": "other"})
-    logger.info("Topic: %s", data.get("topic"))
-    return {**state, **data}
+    """Deterministic topic classification — no LLM call needed.
+    Questions routed here already matched _KNOWLEDGE_KEYWORDS (legal terms),
+    so they are legal by definition."""
+    topic = "legal" if _KNOWLEDGE_KEYWORDS.search(state["question"]) else "other"
+    logger.info("Topic: %s (deterministic)", topic)
+    return {**state, "topic": topic}
 
 
 def answer_draft(state: AgentState) -> AgentState:
@@ -663,9 +673,53 @@ def greeting_node(state: AgentState) -> AgentState:
 
 
 def direct_answer_node(state: AgentState) -> AgentState:
-    """Simple RAG-based answer: retrieve docs and respond directly."""
+    """RAG-based answer: retrieve docs → check relevance → respond.
+    Sets 'direct_quality' = 'good' nếu tìm được docs liên quan,
+    'insufficient' nếu không đủ info → fallback sang knowledge pipeline."""
     query = state.get("rewritten_query") or state["question"]
-    docs = pgvector_search(query, k=15, similarity_threshold=0.45)
+
+    exact_row = exact_db_lookup(query)
+    if exact_row:
+        logger.info("Direct answer: exact DB match found")
+        doc = Document(
+            page_content=(
+                f"Câu hỏi: {exact_row['question']}\n"
+                f"Trả lời: {exact_row['answer']}"
+            ),
+            metadata={
+                "question": exact_row["question"],
+                "answer": exact_row["answer"],
+                "similarity": 1.0,
+                "vec_sim": 1.0,
+                "text_rank": 1.0,
+                "match_type": "exact_db",
+            },
+        )
+        return {
+            **state,
+            "docs": [doc],
+            "answer": exact_row["answer"],
+            "answer_source": "direct_answer",
+            "direct_quality": "good",
+        }
+
+    docs = state.get("docs") or pgvector_search(
+        query, k=5, similarity_threshold=0.45,
+    )
+
+    # Check relevance: nếu không có docs hoặc similarity thấp → insufficient
+    if not docs:
+        logger.info("Direct answer: no docs found → insufficient")
+        return {**state, "docs": [], "direct_quality": "insufficient"}
+
+    max_vec = max(d.metadata.get("vec_sim", 0) for d in docs)
+    max_hybrid = max(d.metadata.get("similarity", 0) for d in docs)
+    logger.info("Direct answer: max_vec=%.4f, max_hybrid=%.4f, n_docs=%d", max_vec, max_hybrid, len(docs))
+    if max_vec < 0.5:
+        logger.info("Direct answer: max_vec=%.3f < 0.50 → insufficient", max_vec)
+        return {**state, "docs": docs, "direct_quality": "insufficient"}
+
+    # Đủ info → generate answer
     state_with_docs = {**state, "docs": docs}
     n_found = len(docs)
     context = _docs_context(state_with_docs)
@@ -683,29 +737,14 @@ def direct_answer_node(state: AgentState) -> AgentState:
         f"Câu hỏi: {state['question']}"
     )
     content = _safe_llm_invoke(prompt, fallback="Xin lỗi, đã xảy ra lỗi khi xử lý câu hỏi.")
-    logger.info("Direct answer generated (%d chars) from %d docs", len(content), n_found)
-    return {**state, "docs": docs, "answer": content}
-
-
-def direct_query_rewriter(state: AgentState) -> AgentState:
-    """Lightweight query rewriter for the direct_answer path."""
-    history_text = _chat_history_text(state)
-    history_block = f"\nLịch sử hội thoại:\n{history_text}\n" if history_text else ""
-    prompt = (
-        "Viết lại câu hỏi sau thành một truy vấn tìm kiếm ngắn gọn bằng tiếng Việt, "
-        "tối ưu cho việc tìm kiếm semantic trong cơ sở dữ liệu pháp luật.\n"
-        "Giữ nguyên các thuật ngữ pháp lý quan trọng. "
-        'Trả về CHỈ JSON.\n\n'
-        "Ví dụ:\n"
-        "Câu hỏi: Quyền của người tiêu dùng theo pháp luật Việt Nam?\n"
-        '{"rewritten_query": "quyền người tiêu dùng pháp luật Việt Nam"}\n\n'
-        f"{history_block}"
-        f"Câu hỏi: {state['question']}"
-    )
-    content = _safe_llm_invoke(prompt, fallback="")
-    data = safe_json_loads(content, {"rewritten_query": state["question"]})
-    logger.info("Direct rewrite: %s", data.get("rewritten_query", "")[:80])
-    return {**state, **data}
+    logger.info("Direct answer: good (max_vec=%.3f, %d docs, %d chars)", max_vec, n_found, len(content))
+    return {
+        **state,
+        "docs": docs,
+        "answer": content,
+        "answer_source": "direct_answer",
+        "direct_quality": "good",
+    }
 
 
 # ---------------------------
@@ -794,7 +833,16 @@ def conclusion_builder(state: AgentState) -> AgentState:
 # Routing functions
 # ---------------------------
 def route_intent(state: AgentState):
-    return state.get("intent", "knowledge_query")
+    return state.get("intent", "query")
+
+
+def route_direct_quality(state: AgentState):
+    """Sau direct_answer: nếu đủ info → end, nếu không → knowledge pipeline."""
+    decision = state.get("direct_quality")
+    logger.info("Route after direct_answer: direct_quality=%s", decision)
+    if decision == "good":
+        return "good"
+    return "insufficient"
 
 
 def route_topic(state: AgentState):
@@ -804,23 +852,9 @@ def route_topic(state: AgentState):
 def route_verification(state: AgentState):
     if state.get("verification") == "good":
         return "good"
-    # Allow one retry before giving up
     if (state.get("retry_count") or 0) > 1:
         return "weak"
     return "retry"
-
-def route_exact(state: AgentState):
-    """Check intent set by exact_match_node, not just answer existence."""
-    if state.get("intent") == "exact_answer":
-        return "found"
-    return "not_found"
-
-
-def route_trigram(state: AgentState):
-    """Check intent set by trigram_match_node."""
-    if state.get("intent") == "trigram_answer":
-        return "found"
-    return "not_found"
 
 
 # ---------------------------
@@ -830,19 +864,16 @@ graph = StateGraph(AgentState)
 
 graph.add_node("router",           intent_router)
 graph.add_node("system_info",      system_info_node)
+graph.add_node("direct_answer",    direct_answer_node)
 graph.add_node("query_rewriter",   query_rewriter)
 graph.add_node("rag",              rag_lookup)
-graph.add_node("relevance_judge",  relevance_judge)
+# relevance_judge removed (output was unused)
 graph.add_node("topic_judge",      topic_judge)
 graph.add_node("answer_draft",     answer_draft)
 graph.add_node("answer_verifier",  answer_verifier)
 graph.add_node("clarify_question", clarify_question)
 graph.add_node("answer",           answer_node)
 graph.add_node("greeting",         greeting_node)
-graph.add_node("direct_answer",         direct_answer_node)
-graph.add_node("direct_query_rewriter", direct_query_rewriter)
-graph.add_node("exact_match",           exact_match_node)
-graph.add_node("trigram_match",         trigram_match_node)
 
 graph.add_node("search_planner",          search_planner)
 graph.add_node("multi_source_retrieval",  multi_source_retrieval)
@@ -852,29 +883,23 @@ graph.add_node("conclusion_builder",      conclusion_builder)
 
 graph.set_entry_point("router")
 
+# Router: greeting / system_info / query (unified)
 graph.add_conditional_edges("router", route_intent, {
     "greeting":           "greeting",
     "direct_system_info": "system_info",
-    "direct_answer":      "exact_match",
-    "knowledge_query":    "query_rewriter",
+    "query":              "direct_answer",
 })
 
-graph.add_conditional_edges("exact_match", route_exact, {
-    "found":     "answer",
-    "not_found": "trigram_match",
+# Direct answer → good → END, insufficient → knowledge pipeline
+graph.add_conditional_edges("direct_answer", route_direct_quality, {
+    "good":         END,
+    "insufficient": "query_rewriter",
 })
 
-graph.add_conditional_edges("trigram_match", route_trigram, {
-    "found":     "answer",
-    "not_found": "direct_query_rewriter",
-})
-
-graph.add_edge("direct_query_rewriter", "direct_answer")
-
+# Knowledge pipeline
 graph.add_edge("system_info",    "answer")
 graph.add_edge("query_rewriter", "rag")
-graph.add_edge("rag",            "relevance_judge")
-graph.add_edge("relevance_judge", "topic_judge")
+graph.add_edge("rag",            "topic_judge")
 
 graph.add_conditional_edges("topic_judge", route_topic, {
     "legal": "search_planner",
@@ -887,17 +912,16 @@ graph.add_edge("source_ranker",           "evidence_extractor")
 graph.add_edge("evidence_extractor",      "conclusion_builder")
 graph.add_edge("conclusion_builder",      "answer_verifier")
 
-graph.add_edge("answer_draft", "answer_verifier")
+graph.add_edge("answer_draft", "answer")
 
 graph.add_conditional_edges("answer_verifier", route_verification, {
     "weak":  "clarify_question",
     "good":  "answer",
-    "retry": "rag",  # re-run RAG with potentially better context
+    "retry": "rag",
 })
 
 graph.add_edge("clarify_question", END)
 graph.add_edge("greeting",        END)
-graph.add_edge("direct_answer",   END)
 graph.add_edge("answer",          END)
 
 app = graph.compile()
@@ -907,9 +931,9 @@ app = graph.compile()
 # ---------------------------
 if __name__ == "__main__":
     print("=" * 60)
-    print("  LangGraph Agent  –  LM Studio + pgvector RAG")
+    print("  LangGraph Agent  –  OpenAI + pgvector RAG")
     print("  DB: PostgreSQL @ %s:%s/%s" % (PG_HOST, PG_PORT, PG_DB))
-    print("  LLM: %s @ %s" % (LMSTUDIO_MODEL, LMSTUDIO_BASE_URL))
+    print("  LLM: %s (OpenAI)" % OPENAI_MODEL)
     print("=" * 60)
 
     if not test_pg_connection():
