@@ -21,7 +21,7 @@ def greeting_node(state: AgentState) -> AgentState:
     elif re.search(r"tốt|hay\s*lắm|giỏi|great|good", q):
         answer = "Cảm ơn bạn! 😄 Tôi luôn sẵn sàng hỗ trợ."
     else:
-        answer = "Xin chào! 👋 Tôi là trợ lý DAP — có thể giúp gì cho bạn?"
+        answer = "Xin chào! 👋 Tôi là trợ lý ảo Mimi — có thể giúp gì cho bạn?"
 
     return {**state, "answer": answer}
 
@@ -32,7 +32,7 @@ def system_info_node(state: AgentState) -> AgentState:
 
     if re.search(r"tên.*bạn|bạn.*tên|bạn\s*là\s*ai|your\s*name|who\s*are", q):
         answer = (
-            "Tôi là **ALO** — trợ lý AI chuyên hỗ trợ tra cứu kiến thức. "
+            "Tôi là **Mimi** — trợ lý AI chuyên biệt cho lĩnh vực cây bệnh trồng."
             "Bạn có thể hỏi tôi bất cứ điều gì! 😊"
         )
     elif re.search(r"làm\s*(gì|được)|khả\s*năng|chức\s*năng|capabilit|bạn\s*(có|biết|giúp).*gì", q):
@@ -60,5 +60,5 @@ def clarify_question_node(state: AgentState) -> AgentState:
 
 
 def answer_node(state: AgentState) -> AgentState:
-    """Pass-through: answer should already be set by an upstream node."""
+    """Pass-through: answer đã được set bởi node trước đó."""
     return state

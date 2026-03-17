@@ -43,7 +43,7 @@ def build_app():
     graph.add_node("answer_draft",         answer_draft_node)
     graph.add_node("answer_verifier",      answer_verifier_node)
     graph.add_node("clarify_question",     clarify_question_node)
-    graph.add_node("answer",               answer_node)
+    graph.add_node("answer_passthrough",               answer_node)
     graph.add_node("search_planner",       search_planner_node)
     graph.add_node("multi_source_retrieval", multi_source_retrieval_node)
     graph.add_node("source_ranker",        source_ranker_node)
@@ -65,7 +65,7 @@ def build_app():
         "insufficient": "query_rewriter",
     })
 
-    graph.add_edge("system_info",    "answer")
+    graph.add_edge("system_info",    "answer_passthrough")
     graph.add_edge("query_rewriter", "rag")
     graph.add_edge("rag",            "topic_judge")
 
@@ -80,16 +80,16 @@ def build_app():
     graph.add_edge("evidence_extractor",     "conclusion_builder")
     graph.add_edge("conclusion_builder",     "answer_verifier")
 
-    graph.add_edge("answer_draft", "answer")
+    graph.add_edge("answer_draft", "answer_passthrough")
 
     graph.add_conditional_edges("answer_verifier", route_verification, {
-        "good":  "answer",
+        "good":  "answer_passthrough",
         "weak":  "clarify_question",
         "retry": "rag",
     })
 
-    graph.add_edge("clarify_question", END)
-    graph.add_edge("greeting",         END)
-    graph.add_edge("answer",           END)
+    graph.add_edge("clarify_question",  END)
+    graph.add_edge("greeting",          END)
+    graph.add_edge("answer_passthrough",END)
 
     return graph.compile()

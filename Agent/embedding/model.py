@@ -9,14 +9,14 @@ from FlagEmbedding import BGEM3FlagModel
 from Agent.config import EMBEDDING_CACHE_MAX
 
 logger = logging.getLogger(__name__)
-
-_model = BGEM3FlagModel("BAAI/bge-m3", use_fp16=True)
-
+# usefp16: Dùng độ chính xác 16 bit
+_model = BGEM3FlagModel("BAAI/bge-m3", use_fp16=True) 
 _cache: OrderedDict[str, list] = OrderedDict()
 
 
 def get_embedding(text: str) -> list:
-    """Return dense embedding vector with LRU eviction."""
+    """Return dense embedding vector with LRU-(Least Recently Used) eviction."""
+    # Tạo key để tra cứu trong cache
     key = hashlib.md5(text.encode()).hexdigest()
 
     if key in _cache:

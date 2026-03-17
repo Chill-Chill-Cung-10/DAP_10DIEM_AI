@@ -36,7 +36,8 @@ def pgvector_search(
     similarity_threshold: float = SIMILARITY_THRESHOLD,
 ) -> List[Document]:
     """
-    Hybrid search: cosine similarity (pgvector) + BM25-style ts_rank.
+    Vector search: cosine similarity trên cột embedding.
+    Full-text search: ts_rank trên short_description + full_content.
     Final score = 0.7 * cosine_sim + 0.3 * ts_rank.
     """
     query_embedding = get_embedding(query)
@@ -47,19 +48,23 @@ def pgvector_search(
         cur = conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
         cur.execute(
             """
-            SELECT question,
-                   answer,
+            SELECT pk_id,
+                   short_description,
+                   full_content,
+                   symptoms_tags,
+                   vector_data,
+                   created_at,
                    1 - (embedding <=> %s::vector) AS vec_sim,
                    ts_rank(
-                       to_tsvector('simple', question || ' ' || answer),
+                       to_tsvector('simple', coalesce(short_description, '') || ' ' || coalesce(full_content, '')),
                        plainto_tsquery('simple', %s)
                    ) AS text_rank
-            FROM   dapchatbot
+            FROM   dap_embeddings
             WHERE  1 - (embedding <=> %s::vector) >= %s
             ORDER  BY (
                 0.7 * (1 - (embedding <=> %s::vector))
                 + 0.3 * ts_rank(
-                    to_tsvector('simple', question || ' ' || answer),
+                    to_tsvector('simple', coalesce(short_description, '') || ' ' || coalesce(full_content, '')),
                     plainto_tsquery('simple', %s)
                 )
             ) DESC
@@ -75,16 +80,22 @@ def pgvector_search(
     docs: List[Document] = []
     for row in rows:
         combined = 0.7 * float(row["vec_sim"]) + 0.3 * float(row["text_rank"])
-        content = f"Câu hỏi: {row['question']}\nTrả lời: {row['answer']}"
+        # Chỉ dùng short_description làm context cho AI (ngắn gọn, súc tích)
+        # Toàn bộ các trường đầy đủ vẫn được lưu trong metadata
+        content = row["short_description"] or ""
         docs.append(
             Document(
                 page_content=content,
                 metadata={
-                    "question": row["question"],
-                    "answer": row["answer"],
-                    "similarity": combined,
-                    "vec_sim": float(row["vec_sim"]),
-                    "text_rank": float(row["text_rank"]),
+                    "pk_id":             row["pk_id"],
+                    "short_description": row["short_description"],
+                    "full_content":      row["full_content"],
+                    "symptoms_tags":     row["symptoms_tags"],
+                    "vector_data":       row["vector_data"],
+                    "created_at":        str(row["created_at"]),
+                    "similarity":        combined,
+                    "vec_sim":           float(row["vec_sim"]),
+                    "text_rank":         float(row["text_rank"]),
                 },
             )
         )
@@ -97,12 +108,12 @@ def pgvector_search(
 # Exact-match DB lookup (cached)
 # ---------------------------------------------------------------------------
 
-_db_question_cache: Optional[List[Dict[str, str]]] = None
+_db_question_cache: Optional[List[Dict]] = None
 _db_question_cache_time: float = 0
 
 
-def _get_db_question_cache() -> List[Dict[str, str]]:
-    """Load and TTL-cache all DB questions with normalised/canonical keys."""
+def _get_db_question_cache() -> List[Dict]:
+    """Load và TTL-cache toàn bộ short_description với normalised/canonical keys."""
     global _db_question_cache, _db_question_cache_time
 
     now = time.time()
@@ -112,7 +123,13 @@ def _get_db_question_cache() -> List[Dict[str, str]]:
     conn = get_connection()
     try:
         cur = conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
-        cur.execute("SELECT question, answer FROM dapchatbot")
+        cur.execute(
+            """
+            SELECT pk_id, short_description, full_content,
+                   symptoms_tags, vector_data, created_at
+            FROM   dap_embeddings
+            """
+        )
         rows = cur.fetchall()
         cur.close()
     finally:
@@ -120,10 +137,14 @@ def _get_db_question_cache() -> List[Dict[str, str]]:
 
     cache = [
         {
-            "question":   row["question"],
-            "answer":     row["answer"],
-            "normalized": normalize_question_text(row["question"]),
-            "canonical":  canonicalize_question_text(row["question"]),
+            "pk_id":             row["pk_id"],
+            "short_description": row["short_description"],
+            "full_content":      row["full_content"],
+            "symptoms_tags":     row["symptoms_tags"],
+            "vector_data":       row["vector_data"],
+            "created_at":        str(row["created_at"]),
+            "normalized":        normalize_question_text(row["short_description"] or ""),
+            "canonical":         canonicalize_question_text(row["short_description"] or ""),
         }
         for row in rows
     ]
@@ -133,14 +154,21 @@ def _get_db_question_cache() -> List[Dict[str, str]]:
     return cache
 
 
-def exact_db_lookup(question: str) -> Optional[Dict[str, str]]:
-    """Return (question, answer) dict on exact normalised/canonical match."""
+def exact_db_lookup(question: str) -> Optional[Dict]:
+    """Return toàn bộ cột khi khớp normalised/canonical với short_description."""
     try:
         normalized = normalize_question_text(question)
         canonical  = canonicalize_question_text(question)
         for row in _get_db_question_cache():
             if row["normalized"] == normalized or row["canonical"] == canonical:
-                return {"question": row["question"], "answer": row["answer"]}
+                return {
+                    "pk_id":             row["pk_id"],
+                    "short_description": row["short_description"],
+                    "full_content":      row["full_content"],
+                    "symptoms_tags":     row["symptoms_tags"],
+                    "vector_data":       row["vector_data"],
+                    "created_at":        row["created_at"],
+                }
         return None
     except Exception as exc:
         logger.warning("exact_db_lookup failed: %s", exc)

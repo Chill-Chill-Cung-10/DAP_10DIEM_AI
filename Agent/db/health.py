@@ -8,7 +8,7 @@ from Agent.db.pool import get_connection, put_connection
 
 logger = logging.getLogger(__name__)
 
-TABLE_NAME = "dapchatbot"
+TABLE_NAME = "dap_embeddings"
 
 
 def test_pg_connection() -> bool:

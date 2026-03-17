@@ -12,9 +12,12 @@ logger = logging.getLogger(__name__)
 
 _KNOWLEDGE_KEYWORDS_RE = re.compile(
     r"("
-    r"luật|điều\s*\d|khoản|nghị\s*định|thông\s*tư|bộ\s*luật|quy\s*định"
-    r"|pháp\s*luật|hình\s*sự|dân\s*sự|hành\s*chính|xử\s*phạt"
-    r"|bồi\s*thường|hợp\s*đồng|quyền\s*sở\s*hữu|thừa\s*kế"
+    r"bệnh|nấm|vi khuẩn|virus|triệu chứng|lây lan|ký sinh"
+    r"|fungus|bacteria|pathogen|infection|disease|rust|blight|rot|mildew|scab"
+    r"|Venturia|Phytophthora|Alternaria|Cercospora|Puccinia|Guignardia"
+    r"|thuốc|fungicide|phun|xử lý|phòng ngừa|kháng bệnh"
+    r"|cây trồng|táo|nho|ngô|cà chua|khoai tây|đào|ớt|anh đào|cam|chanh|lá bệnh|bề mặt lá|lá cây| cây"
+    r"|so sánh|phân tích|giải thích|nguyên nhân|vòng đời"
     r"|giải\s*thích.*điều|phân\s*tích|so\s*sánh|trình\s*bày"
     r"|tại\s*sao|vì\s*sao|nguyên\s*nhân|hậu\s*quả"
     r")",
@@ -92,17 +95,23 @@ def direct_answer_node(state: AgentState) -> AgentState:
         "direct_quality": "good",
     }
 
-
 def query_rewriter_node(state: AgentState) -> AgentState:
     history_text  = chat_history_text(state.get("chat_history") or [])
     history_block = f"\nLịch sử hội thoại:\n{history_text}\n" if history_text else ""
     prompt = (
-        "Rewrite the following question into a concise Vietnamese search query "
-        "suitable for semantic retrieval.  Return ONLY JSON.\n\n"
-        'Example 1:\nQuestion: Theo quy định pháp luật hiện hành, người lao động có quyền gì khi bị sa thải trái phép?\n'
-        '{"rewritten_query": "quyền người lao động bị sa thải trái pháp luật"}\n\n'
-        'Example 2:\nQuestion: Hợp đồng lao động là gì?\n'
-        '{"rewritten_query": "khái niệm hợp đồng lao động"}\n\n'
+        "Rewrite the following question into a concise English/Vietnamese search query "
+        "suitable for semantic retrieval in a plant disease database. "
+        "Focus on: disease name, pathogen, symptoms, crop type, or management method. "
+        "Return ONLY JSON.\n\n"
+        "Example 1:\n"
+        "Question: Bệnh ghẻ táo có những triệu chứng gì trên lá và quả?\n"
+        '{"rewritten_query": "apple scab Venturia inaequalis leaf fruit symptoms"}\n\n'
+        "Example 2:\n"
+        "Question: Làm thế nào để phòng ngừa bệnh mốc sương trên cà chua?\n"
+        '{"rewritten_query": "late blight tomato Phytophthora infestans management prevention"}\n\n'
+        "Example 3:\n"
+        "Question: Nấm nào gây bệnh thối đen trên nho?\n"
+        '{"rewritten_query": "black rot grapes Guignardia bidwelli fungus"}\n\n'
         f"{history_block}"
         f"Question: {state['question']}"
     )
