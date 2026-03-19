@@ -2,6 +2,7 @@
 
 import logging
 
+from Agent.config import VERIFY_INTENTS
 from Agent.graph.state import AgentState
 
 logger = logging.getLogger(__name__)
@@ -27,3 +28,8 @@ def route_verification(state: AgentState) -> str:
 
 def route_freshness(state: AgentState) -> str:
     return "fresh" if state.get("freshness_status") == "fresh" else "stale"
+
+
+def route_quality_gate(state: AgentState) -> str:
+    intent = state.get("intent") or "explanation_retrieve"
+    return "verify" if intent in VERIFY_INTENTS else "passthrough"

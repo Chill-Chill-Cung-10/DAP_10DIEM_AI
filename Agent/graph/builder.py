@@ -17,7 +17,7 @@ from Agent.nodes.retrieval import (
     hybrid_search_node,
 )
 from Agent.nodes.synthesis import answer_draft_node, answer_verifier_node
-from Agent.routing.edges import route_intent, route_verification, route_freshness
+from Agent.routing.edges import route_intent, route_verification, route_freshness, route_quality_gate
 
 
 def build_app():
@@ -65,17 +65,38 @@ def build_app():
         },
     )
 
-    # logical_reasoning -> quality check
-    graph.add_edge("logical_reasoning", "intent_quality_check")
+    # logical_reasoning -> quality gate
+    graph.add_conditional_edges(
+        "logical_reasoning",
+        route_quality_gate,
+        {
+            "verify": "intent_quality_check",
+            "passthrough": "answer_passthrough",
+        },
+    )
 
-    # diagnosis -> retrieval -> reasoning -> quality check
+    # diagnosis -> retrieval -> reasoning -> quality gate
     graph.add_edge("diagnosis_retrieval", "diagnosis_reasoning")
-    graph.add_edge("diagnosis_reasoning", "intent_quality_check")
+    graph.add_conditional_edges(
+        "diagnosis_reasoning",
+        route_quality_gate,
+        {
+            "verify": "intent_quality_check",
+            "passthrough": "answer_passthrough",
+        },
+    )
 
-    # compare -> split -> dual retrieval -> structured compare -> quality check
+    # compare -> split -> dual retrieval -> structured compare -> quality gate
     graph.add_edge("compare_split", "compare_retrieval")
     graph.add_edge("compare_retrieval", "compare_synthesis")
-    graph.add_edge("compare_synthesis", "intent_quality_check")
+    graph.add_conditional_edges(
+        "compare_synthesis",
+        route_quality_gate,
+        {
+            "verify": "intent_quality_check",
+            "passthrough": "answer_passthrough",
+        },
+    )
 
     # recent information -> freshness gate
     graph.add_conditional_edges(
@@ -86,11 +107,25 @@ def build_app():
             "stale": "recent_fallback",
         },
     )
-    graph.add_edge("recent_fallback", "intent_quality_check")
+    graph.add_conditional_edges(
+        "recent_fallback",
+        route_quality_gate,
+        {
+            "verify": "intent_quality_check",
+            "passthrough": "answer_passthrough",
+        },
+    )
 
     # default explanation/retrieve path
     graph.add_edge("hybrid_search", "answer_draft")
-    graph.add_edge("answer_draft", "intent_quality_check")
+    graph.add_conditional_edges(
+        "answer_draft",
+        route_quality_gate,
+        {
+            "verify": "intent_quality_check",
+            "passthrough": "answer_passthrough",
+        },
+    )
 
     # intent-aware quality check
     graph.add_conditional_edges(

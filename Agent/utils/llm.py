@@ -7,7 +7,7 @@ from typing import Any, Dict, List
 
 from langchain_openai import ChatOpenAI
 
-from Agent.config import OPENAI_API_KEY, OPENAI_MODEL
+from Agent.config import OPENAI_API_KEY, OPENAI_MODEL, DOC_CONTEXT_MAX_CHARS, CHAT_HISTORY_MAX_TURNS
 
 logger = logging.getLogger(__name__)
 
@@ -43,7 +43,7 @@ def safe_json_loads(text: str, default: Dict[str, Any]) -> Dict[str, Any]:
     return default
 
 
-def docs_context(docs: list, max_chars: int = 6000) -> str:
+def docs_context(docs: list, max_chars: int = DOC_CONTEXT_MAX_CHARS) -> str:
     """Concatenate doc page_content within a character budget."""
     parts: List[str] = []
     total = 0
@@ -55,7 +55,7 @@ def docs_context(docs: list, max_chars: int = 6000) -> str:
     return "\n\n".join(parts)
 
 
-def chat_history_text(history: list, max_turns: int = 5) -> str:
+def chat_history_text(history: list, max_turns: int = CHAT_HISTORY_MAX_TURNS) -> str:
     """Format recent chat history for prompt injection."""
     recent = history[-max_turns:] if len(history) > max_turns else history
     lines = []

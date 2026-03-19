@@ -50,3 +50,22 @@ SIMILARITY_THRESHOLD    = 0.45
 DIRECT_ANSWER_MIN_VEC   = 0.50
 DB_CACHE_TTL_SECONDS    = 300   # 5 minutes
 EMBEDDING_CACHE_MAX     = 500
+
+# ---------------------------
+# Token/cost optimization
+# ---------------------------
+DOC_CONTEXT_MAX_CHARS   = int(os.getenv("DOC_CONTEXT_MAX_CHARS", "3200"))
+CHAT_HISTORY_MAX_TURNS  = int(os.getenv("CHAT_HISTORY_MAX_TURNS", "3"))
+K_HYBRID_DEFAULT        = int(os.getenv("K_HYBRID_DEFAULT", "8"))
+K_DIAGNOSIS             = int(os.getenv("K_DIAGNOSIS", "10"))
+K_COMPARE_PER_SIDE      = int(os.getenv("K_COMPARE_PER_SIDE", "6"))
+K_RECENT_CHECK          = int(os.getenv("K_RECENT_CHECK", "8"))
+
+VERIFY_INTENTS = {
+    part.strip()
+    for part in os.getenv(
+        "VERIFY_INTENTS",
+        "diagnosis,compare,recent_information",
+    ).split(",")
+    if part.strip()
+}

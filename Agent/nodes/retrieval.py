@@ -4,7 +4,13 @@ import logging
 import re
 from datetime import datetime, timedelta, timezone
 
-from Agent.config import SIMILARITY_THRESHOLD
+from Agent.config import (
+    SIMILARITY_THRESHOLD,
+    K_HYBRID_DEFAULT,
+    K_DIAGNOSIS,
+    K_COMPARE_PER_SIDE,
+    K_RECENT_CHECK,
+)
 from Agent.bootstrap.search import pgvector_search
 from Agent.graph.state import AgentState
 from Agent.utils.llm import safe_llm_invoke, docs_context, chat_history_text
@@ -17,7 +23,7 @@ def _history_block(state: AgentState) -> str:
     return f"\nLịch sử hội thoại:\n{history_text}\n" if history_text else ""
 
 
-def _ensure_docs(state: AgentState, query: str, k: int = 12) -> list:
+def _ensure_docs(state: AgentState, query: str, k: int = K_RECENT_CHECK) -> list:
     docs = state.get("docs") or []
     if docs:
         return docs
@@ -54,7 +60,7 @@ def diagnosis_retrieval_node(state: AgentState) -> AgentState:
     """Symptom-focused retrieval for diagnosis questions."""
     query = state["question"]
     diagnosis_query = f"{query} triệu chứng chẩn đoán tác nhân quản lý"
-    docs = pgvector_search(diagnosis_query, k=15, similarity_threshold=SIMILARITY_THRESHOLD)
+    docs = pgvector_search(diagnosis_query, k=K_DIAGNOSIS, similarity_threshold=SIMILARITY_THRESHOLD)
     logger.info("Diagnosis retrieval: %d docs", len(docs))
     return {**state, "docs": docs, "rewritten_query": diagnosis_query}
 
@@ -101,7 +107,7 @@ def compare_retrieval_node(state: AgentState) -> AgentState:
     seen = set()
 
     for idx, query in enumerate(queries[:2], start=1):
-        docs = pgvector_search(query, k=10, similarity_threshold=SIMILARITY_THRESHOLD)
+        docs = pgvector_search(query, k=K_COMPARE_PER_SIDE, similarity_threshold=SIMILARITY_THRESHOLD)
         for d in docs:
             key = d.metadata.get("pk_id")
             if key in seen:
@@ -143,7 +149,7 @@ def compare_synthesis_node(state: AgentState) -> AgentState:
 
 def recent_freshness_check_node(state: AgentState) -> AgentState:
     """Check if retrieved docs are fresh enough for recent-information queries."""
-    docs = _ensure_docs(state, state["question"], k=12)
+    docs = _ensure_docs(state, state["question"], k=K_RECENT_CHECK)
     now = datetime.now(timezone.utc)
     freshness_window = timedelta(days=540)  # ~18 months
 
@@ -188,7 +194,7 @@ def recent_fallback_node(state: AgentState) -> AgentState:
 
 def hybrid_search_node(state: AgentState) -> AgentState:
     query = state.get("rewritten_query") or state["question"]
-    docs = pgvector_search(query, k=15, similarity_threshold=SIMILARITY_THRESHOLD)
+    docs = pgvector_search(query, k=K_HYBRID_DEFAULT, similarity_threshold=SIMILARITY_THRESHOLD)
     logger.info("Hybrid search: %d docs", len(docs))
     return {**state, "docs": docs}
 
