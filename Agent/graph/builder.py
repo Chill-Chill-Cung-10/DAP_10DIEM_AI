@@ -3,93 +3,108 @@
 from langgraph.graph import StateGraph, END
 
 from Agent.graph.state import AgentState
-from Agent.nodes.router   import intent_router
-from Agent.nodes.simple   import greeting_node, system_info_node, clarify_question_node, answer_node
+from Agent.nodes.router import intent_router
+from Agent.nodes.simple import greeting_node, system_info_node, clarify_question_node, answer_node
 from Agent.nodes.retrieval import (
-    direct_answer_node,
-    query_rewriter_node,
-    rag_lookup_node,
-    topic_judge_node,
+    logical_reasoning_node,
+    diagnosis_retrieval_node,
+    diagnosis_reasoning_node,
+    compare_split_queries_node,
+    compare_retrieval_node,
+    compare_synthesis_node,
+    recent_freshness_check_node,
+    recent_fallback_node,
+    hybrid_search_node,
 )
-from Agent.nodes.synthesis import (
-    answer_draft_node,
-    answer_verifier_node,
-    search_planner_node,
-    multi_source_retrieval_node,
-    source_ranker_node,
-    evidence_extractor_node,
-    conclusion_builder_node,
-)
-from Agent.routing.edges import (
-    route_intent,
-    route_direct_quality,
-    route_topic,
-    route_verification,
-)
+from Agent.nodes.synthesis import answer_draft_node, answer_verifier_node
+from Agent.routing.edges import route_intent, route_verification, route_freshness
 
 
 def build_app():
-    """Build and compile the LangGraph agent."""
+    """Build and compile the LangGraph agent with intent-aware branches."""
     graph = StateGraph(AgentState)
 
-    # --- Register nodes ---
-    graph.add_node("router",               intent_router)
-    graph.add_node("greeting",             greeting_node)
-    graph.add_node("system_info",          system_info_node)
-    graph.add_node("direct_answer",        direct_answer_node)
-    graph.add_node("query_rewriter",       query_rewriter_node)
-    graph.add_node("rag",                  rag_lookup_node)
-    graph.add_node("topic_judge",          topic_judge_node)
-    graph.add_node("answer_draft",         answer_draft_node)
-    graph.add_node("answer_verifier",      answer_verifier_node)
-    graph.add_node("clarify_question",     clarify_question_node)
-    graph.add_node("answer_passthrough",               answer_node)
-    graph.add_node("search_planner",       search_planner_node)
-    graph.add_node("multi_source_retrieval", multi_source_retrieval_node)
-    graph.add_node("source_ranker",        source_ranker_node)
-    graph.add_node("evidence_extractor",   evidence_extractor_node)
-    graph.add_node("conclusion_builder",   conclusion_builder_node)
+    # Register nodes
+    graph.add_node("router", intent_router)
+    graph.add_node("greeting", greeting_node)
+    graph.add_node("system_info", system_info_node)
 
-    # --- Entry point ---
+    graph.add_node("logical_reasoning", logical_reasoning_node)
+
+    graph.add_node("diagnosis_retrieval", diagnosis_retrieval_node)
+    graph.add_node("diagnosis_reasoning", diagnosis_reasoning_node)
+
+    graph.add_node("compare_split", compare_split_queries_node)
+    graph.add_node("compare_retrieval", compare_retrieval_node)
+    graph.add_node("compare_synthesis", compare_synthesis_node)
+
+    graph.add_node("recent_freshness_check", recent_freshness_check_node)
+    graph.add_node("recent_fallback", recent_fallback_node)
+
+    graph.add_node("hybrid_search", hybrid_search_node)
+    graph.add_node("answer_draft", answer_draft_node)
+
+    graph.add_node("intent_quality_check", answer_verifier_node)
+    graph.add_node("clarify_question", clarify_question_node)
+    graph.add_node("answer_passthrough", answer_node)
+
     graph.set_entry_point("router")
 
-    # --- Edges ---
-    graph.add_conditional_edges("router", route_intent, {
-        "greeting":          "greeting",
-        "direct_system_info": "system_info",
-        "query":             "direct_answer",
-    })
+    # Intent dispatch
+    graph.add_conditional_edges(
+        "router",
+        route_intent,
+        {
+            "greeting": "greeting",
+            "direct_system_info": "system_info",
+            "logical_reasoning": "logical_reasoning",
+            "diagnosis": "diagnosis_retrieval",
+            "compare": "compare_split",
+            "recent_information": "recent_freshness_check",
+            "explanation_retrieve": "hybrid_search",
+        },
+    )
 
-    graph.add_conditional_edges("direct_answer", route_direct_quality, {
-        "good":        END,
-        "insufficient": "query_rewriter",
-    })
+    # logical_reasoning -> quality check
+    graph.add_edge("logical_reasoning", "intent_quality_check")
 
-    graph.add_edge("system_info",    "answer_passthrough")
-    graph.add_edge("query_rewriter", "rag")
-    graph.add_edge("rag",            "topic_judge")
+    # diagnosis -> retrieval -> reasoning -> quality check
+    graph.add_edge("diagnosis_retrieval", "diagnosis_reasoning")
+    graph.add_edge("diagnosis_reasoning", "intent_quality_check")
 
-    graph.add_conditional_edges("topic_judge", route_topic, {
-        "legal": "search_planner",
-        "other": "answer_draft",
-    })
+    # compare -> split -> dual retrieval -> structured compare -> quality check
+    graph.add_edge("compare_split", "compare_retrieval")
+    graph.add_edge("compare_retrieval", "compare_synthesis")
+    graph.add_edge("compare_synthesis", "intent_quality_check")
 
-    graph.add_edge("search_planner",         "multi_source_retrieval")
-    graph.add_edge("multi_source_retrieval", "source_ranker")
-    graph.add_edge("source_ranker",          "evidence_extractor")
-    graph.add_edge("evidence_extractor",     "conclusion_builder")
-    graph.add_edge("conclusion_builder",     "answer_verifier")
+    # recent information -> freshness gate
+    graph.add_conditional_edges(
+        "recent_freshness_check",
+        route_freshness,
+        {
+            "fresh": "hybrid_search",
+            "stale": "recent_fallback",
+        },
+    )
+    graph.add_edge("recent_fallback", "intent_quality_check")
 
-    graph.add_edge("answer_draft", "answer_passthrough")
+    # default explanation/retrieve path
+    graph.add_edge("hybrid_search", "answer_draft")
+    graph.add_edge("answer_draft", "intent_quality_check")
 
-    graph.add_conditional_edges("answer_verifier", route_verification, {
-        "good":  "answer_passthrough",
-        "weak":  "clarify_question",
-        "retry": "rag",
-    })
+    # intent-aware quality check
+    graph.add_conditional_edges(
+        "intent_quality_check",
+        route_verification,
+        {
+            "good": "answer_passthrough",
+            "weak": "clarify_question",
+        },
+    )
 
-    graph.add_edge("clarify_question",  END)
-    graph.add_edge("greeting",          END)
-    graph.add_edge("answer_passthrough",END)
+    graph.add_edge("greeting", END)
+    graph.add_edge("system_info", "answer_passthrough")
+    graph.add_edge("clarify_question", END)
+    graph.add_edge("answer_passthrough", END)
 
     return graph.compile()

@@ -8,7 +8,7 @@ logger = logging.getLogger(__name__)
 
 
 def route_intent(state: AgentState) -> str:
-    return state.get("intent", "query")
+    return state.get("intent", "explanation_retrieve")
 
 
 def route_direct_quality(state: AgentState) -> str:
@@ -22,8 +22,8 @@ def route_topic(state: AgentState) -> str:
 
 
 def route_verification(state: AgentState) -> str:
-    if state.get("verification") == "good":
-        return "good"
-    if (state.get("retry_count") or 0) > 1:
-        return "weak"
-    return "retry"
+    return "good" if state.get("verification") == "good" else "weak"
+
+
+def route_freshness(state: AgentState) -> str:
+    return "fresh" if state.get("freshness_status") == "fresh" else "stale"

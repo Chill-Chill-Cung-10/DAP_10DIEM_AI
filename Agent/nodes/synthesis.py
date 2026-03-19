@@ -55,30 +55,21 @@ def answer_draft_node(state: AgentState) -> AgentState:
 
     content = safe_llm_invoke(prompt, fallback="Xin lỗi, đã xảy ra lỗi khi xử lý câu hỏi.")
     logger.info("Answer draft (fallback): %d chars", len(content))
-    return {**state, "answer": content}
+    return {**state, "answer": content, "answer_source": "hybrid_synthesis"}
 
 def answer_verifier_node(state: AgentState) -> AgentState:
+    intent = state.get("intent") or "explanation_retrieve"
     prompt = (
-        "Bạn là chuyên gia kiểm duyệt thông tin bệnh học thực vật. "
-        "Hãy đánh giá câu trả lời dưới đây có đầy đủ, chính xác và hữu ích không.\n\n"
-        "Tiêu chí đánh giá 'good':\n"
-        "- Có nêu tên bệnh hoặc tác nhân gây bệnh cụ thể\n"
-        "- Có mô tả triệu chứng hoặc điều kiện phát sinh\n"
-        "- Có ít nhất một biện pháp quản lý hoặc xử lý\n\n"
-        "Tiêu chí đánh giá 'weak':\n"
-        "- Trả lời chung chung, không có thông tin cụ thể\n"
-        "- Thiếu tên bệnh hoặc tác nhân gây bệnh\n"
-        "- Không có biện pháp xử lý nào\n\n"
+        "Bạn là bộ kiểm tra chất lượng câu trả lời theo intent.\n"
+        "Intent hiện tại: " + intent + "\n\n"
+        "Đánh giá theo quy tắc:\n"
+        "- logical_reasoning: cần lập luận rõ ràng, có giả định nếu thiếu dữ kiện.\n"
+        "- diagnosis: cần nêu khả năng chính, chẩn đoán phân biệt, và bước xác nhận.\n"
+        "- compare: cần cấu trúc so sánh rõ ràng giữa hai đối tượng.\n"
+        "- recent_information: cần nêu độ mới dữ liệu hoặc cảnh báo freshness.\n"
+        "- explanation_retrieve: cần trả lời đúng trọng tâm và có thông tin hữu ích.\n\n"
+        "Trả về weak nếu câu trả lời chung chung, lạc đề, hoặc thiếu cấu trúc của intent.\n\n"
         'Trả về ONLY JSON: {"verification": "good"} hoặc {"verification": "weak"}\n\n'
-        "Ví dụ 1:\n"
-        "Question: Apple scab gây ra triệu chứng gì trên lá?\n"
-        "Answer: Apple scab do Venturia inaequalis gây ra, tạo đốm tròn màu xanh ô liu "
-        "trên lá, sau chuyển nâu đen. Quản lý bằng captan hoặc lime-sulfur.\n"
-        '{"verification": "good"}\n\n'
-        "Ví dụ 2:\n"
-        "Question: Bệnh thối đen trên nho điều trị thế nào?\n"
-        "Answer: Cần xem xét thêm.\n"
-        '{"verification": "weak"}\n\n'
         f"Question: {state['question']}\n"
         f"Answer: {state.get('answer')}"
     )
@@ -86,12 +77,8 @@ def answer_verifier_node(state: AgentState) -> AgentState:
     content = safe_llm_invoke(prompt, fallback='{"verification": "good"}')
     data    = safe_json_loads(content, {"verification": "good"})
 
-    retry = state.get("retry_count") or 0
-    if data.get("verification") == "weak":
-        retry += 1
-
-    logger.info("Verification: %s (retry=%d)", data.get("verification"), retry)
-    return {**state, **data, "retry_count": retry}
+    logger.info("Verification: %s (intent=%s)", data.get("verification"), intent)
+    return {**state, **data}
 
 # ---------------------------------------------------------------------------
 # Evidence sub-pipeline (legal queries)
