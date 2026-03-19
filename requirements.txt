@@ -9,6 +9,9 @@ langsmith
 pandas
 openpyxl
 numpy
+Pillow
+opencv-python
+tensorflow
 
 # LangChain - Compatible versions
 langchain
