@@ -1,12 +1,20 @@
-import os
+import argparse
 import json
+import os
+from datetime import datetime
+from pathlib import Path
 from urllib.parse import urlparse
-from dotenv import load_dotenv
-import pandas as pd
+
 import psycopg2
+from dotenv import load_dotenv
 from FlagEmbedding import BGEM3FlagModel
+from pgvector.psycopg2 import register_vector
+from psycopg2 import sql
+from psycopg2.extras import Json
 
 load_dotenv()
+
+EMBEDDING_DIM = 1024
 
 
 def _int_or_default(value, default):
@@ -17,7 +25,6 @@ def _int_or_default(value, default):
 
 
 def _build_db_candidates():
-    """Tạo danh sách cấu hình DB để thử kết nối theo thứ tự ưu tiên."""
     candidates = []
 
     database_url = os.getenv("DATABASE_URL", "").strip()
@@ -25,13 +32,15 @@ def _build_db_candidates():
         try:
             parsed = urlparse(database_url)
             if parsed.scheme.startswith("postgres"):
-                candidates.append({
-                    "host": parsed.hostname or "localhost",
-                    "port": parsed.port or 5432,
-                    "user": parsed.username or "postgres",
-                    "password": parsed.password or "",
-                    "database": (parsed.path or "").lstrip("/") or "postgres"
-                })
+                candidates.append(
+                    {
+                        "host": parsed.hostname or "localhost",
+                        "port": parsed.port or 5432,
+                        "user": parsed.username or "postgres",
+                        "password": parsed.password or "",
+                        "database": (parsed.path or "").lstrip("/") or "postgres",
+                    }
+                )
         except Exception:
             pass
 
@@ -40,31 +49,38 @@ def _build_db_candidates():
     pg_user = os.getenv("PG_USER", "").strip()
     pg_pass = os.getenv("PG_PASS", "")
     pg_db = os.getenv("PG_DB", "").strip()
-
     if pg_host and pg_user and pg_db:
-        candidates.append({
-            "host": pg_host,
-            "port": pg_port,
-            "user": pg_user,
-            "password": pg_pass,
-            "database": pg_db
-        })
+        candidates.append(
+            {
+                "host": pg_host,
+                "port": pg_port,
+                "user": pg_user,
+                "password": pg_pass,
+                "database": pg_db,
+            }
+        )
 
-    # Fallback cho các tình huống phổ biến
-    candidates.extend([
-        {"host": "localhost", "port": 5433, "user": "postgres", "password": "postgres", "database": "demo_db"},
-        {"host": "localhost", "port": 5432, "user": "postgres", "password": "postgres", "database": "demo_db"},
-        {"host": "postgres", "port": 5432, "user": "postgres", "password": "postgres", "database": "demo_db"},
-    ])
+    candidates.extend(
+        [
+            {"host": "localhost", "port": 5433, "user": "postgres", "password": "postgres", "database": "demo_db"},
+            {"host": "localhost", "port": 5432, "user": "postgres", "password": "postgres", "database": "demo_db"},
+            {"host": "postgres", "port": 5432, "user": "postgres", "password": "postgres", "database": "demo_db"},
+        ]
+    )
 
-    # Loại trùng theo bộ khóa kết nối
     deduped = []
     seen = set()
-    for c in candidates:
-        key = (c["host"], c["port"], c["user"], c["database"], c["password"])
+    for candidate in candidates:
+        key = (
+            candidate["host"],
+            candidate["port"],
+            candidate["user"],
+            candidate["database"],
+            candidate["password"],
+        )
         if key not in seen:
             seen.add(key)
-            deduped.append(c)
+            deduped.append(candidate)
     return deduped
 
 
@@ -72,225 +88,254 @@ def _connect_postgres():
     candidates = _build_db_candidates()
     last_error = None
 
-    print(f"\n{'='*50}")
-    print("🔌 Đang thử kết nối PostgreSQL...")
-    print(f"{'='*50}")
+    print("\n" + "=" * 60)
+    print("Dang thu ket noi PostgreSQL...")
+    print("=" * 60)
 
-    for i, cfg in enumerate(candidates, start=1):
+    for index, cfg in enumerate(candidates, start=1):
         try:
-            print(f"[{i}/{len(candidates)}] host={cfg['host']} port={cfg['port']} db={cfg['database']} user={cfg['user']}")
-            conn = psycopg2.connect(
+            print(
+                f"[{index}/{len(candidates)}] host={cfg['host']} "
+                f"port={cfg['port']} db={cfg['database']} user={cfg['user']}"
+            )
+            connection = psycopg2.connect(
                 host=cfg["host"],
                 port=cfg["port"],
                 user=cfg["user"],
                 password=cfg["password"],
-                database=cfg["database"]
+                database=cfg["database"],
             )
-            print("✅ Kết nối PostgreSQL thành công")
-            return conn
-        except psycopg2.Error as e:
-            last_error = e
-            print(f"⚠️ Kết nối thất bại: {e.pgerror or str(e).splitlines()[0]}")
+            register_vector(connection)
+            print("Ket noi PostgreSQL thanh cong.")
+            return connection
+        except psycopg2.Error as error:
+            last_error = error
+            print(f"Ket noi that bai: {error.pgerror or str(error).splitlines()[0]}")
 
-    raise last_error if last_error else RuntimeError("Không thể kết nối PostgreSQL")
-
-
-def _pick_first_text(values):
-    for value in values:
-        if isinstance(value, str) and value.strip():
-            return value.strip()
-    return ""
+    raise last_error if last_error else RuntimeError("Khong the ket noi PostgreSQL.")
 
 
-def _records_from_items(items, source_name):
-    records = []
-    for item in items:
-        if not isinstance(item, dict):
-            continue
-
-        question = _pick_first_text([
-            item.get("summary"),
-            item.get("question"),
-            item.get("title"),
-            item.get("heading")
-        ])
-        answer = _pick_first_text([
-            item.get("full_text"),
-            item.get("answer"),
-            item.get("text"),
-            item.get("description")
-        ])
-
-        if question:
-            if not answer:
-                answer = question
-            records.append({
-                "question": question,
-                "answer": answer,
-                "source": source_name
-            })
-    return records
-
-
-def load_records_from_datasets(datasets_dir):
-    records = []
-    json_files = sorted(
-        [
-            f for f in os.listdir(datasets_dir)
-            if f.lower().endswith(".json") and not f.lower().endswith(".json.bak")
-        ]
+def _list_dataset_files(datasets_dir):
+    return sorted(
+        [path for path in datasets_dir.glob("*.json") if not path.name.lower().endswith(".json.bak")]
     )
 
-    print(f"\n{'='*50}")
-    print("📂 Đang đọc JSON từ datasets...")
-    print(f"{'='*50}")
 
-    for file_name in json_files:
-        file_path = os.path.join(datasets_dir, file_name)
+def _choose_dataset_file(datasets_dir, explicit_file=None):
+    if explicit_file:
+        file_path = Path(explicit_file)
+        if not file_path.is_absolute():
+            file_path = (Path.cwd() / explicit_file).resolve()
+        if not file_path.exists():
+            raise FileNotFoundError(f"Khong tim thay file: {file_path}")
+        return file_path
+
+    files = _list_dataset_files(datasets_dir)
+    if not files:
+        raise FileNotFoundError(f"Khong co file JSON trong: {datasets_dir}")
+
+    print("\n" + "=" * 60)
+    print("Danh sach file datasets:")
+    print("=" * 60)
+    for index, path in enumerate(files, start=1):
+        print(f"{index}. {path.name}")
+
+    while True:
+        picked = input("Chon so thu tu file can embedding: ").strip()
         try:
-            with open(file_path, "r", encoding="utf-8") as f:
-                data = json.load(f)
+            selected_index = int(picked)
+            if 1 <= selected_index <= len(files):
+                return files[selected_index - 1]
+        except ValueError:
+            pass
+        print("Lua chon khong hop le, vui long nhap lai.")
 
-            file_records = []
-            if isinstance(data, dict):
-                if isinstance(data.get("contents"), list):
-                    file_records.extend(_records_from_items(data["contents"], file_name))
-                else:
-                    file_records.extend(_records_from_items([data], file_name))
-            elif isinstance(data, list):
-                normalized_items = []
-                for entry in data:
-                    if isinstance(entry, dict) and isinstance(entry.get("content"), dict):
-                        normalized_items.append(entry["content"])
-                    elif isinstance(entry, dict):
-                        normalized_items.append(entry)
-                file_records.extend(_records_from_items(normalized_items, file_name))
 
-            records.extend(file_records)
-            print(f"✅ {file_name}: {len(file_records)} records")
-        except Exception as e:
-            print(f"❌ Lỗi đọc {file_name}: {e}")
+def _load_dataset(file_path):
+    with open(file_path, "r", encoding="utf-8-sig") as handle:
+        data = json.load(handle)
 
-    print(f"📊 Tổng records từ JSON: {len(records)}")
-    return records
+    if not isinstance(data, dict) or "contents" not in data or not isinstance(data["contents"], list):
+        raise ValueError("File JSON phai co format: {'contents': [...]} ")
+    return data
 
-try:
-    connection = _connect_postgres()
-    cursor = connection.cursor()
-    
-    # Tạo extension pgvector nếu chưa có
+
+def _save_dataset(file_path, data):
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    backup_path = file_path.with_suffix(file_path.suffix + f".{timestamp}.bak")
+    file_path.replace(backup_path)
+
+    with open(file_path, "w", encoding="utf-8") as handle:
+        json.dump(data, handle, ensure_ascii=False, indent=2)
+
+    print(f"Da sao luu file goc: {backup_path}")
+    print(f"Da cap nhat file JSON: {file_path}")
+
+
+def _embed_vector_data(items, batch_size):
+    texts = []
+    valid_indices = []
+
+    for index, item in enumerate(items):
+        text = item.get("vector_data", "")
+        if isinstance(text, str) and text.strip():
+            texts.append(text.strip())
+            valid_indices.append(index)
+
+    if not texts:
+        return 0
+
+    print("\n" + "=" * 60)
+    print("Khoi tao model BGE-M3 va bat dau embedding...")
+    print("=" * 60)
+    model = BGEM3FlagModel("BAAI/bge-m3", use_fp16=True)
+
+    embedded_count = 0
+    for start in range(0, len(texts), batch_size):
+        end = min(start + batch_size, len(texts))
+        batch_texts = texts[start:end]
+        batch_vectors = model.encode(batch_texts)["dense_vecs"]
+
+        for offset, vector in enumerate(batch_vectors):
+            item_index = valid_indices[start + offset]
+            items[item_index]["embedding"] = vector.tolist()
+            embedded_count += 1
+
+        print(f"Embedded {end}/{len(texts)} records")
+
+    return embedded_count
+
+
+def _create_table(cursor, table_name):
     cursor.execute("CREATE EXTENSION IF NOT EXISTS vector")
-    
-    # Tạo bảng diseases
-    print(f"\n{'='*50}")
-    print("🔧 Tạo bảng diseases...")
-    print(f"{'='*50}")
-    
-    cursor.execute("""
-        CREATE TABLE IF NOT EXISTS diseases (
-            id SERIAL PRIMARY KEY,
-            question TEXT,
-            answer TEXT,
-            embedding vector(1024)
+
+    create_table_query = sql.SQL(
+        """
+        CREATE TABLE IF NOT EXISTS {table_name} (
+            pk_id BIGSERIAL PRIMARY KEY,
+            item_id TEXT NOT NULL,
+            source_file TEXT NOT NULL,
+            vector_data TEXT NOT NULL,
+            display_title TEXT,
+            short_description TEXT,
+            full_content TEXT,
+            symptoms_tags JSONB,
+            embedding vector({dim}) NOT NULL,
+            created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+            UNIQUE (source_file, item_id)
         )
-    """)
-    print("✅ Đã tạo bảng diseases")
-    
-    # Đọc dữ liệu từ datasets JSON
-    base_dir = os.path.dirname(os.path.dirname(__file__))
-    datasets_dir = os.path.join(base_dir, "datasets")
-    records = load_records_from_datasets(datasets_dir)
+        """
+    ).format(table_name=sql.Identifier(table_name), dim=sql.Literal(EMBEDDING_DIM))
+    cursor.execute(create_table_query)
 
-    # Fallback sang CSV nếu JSON không có dữ liệu hợp lệ
-    if not records:
-        print(f"\n{'='*50}")
-        print("📂 Không có dữ liệu JSON hợp lệ, chuyển sang đọc embeddings.csv...")
-        print(f"{'='*50}")
 
-        csv_path = os.path.join(os.path.dirname(__file__), "embeddings.csv")
-        df = pd.read_csv(csv_path)
-        df = df.dropna(subset=["question"])
+def _upsert_records(cursor, table_name, source_file, items):
+    upsert_query = sql.SQL(
+        """
+        INSERT INTO {table_name} (
+            item_id,
+            source_file,
+            vector_data,
+            display_title,
+            short_description,
+            full_content,
+            symptoms_tags,
+            embedding
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
+        ON CONFLICT (source_file, item_id)
+        DO UPDATE SET
+            vector_data = EXCLUDED.vector_data,
+            display_title = EXCLUDED.display_title,
+            short_description = EXCLUDED.short_description,
+            full_content = EXCLUDED.full_content,
+            symptoms_tags = EXCLUDED.symptoms_tags,
+            embedding = EXCLUDED.embedding
+        """
+    ).format(table_name=sql.Identifier(table_name))
 
-        for _, row in df.iterrows():
-            question = row.get("question")
-            if isinstance(question, str) and question.strip():
-                records.append({
-                    "question": question.strip(),
-                    "answer": str(row.get("answer", "") or ""),
-                    "source": "embeddings.csv"
-                })
+    inserted = 0
+    for item in items:
+        vector = item.get("embedding")
+        vector_data = item.get("vector_data")
+        item_id = item.get("id")
+        if not isinstance(vector, list) or len(vector) != EMBEDDING_DIM:
+            continue
+        if not isinstance(vector_data, str) or not vector_data.strip():
+            continue
+        if not isinstance(item_id, str) or not item_id.strip():
+            continue
 
-    print(f"✅ Số records dùng để embed: {len(records)}")
-    
-    # Khởi tạo BGE-M3 embedding model
-    print(f"\n🤖 Khởi tạo BGE-M3 Embedding Model...")
-    embedding_model = BGEM3FlagModel('BAAI/bge-m3', use_fp16=True)
-    
-    # Lưu cặp (index, vector) để mapping đúng
-    successful_embeddings = []
-    
-    print(f"\n{'='*50}")
-    print("🔄 Bắt đầu embedding...")
-    print(f"{'='*50}\n")
-    
-    for idx, row in enumerate(records):
-        question = row["question"]
-        
-        if isinstance(question, str) and question.strip():
-            try: 
-                # BGE-M3 trả về dict, lấy 'dense_vecs'
-                embeddings = embedding_model.encode([question])
-                vector = embeddings['dense_vecs'][0].tolist()
-                successful_embeddings.append((idx, vector))
-                print(f"✅ Embedded {idx+1}/{len(records)}: {question[:50]}...")
-            except Exception as e:
-                print(f"❌ Lỗi embedding dòng {idx+1}: {e}")
-        else:
-            print(f"⚠️ Bỏ qua dòng {idx+1}: question không hợp lệ")
-    
-    # Insert vào database
-    print(f"\n{'='*50}")
-    print("💾 Đang lưu vào database...")
-    print(f"{'='*50}\n")
-    
-    inserted_count = 0
-    for idx, vector in successful_embeddings:
-        row = records[idx]
-        try:
-            cursor.execute(
-                """INSERT INTO diseases(
-                    question, answer, embedding
-                ) VALUES (%s, %s, %s)""",
-                (
-                    row["question"],
-                    row.get("answer", ""),
-                    vector
-                )
-            )
-            inserted_count += 1
-            print(f"✅ Đã lưu dòng {idx+1}: {row['question'][:50]}...")
-        except Exception as e:
-            print(f"❌ Lỗi insert dòng {idx+1}: {e}")
-            print(f"   Data: {row}")
-    
-    connection.commit()
-    print(f"\n{'='*50}")
-    print(f"🎉 Hoàn thành! Đã lưu {inserted_count}/{len(successful_embeddings)} dòng vào database")
-    print(f"{'='*50}")
-    
-    print(f"\n{'='*50}")
-    print("🎉 Hoàn thành tất cả!")
-    print(f"{'='*50}")
+        cursor.execute(
+            upsert_query,
+            (
+                item_id.strip(),
+                source_file,
+                vector_data.strip(),
+                item.get("display_title"),
+                item.get("short_description"),
+                item.get("full_content"),
+                Json(item.get("symptoms_tags", [])),
+                vector,
+            ),
+        )
+        inserted += 1
 
-except psycopg2.Error as e:
-    print("❌ Lỗi kết nối PostgreSQL:")
-    print(e)
-except Exception as e:
-    print("❌ Lỗi khác:")
-    print(e)
-finally:
-    if 'cursor' in locals():
-        cursor.close()
-    if 'connection' in locals():
-        connection.close()
-    print("\n✅ Đã đóng kết nối database")
+    return inserted
+
+
+def main():
+    parser = argparse.ArgumentParser(
+        description="Pipeline embedding: chon file JSON -> embed vector_data -> ghi embedding vao JSON -> upsert vao PostgreSQL."
+    )
+    parser.add_argument("--file", help="Duong dan file JSON can embedding. Neu bo trong se cho chon tu datasets/.")
+    parser.add_argument("--table", default="dataset_embeddings", help="Ten bang PostgreSQL, mac dinh: dataset_embeddings")
+    parser.add_argument("--batch-size", type=int, default=16, help="So luong ban ghi embedding moi batch.")
+    args = parser.parse_args()
+
+    base_dir = Path(__file__).resolve().parent.parent
+    datasets_dir = base_dir / "datasets"
+    file_path = _choose_dataset_file(datasets_dir, explicit_file=args.file)
+
+    print("\n" + "=" * 60)
+    print(f"File duoc chon: {file_path}")
+    print("=" * 60)
+
+    data = _load_dataset(file_path)
+    items = data["contents"]
+    print(f"So records tim thay trong file: {len(items)}")
+
+    embedded_count = _embed_vector_data(items, batch_size=max(1, args.batch_size))
+    if embedded_count == 0:
+        raise ValueError("Khong co record hop le de embedding trong truong 'vector_data'.")
+    print(f"So records da embed: {embedded_count}")
+
+    _save_dataset(file_path, data)
+
+    connection = None
+    cursor = None
+    try:
+        connection = _connect_postgres()
+        cursor = connection.cursor()
+
+        print("\n" + "=" * 60)
+        print(f"Tao bang neu chua ton tai: {args.table}")
+        print("=" * 60)
+        _create_table(cursor, args.table)
+
+        print("\n" + "=" * 60)
+        print("Dang upsert du lieu vao database...")
+        print("=" * 60)
+        inserted = _upsert_records(cursor, args.table, file_path.name, items)
+        connection.commit()
+        print(f"Upsert thanh cong {inserted} records vao bang '{args.table}'.")
+    finally:
+        if cursor:
+            cursor.close()
+        if connection:
+            connection.close()
+            print("Da dong ket noi database.")
+
+
+if __name__ == "__main__":
+    main()

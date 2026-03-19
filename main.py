@@ -1,29 +1,44 @@
-import asyncio
+"""FastAPI entrypoint."""
 
-from utils.database import (
-    check_health,
-    fetch_query,
-    get_postgre_client,
-    get_redis_client,
-)
+from fastapi import FastAPI
+from pydantic import BaseModel
+from typing import List, Optional
+
+from Agent import app, test_pg_connection, append_chat_history
+
+api = FastAPI(title="DAP Chatbot API")
 
 
-async def main() -> None:
-    health = await check_health()
-    print("health:", health)
+class ChatRequest(BaseModel):
+    question: str
+    chat_history: Optional[List[dict]] = []
 
-    row = await fetch_query("SELECT 1 AS ok")
-    print("postgres test:", dict(row) if row else None)
 
-    redis_client = await get_redis_client()
-    await redis_client.set("ping", "pong", ex=30)
-    value = await redis_client.get("ping")
-    print("redis test:", value)
+class ChatResponse(BaseModel):
+    answer: str
+    chat_history: List[dict]
 
-    pool = await get_postgre_client()
-    await pool.close()
-    await redis_client.aclose()
+
+@api.get("/test")
+def test():
+    db_ok = test_pg_connection()
+    return {
+        "status": "ok",
+        "database": "connected" if db_ok else "unavailable",
+    }
+
+
+@api.post("/chat", response_model=ChatResponse)
+def chat(request: ChatRequest):
+    out = app.invoke({
+        "question": request.question,
+        "chat_history": request.chat_history,
+    })
+    answer      = out.get("answer", "(no answer)")
+    chat_history = append_chat_history(request.chat_history, request.question, answer)
+    return ChatResponse(answer=answer, chat_history=chat_history)
 
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    import uvicorn
+    uvicorn.run("main:api", host="0.0.0.0", port=3400, reload=True)
