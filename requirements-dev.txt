@@ -1,0 +1,15 @@
+# Development and load testing
+locust
+
+# Observability and experimentation
+langsmith
+
+# Data processing and notebooks
+pandas
+openpyxl
+
+# CV/ML testing scripts (Test/Test.py)
+numpy
+Pillow
+opencv-python
+tensorflow

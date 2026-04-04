@@ -1,37 +1,51 @@
-# Database & Connection
-psycopg2-binary
-asyncpg
-redis
-pgvector
-langsmith
+# ============================================================
+# Python 3.11 | Last verified: April 2026
+# ============================================================
 
-# Data Processing
-pandas
-openpyxl
-numpy
-Pillow
-opencv-python
-tensorflow
+# ── Database & Connection ────────────────────────────────────
+psycopg2-binary>=2.9.9,<3
+asyncpg>=0.29,<1
+redis>=5.2,<6
+pgvector>=0.3,<1
 
-# LangChain - Compatible versions
-langchain
-langchain-core
-langchain-community
-langchain-openai
-langgraph
-langgraph-checkpoint-redis
+# ── API Runtime ──────────────────────────────────────────────
+fastapi>=0.115,<1
+uvicorn[standard]>=0.34,<1
 
-# Pydantic (important for compatibility)
-pydantic
-pydantic-core
+# ── LangChain Ecosystem (v1.x) ───────────────────────────────
+# IMPORTANT: Tất cả langchain-* phải cùng major version
+# langchain 1.x yêu cầu langchain-core 1.x
+langchain>=1.2,<2
+langchain-core>=1.2,<2
+langchain-community>=0.3,<0.4   # community vẫn ở 0.3.x, không lên 1.x cùng lúc
+langchain-openai>=1.1,<2
+openai>=1.55,<2                  # pin explicit, langchain-openai kéo vào nhưng dễ conflict
 
-# Vector Embeddings & AI
-FlagEmbedding
-sentence-transformers
-transformers==4.44.2
-peft==0.12.0
-torch
+# ── LangGraph ────────────────────────────────────────────────
+langgraph>=1.1,<2
+langgraph-checkpoint-redis>=0.4,<1
 
-# Environment
-python-dotenv
+# ── Pydantic ─────────────────────────────────────────────────
+pydantic>=2.9,<3
 
+# ── AI / Embeddings Stack ────────────────────────────────────
+# WARNING: FlagEmbedding 1.3.x yêu cầu transformers==4.44.2 (pin cứng từ phía lib)
+# Conflict với sentence-transformers>=3 (yêu cầu transformers>=4.34, nhưng thực tế
+# sentence-transformers mới kéo transformers 4.45+)
+#
+# Lựa chọn A (khuyến nghị nếu dùng cả hai):
+#   → Pin FlagEmbedding==1.3.5 + transformers==4.44.2 + sentence-transformers==3.0.x
+#     (sentence-transformers 3.0.x vẫn tương thích transformers 4.44)
+#
+# Lựa chọn B (nếu chỉ cần inference, không finetune):
+#   → Bỏ FlagEmbedding, dùng sentence-transformers>=3.3 với transformers>=4.45
+#
+# File này dùng Lựa chọn A:
+FlagEmbedding==1.3.5
+transformers==4.44.2             # locked bởi FlagEmbedding, KHÔNG thay đổi
+peft>=0.13,<0.14                 # 0.13.x tương thích transformers 4.44
+sentence-transformers>=3.0,<3.1  # 3.0.x dùng được với transformers 4.44
+torch>=2.3,<2.6                  # upper bound hẹp hơn; 2.6 yêu cầu transformers>=4.45
+
+# ── Environment ──────────────────────────────────────────────
+python-dotenv>=1.0,<2
